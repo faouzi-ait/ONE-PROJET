@@ -1,0 +1,73 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/notification'
+
+//***********************************
+
+@keyframes notification-hide
+  100%
+    transform: translateY(-100%)
+
+@keyframes hide-notification
+  0%
+    transform: translateY(-100%)
+
+  8%
+    transform: translateY(0%)
+
+  92%
+    transform: translateY(0%)
+
+  100%
+    transform: translateY(-100%)
+
+//***********************************
+
+.notification
+  box-sizing: border-box
+  position: $notification-position
+  top: $notification-top
+  bottom: $notification-bottom
+  left: $notification-left
+  right: $notification-right
+  width: $notification-width
+  background: $notification-background
+  color: $notification-color
+  z-index: $notification-z-index
+  margin: $notification-margin
+  padding: $notification-padding
+  animation: hide-notification 6s forwards
+
+  &__inner
+    display: $notification-inner-display
+    align-items: $notification-inner-align
+
+    > *
+      flex: 0 1 auto
+
+  &--success
+    background-color: $notification-success-bgc
+    color: $notification-success-color
+
+    .notification__copy
+      color: $notification-success-color
+
+  &--error
+    background-color: $notification-error-bgc
+    color: $notification-error-color
+
+    .notification__copy
+      color: $notification-error-color
+
+  &--static
+    animation: none
+    position: static
+
+  &__copy
+    color: $notification-copy-color
+    margin: 0 0 0 10px
+
+  .container
+    margin-bottom: 0

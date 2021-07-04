@@ -1,0 +1,39 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/quote-card'
+
+//***********************************
+
+.quote-card
+  box-sizing: border-box
+  margin: 0
+  padding: $quote-card-padding
+  position: relative
+  width: 100%
+
+  &::before
+    background-color: $quote-card-border-color
+    content: ''
+    display: block
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 6px
+
+  &__title
+    margin: $quote-card-title-margin
+
+  &__name
+    display: block
+    font-size: $quote-card-name-size
+    font-weight: bold
+
+  &__author
+    display: block
+    font-size: $quote-card-author-size
+
+  &__media
+    max-width: 100%

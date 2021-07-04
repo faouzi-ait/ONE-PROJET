@@ -1,0 +1,54 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$footer-bgc: $mirage
+$footer-padding: 40px 0
+
+//***********************************
+
+$footer-brand-margin: 0 auto
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .footer
+  text-align: center
+  position: relative
+  color: $white
+  font-size: (12/16)+rem
+  z-index: 1
+
+  .container
+    display: block
+
+  &__list
+    justify-content: center
+
+  &__item
+    line-height: 1.5
+
+  &__nav
+    margin: 20px 0
+
+  .brand img
+    max-width: none
+    margin: 0 auto
+
+  .sharer
+    display: inline-block
+    margin-top: 0
+    margin-bottom: 0
+    padding: 0 5px 0 0
+    
+    &__item
+      transform: scale(0.8)
+      transform-origin: top
+
+  &__copy
+    display: inline-block

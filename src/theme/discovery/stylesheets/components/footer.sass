@@ -1,0 +1,41 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$footer-bgc: $white
+$footer-padding: 50px 0 70px
+
+//***********************************
+
+$footer-brand-margin: 50px auto 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .footer
+    .container
+        &:before
+            background: $gallery
+            content: ''
+            height: 6px
+            width: 100%
+
+    &__nav,
+    &__copy
+        font-weight: 500
+        margin-top: 20px
+
+    &__item
+        border-color: $base-color
+
+    &__link
+        color: $base-color
+        font-size: 16px
+
+    &__copy
+        font-size: 12px

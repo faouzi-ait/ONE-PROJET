@@ -1,0 +1,40 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$contact-image-size: 70px
+$contact-image-border-radius: 100%
+
+$contact-jobtitle-font-size: 14px
+
+$contact-info-margin: 20px
+
+$contact-detail-margin: 60px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .contact
+  color: $gallery
+
+  &__phone,
+  &__email
+    display: flex
+    align-items: center
+
+  &__icon
+    fill: $brand-color
+    margin-right: 10px
+
+  .text-button
+    color: $gallery
+    font-weight: normal
+    text-decoration: none
+
+    &:hover
+      color: $brand-color

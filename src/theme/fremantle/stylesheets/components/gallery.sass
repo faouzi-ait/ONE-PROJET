@@ -1,0 +1,75 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$gallery-display: flex
+$gallery-overflow: auto
+
+//***********************************
+
+$gallery-modal-content-padding: 20px 17px
+$gallery-modal-content-position: absolute
+$gallery-modal-content-bottom: 0px
+$gallery-modal-content-background: linear-gradient(180deg, rgba($base-color,0) 0%, $base-color 100%)
+
+//***********************************
+
+$gallery-modal-caption-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .gallery
+    
+    &-modal
+        &__content
+            display: block
+            min-height: 52px
+            padding-right: 80px
+            
+        &__arrow
+            background-color: $white
+            border-radius: 0
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 20px
+            cursor: pointer
+            width: 40px
+            height: 40px
+
+            &:after
+                border-color: $base-color
+
+            &--prev
+                right: 65px
+        
+
+        &__caption
+            &:not(:first-child)
+                font-size: 15px
+                font-family: $secondary-font-family
+                font-weight: 800
+
+            &:first-child
+                font-size: 24px
+
+        .modal__close
+            background: transparent
+            border-radius: 0
+
+    &__caption
+        color: $white
+
+    &--static
+        .gallery__item
+            max-width: none
+            margin-right: 20px
+            width: calc(33.33% - 20px)
+
+    

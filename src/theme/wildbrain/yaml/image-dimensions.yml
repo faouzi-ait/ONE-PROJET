@@ -1,0 +1,18 @@
+dimensions:
+  - name: Page
+    url: https://wildbrain.rawnet.one/admin/pages/page/5/images
+    components:
+      Banner: 3200x480
+      Thumbnail: 1120x630
+
+  - name: Programme
+    url: https://wildbrain.rawnet.one/catalogue/2
+    components:
+      Banner: 3200x1200
+      Thumbnail: 1120x630
+      Logo: 400x60
+
+  - name: News Article
+    components:
+      Banner: 3200x480
+      Thumbnail: 560x350

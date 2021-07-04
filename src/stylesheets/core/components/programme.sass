@@ -1,0 +1,100 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/programme'
+
+//***********************************
+
+@keyframes scroll-text
+  100%
+    transform: translate3d(-50%, 0, 0)
+
+.programme
+  position: relative
+  overflow: hidden
+
+  img.programme__logo //forcing override of carousel.sass style
+    max-width: 50%
+
+  &:hover &__title--ellipsis
+    animation: scroll-text 5s linear infinite
+
+  &__actions
+    position: absolute
+    top: 10px
+    right: 10px
+
+  &__image
+    display: block
+    border-radius: $programme-image-radius
+    margin-bottom: $programme-image-spacing
+    overflow: hidden
+    position: relative
+
+    img
+      display: block
+      width: 100%
+
+  &__icon
+    background: $programme-icon-background
+    border-radius: $programme-icon-radius
+    border: $programme-icon-border
+    left: 50%
+    padding-top: $programme-icon-size
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: $programme-icon-size
+
+    &--centered
+      left: calc(50% + (#{$programme-icon-size} / 2))
+
+    &:after
+      border: $programme-icon-arrow-size / 3 solid transparent
+      border-left: $programme-icon-arrow-size / 2 solid $programme-icon-arrow-color
+      border-right: 0
+      content: ''
+      display: block
+      left: 50%
+      margin-left: $programme-icon-arrow-size / 9
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+
+  &__title
+    font-size: $programme-title-font-size
+    margin: 0
+
+    &--ellipsis
+      white-space: nowrap
+      display: inline-block
+      word-break: break-all
+      min-width: 200%
+
+      &::after
+        content: attr(data-title)
+        display: inline-block
+        padding-right: 50px
+
+      > *
+        display: inline-block
+        padding-right: 50px
+        box-sizing: border-box
+
+    &--small
+      font-size: $programme-title-font-size-small
+
+  &__copy
+    color: $programme-copy-color
+    font-size: $programme-copy-font-size
+    margin: 0
+
+  &__strip
+    background: $programme-strip-bgc
+    color: $programme-strip-color
+    font-size: $programme-strip-font-size
+    padding: $programme-strip-padding
+    position: absolute
+    bottom: 0
+    left: 0

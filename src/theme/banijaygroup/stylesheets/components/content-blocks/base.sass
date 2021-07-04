@@ -1,0 +1,450 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: transparent
+$content-block-bg-shade: $tyrian
+$content-block-padding: 80px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: $cinnabar
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block
+    &__media
+        &--programme
+            max-width: none
+            width: 400px
+
+    &--brand
+        background: url(../../../../images/theme/section-brand-bg.png) no-repeat left center $tyrian
+        background-size: auto calc(100% - 100px)
+
+    &__heading
+        font-size: 52px
+        margin: 0 0 40px
+
+        .button
+            margin-left: auto
+
+    &--kids
+        background-color: $brand-color
+        
+        .content-block__actions,
+        .content-block__heading
+            .button--filled
+                background-color: $tyrian
+
+                +hover
+                    background-color: $brand-color
+
+    &--shade + .content-block--shade,
+    &--brand + .content-block--shade,
+    &--shade + .content-block--brand,
+    &--brand + .content-block--brand,
+    &--kids + .content-block--kids
+        padding-top: 10px
+
+    &--brand,
+    &--shade,
+    &--kids
+        .content-block__heading,
+        .card--person .card__title,
+        .card--person .card__copy,
+        .card--cast .card__title,
+        .card--cast .card__copy,
+        blockquote,
+        .content-block__service,
+        .show-hide,
+        .tweet__title,
+        .tweet__copy,
+        .carousel__counter,
+        .contact,
+        .statistic
+            color: $white
+
+        .carousel__dot:not(.carousel__dot--active)
+            border-color: $white
+
+    &--quote
+        blockquote
+            margin: 0 auto
+            max-width: 780px
+            padding: 25px
+            position: relative
+
+        h2
+            font-size: 36px
+            line-height: 42px
+
+        cite
+            font-style: normal
+            font-family: $sub-font-family
+
+    &--accordion
+        .show-hide
+            max-width: 835px
+            margin-left: auto
+            margin-right: auto
+
+    &--banner-carousel
+        background: $base-color
+        padding: 0
+
+        .carousel
+            margin-top: 0
+            padding-top: 0
+            overflow: visible
+
+            &__arrow
+                background: url(../../../../images/theme/carousel-arrow.svg) no-repeat
+                border: none
+                height: 28px
+                position: relative
+                right: auto
+                width: 18px
+
+                &:after
+                    display: none
+
+                &--next
+                    order: 2
+
+                &--prev
+                    transform: rotate(-180deg)
+
+                &:hover
+                    background-color: transparent
+
+
+            &__pager
+                bottom: 50px
+                left: calc(50vw - 640px)
+                position: absolute
+
+                &-text
+                    color: $white
+                    font-family: $sub-font-family
+                    margin-left: 15px
+                    order: 3
+
+            &__counter
+                align-items: center
+                color: transparentize($white, .6)
+                display: flex
+                order: 1
+                margin: 0 20px
+
+                &-from
+                    color: $white
+                    font-size: 28px
+                    line-height: 1
+                    margin-right: 5px
+
+                &-to
+                    margin-left: 5px
+
+                &-from,
+                &-to
+                    &:before
+                        content: '0'
+
+            &__dot:not(.carousel__dot--active)
+                border-color: $white
+
+        .wysiwyg .button
+            padding-left: 40px
+            padding-right: 40px
+
+
+    &--promo-carousel
+        position: relative
+
+        &:after
+            background: $white
+            background-size: 100%
+            content: ''
+            display: block
+            height: 31vw
+            position: absolute
+            top: calc(100% - 14vw)
+            width: 100vw
+            z-index: 1
+
+        &.content-block--shade:after,
+        &.content-block--brand:after
+            background: $tyrian
+
+        &.content-block--kids:after
+            background-color: $brand-color
+
+        .content-block
+            &__inner
+                position: relative
+                z-index: 2
+
+            &__actions
+                position: absolute
+                top: -15px
+                right: calc(50vw - 642px)
+                margin-top: 0
+
+            &__heading
+                justify-content: center
+
+            &__main
+                &:first-child
+                    margin-top: 60px
+
+        .tabs
+            border: none
+            justify-content: flex-start
+            flex-wrap: wrap
+            margin-bottom: 20px
+            position: relative
+            max-width: calc(100% - 340px)
+            z-index: 10
+
+            &__item
+                background: transparent
+                border: none
+                color: $base-color
+                font-size: 20px
+                line-height: 23px
+                flex: none
+                max-width: none
+                margin-bottom: 20px
+                padding: 0
+                margin-right: 40px
+
+                &:last-child
+                    border-right: none
+
+                &--active
+                    position: relative
+
+                    &:after
+                        background: $brand-color
+                        content: ''
+                        height: 2px
+                        left: 0
+                        position: absolute
+                        top: calc(100% + 6px)
+                        width: 100%
+
+        &.content-block--brand,
+        &.content-block--shade,
+        &.content-block--kids
+            .tabs__item
+                color: $white
+
+        &.content-block--kids
+            .content-block__inner
+                &::before
+                    background: url('../../../../images/theme/stars-bg.png')
+                    content: ''
+                    height: 390px
+                    position: absolute
+                    top: 100%
+                    left: 0
+                    pointer-events: none
+                    width: 908px
+
+            .tabs__item:after
+                background-color: $white
+
+            & ~ .content-block--text
+
+                .container
+                    background-color: $white
+                    color: $base-color
+
+                    .wysiwyg__button
+                        background-color: $brand-color
+
+                        +hover
+                            background-color: $tyrian
+
+        & + .content-block
+            .container
+                position: relative
+                z-index: 2
+
+        & + .content-block--text.content-block
+            padding-top: 0
+
+            &.content-block--brand
+                position: relative
+                z-index: 4
+
+    &--promo-carousel,
+    &--related-pages
+        &.content-block--kids
+            position: relative
+            z-index: 2
+            &::before
+                background: url('../../../../images/theme/stars-bg.png')
+                transform: scaleX(-1)
+                content: ''
+                height: 390px
+                position: absolute
+                top: -75px
+                right: 0
+                pointer-events: none
+                width: 908px
+                z-index: -1
+
+    &--related-pages
+        &.content-block--kids
+            &::before
+                transform: scale(-1)
+
+        & + .content-block--image.content-block--shade,
+        & + .content-block--image.content-block--kids
+            padding: 0
+            > .container
+                max-width: none
+                padding: 0
+
+    &--recommended-genres
+        .card__title
+            font-size: 22px
+
+    &--continue-watching
+        &.content-block--shade,
+        &.content-block--brand,
+        &.content-block--kids
+            .card__title
+                color: $white
+
+    &--continue-watching
+        .video-carousel .programme
+            padding-bottom: 9px
+        .carousel .programme__image
+            height: 90%
+
+    &--locations
+        .card__copy
+            line-height: 1.5
+            margin-bottom: 0
+
+    &--text
+        .container
+            padding: 0
+            position: relative
+
+        .grid
+            margin-bottom: 0
+
+        .content-block__media
+            &,
+            & + .wysiwyg
+                margin-bottom: 0
+
+        &.content-block--light
+
+            .container
+                background-color: $brand-color
+                color: $white
+                
+                .wysiwyg__button
+                    background: $tyrian
+
+                > div:not(.grid) > .wysiwyg
+                    background-color: $white
+                    color: $base-color
+
+                .content-block__media--programme
+                    margin: 20px
+
+        &.content-block--shade,
+        &.content-block--brand,
+        &.content-block--kids
+            .container
+                color: $white
+
+        .grid
+            align-items: center
+
+            .wysiwyg
+                box-sizing: border-box
+                padding: 30px 5vw
+                
+
+    &--genre-tags
+        padding-top: 40px
+        padding-bottom: 40px
+        position: relative
+        z-index: 3
+
+        .content-block__heading
+            font-size: 20px
+            margin-bottom: 10px
+
+    +breakpoint(1320px)
+        &--banner-carousel
+            .carousel__pager
+                left: 20px
+
+        &--text .container
+            margin: 0 20px
+
+
+        &--promo-carousel
+
+            .content-block__actions
+                right: 20px
+
+    +breakpoint(1210px)
+
+        &--promo-carousel
+            .tabs
+                max-width: 100%
+
+                &__item
+                    font-size: 16px
+                    margin-right: 20px
+
+    +breakpoint(large)
+        padding: 60px 0
+
+        &__heading
+            font-size: 6vw
+            margin-bottom: 20px
+
+        &--banner-carousel
+            padding: 0
+
+    +breakpoint(medium)
+        overflow: visible
+        padding: 40px 0
+
+        &--text
+
+            .grid
+                .wysiwyg
+                    padding: 20px
+
+        &--banner-carousel
+            padding: 0
+
+            .carousel
+                &__pager
+                    bottom: 20px
+
+        &--promo-carousel
+            .content-block
+
+                &__actions
+                    position: static
+                    margin-top: 20px
+
+                &__main
+                    &:first-child
+                        margin-top: 0

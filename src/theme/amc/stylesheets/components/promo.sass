@@ -1,0 +1,84 @@
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$promo-color: $white
+$promo-padding: 50px
+
+$promo-title-font-size: 60px
+$promo-title-line-height: 1.5
+$promo-title-margin: 0 0 20px 20px
+$promo-copy-margin: -20px 0
+
+$promo-content-width: 33%
+
+$promo-media-margin: 0 0 -50px auto
+$promo-media-width: 63%
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .promo
+
+    &__brand,
+    &__action
+      background-color: $black
+      display: inline-block
+      padding: 20px
+
+    &__brand
+      padding-bottom: 0
+      padding-top: 15px
+      position: relative
+      z-index: 1
+
+    &__title,
+      background: $black
+      box-decoration-break: clone
+      box-shadow: 0 0 0 20px $black
+      display: inline
+      outline: 1px solid $black
+
+      .heading--one
+        display: inline
+        text-transform: uppercase
+      
+    &__contents
+      background-color: $black
+      display: inline-block
+      padding: 20px
+
+    +breakpoint(xlarge)
+      &__title
+          font-size: 50px
+
+    +breakpoint(large)
+      padding: 30px
+
+      &__title
+        font-size: 40px
+
+      &__media
+        margin-bottom: -30px
+
+    +breakpoint(medium)
+      padding: 20px
+
+      &__title
+        font-size: 36px
+
+      &__contents
+        margin-top: -10px
+
+      &__content
+        margin-bottom: 20px
+
+      &__media
+        margin-bottom: -20px
+
+    +breakpoint(small)
+      &__content
+        background-color: $black

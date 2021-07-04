@@ -1,0 +1,31 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$page-controls-padding: 20px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .page-controls
+    &__count
+        font-size: 20px
+
+    &__control
+        font-size: 17px
+
+    .per-page
+        .Select-control
+            min-width: 130px
+
+    +breakpoint(large, min)
+    
+        &__control
+            margin-left: 30px
+
+        &__right
+            margin-left: 40px
+
+            &:first-child
+                margin-left: auto

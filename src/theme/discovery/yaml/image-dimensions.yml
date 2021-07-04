@@ -1,0 +1,22 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x900
+      Thumbnail: 1120x630
+
+  - name: Programme
+    url: https://discovery.rawnet.one/catalogue/2
+    components:
+      Banner: 3200x1800
+      Thumbnail: 1120x630
+      Logo: 550x200
+
+  - name: News Article
+    components:
+      Banner: 3200x900
+      Thumbnail: 1120x630
+
+  - name: Custom Catalogue
+    components:
+      Banner: 3200x900
+      Thumbnail: 1120x630

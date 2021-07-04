@@ -1,0 +1,37 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 60px
+$programme-details-border: 1px solid $iron
+$programme-details-side-width: 280px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  &__side
+    .heading-three
+      font-weight: normal
+      font-size: 16px
+      text-transform: none
+
+  .gallery--static
+    .gallery__item
+      width: calc(25% - 20px)
+
+  +breakpoint(xlarge)
+    &__main
+      margin-right: 40px
+      padding-right: 40px
+
+  +breakpoint(large)
+    &__main
+      border: 0
+      border-bottom: $programme-details-border
+      margin: 0
+      margin-bottom: 30px
+      padding: 0
+      padding-bottom: 30px

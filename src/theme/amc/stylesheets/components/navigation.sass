@@ -1,0 +1,141 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$nav-bgc: $base-color-dark
+$nav-divide-color: lighten($base-color-dark, 10%)
+$nav-width: 400px
+$nav-width-bp-large: 320px
+
+//***********************************
+
+$nav-close-left: auto
+$nav-close-right: 40px
+$nav-close-top: 30px
+
+//***********************************
+
+$nav-item-divide-margin: 0
+$nav-item-divide-padding: 0
+
+//***********************************
+
+$nav-list-padding: 80px 0
+$nav-list-padding-bp-large: 80px 0
+
+//***********************************
+
+$nav-link-active-color: $brand-color
+$nav-link-color: $white
+$nav-link-hover-color: $black
+$nav-link-padding: 15px 80px
+
+//***********************************
+
+$sub-nav-margin: 0
+$sub-nav-padding: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .navigation
+
+  .button
+    background-color: transparent
+    border: none
+    +hover
+      .button__icon
+        fill: $brand-color
+    &__icon
+      fill: $white
+      transition: fill .2s
+
+  &__link
+    font-size: 17px
+    font-weight: 900
+    position: relative
+    text-transform: uppercase
+    transition: background-color .2s, color .2s
+    z-index: 2
+
+    +hover
+      background-color: $brand-color
+
+      &.navigation__link--is-active
+        &::before
+          background-color: $black
+
+    &--is-active
+      &::before
+        background: $brand-color
+        content: ''
+        height: 8px
+        left: 50px
+        position: absolute
+        top: 50%
+        margin-top: -1px
+        transform: translateY(-50%)
+        width: 8px
+        transition: background-color .2s
+
+  &__item--divide
+    border-bottom: 0
+    position: relative
+
+    &:after
+      background: $nav-divide-color
+      bottom: 0
+      content: ''
+      height: 1px
+      left: 50px
+      position: absolute
+      right: 50px
+
+    &:last-child
+      &:after
+        background: transparent
+
+  &__sub-nav
+    list-style: none
+    padding-bottom: 10px
+
+    .navigation__link
+      padding: 6px 80px 6px 110px
+
+      &--is-active
+
+        &::before
+          left: 80px
+
+  +breakpoint(large)
+
+    .button
+      top: 10px
+      right: 10px
+
+    &__list
+      padding: 60px 0
+
+    &__item
+      &::after
+        left: 20px
+        right: 20px
+
+    &__link
+      padding: 10px 50px
+      font-size: 15px
+
+      &::before
+        left: 20px
+
+    &__sub-nav
+      .navigation__link
+        padding: 5px 40px 5px 70px
+
+        &::before
+          left: 40px

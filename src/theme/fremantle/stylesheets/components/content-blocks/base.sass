@@ -1,0 +1,211 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: $shark
+$content-block-bg-shade: $cod-gray
+$content-block-padding: 80px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: $shark
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block
+
+  &--brand + .content-block--light
+    padding-top: 0
+
+  &--banner-carousel,
+  &--gallery.content-block--light
+    & + .content-block--light
+      padding-top: 40px
+
+  &--brand
+    background: url(../../../../images/theme/content-block-brand-bg.svg) center no-repeat
+    background-size: 100%
+    padding: 0
+
+  &--image
+    &.content-block--text > .container
+      overflow: visible
+
+    .content-block__media
+      box-shadow: 0 22px 34px 0 rgba($black,0.3)
+
+  &__heading
+    color: $white
+    font-weight: normal
+    margin: 0 0 30px
+    font-size: 35px
+
+    .button
+      margin-left: 20px
+
+  &--text
+
+    .wysiwyg
+      max-width: 930px
+      margin-left: auto
+      margin-right: auto
+
+
+    .grid
+      align-items: center
+      margin-bottom: -30px
+
+      .content-block__media
+        margin-left: 45px
+        width: calc(55% - 75px)
+
+      .wysiwyg
+        margin-left: 55px
+        margin-right: 75px
+        width: calc(45% - 130px)
+
+    .content-block__media--programme + .wyiswyg
+      margin: 0
+
+  &--quote
+    blockquote
+      margin: 0 auto
+      max-width: 865px
+      position: relative
+      padding: 18px 0 18px 60px
+
+      h2
+        font-size: 35px
+        margin: 0 0 25px
+
+      &::after
+        background: $abbey
+        content: ''
+        display: block
+        left: 0
+        height: 100%
+        position: absolute
+        top: 0
+        width: 6px
+
+
+  &--promo-carousel
+    .tabs
+      margin-bottom: 40px
+
+  &--people,
+  &--related-pages
+    .card
+      &__title
+        font-size: 24px
+
+      &__copy
+        font-size: 14px
+
+        &:last-child
+          margin-top: 20px
+
+  &--people,
+  &--locations
+    .card__copy
+      a
+        font-weight: bold
+        font-size: 18px
+        border-bottom: solid 2px transparent
+
+        &:hover
+          border-color: $abbey
+
+  &__service
+    border-color: $mine-shaft
+    color: $white
+    text-align: left
+
+    h3
+      font-size: 35px
+
+    p
+      font-size: 18px
+      line-height: 1.6
+      font-family: $secondary-font-family
+      letter-spacing: 0.5px
+ 
+  +breakpoint(large)
+    padding: 40px 0
+    &--brand
+      padding: 0
+
+    &--quote
+      blockquote
+        padding-left: 40px
+        h2
+          font-size: 28px
+
+    &__service h3
+      font-size: 28px
+
+    &__service
+      padding: 0
+
+
+  +breakpoint(800px)
+    &--text
+      .grid
+
+        .content-block__media
+          margin-left: 20px
+          width: calc(45% - 50px)
+
+        .wysiwyg
+          margin-left: 30px
+          margin-right: 20px
+          width: calc(55% - 50px)
+
+      .content-block__media--programme + .wyiswyg
+        margin: 0
+
+  +breakpoint(medium)
+
+    &--quote blockquote h2,
+    &__service h3
+      font-size: 24px
+
+    &__heading
+      font-size: 28px
+      margin-bottom: 20px
+
+
+
+  +breakpoint(small)
+    &--brand
+      background: $shark
+
+    &--text
+      .grid
+        .content-block__media
+          margin-left: 0
+          margin-bottom: 0
+          width: 100%
+
+        .wysiwyg
+          margin-left: 0
+          margin-right: 0
+          width: 100%
+
+.custom .mock-page .content-block
+  color: $white
+
+.custom:not(.admin) .content-block
+  &--banner-carousel
+    .carousel
+      &__arrow
+        top: calc(50% - 60px)
+        &--prev
+          top: 50% 
+
+.custom .mock-page__warning
+  color: $white

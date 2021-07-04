@@ -1,0 +1,150 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 900px
+$banner-tablet-min-height: 780px
+$banner-mobile-min-height: 540px
+$banner-short-min-height: 460px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 100px 0 0
+$banner-tablet-content-padding: 80px 0 30px
+$banner-content-width: 580px
+
+//***********************************
+
+$banner-intro-min-height: 240px
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 100px 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 20px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: 20px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  min-height: 0
+  height: $banner-min-height
+  max-height: 100vh
+
+  &--short,
+  &--intro
+    height: $banner-short-min-height
+
+  &--long
+    height: 668px
+
+    .container
+      max-width: 1360px
+
+    .banner__copy
+      font-size: 26px
+      line-height: 1.4
+
+  &__title
+    line-height: 1.2
+    letter-spacing: -2.5px
+
+  .button
+    border-color: $white
+    padding: 13px 10px 12px
+
+    +hover
+      border-color: $black
+
+  .icon-button
+    background-color: $white
+    padding: 8px
+    padding-bottom: 7px
+
+    svg
+      fill: $black
+
+    +hover
+      background-color: $black
+
+      svg
+        fill: $white
+
+  &__copy
+    font-size: 21px
+    font-weight: bold
+    line-height: 1.2
+
+  &--medium-media
+    min-height: 0
+    height: $banner-mobile-min-height !important
+
+    &.banner--short,
+    &.banner--intro,
+    &.banner--long
+      min-height: 280px !important
+
+  &--large-media
+    min-height: 0
+    height: $banner-tablet-min-height !important
+
+    &.banner--intro,
+    &.banner--short,
+    &.banner--long
+      min-height: 360px !important
+
+
+  +breakpoint(xlarge)
+    &__title
+      font-size: 5.5vw
+
+  +breakpoint(large)
+    min-height: 0
+    height: $banner-tablet-min-height
+
+    &--short,
+    &--intro,
+    &--long
+      min-height: 360px
+
+      &__content
+        padding-bottom: 20px
+
+  +breakpoint(medium)
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    min-height: 0
+    height: $banner-mobile-min-height
+
+    &--short,
+    &--intro,
+    &--long
+      min-height: 280px
+
+    &__title
+      font-size: 36px
+      line-height: 1.14
+      margin: 0
+
+    &:after
+      background: linear-gradient(rgba($black,0), $black 120px, $black 100%)
+      bottom: 0
+      content: ''
+      height: 240px
+      left: 0
+      position: absolute
+      top: auto
+      width: 100%

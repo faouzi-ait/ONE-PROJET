@@ -1,0 +1,3 @@
+https://storylab.rawnet.one   http://storylab.com   301!
+https://storylab.rawnet.one/*   http://storylab.com/:splat   301
+/*   /index.html   200

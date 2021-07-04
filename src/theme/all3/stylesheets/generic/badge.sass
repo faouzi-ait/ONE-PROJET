@@ -1,0 +1,26 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$badge-bg-color: $tundora
+$badge-color: $white
+$badge-border: none
+$badge-size: 13px
+$badge-padding: 3px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .badge
+  display: flex
+  align-items: center
+
+  &:after
+    order: -1
+    margin-right: 3px
+    position: static

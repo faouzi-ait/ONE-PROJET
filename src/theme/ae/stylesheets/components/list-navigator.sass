@@ -1,0 +1,51 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$list-nav-title-padding: 6px 20px
+$list-nav-title-size: 18px
+
+$list-nav-actions-padding: 12px 10px
+
+$list-nav-search-bg: $athens-gray
+$list-nav-search-padding: 10px
+
+$list-nav-tabs-margin: 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .list-navigator
+  border-color: $oslo
+  &__column
+    background-color: transparent
+    border-color: $oslo
+
+    &:first-child
+      .list-navigator__item
+        font-size: 20px
+
+  &__title
+    background-color: $rhino
+    font-size: 18px
+    margin: -1px
+    border-bottom: solid 1px $oslo
+
+  &__item
+    font-size: 18px
+    padding: 12px 20px
+
+    +hover
+      background-color: rgba($mid-gray, .5)
+      color: $white
+
+    &--is-active
+      background-color: rgba($mid-gray, .5)
+
+  &__icon
+    fill: $white

@@ -1,0 +1,82 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: transparent
+$header-max-width: 1480px
+$header-padding: 15px 20px
+$header-welcome-color: $white
+$header-user-color: $white
+$header-user-hover-color: $brand-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+
+    .brand
+        flex: 1
+
+    &__controls
+        > *:not(:first-child)
+            margin-left: 30px
+
+            &.programme-search
+                margin-left: 0
+
+    &__welcome
+        margin-right: 0
+
+    .text-button
+        font-size: 16px
+        padding: 0
+        margin-right: 0
+        margin-left: 25px
+
+    .button--icon
+        
+        &:hover
+            background-color: transparent
+
+            .button__icon
+                fill: $white
+
+    .button__icon
+        fill: $brand-color
+        margin-top: 0
+
+    .programme-search:before
+        display: none
+
+    &--meetings
+        padding: $header-padding
+
+    &--searching
+
+        .programme-search
+            &__input
+                color: $white
+                filter: invert(10%) brightness(10)
+
+                &::placeholder
+                    color: $white
+
+    +breakpoint(1024, min)
+        .container
+            width: auto
+
+    +breakpoint(medium, min)
+        &--searching
+            .header__controls
+                flex: 1
+
+    +breakpoint(small)
+        padding: 20px 10px
+
+        .brand
+            width: 130px

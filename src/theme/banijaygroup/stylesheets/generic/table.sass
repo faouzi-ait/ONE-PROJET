@@ -1,0 +1,39 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$th-bgc: $white
+$th-border-color: $gull-gray
+$th-font-size: 15px
+$th-font-weight: normal
+$th-padding: 15px 20px
+
+$td-bgc: $white
+$td-border-color: transparent
+$td-font-size: 12px
+$td-padding: 12px 20px
+$table-radius: 0
+
+.custom .table
+  font-family: $sub-font-family
+
+  tr:nth-child(even) 
+    td
+      background-color: rgba($azalea, .3)
+
+    &:hover td
+      background-color: $brand-color
+
+  th
+    border-left: none
+    
+  &__actions
+    .button
+      white-space: nowrap
+
+  &__sort
+    font-family: $sub-font-family

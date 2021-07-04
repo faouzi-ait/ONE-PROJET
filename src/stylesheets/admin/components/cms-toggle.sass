@@ -1,0 +1,66 @@
+
+@import '../../core/imports'
+
+$toggle-size: 25px
+$toggle-border: 2px solid $brand-color
+$toggle-background: transparent
+$toggle-background-hover: tint($brand-color, 10%)
+$toggle-border-radius: 50%
+$toggle-icon-fill: $white
+$toggle-active-background: $brand-color
+$toggle-active-border: 2px solid $brand-color
+
+.cms-toggle
+  background: $toggle-background
+  border: $toggle-border
+  border-radius: $toggle-border-radius
+  box-sizing: border-box
+  color: transparent
+  cursor: pointer
+  font-size: 0
+  height: $toggle-size
+  outline: none
+  position: relative
+  transition: background-color .3s
+  width: $toggle-size
+  overflow: hidden
+  margin: 0px 6px
+
+  .no-touch &:not(&--active):hover
+    background-color: $toggle-background-hover
+
+  &__icon
+    display: none
+    fill: $toggle-icon-fill
+    margin: 0 auto
+    position: relative
+    right: 3px
+
+  &--active:not(&--loading)
+    background: $toggle-active-background
+    border: $toggle-active-border
+
+  &--active:not(&--loading) &
+    &__icon
+      animation: toggle-icon-pop .3s reverse $easing
+      display: block
+
+  &--loading
+    &:before
+      border-radius: 100%
+      content: ''
+      display: block
+      top: 0
+      left: 0
+      position: absolute
+      width: calc(100% - 8px)
+      padding-top: calc(100% - 8px)
+      margin: 2px 0 0 2px
+      border: 2px solid transparent
+      border-right: 2px solid $brand-color
+      border-bottom: 2px solid $brand-color
+      animation: rotate .5s infinite linear
+
+@keyframes toggle-icon-pop
+  to
+    transform: translateY(100%)

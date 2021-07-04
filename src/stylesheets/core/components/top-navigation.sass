@@ -1,0 +1,52 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/top-navigation'
+
+//***********************************
+
+.top-navigation
+    align-items: center
+    border-bottom: $top-nav-border-bottom
+    display: flex
+    justify-content: center
+    margin-left: auto
+    max-width: $top-nav-max-width
+    padding: $top-nav-padding
+    width: 100%
+
+    &__list
+        align-items: flex-start
+        display: flex
+        justify-content: space-between
+        list-style: none
+        margin: 0
+        padding: 0
+        width: 100%
+
+    &__item
+        flex: 1 1 100%
+
+    &__link
+        border-bottom: $top-nav-link-border-bottom
+        color: $top-nav-link-color
+        display: block
+        font-size: $top-nav-link-font-size
+        font-weight: $top-nav-link-font-weight
+        padding: $top-nav-link-padding
+        position: relative
+        text-align: center
+        text-decoration: none
+        transition: color .2s
+        white-space: nowrap
+
+        +hover
+            color: $nav-link-hover-color
+
+        &--is-active
+            color: $nav-link-active-color
+
+
+    +breakpoint($top-nav-breakpoint)
+        display: none

@@ -1,0 +1,111 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: $white
+$psearch-padding: 20px 0
+
+//***********************************
+
+$psearch-input-border: none
+$psearch-input-focus-border: $brand-color
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: 24px
+$psearch-input-padding: 8px 0 8px 45px
+$psearch-input-radius: 0
+$psearch-input-radius-open: 0
+
+//***********************************
+
+$psearch-button-radius: 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: $base-color-light
+$psearch-clear-hover-fill: $brand-color
+
+//***********************************
+
+$psearch-input-radius-bp-small: 0
+$psearch-button-radius-bp-small: 0
+$psearch-input-radius-open-bp-small: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-search
+  position: relative
+
+  &__input
+    background: url(../../images/theme/mag-glass.svg) -11px center / 55px  transparent no-repeat
+    color: $base-color-dark
+    text-transform: uppercase
+
+    &::placeholder
+      color: rgba($base-color-dark, .6)
+
+  .button
+    display: none
+
+  &--global
+    margin: -10px 0
+    max-width: 350px
+    position: static
+
+    .programme-search__input
+      font-size: 17px
+
+    .react-autosuggest__suggestions-list:empty::after,
+    .react-autosuggest__suggestion
+        font-size: 13px
+
+  +breakpoint(900px)
+    &__input
+      font-size: 18px
+
+  +breakpoint(medium, min)
+    &--global
+      .programme-search__input
+        background: url(../../images/theme/mag-glass-white.svg) left center / 45px  transparent no-repeat
+        border-radius: 3px
+        border: 1px solid $iron
+        color: $white
+
+        &::placeholder
+          color: rgba($white, .6)
+
+  +breakpoint(medium)
+    padding: 10px 0
+
+    &--global
+      background: $white
+      padding: 5px 10px
+      position: absolute
+      left: 0
+      right: 0
+      max-width: none
+
+      .programme-search__input
+        border: none
+
+    .react-autosuggest
+      &__container
+        position: static
+
+      &__suggestions-container
+        border-radius: 0
+
+        &--open
+          border: none
+
+      &__section-title
+        border-radius: 0
+
+

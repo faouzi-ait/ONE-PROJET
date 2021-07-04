@@ -1,0 +1,49 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../../_theme/components/passport/map'
+
+//***********************************
+
+
+.map
+  width: $map-width
+  height: $map-height
+  padding-bottom: 40px
+
+  &__marker-circle
+    background-color: $marker-background-color
+
+  &__marker-circle--hotel
+    border-color: $hotel-marker-color
+
+  &__marker-circle--restaurant
+    border-color: $restaurant-marker-color
+
+  &__marker-circle--event
+    border-color: $event-marker-color
+
+  &__marker-stick--hotel
+    background-color: $hotel-marker-color
+
+  &__marker-stick--event
+    background-color: $event-marker-color
+
+  &__marker-stick--restaurant
+    background-color: $restaurant-marker-color
+
+  &__tooltip
+    position: relative
+    background-color: white
+    padding: 10px 10px
+    min-width: 100px
+    width: auto
+    border: 2px solid black
+    border-radius: 5px
+
+  &__tooltip--line
+    display: block
+
+  &__tooltip--address
+    margin-top: 10px

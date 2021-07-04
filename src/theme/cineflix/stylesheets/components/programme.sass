@@ -1,0 +1,113 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-image-radius: 8px
+$programme-image-spacing: 0
+
+//***********************************
+
+$programme-title-font-size: (15/16)+rem
+$programme-title-font-size-small: 14px
+
+//***********************************
+
+$programme-copy-font-size: 14px
+$programme-copy-color: $casper
+
+//***********************************
+
+$programme-icon-size: 60px
+$programme-icon-background: rgba($black, .2)
+$programme-icon-border: 2px solid $brand-color
+$programme-icon-radius: 100%
+
+//***********************************
+
+$programme-icon-arrow-size: 30px
+$programme-icon-arrow-color: $white
+
+//***********************************
+
+$programme-strip-bgc: $error-color
+$programme-strip-color: $white
+$programme-strip-font-size: 12px
+$programme-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme
+    position: relative
+
+    &__icon
+        z-index: 2
+
+    &__title
+        font-weight: 400
+        margin-top: 5px
+
+    &:not(.programme--video)
+        .programme__title
+            align-items: center
+            bottom: 0
+            color: $white
+            display: flex
+            font-size: (17/16)+rem
+            font-weight: 700
+            left: 0
+            line-height: 1.1
+            padding: 20px
+            pointer-events: none
+            position: absolute
+            right: 0
+            top: 0
+            justify-content: center
+            text-align: center
+
+    &__image
+        position: relative
+
+        &:after
+            background: rgba($black, .5)
+            bottom: 0
+            content: ''
+            left: 0
+            pointer-events: none
+            position: absolute
+            right: 0
+            top: 0
+            transition: background .2s
+
+        &:hover, &:focus
+
+            &:after
+                background: rgba($black, .7)
+
+
+    img.programme__logo:not(.banner__media)
+        max-width: 60%
+
+    &__logo
+        left: 50%
+        pointer-events: none
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+
+    .icon-button
+        background: $orient
+        border-radius: 50%
+        height: 30px
+        width: 30px
+
+        svg
+            fill: $white
+
+    &__strip
+        z-index: 10

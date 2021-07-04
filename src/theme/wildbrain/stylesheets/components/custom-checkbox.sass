@@ -1,0 +1,54 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$checkbox-size: 24px
+$checkbox-border: 2px solid $brand-color
+$checkbox-radius: 50%
+$checkbox-bg: $white
+$checkbox-bgsz: 13px 14px
+
+//***********************************
+
+$checkbox-border-color-selected: $brand-color-dark
+$checkbox-bg-selected: $brand-color-dark url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 14'%3E%3Cpath fill='%23ffffff' d='M4.9,14C4.9,14,4.9,14,4.9,14c0.5,0,0.9-0.3,1.1-0.7l6.8-11.2c0.4-0.7,0.2-1.5-0.4-1.9c-0.7-0.4-1.5-0.2-1.9,0.4l-5.8,9.5L2.4,7C2,6.4,1.1,6.3,0.5,6.8c-0.6,0.5-0.7,1.3-0.3,2l3.5,4.7C4,13.8,4.4,14,4.9,14'/%3E%3C/svg%3E") center center no-repeat
+
+//***********************************
+
+$checkbox-toggle-border: 2px solid $brand-color
+$checkbox-toggle-bgc: $white
+$checkbox-toggle-radius: 20px
+$checkbox-toggle-padding: 5px 10px
+
+//***********************************
+
+$checkbox-toggle-bgc-selected: $brand-color-dark
+$checkbox-toggle-color-selected: $white
+
+//***********************************
+
+$checkbox-label-disabled-color: grey
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .custom-checkbox
+    &__label
+        padding-left: 38px
+
+        &::before
+            top: -5px
+
+    &--toggle 
+        .custom-checkbox__label
+            font-size: 14px
+            padding-left: 10px
+            border-bottom-right-radius: 0
+
+        .custom-checkbox__input:checked + .custom-checkbox__label
+            border-color: $brand-color-dark

@@ -1,0 +1,220 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$card-base-color: $white
+$card-bgc: $cod-gray
+$card-border-radius: 10px
+$card-padding: 0 1.5rem
+
+//***********************************
+
+$card-title-color: $white
+$card-title-hover-color: $brand-color
+$card-title-margin: 0 0 10px
+$card-title-size: 30px
+$card-title-weight: 800
+
+//***********************************
+
+$card-date-color: $white
+$card-date-font-size: 14px
+$card-date-margin: -5px 0 10px
+
+//***********************************
+
+$card-copy-color: $white
+$card-copy-hover-color: $white
+$card-copy-margin: 0 0 10px
+$card-copy-size: $base-font-size
+$card-copy-weight: normal
+
+//***********************************
+
+$card-count-color: $white
+$card-count-background: $tundra
+$card-count-padding: 2px 12px
+$card-count-weight: bold
+$card-count-border-radius: 5px
+$card-count-spacing: 5px
+$card-count-offset: -3px
+
+//***********************************
+
+$card-toggle-position: relative
+$card-toggle-right: 0px
+$card-toggle-top: 0px
+$card-toggle-transform: none
+
+//***********************************
+
+$card-tags-margin: 5px -5px 5px 0
+$card-tag-margin: 0 5px 5px 0
+$card-tag-font-size: 10px
+$card-tag-color: $base-color-light
+$card-tag-border: 1px solid $base-color-light
+$card-tag-padding: 1px 10px 0
+$card-tag-radius: 4px
+
+//***********************************
+
+$card-active-shadow: 0 12px 5px rgba($base-color-dark, 0.2)
+
+//***********************************
+
+$card-small-content-padding: 0
+
+//***********************************
+
+$card-small-title-size: 14px
+
+//***********************************
+
+$card-icon-fill: $brand-color
+
+//***********************************
+
+$card-strip-bgc: $error-color
+$card-strip-color: $white
+$card-strip-font-size: 12px
+$card-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card
+  overflow: hidden
+  position: relative
+  z-index: 1
+
+  &__media-link
+    z-index: -1
+    &:after
+      background: linear-gradient(to bottom, rgba($cod-gray,0) 50%, rgba($cod-gray,1) 100%)
+      content: ""
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: 1
+
+  &__content
+    position: static
+    margin-top: -2rem
+
+  &--list,
+  &__media-link
+    border-radius: 0
+
+  &--list
+    .card__content
+      margin-top: -1rem
+
+      > div:first-child
+        display: flex
+        .card__title
+          margin: 0 0 0 0.5rem
+
+  &--active .card__media-link
+    opacity: 0.3
+
+  &--small
+    .card__content
+      margin-left: 10px
+      margin-right: 10px
+
+  &__count
+    font-size: 12px
+    margin-left: 5px
+
+  span.card__count
+    float: left
+    margin-top: 0
+
+    & + .card__copy
+      float: left
+
+  &__copy
+    display: flex
+    line-height: 21px
+
+  &__title
+    letter-spacing: -1px
+    line-height: 31px
+    &--inline
+      display: inline
+      margin-left: 0.5rem
+      line-height: 32px
+
+  &__actions
+    position: absolute
+    top: 0
+    right: 0
+    border-radius: 0
+    background-color: $brand-color
+    transform: none
+    padding: 0
+    z-index: 2
+
+    > *
+      margin: 5px
+
+  &__tag
+    text-transform: uppercase
+    font-weight: bold
+
+  .like
+    transform: none
+    top: 0
+    right: 0
+    &__trigger
+      border-radius: 0
+
+  &--poster
+    margin: 20px 20px 0px 0
+    .card__content
+      margin: 0
+
+  &__strip
+    bottom: auto
+    top: 0
+
+  &--draggable
+    .card__strip
+      left: 50%
+      transform: translateX(-50%)
+
+  &--person,
+  &--cast
+    .card__content
+      position: relative
+
+      > *
+        position: relative
+        z-index: 2
+
+      &:after
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(30,30,30,1) 100%)
+        bottom: calc(100% - 2rem)
+        content: ""
+        height: 180px
+        left: 0
+        position: absolute
+        width: 100%
+        z-index: 1
+
+.custom .report__title
+  ~.grid
+    .card
+      overflow: visible
+      &__content
+        margin: 0
+
+      &__copy
+        flex-flow: column

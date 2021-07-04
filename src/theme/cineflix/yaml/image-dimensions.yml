@@ -1,0 +1,17 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x580
+      Thumbnail: 370x198
+
+  - name: Programme
+    url: https://cineflix.rawnet.one/our-catalogue/2
+    components:
+      Banner: 3200x1460
+      Thumbnail: 1056x594
+      Logo: 280x130
+
+  - name: News Article
+    components:
+      Banner: 3200x580
+      Thumbnail: 560x350

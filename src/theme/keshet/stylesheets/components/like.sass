@@ -1,0 +1,32 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .like
+    &__trigger
+        &--its_ok
+            background-color: $base-color
+
+    &__button--ok:before
+        background-color: $base-color
+
+    +breakpoint(small)
+        &__menu
+            border-radius: 0
+            right: -10px
+            width: calc(50vw - 25px)
+
+            &:before,
+            &:after
+                left: auto
+                right: 10px

@@ -1,0 +1,24 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$grid-gutter: 28px
+$grid-margin-bottom: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .grid
+    &--right
+        justify-content: flex-end
+
+    +breakpoint(1000)
+        &--three
+             > *
+                width: calc(50% - #{$grid-gutter})
+
+    +breakpoint(medium)
+        &--three
+             > *
+                width: 100%

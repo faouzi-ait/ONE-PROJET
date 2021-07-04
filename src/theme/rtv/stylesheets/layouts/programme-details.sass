@@ -1,0 +1,27 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 80px
+$programme-details-border: 1px solid $athens-gray
+$programme-details-side-width: 280px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  +breakpoint(xlarge)
+    &__main
+      margin-right: 40px
+      padding-right: 40px
+
+  +breakpoint(large)
+    &__main
+      border: 0
+      border-bottom: $programme-details-border
+      margin: 0
+      margin-bottom: 30px
+      padding: 0
+      padding-bottom: 30px

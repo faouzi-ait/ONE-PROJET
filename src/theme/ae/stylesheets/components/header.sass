@@ -1,0 +1,126 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: rgba($shark, .3)
+$header-max-width: 1520px
+$header-padding: 20px 30px
+$header-welcome-color: $white
+$header-user-color: $brand-color
+$header-user-hover-color: $ziggurat
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+  position: fixed
+  transition: background-color .5s $easing
+
+  &--impersonating
+    top: 75px
+
+  &--sticky
+    background-color: $shark
+
+  .brand
+    margin-right: 50px
+    width: 83px
+
+    img
+      width: 100%
+
+  .text-button
+    color: $white
+    align-items: center
+    display: flex
+    font-size: 14px
+    font-weight: bold
+    text-transform: uppercase
+    margin-left: 20px
+    margin-right: 20px
+
+    +hover
+      color: $ziggurat
+      .button__icon
+        fill: $ziggurat
+
+  .mega-menu .text-button
+    stroke: $white
+    +hover
+      .button__icon
+        stroke: $ziggurat
+
+  .button
+    +hover
+      .button__icon
+        fill: $ziggurat
+
+  &--searching
+    background-color: $shark
+    .programme-search + .text-button
+      .button__icon
+        stroke: $white
+      +hover
+        .button__icon
+          stroke: $ziggurat
+
+  +breakpoint(1600, min)
+    .container
+      position: relative
+      transition: none
+
+  +breakpoint(1600px)
+    > .container
+      max-width: calc(88vw - 40px)
+
+  +breakpoint(largePlus)
+    > .container
+      max-width: none
+
+  +breakpoint(920px)
+    .container
+      > .text-button
+        display: none
+
+    .brand
+      margin-right: 20px
+      height: 40px
+
+  +breakpoint(720px)
+    .brand
+      margin-right: auto
+
+    .burger
+      margin-left: 20px
+
+    .text-button
+      font-size: 0
+      margin-left: 20px
+      margin-right: 0px
+      &:first-child
+        display: block
+
+      .button__icon
+        margin-right: 0
+
+      &--logout
+        font-size: 12px
+        margin-left: 0
+
+    &__controls
+      margin-left: 0
+      
+    &:not(.header--searching)
+      .text-button:nth-child(2)
+        display: none
+        &.text-button--acount
+          display: block
+
+    &--searching
+      .text-button:nth-child(3)
+        display: none

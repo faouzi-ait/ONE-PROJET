@@ -1,0 +1,36 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$actions-padding: 0
+$actions-background: $white
+
+//***********************************
+
+$actions-inner-display: flex
+$actions-inner-flex-wrap: wrap
+$actions-inner-align: center
+$actions-inner-justify: flex-end
+$actions-inner-margin: -10px -5px 0px 0px
+
+//***********************************
+
+$actions-item-margin: 10px 5px 0px 0px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .actions
+    .container
+        border-top: solid 1px $iron
+        padding: 20px 0
+
+    +breakpoint(1220)
+        margin-left: 20px
+        margin-right: 20px
+
+    +breakpoint(medium)
+        .container
+            border-top: none
+            

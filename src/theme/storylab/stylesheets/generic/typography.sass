@@ -1,0 +1,43 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$info-size: 14px
+$info-color: $base-color-light
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+  .heading
+    &--one
+      letter-spacing: -2.5px
+
+    &--two
+      letter-spacing: -1.5px
+
+    &--three
+      letter-spacing: -1px
+      margin-bottom: 5px
+
+    &--four
+      font-size: 16px
+      letter-spacing: -0.5px
+      margin-bottom: 5px
+
+  +breakpoint(large)
+
+    .heading
+      &--two
+        font-size: 26px
+
+  +breakpoint(small)
+
+    .heading
+      &--two
+        font-size: 20px

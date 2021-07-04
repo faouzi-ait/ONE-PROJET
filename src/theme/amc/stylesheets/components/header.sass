@@ -1,0 +1,88 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: transparent
+$header-max-width: 1480px
+$header-padding: 30px 20px
+$header-welcome-color: $white
+$header-user-color: $brand-color
+$header-user-hover-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+  padding: 35px 50px
+
+  &__welcome
+    font-weight: 600
+    margin-right: 0
+
+  .text-button
+    margin-right: 0
+
+    &:first-child:not(:last-child)
+      margin-right: 20px
+
+  .button
+    background-color: transparent
+    padding: 0 !important
+    border: none
+    width: 25px
+    height: 25px
+    min-width: 0
+
+    +hover
+      .button__icon
+        fill: $white
+
+    &__icon
+      fill: $brand-color
+      transition: fill .3s
+
+      &--close
+        margin: -1px 0 0 -1px
+
+
+  &__controls > *
+    margin-left: 40px
+
+  &--searching
+    background-color: $black
+
+  +breakpoint(large)
+    padding: 20px
+
+    &__controls > *
+      margin-left: 30px
+
+  +breakpoint(medium)
+    &__controls > *
+      margin-left: 20px
+
+  +breakpoint(small)
+    padding: 15px
+    &__controls > *
+      margin-left: 10px
+
+    .button,.button__icon
+      width: 20px
+      height: 20px
+
+    .button__icon--close
+      width: 16px
+      height: 16px
+
+  .burger
+    +hover
+      .burger__line
+        background-color: $white
+
+    &__line
+      transition: background-color .3s

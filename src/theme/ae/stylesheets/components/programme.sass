@@ -1,0 +1,84 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-image-radius: 12px
+$programme-image-spacing: 0
+
+//***********************************
+
+$programme-title-font-size: 16px
+$programme-title-font-size-small: 14px
+
+//***********************************
+
+$programme-copy-font-size: 14px
+$programme-copy-color: $casper
+
+//***********************************
+
+$programme-icon-size: 72px
+$programme-icon-background: rgba($casper, .8)
+$programme-icon-border: 2px solid $brand-color
+$programme-icon-radius: 100%
+
+//***********************************
+
+$programme-icon-arrow-size: 30px
+$programme-icon-arrow-color: $white
+
+//***********************************
+
+$programme-strip-bgc: $error-color
+$programme-strip-color: $white
+$programme-strip-font-size: 12px
+$programme-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme
+  border-radius: $programme-image-radius
+  z-index: 1
+
+  &__title
+    line-height: 1.1
+
+  > .programme__title
+    position: absolute
+    bottom: 17px
+    left: 17px
+    z-index: 2
+
+  &:after
+    background: linear-gradient(rgba($black, 0), $black)
+    content: ''
+    position: absolute
+    height: 50%
+    left: 0
+    right: 0
+    bottom: 0
+    pointer-events: none
+    z-index: 1
+
+
+  &__assets
+    .heading--two
+      text-transform: uppercase
+      border-bottom: solid 1px $oslo
+      padding-bottom: 20px
+
+  &__strip
+    background: url(../../../images/theme/lock.svg) no-repeat
+    padding: 0
+    width: 21px
+    height: 24px
+    text-indent: -99999px
+    top: 14px
+    left: 14px
+    bottom: auto

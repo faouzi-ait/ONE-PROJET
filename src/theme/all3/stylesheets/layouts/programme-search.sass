@@ -1,0 +1,93 @@
+c//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: transparent
+$psearch-padding: 0
+
+//***********************************
+
+$psearch-input-border: none
+$psearch-input-focus-border: $black
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: 36px
+$psearch-input-padding: 4px 0 4px 40px
+$psearch-input-radius: 0
+$psearch-input-radius-open: 0
+
+//***********************************
+
+$psearch-button-radius: 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: $base-color-light
+$psearch-clear-hover-fill: $brand-color
+
+//***********************************
+
+$psearch-input-radius-bp-small: 0
+$psearch-button-radius-bp-small: 0
+$psearch-input-radius-open-bp-small: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-search
+
+  &__input
+    background: url(../../images/theme/search.svg) 0 center / 26px no-repeat
+    color: $empress
+    font-weight: bold
+    letter-spacing: -1.6px
+
+  &__clear
+    background-color: transparent
+
+  .button
+    display: none
+
+  &--compact
+    .programme-search__input
+      letter-spacing: -1px
+
+  +breakpoint(large)
+    &--global
+      background:  $base-color-dark
+      right: 0
+      left: 0
+      top: 100%
+
+  +breakpoint(medium, min)
+    &:not(.programme-search--global):not(.programme-search--reporting):not(.programme-search--compact)
+      height: 0
+      transform: translateY(-124px)
+      position: relative
+      z-index: 10
+
+  +breakpoint(medium)
+    &:not(.programme-search--reporting):not(.programme-search--compact)
+      background:  $base-color-dark
+
+    .container
+      padding: 0
+
+    &__input
+      background-size: 22px
+      background-position: 18px center
+      font-size: 18px
+      letter-spacing: -1px
+      padding: 15px 20px 15px 50px
+
+  +breakpoint(small)
+    &__clear
+      padding: 0 10px
+
+  

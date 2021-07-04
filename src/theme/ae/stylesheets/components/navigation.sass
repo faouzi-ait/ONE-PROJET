@@ -1,0 +1,201 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$nav-bgc: transparent
+$nav-divide-color: none
+$nav-width: 100vw
+$nav-width-bp-large: 100vw
+
+//***********************************
+
+$nav-close-left: auto
+$nav-close-right: 40px
+$nav-close-top: 40px
+
+//***********************************
+
+$nav-item-divide-margin: 0
+$nav-item-divide-padding: 0
+
+//***********************************
+
+$nav-list-padding: 0 20px
+$nav-list-padding-bp-large: 0 20px
+
+//***********************************
+
+$nav-link-active-color: $white
+$nav-link-color: $white
+$nav-link-hover-color: $ghost
+$nav-link-padding: 15px 0
+
+//***********************************
+
+$sub-nav-margin: 0
+$sub-nav-padding: 0 0 0 57px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .navigation
+  pointer-events: none
+  transform: none
+
+  &__list,
+  .button
+    opacity: 0
+    transition: opacity .2s ease-out
+
+  .button
+    position: absolute
+    border: none
+    padding: 0
+
+    &__icon
+      stroke: $white
+
+    &:after
+      display: none
+
+    +hover
+      .button__icon
+        stroke: $ziggurat
+
+  &__list
+    margin: auto
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    box-sizing: border-box
+    max-width: 900px
+    max-height: 605px
+    width: 100%
+
+  &__item
+    padding-left: 100px
+
+  &__icon
+    fill: $white
+    position: absolute
+    top: 50%
+    left: -100px
+    transform: translateY(-50%) scale(0.8)
+
+  &__link
+    font-size: 24px
+    position: relative
+    font-weight: bold
+    line-height: 1
+
+    &--with-icon
+      font-size: 45px
+      text-transform: uppercase
+
+    +hover
+      .navigation__icon
+        fill: $ghost
+
+  &__sub-nav
+    list-style: none
+
+  &__sub-item
+    position: relative
+
+    .navigation__icon
+      padding-left: 57px
+
+  &:before
+    background: radial-gradient(at 150vw 110vw, $chambray, $bunker 50%)
+    clip-path: polygon(200vw 0, 0% 200vw, 200vw 200vw)
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0
+    opacity: 1
+    top: 100%
+    left: 100%
+    right: 0
+    transition: top .6s ease-in-out 0s,left .8s ease-out 0s
+
+  +breakpoint(largePlus)
+    &__list
+      max-height: 490px
+
+    &__link
+      font-size: 24px
+
+      &--with-icon
+        font-size: 40px
+        padding: 8px 0
+
+        .navigation__icon
+          transform: scale(0.66)
+          transform-origin: 100% -100%
+
+  +breakpoint(large)
+    &:before
+      clip-path: polygon(200vw 0, 0% 200vw, 200vw 500vw)
+
+  +breakpoint(small)
+    &__list
+      max-height: 90vh
+      display: block
+      overflow: auto
+  
+  +breakpoint(xsmall)
+    &:before
+      clip-path: none
+
+    &__item
+      padding-left: 60px
+
+    &__link
+      font-size: 18px
+
+      &--with-icon
+        font-size: 24px
+        padding: 8px 0
+
+        .navigation__icon
+          transform: scale(0.5)
+          transform-origin: left -50%
+          left: -50px
+
+.custom .nav-open 
+  height: 100vh
+  &:before
+    opacity: 0
+
+  .navigation
+    opacity: 1
+    pointer-events: auto
+    transform: none
+
+    &__list,
+    .button
+      opacity: 1
+      transition: opacity .4s ease-in .4s
+
+    &:before
+      transition: top .4s ease-in-out 0s,left .8s ease-out 0s
+      left: calc(-100vw + 90px)
+      top: calc(-100vw + 100px)
+
+  .header
+    .container
+      max-width: 100vw
+      transition: max-width .8s ease-in-out
+
+  +breakpoint(large)
+    .navigation
+      &:before
+        left: calc(-100vw + 75px)
+        top: calc(-100vw + 75px)
+
+  

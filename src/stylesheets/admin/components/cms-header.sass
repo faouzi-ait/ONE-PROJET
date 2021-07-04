@@ -1,0 +1,97 @@
+@import '../imports'
+.cms-header
+  bottom: 0
+  left: 0
+  padding-right: 12px
+  overflow: hidden
+  position: fixed
+  top: 0
+  transition: width .3s, transform .3s
+  transform: translateX(0)
+  z-index: 20
+  width: 190px
+
+  &--with-sub
+    width: 310px
+
+    & + main,
+    & + .main
+      margin-left: 310px
+      width: calc(100% - 310px)
+
+      .notification
+        right: -310px
+        width: auto
+
+    &.cms-header--wide
+      width: 490px
+
+      & + main,
+      & + .main
+        margin-left: 490px
+        position: static
+        width: calc(100% - 490px)
+
+        .notification
+          right: -490px
+
+    &.cms-header--icon-wide
+      width: 390px
+
+      & + main,
+      & + .main
+        margin-left: 390px
+        position: static
+        width: calc(100% - 390px)
+
+        .notification
+          right: -390px
+
+      .sub-navigation
+        width: 270px
+
+
+  &--collapsed
+    transform: translateX(calc(-100% + 32px))
+
+    .cms-header__toggle-icon
+      transform: rotate(0)
+
+    .cms-navigation__list,
+    .sub-navigation__list
+      opacity: 0
+
+    & + main,
+    & + .main,
+    &--with-sub + main,
+    &.cms-header--wide + main
+      margin-left: 20px
+      width: calc(100% - 20px)
+
+    &.cms-header--icon-wide + .main
+      margin-left: 290px
+      width: calc(100% - 290px)
+
+  &__toggle
+    background: $athens-gray
+    border: solid 1px $brand-color
+    border-radius: 50%
+    height: 30px
+    position: absolute
+    right: 0
+    width: 30px
+    top: 30px
+    z-index: 20
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &-icon
+      fill: $brand-color
+      transform: rotate(180deg)
+
+    +hover
+      background-color: $brand-color
+
+      .cms-header__toggle-icon
+        fill: $white

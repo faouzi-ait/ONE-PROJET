@@ -1,0 +1,43 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$actions-padding: 20px 0
+$actions-background: $background-color
+
+//***********************************
+
+$actions-inner-display: flex
+$actions-inner-flex-wrap: wrap
+$actions-inner-align: center
+$actions-inner-justify: flex-end
+$actions-inner-margin: -10px -5px 0px 0px
+
+//***********************************
+
+$actions-item-margin: 10px 5px 0px 0px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .actions
+  +breakpoint(1310, min)
+    position: relative
+
+    &__inner--centered
+      position: absolute
+      left: 45%
+      top: 80px
+      transform: translateX(-50%)
+
+  +breakpoint(medium)
+    & +.section
+      padding-top: 0
+
+  +breakpoint(large)
+    &__inner
+      justify-content: $actions-inner-justify
+
+      > *
+        width: auto

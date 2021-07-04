@@ -1,0 +1,54 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tag-bgc: $brand-color
+$tag-hover-bgc: none
+$tag-margin: 0 5px 5px 0
+$tag-padding: 4px 15px 6px
+$tag-radius: 20px
+
+//***********************************
+
+$tag-font-size: 14px
+$tag-font-weight: 900
+$tag-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tag
+  &__icon
+    fill: $white
+    width: auto
+
+  &--plain
+    background-color: transparent
+    border-radius: 0
+    color: $black
+    font-size: (12/16)+rem
+    font-weight: 500
+    padding: 0
+    
+
+  &--unlinked
+    margin: 0
+    text-decoration: none
+
+  @each  $genre, $color in $genre-colors
+    &--#{$genre}
+      background-color: map-get($genre-colors, $genre)
+      color: $black
+
+
+.custom a.tag
+
+  &--plain
+    text-decoration: underline
+    &:hover, &:focus
+      text-decoration: none

@@ -1,0 +1,74 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$modal-overlay-bgc: rgba($black, .8)
+$modal-overlay-padding: 20px
+$modal-overlay-padding-bp-small: 10px
+
+//***********************************
+
+$modal-warning-bgc: $error-color
+$modal-warning-color: $white
+
+//***********************************
+
+$modal-wrapper-bgc: $white
+$modal-wrapper-radius: 4px
+$modal-max-width: 1180px
+$modal-min-width: 300px
+
+//***********************************
+
+$modal-header-bgc: $cod-gray
+$modal-header-padding: 50px 50px 20px
+$modal-header-padding-bp-large: 40px 30px 15px
+$modal-header-padding-bp-medium: 30px 20px 15px
+$modal-header-padding-bp-small: 30px 15px 10px
+
+//***********************************
+
+$modal-content-bgc: $cod-gray
+$modal-content-padding: 30px 50px
+$modal-content-padding-bp-large: 30px
+$modal-content-padding-bp-medium: 20px
+$modal-content-padding-bp-small: 15px
+$modal-link-color: $brand-color
+$modal-link-weight: bold
+
+//***********************************
+
+$modal-close-color: $base-color-light
+$modal-close-hover-color: $brand-color
+
+//***********************************
+
+$modal-header-padding-filters: 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .modal
+  color: $white
+
+  &__search
+    input
+      background: left center / 50px url(../../images/theme/mag-glass.svg) $black no-repeat
+      border-bottom: none
+      font-weight: 800
+      color: $white
+      padding-left: 50px
+
+  &--filters
+    .modal__wrapper
+      max-width: none
+
+  &__wrapper
+    &--wide
+      max-width: 100%
+      width: 1180px

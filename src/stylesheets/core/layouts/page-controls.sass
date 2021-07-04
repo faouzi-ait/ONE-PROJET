@@ -1,0 +1,74 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/page-controls'
+
+//***********************************
+
+.page-controls
+  align-items: center
+  display: flex
+  padding: $page-controls-padding
+
+  &__left
+    margin-right: auto
+
+  &__center
+    margin: 0 auto
+
+  &__right
+    margin-left: auto
+
+  &__count
+    font-size: 24px
+    font-weight: bold
+
+  &__control
+    align-items: center
+    display: flex
+
+    > *
+      margin-right: 10px
+
+      &:last-child
+        margin-right: 0
+
+  .custom-select
+    width: auto
+    min-width: 190px
+
+  +breakpoint(large)
+    flex-wrap: wrap
+
+    &__count
+      font-size: 18px
+      width: 100%
+
+  +breakpoint(medium)
+    display: block
+    font-size: 14px
+
+    &__count
+      display: none
+
+    &__right,
+    &__control
+      margin-top: 10px
+      justify-content: center
+
+    .button
+      display: block
+      width: 100%
+
+    .text-button
+      display: block
+      margin: 10px auto
+
+    .per-page
+      justify-content: center
+      margin-left: 0
+
+      &__label
+        display: none
+

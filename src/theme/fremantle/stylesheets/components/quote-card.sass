@@ -1,0 +1,28 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$quote-card-padding: 18px 50px 18px 60px
+$quote-card-title-margin: 0 0 25px 0
+$quote-card-border-color: $abbey
+
+$quote-card-name-size: 18px
+$quote-card-author-size: 14px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .quote-card
+
+    +breakpoint(large)
+        padding-left: 20px
+        &__title
+            font-size: 18px
+
+    +breakpoint(small)
+        padding-left: 40px

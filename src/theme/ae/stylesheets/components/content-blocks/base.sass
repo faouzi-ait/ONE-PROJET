@@ -1,0 +1,196 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: $background-color
+$content-block-bg-shade: $base-color-dark
+$content-block-padding: 40px 0
+$content-block-container-padding: 0 40px
+$content-block-bg-brand: rgba($brand-color, .3)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block
+  &__heading
+    color: $white
+    margin: 0 0 30px
+    font-size: 20px
+    text-transform: uppercase
+    position: relative
+    padding-left: 23px
+    flex-wrap: wrap
+    line-height: 22px
+
+    .button
+      margin: -6px 0 -6px auto
+
+    &:before
+      @include title-marker
+      left: 0
+      top: 2px
+
+    span
+      margin: 0 10px 10px 0
+
+  &__sub-heading
+    color: $white
+
+  &__actions
+    display: flex
+    justify-content: flex-end
+
+  &__media
+    &--programme
+      width: 430px
+      max-width: 430px
+
+  &__image
+    border-radius: 12px
+
+  &__service
+    border: none
+    text-align: left
+
+    h3
+      font-size: 24px
+
+    p
+      font-size: 14px
+
+  &--genre-tags
+    .grid
+      width: 100%
+      
+    .grid__item
+      flex: 1 0 auto
+
+    .button
+      display: block
+
+  &--banner-carousel
+    .carousel
+      max-width: none
+      &__arrow
+        background: $oslo
+        border-radius: 50%
+        height: 50px
+        width: 50px
+
+        &:after
+          background: url('../../../../images/theme/right-arrow.svg') no-repeat
+          border: none
+          width: 25px
+          height: 18px
+          margin-top: -9px
+          margin-left: -12px
+
+        &:before
+          background: rgba($oslo, 0.4)
+          border-radius: 50px
+          content: 'SEE MORE'
+          display: flex
+          align-items: center
+          font-size: 14px
+          color: $white
+          height: 50px
+          padding: 0 15px
+          position: absolute
+          opacity: 0
+          top: 0
+          width: 118px
+          transition: opacity .3s
+
+        &--next
+          right: 30px
+          &:after
+            transform: none
+          &:before
+            right: 0
+
+        &--prev
+          left: 30px
+          &:after
+            transform: rotate(180deg)
+          &:before
+            left: 0
+            justify-content: flex-end
+
+        +hover
+          background-color: rgba($black, .8)
+          &:before
+            opacity: 1
+
+  &--contact-person
+    .container
+      text-align: center
+
+  &--text,
+  &--services
+    .container
+      max-width: 1180px
+
+  &--text
+    .wysiwyg:first-child:last-child
+      max-width: 780px
+      margin: 0 auto
+
+  &--quote
+    color: $white
+
+    blockquote
+      max-width: 470px
+      margin: 0 auto
+      padding: 30px 40px
+
+      h2
+        font-size: 24px
+        line-height: 1.1
+        margin: 0 0 15px
+
+      cite
+        color: $wildsand
+        font-style: normal
+        text-transform: uppercase
+
+  &--gallery
+    .carousel
+      overflow: inherit
+
+  &--most-popular,
+  &--gallery
+    .carousel__arrow
+      &--next
+        right: -20px
+
+      &--prev
+        left: -20px
+
+  +breakpoint(1400px)
+    &--banner-carousel
+      .carousel
+        &__arrow
+          opacity: .5
+
+          +hover
+            opacity: 1
+
+  +breakpoint(small)
+    padding-top: 40px
+    padding-bottom: 40px
+
+    &__heading
+      flex-direction: column
+      align-items: flex-start
+      margin-bottom: 20px
+
+      .button
+        margin: 5px 0
+
+.custom .mock-page__warning
+  color: $white

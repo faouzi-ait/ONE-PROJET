@@ -1,0 +1,114 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$react-select-bgc: transparent
+$react-select-color: $iron
+$react-select-border: 1px solid $white
+$react-select-radius: 4px
+$react-select-focused-border: $ghost
+$react-select-padding: 7px 0 3px 16px
+$react-select-height: 40px
+$react-select-width: 190px
+
+$react-select-single-padding: 7px 0 7px 16px
+$react-select-single-border: 1px solid $white
+
+//***********************************
+
+$react-select-placeholder-color: $iron
+
+//***********************************
+
+$react-select-value-bgc: $mako
+$react-select-value-radius: 14px
+$react-select-value-color: $white
+
+//***********************************
+
+$react-select-menu-border: 1px solid $base-color-light
+$react-select-menu-radius: 4px
+
+//***********************************
+
+$react-select-option-border: 1px solid shade($athens-gray, 5%)
+$react-select-option-padding: 10px
+$react-select-option-color: $white
+$react-select-option-focus-bgc: tint($brand-color, 80%)
+$react-select-option-focus-color: $base-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .Select
+  &-input
+    input
+      color: $white
+
+  &-value
+    border-radius: 4px
+    font-weight: bold
+
+  &-menu-outer
+    background: $background-color
+
+  &--single
+    .Select-control
+      &::after
+        background: $white
+        bottom: 0
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        width: 40px
+        z-index: 1
+
+    .Select-arrow-zone
+      background: 14px center url(../../images/theme/select-arrow.svg) no-repeat
+      display: block
+      padding-left: 40px
+      position: relative
+      z-index: 2
+
+    .Select-placeholder
+      color: $oslo
+
+    .Select-value,
+    .Select-placeholder
+      font-size: 14px
+
+    .Select-clear-zone
+      padding-right: 10px
+
+.custom:not(.admin) .react-datepicker
+  &__input-container
+    position: relative
+    input
+      background: transparent
+      color: $oslo
+
+    &::before
+      background: $white
+      border-radius: 0 4px 4px 0
+      bottom: 0
+      content: ''
+      pointer-events: none
+      position: absolute
+      right: 0
+      top: 0
+      width: 40px
+
+    &::after
+      background: 14px center url(../../images/theme/select-arrow.svg) no-repeat
+      right: 0
+      width: 40px
+
+  &__close-icon
+    top: 12px
+    right: 44px

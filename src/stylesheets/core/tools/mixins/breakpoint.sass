@@ -1,0 +1,33 @@
+//***********************************
+// Media query mixin
+//***********************************
+
+=breakpoint($name)
+  @if map-has-key($breakpoints, $name)
+    $key: map-get($breakpoints, $name)
+    @media screen and (max-width: $key + 'px')
+      @content
+  @else
+    @if type_of($name) == "number"
+      @media screen and (max-width: $name + 'px')
+        @content
+    @else
+      @warn 'Warning: `#{$name}` is not a valid breakpoint name.'
+
+
+  // Overloaded this mixin from AMC codebase.
+=breakpoint($name, $type: max)
+  $width: 0
+  $query: 0
+  @if map-has-key($breakpoints, $name)
+      $width: map_get($breakpoints, $name)
+  @else if type_of($name) == "number"
+      $width: $name
+  @else
+      @warn "Warning: `#{$name}` is not a valid breakpoint name."
+  @if $type == max
+      $query: $width - 1px
+  @else
+      $query: $width + px
+  @media screen and (#{$type}-width: $query)
+      @content

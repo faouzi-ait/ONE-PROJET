@@ -1,0 +1,468 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$card-base-color: $base-color
+$card-bgc: $white
+$card-border-radius: 10px
+$card-padding: 24px 30px
+
+//***********************************
+
+$card-title-color: $base-color
+$card-title-hover-color: $brand-color
+$card-title-margin: 0 0 10px
+$card-title-size: 16px
+$card-title-weight: bold
+
+//***********************************
+
+$card-date-color: rgba($base-color, .6)
+$card-date-font-size: 14px
+$card-date-margin: 10px 0 0
+
+//***********************************
+
+$card-copy-color: $base-color
+$card-copy-hover-color: $base-color
+$card-copy-margin: 0 0 10px
+$card-copy-size: 16px
+$card-copy-weight: normal
+
+//***********************************
+
+$card-count-color: $white
+$card-count-background: transparent
+$card-count-padding: 2px 12px
+$card-count-weight: normal
+$card-count-border-radius: 15px
+$card-count-spacing: 10px
+$card-count-offset: -3px
+
+//***********************************
+
+$card-toggle-position: absolute
+$card-toggle-right: 20px
+$card-toggle-top: calc(100% - 20px)
+$card-toggle-transform: translateY(-100%)
+
+//***********************************
+
+$card-tags-margin: 0 -10px -5px 0
+$card-tag-margin: 0 10px 5px 0
+$card-tag-font-size: 14px
+$card-tag-color: $brand-color
+$card-tag-border: none
+$card-tag-padding: 0
+$card-tag-radius: 0
+
+//***********************************
+
+$card-active-shadow: 0 4px 20px 0 rgba($black,0.5)
+
+//***********************************
+
+$card-small-content-padding: 10px
+
+//***********************************
+
+$card-small-title-size: 14px
+
+//***********************************
+
+$card-icon-fill: $white
+
+//***********************************
+
+$card-strip-bgc: $brand-color
+$card-strip-color: $white
+$card-strip-font-size: 12px
+$card-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card
+    box-shadow: 0 4px 20px 0 rgba($black,0.5)
+    display: flex
+    flex-direction: column
+    position: relative
+
+    > div:not(.card__content)
+        flex: 0 0 auto
+
+    &:after 
+        background: $tyrian url(../../../images/theme/select-arrow-white.svg) 48% no-repeat
+        border-radius: 100px 100px 0 0
+        bottom: 10px
+        content: ''
+        height: 60px
+        position: absolute
+        right: 5px
+        transform: rotate(-90deg)
+        width: 50px
+        z-index: 2
+        pointer-events: none
+
+    +hover
+        &:after 
+            background-color: $brand-color
+
+    .like
+        bottom: 20px
+        right: 65px
+        top: auto
+        z-index: 2
+        transform: none
+
+    &__copy 
+        font-family: $sub-font-family
+        a
+            font-weight: bold
+
+    .people__mail-link,
+    &__mailto
+        color: $brand-color
+
+    &__date
+        margin-top: auto
+        text-transform: uppercase
+
+    &__media
+        margin-right: 1px
+        margin-bottom: 1px
+        width: calc(50% - 1px)
+
+    &__media-link
+        margin-right: -1px
+        margin-bottom: -1px
+
+        .card__media
+         &:first-of-type:last-of-type
+            width: calc(100% - 1px)
+
+    &__display-icon
+        right: 115px
+        top: auto
+        bottom: 27px
+
+    &__move-icon
+        left: auto
+        right: 15px
+        top: 15px
+
+    &__actions
+        padding-right: 0
+
+        > *
+            margin-right: 0
+
+    &__tag
+        font-weight: bold
+        text-transform: uppercase
+
+    &__count
+        align-self: flex-start
+        margin-bottom: 0
+        height: 31px
+        padding: 0
+        position: relative
+        vertical-align: middle
+
+        span
+            align-items: flex-end
+            bottom: 0
+            color: $white
+            display: flex
+            font-size: 12px
+            font-weight: bold
+            justify-content: center
+            left: 0
+            padding-bottom: 5px
+            position: absolute
+            right: 0
+            top: 0
+
+        + .card__copy
+            font-family: $sub-font-family
+            font-size: 14px
+            display: inline-block
+            opacity: .4
+            vertical-align: middle
+
+        svg
+            fill: $brand-color
+
+    &__content
+        flex: 1 0 auto
+
+    &__icon
+        background: $brand-color
+        border-radius: 0 0 100px 100px
+        height: 50px
+        right: 
+        width: 50px
+
+    &--active
+        .card__media-link
+            &::after
+                display: block
+                background: $white
+                content: ''
+                opacity: .8
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: calc(100% - 1px)
+
+    &:not(.card--catalogue)
+        transition: background .3s
+        .card__content
+            display: flex
+            flex-direction: column
+
+    &--poster
+        box-shadow: none
+
+        .card__title
+            font-size: 26px
+
+    &--person,
+    &--cast,
+    &--location
+        background: transparent
+        box-shadow: none
+
+        &:after 
+            display: none
+
+        .card__media
+            margin: 0
+
+        .card__title
+            margin-bottom: 6px
+            font-size: 26px
+
+        .card__copy
+            font-size: 14px
+            margin-bottom: 6px
+
+            a
+                font-size: 16px
+
+                &.people__mail-link
+                    font-size: 13px
+
+            span
+                margin-bottom: 5px
+
+
+        .card__content
+            padding: 20px 0
+
+    &--video
+        .card__media-link
+            &::before,
+            &::after
+                content: ""
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                pointer-events: none
+                z-index: 3
+
+            &::before
+                width: 50px
+                height: 50px
+                background-color: $white
+                border-radius: 50%
+
+            &::after
+                border-style: solid
+                border-width: 10px 0 10px 16px
+                border-color: transparent transparent transparent $brand-color
+                margin-left: 2px
+
+    &--catalogue,
+    &--video
+        background: linear-gradient(180deg, $tyrian, $jacaranda)
+        height: 480px
+
+        .card__content
+            bottom: 0
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            left: 0
+            padding: 30px 60px 30px 30px
+            position: absolute
+            right: 0
+            top: 0
+            z-index: 2
+
+        .card__title
+            color: $white
+            font-size: 36px
+            line-height: 1.2
+            letter-spacing: -1px
+            margin-bottom: 10px
+
+            &--small
+                font-size: 18px
+
+        .card__copy
+            color: $white
+            max-height: 0
+            opacity: 0
+            overflow: hidden
+            margin-bottom: 0
+            transition: max-height .3s, opacity .3s, margin-bottom .3s
+
+        .card__strip
+            border-radius: 0 0 4px 4px
+            bottom: auto
+            top: 0
+            left: 30px
+            text-transform: uppercase
+            letter-spacing: 1px
+
+        .card__actions
+            right: 10px
+            transform: none
+
+        +hover
+
+            .card__copy
+                max-height: 140px
+                margin-bottom: 10px
+                opacity: 1
+
+            .card__media-link + .card__content 
+                .card__title
+                    color: $white
+
+        &.card--with-like
+            &:after
+                display: none
+
+            .card__tags
+                padding-right: 140px
+
+    &--catalogue
+        .card__media-link
+            border-radius: 10px 50% 50% 0
+            height: 75%
+            margin: 0
+            width: calc(100% - 20px)
+
+            &:before
+                background: linear-gradient(180deg, rgba($black,0) 0%, $black 100%)
+                bottom: 0
+                content: ''
+                left: 0
+                position: absolute
+                height: 40%
+                width: 100%
+                transition: background .4s
+                z-index: 1
+
+            .card__media:first-of-type:last-of-type
+                width: 100%
+
+    &--list
+        &:after
+            display: none
+
+        .card__content
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+            padding: 15px 20px
+            transition: background .4s
+
+        +hover
+            .card__media-link
+                ~ .card__content 
+                    background-color: $tyrian
+                    .card__title,
+                    .card__copy
+                        color: $white
+
+    +breakpoint(1320px)
+        &--catalogue,
+        &--video
+            height: 35vw
+
+    +breakpoint(1000px)
+        &--catalogue,
+        &--video
+            height: 48vw
+
+
+    +breakpoint(800px)
+        &--catalogue,
+        &--video
+            &:after,
+            .card__content:before,
+            .card__content:after
+                height: 30px
+                width: 30px
+
+            .card__content
+                padding: 15px
+
+                &:before
+                    right: 30px
+
+                &:after
+                    bottom: 30px
+
+            .card__tags
+                padding-right: 20px
+
+    +breakpoint(medium)
+        &--catalogue,
+        &--video
+            height: 53vw
+
+            .card__title
+                font-size: 24px
+
+                &--small
+                    font-size: 18px
+
+
+    +breakpoint(xsmall)
+        &--catalogue,
+        &--video
+            height: 90vw
+
+.custom .grid--four .card
+
+    +breakpoint(medium, min)
+        &--catalogue,
+        &--video
+            height: 26vw
+
+    +breakpoint(1320, min)
+        &--catalogue,
+        &--video
+            height: 350px
+
+.custom .list-modal .card
+    &__content
+        padding-top: 1em
+
+.custom .card-group .card
+    &--catalogue,
+        &--video
+        .card__title
+            font-size: 28px
+
+    

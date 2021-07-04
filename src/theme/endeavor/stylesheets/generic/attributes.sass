@@ -1,0 +1,32 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$attr-border: 1px solid $iron
+$attr-bgc: $athens-gray
+$attr-margin: 0 0 20px 0
+$attr-font-size: 17px
+$attr-cell-padding: 5px 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .attributes
+    border: $attr-border
+    &__cell
+        border-top-width: 0
+        
+        &:first-child
+            font-weight: 500
+
+    &__row
+        &:nth-child(even)
+            background-color: $attr-bgc
+
+        &:nth-child(odd)
+            background-color: $white

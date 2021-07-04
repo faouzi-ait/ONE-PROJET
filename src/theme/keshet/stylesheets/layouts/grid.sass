@@ -1,0 +1,29 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$grid-gutter: 20px
+$grid-margin-bottom: 20px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .grid
+    +breakpoint(small)
+      display: flex
+      margin-right: -10px
+
+      > *:not(.tweet)
+        margin-right: 10px
+        width: calc(50% - 10px)
+
+        .card
+          &__content
+            padding: 10px
+
+          &__media-link:after
+            display: none
+
+          &__tags
+            margin-top: -20px

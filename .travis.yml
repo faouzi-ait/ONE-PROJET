@@ -1,0 +1,13 @@
+language: node_js
+cache:
+  yarn: true
+node_js:
+- '10.14.0'
+script:
+- npm test
+notifications:
+  slack:
+    on_failure: always
+    on_success: change
+    rooms:
+      - rawnet:uT8j6gbU1RpxOVmgozTh7paX#rawnet-one-dev

@@ -1,0 +1,105 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$show-hide-border: solid 5px $gallery
+
+//***********************************
+
+$show-hide-wrap-align: flex-start
+$show-hide-wrap-display: flex
+
+//***********************************
+
+$show-hide-title-flex: 1
+$show-hide-title-font-family: $base-font-family
+
+//***********************************
+
+$show-hide-trigger-background: transparent
+$show-hide-trigger-border-radius: 0
+$show-hide-trigger-width: 2px
+$show-hide-trigger-flex: none
+$show-hide-trigger-size: 38px
+$show-hide-trigger-spacing: 10px
+
+//***********************************
+
+$show-hide-arrow-width: 2px
+$show-hide-arrow-color: $brand-color
+$show-hide-arrow-size: 8px
+
+//***********************************
+
+$show-hide-wrap-icon-button-margin: 17px
+$show-hide-gap: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .show-hide
+  padding-top: 0
+
+  > *
+    padding: 0
+
+    &:last-child
+      margin-bottom: 25px
+
+  &__wrap
+    margin: 25px 0
+
+  &__trigger
+    background: url('../../../images/theme/chevron-down.svg') center no-repeat
+    border: none
+
+    &:before
+      display: none
+
+  &:first-child
+    border-top: none
+
+    .show-hide__wrap
+      margin-top: 0
+
+  &--active
+    .show-hide__trigger
+      background: url('../../../images/theme/chevron-down.svg') center no-repeat
+      transform: rotate(-180deg)
+
+  &__title
+    display: inline-block
+    font-size: 25px
+    line-height: 1
+    margin-right: 5px
+    margin-bottom: 3px
+    
+    &-wrap
+      display: block
+      position: relative
+      padding-right: 110px
+      
+      .tag
+        position: absolute
+        right: 0
+        top: 10px
+
+
+  &__sub-title
+    font-size: 11px
+    font-weight: 600
+    margin: 0
+    letter-spacing: 1px
+    text-transform: uppercase
+
+  .text-button
+    display: block
+
+  +breakpoint(small)
+    &__title
+      font-size: 22px

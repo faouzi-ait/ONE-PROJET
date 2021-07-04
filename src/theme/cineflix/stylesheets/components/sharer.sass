@@ -1,0 +1,39 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$sharer-bg: transparent
+$sharer-padding: 20px 20px 60px
+$sharer-color: $mako
+$sharer-font-size: 18px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .sharer
+    &__link
+        background: $delta
+        border: 2px solid $delta
+        height: 44px
+        width: 44px
+
+        &:hover,
+        &:focus
+            background: $white
+
+            .sharer__icon
+                fill: $delta
+    &__item
+        margin: 0 10px
+
+    &__icon
+        color: $white
+
+
+    &--footer
+        padding: 10px 20px 20px

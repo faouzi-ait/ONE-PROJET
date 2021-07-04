@@ -1,0 +1,50 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 40px 0
+$section-bgc: $bright-gray
+$section-shade-bgc: $bright-gray
+
+//***********************************
+
+$section-copy-color: $gallery
+$section-copy-hover-color: $gallery
+$section-copy-margin: 0 0 20px
+$section-copy-size: $base-font-size
+$section-copy-weight: normal
+
+//***********************************
+
+$section-header-text-align: left
+
+//***********************************
+
+$section-actions-align: right
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+
+  &--shade
+    background: linear-gradient(180deg, $bright-gray 0%, $charade 100%)
+
+    .page-controls
+        padding-top: 0
+
+        &__left
+          margin-top: 0
+          margin-bottom: 0
+
+  &__header
+    color: $spun-pearl
+    font-size: 26px
+    line-height: 1.2
+    text-transform: uppercase
+    margin: 0 0 30px
+
+  +breakpoint(medium)
+    &__header
+      margin-bottom: 10px

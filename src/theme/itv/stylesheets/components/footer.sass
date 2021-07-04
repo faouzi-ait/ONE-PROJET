@@ -1,0 +1,96 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$footer-bgc: $bright-gray
+$footer-padding: 0 0 80px
+
+//***********************************
+
+$footer-brand-margin: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .footer
+
+  .container
+    border-top: solid 1px rgba($white, .4)
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 80px 0 10px
+
+  .brand
+    width: 160px
+    img
+      height: 59px
+
+  &__nav
+    margin-top: 0
+
+  &__item
+    border-right: none
+    text-transform: uppercase
+
+  &__list
+    justify-content: center
+
+  &__link
+    padding: 5px 20px
+
+  .sharer
+    width: 180px
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    padding-bottom: 0
+
+  &__social-icon
+    display: block
+    width: 40px
+    height: 40px
+    margin-left: 15px
+
+  &__foot
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin-top: 40px
+
+    &-item
+      margin: 0 10px
+      font-size: 12px
+      color: $spun-pearl
+
+  +breakpoint(1220)
+    padding-left: 20px
+    padding-right: 20px
+
+  +breakpoint(medium)
+    .container
+      flex-wrap: wrap
+      justify-content: center
+
+    .brand
+      margin-bottom: 10px
+      width: auto
+
+    &__list
+      margin-bottom: 10px
+
+    &__link
+      display: block
+      padding: 5px 10px
+
+    .sharer
+      justify-content: center
+
+    &__foot
+      margin-top: 60px

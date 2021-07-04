@@ -1,0 +1,127 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 10px
+
+//***********************************
+
+$carousel-group-background: $dove-gray
+$carousel-group-border-radius: 0
+$carousel-group-color: $white
+$carousel-group-font-size: 10px
+$carousel-group-margin: 0 $carousel-spacing 20px 0
+$carousel-group-padding: 4px 15px
+
+//***********************************
+
+$carousel-arrow-background-color: $base-color
+$carousel-arrow-background-size: 70px
+$carousel-arrow-color: $white
+$carousel-arrow-size: 10px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: none
+$carousel-arrow-hover-background-color: $base-color
+$carousel-arrow-border-radius: 0
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 0
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 10px
+$carousel-dots-margin: 20px 0 0 0
+$carousel-dots-radius: 100%
+$carousel-dots-border: 2px solid $white
+$carousel-dots-size: 10px
+$carousel-dots-active-background: $white
+
+//***********************************
+
+$carousel-scroll-spacing: 25px
+$carousel-scroll-height: 4px
+$carousel-scroll-background: $abbey
+$carousel-scroll-handle-background: $white
+$carousel-scroll-handle-radius: 0
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 5px
+$carousel-pager-padding: 20px 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+    .banner
+        &__content
+            padding-left: 0
+            padding-right: 0
+
+    &--2-items,
+    &--3-items
+    .banner
+        .button:last-child,
+        &__actions
+            position: static
+
+
+    +breakpoint(medium)
+        &__dots
+            margin-top: 15px
+
+        &--fixed-dots
+            .carousel__dots
+                position: static  
+
+.custom:not(.admin) .carousel
+    &__pager
+        color: $white
+        margin-right: 0
+
+        .carousel__arrow
+            display: none
+
+        > *
+            margin-right: 0
+
+
+    &__arrow
+        height: 60px
+        top: 30px
+        transform: none
+        
+        &:after
+            content: none
+
+        &--prev
+            left: auto
+            right: 0
+            top: 90px
+            border-top: solid 1px $abbey
+
+        &--next
+            right: 0
+
+        &[disabled]
+            opacity: 1
+
+            .carousel__arrow-icon
+                fill: $abbey

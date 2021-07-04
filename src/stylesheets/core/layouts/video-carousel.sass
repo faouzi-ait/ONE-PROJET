@@ -1,0 +1,59 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/video-carousel'
+
+//***********************************
+
+.video-carousel
+  &__copy
+   font-size: $base-font-size
+
+  &__controls
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    .button
+      margin-left: auto
+
+  &__select-filters
+    display: flex
+
+  &__select-filter-row
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 8px
+
+  &__select
+    display: flex
+    align-items: center
+    margin-right: 8px
+
+    span
+      margin-right: 8px
+
+    .custom-select
+      width: 300px
+
+  +breakpoint(xlarge)
+    &__select-filters
+      flex-direction: column
+
+    &__select
+      span
+        min-width: 80px
+
+  +breakpoint(large)
+    &__controls
+      flex-wrap: wrap
+      justify-content: center
+
+  +breakpoint(medium)
+    &__select
+      flex-direction: column
+      align-items: flex-start
+      justify-content: end
+      min-height: 55px
+

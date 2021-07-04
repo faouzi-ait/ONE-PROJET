@@ -1,0 +1,82 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .video-carousel
+  position: relative
+  margin-bottom: 50px
+
+  &__heading
+    font-size: 24px
+    margin: 0 auto 0 0
+    text-transform: uppercase
+
+  &__select-filters
+    position: relative   
+    width: auto
+
+    &:after
+      content: ''
+      background: $background-color
+      height: 35px
+      width: 30px
+      position: absolute
+      top: calc(100% + 56px)
+      left: 100%
+      z-index: 10
+
+  &__select
+    
+    .custom-select
+      min-width: 160px
+      width: auto
+
+  .bulk-manager
+    min-width: 0
+    position: absolute
+    bottom: -60px
+    right: 20px
+
+  +breakpoint(1410, min)
+    .bulk-manager
+      right: calc(50vw - 680px)
+
+  +breakpoint(1600, min)
+    .bulk-manager
+      right: 125px
+
+  +breakpoint(xlarge)
+    &__select-filters
+      flex-direction: row
+
+    &__select
+      span
+        min-width: 80px
+
+  +breakpoint(medium)
+    &__heading
+      font-size: 24px    
+
+  +breakpoint(small, min)
+    &__controls
+      border-bottom: solid 1px $oslo
+      padding-bottom: 20px
+      margin-bottom: 36px
+
+  +breakpoint(small)
+    margin-bottom: 75px
+    &__heading
+      font-size: 18px    
+
+    .bulk-manager
+      bottom: -100px
+
+    &__select-filters
+      padding-bottom: 10px
+
+      &:after
+        display: none

@@ -1,0 +1,80 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 20px
+
+//***********************************
+
+$carousel-group-background: $white
+$carousel-group-border-radius: 3px
+$carousel-group-color: $mako
+$carousel-group-font-size: 12px
+$carousel-group-margin: 0 $carousel-spacing 10px 0
+$carousel-group-padding: 3px 10px
+
+//***********************************
+
+$carousel-arrow-background-color: $brand-color
+$carousel-arrow-background-size: 60px
+$carousel-arrow-color: $white
+$carousel-arrow-size: 12px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: none
+$carousel-arrow-hover-background-color: $downy
+$carousel-arrow-border-radius: 3px
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 0
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 20px 0 0 0
+$carousel-dots-radius: 100%
+$carousel-dots-border: 1px solid $brand-color
+$carousel-dots-size: 10px
+$carousel-dots-active-background: $brand-color
+
+//***********************************
+
+$carousel-scroll-spacing: 20px
+$carousel-scroll-height: 6px
+$carousel-scroll-background: $white
+$carousel-scroll-handle-background: $brand-color
+$carousel-scroll-handle-radius: $carousel-scroll-height * 2
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 10px
+$carousel-pager-padding: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+  &__pager
+    font-size: 15px
+    margin-top: 20px
+
+  +breakpoint(medium)
+    .banner__content
+      padding-left: 0
+      padding-right: 0

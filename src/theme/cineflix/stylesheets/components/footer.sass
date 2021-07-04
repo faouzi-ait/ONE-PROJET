@@ -1,0 +1,59 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$footer-bgc: $white
+$footer-padding: 40px 0 20px
+
+//***********************************
+
+$footer-brand-margin: 0 auto
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .footer
+    margin-top: -40px
+    position: relative
+
+    &__logo-tagline
+        color: $base-color
+        font-size: 12px
+        margin: 0 0 5px
+    
+    &__list
+        justify-content: center
+
+    &__copy
+        margin: 0
+
+    &__nav
+        margin: 0
+
+    &__link
+        color: $mako
+
+    &__bottom
+        align-items: center
+        border-top: 1px solid $geyser
+        color: $mako
+        display: flex
+        font-size: (12/16)+rem
+        font-weight: 400
+        justify-content: space-between
+        margin-top: 20px
+        padding-top: 20px
+        width: 100%
+
+    .brand
+        max-width: 210px
+        margin: 0 auto
+
+    +breakpoint(small)
+        &__bottom
+            flex-direction: column

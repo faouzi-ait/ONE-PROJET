@@ -1,0 +1,39 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/add-meeting'
+
+//***********************************
+
+.add-meeting
+  align-items: center
+  background: $add-meeting-background
+  border-radius: $add-meeting-radius
+  border: $add-meeting-border
+  box-sizing: border-box
+  cursor: pointer
+  display: flex
+  height: $add-meeting-size
+  justify-content: center
+  transition: background-color .2s
+  width: $add-meeting-size
+
+  +hover
+    background: $add-meeting-background-hover
+
+    .add-meeting__icon
+      fill: $add-meeting-icon-fill-hover
+
+  &__icon
+    fill: $add-meeting-icon-fill
+    flex: none
+    height: $add-meeting-icon-size
+    transition: fill .2s
+    width: $add-meeting-icon-size
+
+    &--large
+      position: relative
+      z-index: 3
+      height: $add-meeting-icon-size-large
+      width: $add-meeting-icon-size-large

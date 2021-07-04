@@ -1,0 +1,51 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$checkbox-size: 32px
+$checkbox-border: 1px solid $wildsand
+$checkbox-radius: 5px
+$checkbox-bg: $background-color
+$checkbox-bgsz: 19px 19px
+
+//***********************************
+
+$checkbox-border-color-selected: $wildsand
+$checkbox-bg-selected: $bluewood url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 17'%3E%3Cpath fill='%23ffffff' d='M16.8379 0.00379612C16.277 0.00379612 15.7862 0.284226 15.4006 0.72491C12.1054 4.49075 9.58144 7.6156 6.56668 11.1411L3.51687 8.17646C2.64048 7.29509 1.30838 7.37523 0.537163 8.33672C-0.234054 9.33827 -0.163943 10.8606 0.677384 11.742C0.71244 11.7821 0.747495 11.8221 0.78255 11.8221L5.33974 16.229C6.18107 17.0302 7.40801 16.9901 8.17922 16.1088C11.9652 11.782 14.6645 8.3367 18.3453 4.09012C19.1866 3.16869 19.1866 1.64632 18.3803 0.684833C17.9947 0.244149 17.4338 -0.036266 16.8379 0.00379612Z'/%3E%3C/svg%3E") center center no-repeat
+
+//***********************************
+
+$checkbox-toggle-border: 1px solid $wildsand
+$checkbox-toggle-bgc: $background-color
+$checkbox-toggle-radius: 3px
+$checkbox-toggle-padding: 4px 27px
+
+//***********************************
+
+$checkbox-toggle-bgc-selected: $white
+$checkbox-toggle-color-selected: $base-color
+
+//***********************************
+
+$checkbox-label-disabled-color: grey
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .custom-checkbox
+  &__label
+    display: flex
+    align-items: center
+    min-height: 34px
+    padding-left: 52px
+
+.custom:not(.admin) .custom-checkbox
+  &__label
+    &:before
+      background-color: transparent
+  

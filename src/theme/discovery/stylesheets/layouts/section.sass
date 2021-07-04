@@ -1,0 +1,46 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 40px 0
+$section-bgc: transparent
+$section-shade-bgc: $porcelain
+
+//***********************************
+
+$section-copy-color: $base-color
+$section-copy-hover-color: $base-color
+$section-copy-margin: 0 0 20px
+$section-copy-size: $base-font-size
+$section-copy-weight: normal
+
+//***********************************
+
+$section-header-text-align: left
+
+//***********************************
+
+$section-actions-align: right
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+  &--shade
+      background: linear-gradient(180deg, $porcelain 0%, $white 420px, $white 100%)
+
+  &--brand
+    background-color: $shark
+
+    .programme__title
+      color: $white
+
+  &__header
+    font-size: 40px
+    margin: 0 0 20px
+    text-transform: uppercase
+
+  +breakpoint(medium)
+    &__header
+      font-size: 28px

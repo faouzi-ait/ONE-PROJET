@@ -1,0 +1,57 @@
+//***********************************
+
+@import '../../_theme/components/news'
+
+
+.news
+  &__categories-filter
+    display: flex
+    flex-direction: row
+
+  &__featured
+    .card
+      display: flex
+      flex-direction: row
+
+      &__media-link
+        width: 38%
+        display: flex
+        justify-content: center
+        align-items: center
+
+      &__title
+        font-size: 30px
+
+      &__content
+        padding-top: 80px
+        flex-basis: 45%
+
+  &__date
+    font-size: 12px
+
+  .page-controls .Select-control
+    min-width: 300px
+
+
+  +breakpoint(small)
+    &__featured
+      .card
+        flex-direction: column
+
+        &__media-link
+          display: block
+          width: 100%
+
+          .card__media:first-of-type:last-of-type
+            margin: 0
+            width: 100%
+
+        &__content
+          padding-top: 20px
+
+  +breakpoint(xsmall)
+
+    &__categories-filter
+      flex-direction: column
+      .Select
+        margin-top: 10px

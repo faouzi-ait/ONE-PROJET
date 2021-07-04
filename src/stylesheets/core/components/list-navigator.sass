@@ -1,0 +1,124 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/list-navigator'
+
+//***********************************
+
+.list-navigator
+  border: 1px solid $base-color-light
+  display: flex
+  height: calc(100vh - 385px)
+  min-height: 420px
+
+  &__column
+    background-color: $white
+    border-right: 1px solid $base-color-light
+    display: flex
+    flex: 1
+    flex-direction: column
+    width: 25%
+
+    &:last-child
+      border-right: none
+
+    &--small
+      width: 20%
+
+    &--large
+      width: 35%
+
+    &--equal
+      width: 33.333%
+
+    &--half
+      width: 50%
+
+  &__title
+    background-color: $base-color-light
+    font-size: $list-nav-title-size
+    margin: 0
+    padding: $list-nav-title-padding
+
+  &__no-results
+    color: $base-color-light
+    font-size: 14px
+    left: 0
+    margin: 0
+    position: absolute
+    right: 0
+    text-align: center
+    top: 50%
+    transform: translateY(-100%)
+
+  &__scroller
+    flex: 1
+    overflow: auto
+    position: relative
+
+    .loader
+      transform: translate(-50%, -50%) scale(.5)
+
+  &__list
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__tabs
+      margin: $list-nav-tabs-margin
+
+  &__item
+    align-items: center
+    cursor: pointer
+    display: flex
+    font-size: 14px
+    padding: 10px 20px
+    transition: color .2s, background-color .2s
+    justify-content: space-between
+
+    .count
+      margin-top: 1px
+
+    +hover
+      color: $brand-color
+
+    &--is-active
+      background-color: tint($brand-color, 80%)
+
+      .list-navigator__icon
+        opacity: 1
+
+      +hover
+        color: $base-color
+
+    &--centered
+      align-items: center
+
+      .toggle
+        margin-right: 10px
+
+  &__icon
+    align-self: center
+    fill: $brand-color
+    opacity: 0
+    transition: opacity .2s
+
+  &__actions
+    background-color: $brand-color
+    padding: $list-nav-actions-padding
+
+  &__search
+    background-color: $list-nav-search-bg
+    border-bottom: 1px solid $base-color-light
+    padding: $list-nav-search-padding
+
+  &__search-input
+    box-sizing: border-box
+    min-width: 0
+    width: 100%
+
+  &__action
+    box-sizing: boerder-box
+    display: block
+    width: 100%

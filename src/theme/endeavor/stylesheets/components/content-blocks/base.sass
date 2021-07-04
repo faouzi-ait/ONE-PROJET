@@ -1,0 +1,85 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: $white
+$content-block-bg-shade: $athens-gray
+$content-block-padding: 70px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: rgba($downy, .4)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block
+  &__heading
+    font-size: 24px
+    margin-bottom: 20px
+
+  &--promo-carousel
+    .carousel
+      padding-bottom: 20px
+      margin-bottom: -20px
+
+  &--banner-carousel
+    .carousel
+      &__dots
+        bottom: 20px
+
+      &__dot
+        border-color: $white
+
+        &--active
+          background-color: $white
+
+  &--text
+    
+    &.content-block--image
+      .wysiwyg
+        color: $white
+        max-width: 600px
+
+  &--cast
+    .card__content
+      padding: 10px
+
+  &--light
+    .carousel__scroll-track
+      background: $athens-gray
+
+  +breakpoint(xlarge, min)
+    &--most-popular
+      .carousel__arrow
+        &--prev
+          left: -70px
+        &--next
+          right: -70px
+
+
+  +breakpoint(large, min)
+     &--text
+      .grid
+        align-items: center
+        .content-block
+          &__media
+            width: calc(62.5% - 20px)
+
+        .wysiwyg
+          box-sizing: border-box
+          padding-left: 30px
+          padding-right: 30px
+          width: calc(37.5% - 20px)
+
+  +breakpoint(large)
+    padding-top: 40px
+    padding-bottom: 40px
+
+  +breakpoint(medium)
+    &__heading
+      margin: 0 0 10px
+      font-size: 18px

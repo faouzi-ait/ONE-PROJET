@@ -1,0 +1,29 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/delete'
+
+//***********************************
+
+.delete
+  background-color: $delete-bgc
+  border-radius: $delete-radius
+  border: $delete-border
+  cursor: pointer
+  height: $delete-size
+  padding: $delete-padding
+  transition: background-color .3s, border .3s
+  width: $delete-size
+
+  +hover
+    border: $delete-border-hover
+    background-color: $delete-bgc-hover
+    .delete__icon
+      fill: $delete-fill-hover
+
+  &__icon
+    display: block
+    fill: $delete-fill
+    margin: 0 auto
+    transition: fill .3s

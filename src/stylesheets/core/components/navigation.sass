@@ -1,0 +1,83 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/navigation'
+
+//***********************************
+
+.navigation
+  background-color: $nav-bgc
+  bottom: 0
+  max-width: 100%
+  position: fixed
+  right: 0
+  top: 0
+  transform: translateX(100%)
+  transition: transform .5s $easing
+  width: $nav-width
+  z-index: 20
+
+  .nav-open &
+    transform: translateX(0)
+
+  .button
+    font-size: 0
+    left: $nav-close-left
+    position: absolute
+    right: $nav-close-right
+    top: $nav-close-top
+    z-index: 1
+
+    &__icon
+      fill: $white
+
+  &__list
+    -webkit-overflow-scrolling: touch
+    bottom: 0
+    left: 0
+    list-style: none
+    margin: 0
+    overflow: auto
+    padding: $nav-list-padding
+    position: absolute
+    right: 0
+    top: 0
+
+  &__item
+
+    &--divide
+      border-bottom: 1px solid $nav-divide-color
+      margin: $nav-item-divide-margin
+      padding: $nav-item-divide-padding
+
+  &__link
+    color: $nav-link-color
+    display: block
+    padding: $nav-link-padding
+    text-decoration: none
+    transition: color .2s
+
+    +hover
+      color: $nav-link-hover-color
+
+    &.button-nav
+      padding: 10px 20px
+      margin: auto auto 20px auto
+      text-align: center
+
+    &--is-active
+      color: $nav-link-active-color
+
+  &__sub-nav
+    margin: $sub-nav-margin
+    padding: $sub-nav-padding
+
+  &__sub-item
+    position: relative
+
+  +breakpoint(large)
+    width: $nav-width-bp-large
+
+    &__list
+      padding: $nav-list-padding-bp-large

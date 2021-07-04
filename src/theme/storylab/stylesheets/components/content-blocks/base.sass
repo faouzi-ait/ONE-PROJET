@@ -1,0 +1,257 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: transparent
+$content-block-bg-shade: $black
+$content-block-padding: 40px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: $brand-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block
+    &__heading
+        +heading(2)
+        display: flex
+        justify-content: space-between
+
+    &--light
+
+        &:not(.content-block--banner-carousel) + &
+            padding-top: 40px
+
+    .container
+        max-width: 1180px
+        width: calc(100% - 40px)
+
+    &--brand
+        background: linear-gradient(180deg, $fuscous, $mine-shaft)
+
+    &--brand,
+    &--shade
+        color: $gray
+
+        .wysiwyg
+            h1,h2,h3
+                color: $white
+
+        .content-block__heading
+            +heading(2)
+            color: $white
+            border-bottom: 3px solid $gray
+            padding-bottom: 10px
+
+        .card--location
+            .card__title
+                color: $white
+
+            .card__copy
+                color: $gray
+
+            .card__mailto
+                color: $white
+                font-size: 14px
+
+                +hover
+                    color: $white
+                    text-decoration: underline
+
+        .tweet__title,
+        .tweet__handle,
+        .tweet__copy,
+        .tweet__date
+            color: $white
+
+    &--text.content-block--image,
+    &--locations
+        .container
+            max-width: 1360px
+
+    &--text.content-block--image
+        box-sizing: border-box
+        color: $white
+        display: flex
+        flex-direction: column
+        justify-content: center
+        position: relative
+        height: 566px
+
+        .content-block__image
+            max-height: 486px
+            width: auto
+
+        .wysiwyg
+            h1
+                text-indent: -4px
+            p
+                font-size: 26px
+                font-weight: bold
+                line-height: 1.4
+            a
+                color: $white
+
+            > *
+                position: relative
+                z-index: 5
+
+        .grid
+            .wysiwyg
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                &:after
+                    background: linear-gradient(90deg, $black, rgba($black,0))
+                    content: ''
+                    height: 100%
+                    left: 0
+                    position: absolute
+                    top: 0
+                    width: 50%
+
+            .content-block__media + .wysiwyg
+                margin-left: auto
+                &:after
+                    left: auto
+                    right: 0
+                    transform: rotate(180deg)
+
+            .wysiwyg__button
+                background: url('../../../../images/theme/arrow-btn.svg') no-repeat
+                border: none
+                display: block
+                height: 32px
+                font-size: 0
+                margin-left: -8px
+                text-indent: -99999px
+                padding: 0
+                width: 32px
+
+    &--quote
+        blockquote
+            color: $cod-gray
+            margin: 0 auto
+            max-width: 780px
+            padding: 25px 40px
+            position: relative
+
+            &::after
+                background: $cod-gray
+                content: ''
+                display: block
+                left: 0
+                height: 100%
+                position: absolute
+                top: 0
+                width: 6px
+
+        h2
+            +heading(2)
+            line-height: 1.15
+            letter-spacing: -2.8
+            margin: 0 0 20px
+
+        cite
+            font-style: normal
+
+    &--video
+        background-color: $black
+
+    .tabs
+        border: none
+        justify-content: center
+
+        &__item
+            border: 2px solid $brand-color
+            flex: 0
+            min-width: 220px
+
+    &--banner-carousel
+        .carousel__arrow
+            top: 50%
+
+    +breakpoint(1500)
+        &--text.content-block--image
+            background-position: 70% 0
+
+
+    +breakpoint(xlarge, min)
+        &--text.content-block--image
+
+            .grid
+                .wysiwyg
+                    width: 35%
+
+    +breakpoint(medium, min)
+
+        &--text
+            .wysiwyg
+                &:first-child:last-child
+                    margin: 0 auto
+                    max-width: 780px
+
+            &.content-block--image
+                .wysiwyg:first-child:last-child
+                    text-align: center
+
+        &--text:not(.content-block--image)
+            .grid--two
+                align-items: center
+                justify-content: space-between
+                > *
+                    width: calc(46% - 20px)
+
+    +breakpoint(medium)
+        padding-top: 20px
+        padding-bottom: 20px
+
+        &--banner-carousel
+            padding-top: 0
+            padding-bottom: 0
+
+        &--text.content-block--image
+            background-size: auto calc(240px + 20%)
+            background-repeat: no-repeat
+            background-position: top center
+            justify-content: flex-end
+            height: auto
+            padding-top: 0
+            padding-bottom: 0
+
+            .content-block__media
+                display: none
+
+            .wysiwyg
+                h1
+                    text-indent: -2px
+
+            .container
+                background: linear-gradient(rgba($black,0) 240px, $black calc(240px + 20%), $black 100%)
+                padding-top: 240px
+                padding-bottom: 20px
+
+            .grid
+                .wysiwyg
+                    padding-bottom: 0
+                    p
+                        font-size: 21px
+                        line-height: 1.25
+                    &:after
+                        display: none
+
+                .content-block__media + .wysiwyg
+                    &:after
+                        transform: none
+
+        .content-block--banner-carousel
+            .banner__image
+                left: auto
+                right: 0
+                transform: translateY(-50%)

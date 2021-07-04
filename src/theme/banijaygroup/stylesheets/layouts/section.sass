@@ -1,0 +1,91 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 80px 0
+$section-bgc: $white
+$section-shade-bgc: $tyrian
+
+//***********************************
+
+$section-copy-color: $base-color-dark
+$section-copy-hover-color: $base-color-dark
+$section-copy-margin: 0 0 50px
+$section-copy-size: 20px
+$section-copy-weight: normal
+
+//***********************************
+
+$section-header-text-align: left
+
+//***********************************
+
+$section-actions-align: right
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+
+    &--collapse + .section
+        padding-top: 40px
+
+    &__header
+        font-size: 36px
+        line-height: 1.2
+        margin-bottom: 40px
+        margin-top: 0
+
+        &:last-child
+            margin-bottom: 0
+
+    &--shade,
+    &--brand
+        &__header
+        color: $white
+
+    &--brand
+        background: url(../../images/theme/section-brand-bg.png) no-repeat left center $tyrian
+        background-size: auto calc(100% - 100px)
+
+        .section__header
+            font-size: 52px
+
+    &--shade + .section--shade,
+    &--brand + .section--shade,
+    &--shade + .section--brand,
+    &--brand + .section--brand,
+    &:not(.section--shade):not(.section--brand) + .section:not(.section--shade):not(.section--brand)
+        padding-top: 10px
+
+    &--centered
+        .section__header
+            text-align: center
+
+    &--shade
+        .panel-section__title,
+        .slide-toggle__label
+            color: $white
+
+        .actions
+            background-color: $tyrian
+
+    &--compact
+        padding: 10px 0 40px
+
+    +breakpoint(large)
+        padding: 70px 0
+
+    +breakpoint(medium)
+        padding: 40px 0
+
+        &__header
+            font-size: 26px
+
+        &--brand
+            background-size: calc(100% - 100px) auto
+            background-position: top left
+
+            .section__header
+                font-size: 36px

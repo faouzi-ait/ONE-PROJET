@@ -1,0 +1,106 @@
+
+@import '../imports'
+
+$paginator-margin: 40px 0
+
+$paginator-button-spacing: 0.7rem
+$paginator-button-color: #2a2f2f
+$paginator-button-border: 2px solid $brand-color
+$paginator-button-bgc: $white
+$paginator-button-padding: 5px
+$paginator-button-size: 34px
+$paginator-button-active-color: $white
+$paginator-button-active-bgc: $brand-color
+
+//***********************************
+
+$paginator-ellipsis-bgc: $white
+$paginator-ellipsis-color: #2a2f2f
+
+//***********************************
+
+$paginator-arrow-padding: 5px
+$paginator-previous-radius: 4px
+$paginator-next-radius: 4px
+$paginator-disabled-arrow-bgc: tint($brand-color, 35%)
+
+.cms-paginator
+  align-items: center
+  display: flex
+  justify-content: center
+  margin: $paginator-margin
+
+  &__arrow
+    font-size: 0
+
+    &--previous
+      margin-right: $paginator-button-spacing
+
+  &__icon
+    pointer-events: none
+
+  &__button,
+  &__arrow
+    background-color: $paginator-button-bgc
+    border: $paginator-button-border
+    color: $paginator-button-color
+    cursor: pointer
+    font-family: $base-font-family
+    font-weight: bold
+    height: $paginator-button-size
+    margin-right: $paginator-button-spacing
+    min-width: $paginator-button-size
+    outline: none
+    padding: $paginator-button-padding
+    text-align: center
+    border-radius: 4px
+
+    svg
+      fill: $paginator-button-color
+
+    &--is-active
+      background-color: $paginator-button-active-bgc
+      color: $paginator-button-active-color
+      pointer-events: none
+
+  &__ellipsis
+    border: $paginator-button-border
+    background-color: $paginator-ellipsis-bgc
+    color: $paginator-ellipsis-color
+    display: inline-block
+    font-weight: bold
+    height: 30px
+    margin-right: $paginator-button-spacing
+    text-align: center
+    width: 30px
+    border-radius: 4px
+    line-height: 30px
+
+  &__end
+    display: flex
+
+  &__arrow
+    font-size: 0
+    padding: $paginator-arrow-padding
+
+    &--is-disabled
+      display: none
+
+    &--previous
+      border-radius: $paginator-previous-radius
+
+    &--next
+      border-radius: $paginator-next-radius
+
+  &__icon
+    fill: $paginator-button-color
+    pointer-events: none
+
+  .Select:not(:first-child)
+    margin-left: 20px
+
+  .Select-control
+    min-width: 110px
+
+  .Select.Select--single .Select-multi-value-wrapper
+    max-width: 100%

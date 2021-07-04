@@ -1,0 +1,124 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//*********************************** 
+
+$menu-bgc: $background-color
+$menu-radius: 10px
+$menu-top: calc(100% + 30px)
+$menu-width: 1200px
+$menu-padding: 90px 20px 90px 100px
+
+$menu-list-padding: 0
+
+$menu-item-width: 25%
+$menu-item-spacing: 10px
+
+$menu-link-color: $white
+$menu-link-hover-color: $ziggurat
+$menu-link-font-size: 24px
+$menu-link-font-weight: bold
+
+$menu-sub-list-padding: 30px 0 0
+$menu-sub-item-padding: 3px 0
+
+$menu-close-spacing: 28px
+$menu-close-icon-fill: $oslo
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .mega-menu
+  &__popout
+    &:before
+      content: url('../../../images/theme/mega-menu-tip.svg')
+      bottom: calc(100% - 20px)
+      position: absolute
+      left: 165px
+
+  &__link
+    line-height: 1
+
+  &__close
+    border: none
+    position: absolute
+
+    &:after
+      display: none
+
+    .button__icon
+      stroke: $menu-close-icon-fill
+
+    &.button
+      position: absolute
+
+    +hover
+      .button__icon
+        stroke: $ziggurat
+
+  &__item
+    position: relative
+    &:before
+      left: -20px
+      top: 2px
+
+    @each $genre, $color in $genre-colors
+
+      &--#{$genre}:before
+        background: linear-gradient(map-get($color, 'light'), map-get($color, 'dark'))
+
+  &__sub-item
+    .mega-menu__link
+      font-size: 18px
+      font-weight: normal
+
+  +breakpoint(1600, min)
+    &__popout
+      left: 20px
+
+  +breakpoint(largePlus)
+    &__popout
+      padding: 50px 20px 20px 60px
+
+  +breakpoint(medium)
+    &__popout
+      border-radius: 0
+      box-sizing: border-box
+      height: 100vh
+      overflow: auto
+
+    &__sub-list
+      padding-top: 15px
+
+.custom .menu-open .mega-menu
+  +breakpoint(1600)
+    &__popout
+      left: calc(3vw + 30px)
+      top: calc(100% + 10px)
+      &:before
+        left: 215px
+
+  +breakpoint(largePlus)
+    &__popout
+      left: 20px
+      max-width: calc(100vw - 40px)
+
+      &:before
+        left: 200px
+
+  +breakpoint(920px)
+    &__popout
+
+      &:before
+        left: 170px
+        
+
+  +breakpoint(medium)
+    &__popout
+      left: 0
+      max-width: none
+      top: 0

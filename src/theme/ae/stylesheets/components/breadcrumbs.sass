@@ -1,0 +1,59 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$breadcrumbs-bgc: transparent
+$breadcrumbs-padding: 20px 0
+
+//***********************************
+
+$breadcrumbs-item-color: $oslo
+$breadcrumbs-item-margin: 0 3px 0 0
+$breadcrumbs-item-padding: 0 3px 0 0
+
+//***********************************
+
+$breadcrumbs-link-color: $oslo
+$breadcrumbs-link-hover-color: $ziggurat
+$breadcrumbs-link-size: 12px
+
+//***********************************
+
+$breadcrumbs-seperator-width: 6px
+$breadcrumbs-seperator-height: 10px
+$breadcrumbs-seperator-bg: none
+
+//***********************************
+
+$breadcrumbs-border-color: $athens-gray
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .breadcrumbs
+  &__item
+    font-weight: bold
+    &:after
+      color: $oslo
+      content: '/'
+      margin-left: 6px
+      position: relative
+
+  &--bordered
+    .breadcrumbs__list
+      border: none
+
+  &__list
+    flex-wrap: wrap
+
+  +breakpoint(medium)
+    display: block
+
+  +breakpoint(medium)
+    & + .section
+      padding-top: 20px

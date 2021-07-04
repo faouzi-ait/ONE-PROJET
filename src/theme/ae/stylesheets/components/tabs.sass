@@ -1,0 +1,91 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tabs-background: $rhino
+$tabs-border: 1px solid $oslo
+$tabs-spacing: 30px
+$tabs-active-color: $white
+$tabs-padding: 13px 10px
+$tabs-border-radius: 6px
+
+//***********************************
+
+$tabs-item-font-size: 16px
+$tabs-item-weight: bold
+$tabs-item-background: transparent
+
+//***********************************
+
+$tabs-select-margin: 0 0 20px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tabs
+  &__item
+    color: $white
+    text-transform: uppercase
+
+  &--underline
+    border-radius: $tabs-border-radius
+    .tabs
+      &__item
+        border: $tabs-border
+        padding-bottom: 16px
+
+        &:first-child
+          border-radius: $tabs-border-radius 0 0 $tabs-border-radius
+
+        &:last-child
+          border-radius: 0 $tabs-border-radius $tabs-border-radius 0
+
+        &--active
+          background-color: $tabs-background
+
+      &__title
+        font-size: 20px
+
+  &__sub
+    font-size: 14px
+    text-transform: none
+    font-weight: normal
+
+  &--radio
+    border-radius: 0
+
+    .tabs__icon
+      pointer-events: none
+
+    .tabs__item
+      background-color: $oslo
+      border-radius: 3px
+
+      &--active
+        background-color: $white
+        color: $mirage
+
+        .tabs__icon
+          fill: $mirage
+          transform: translateY(-50%) rotate(180deg)
+
+    .custom-checkbox
+
+      &__label
+        display: block
+        text-align: center
+        text-transform: none
+        padding: $tabs-padding
+
+  +breakpoint(medium)
+    &--radio
+      .tabs__item
+        font-size: 16px
+
+      .tabs__icon
+        display: none

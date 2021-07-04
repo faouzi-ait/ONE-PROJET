@@ -1,0 +1,82 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/paginator'
+
+//***********************************
+
+.paginator
+  align-items: center
+  display: flex
+  justify-content: center
+  margin: $paginator-margin
+
+  &__arrow
+    font-size: 0
+
+    &--previous
+      margin-right: $paginator-button-spacing
+
+  &__icon
+    pointer-events: none
+
+  &__button,
+  &__arrow
+    background-color: $paginator-button-bgc
+    border: $paginator-button-border
+    color: $paginator-button-color
+    cursor: pointer
+    font-family: $base-font-family
+    font-size: $base-font-size
+    font-weight: bold
+    height: $paginator-button-size
+    margin-right: $paginator-button-spacing
+    min-width: $paginator-button-size
+    outline: none
+    padding: $paginator-button-padding
+    text-align: center
+
+    &--is-active
+      background-color: $paginator-button-active-bgc
+      color: $paginator-button-active-color
+      pointer-events: none
+
+  &__ellipsis
+    background-color: $paginator-ellipsis-bgc
+    color: $paginator-ellipsis-color
+    display: inline-block
+    font-weight: bold
+    height: $paginator-button-size
+    margin-right: $paginator-button-spacing
+    text-align: center
+    width: $paginator-button-size
+
+  &__end
+    display: flex
+
+  &__arrow
+    font-size: 0
+    padding: $paginator-arrow-padding
+
+    &--is-disabled
+      background-color: $paginator-disabled-arrow-bgc
+
+    &--previous
+      border-radius: $paginator-previous-radius
+
+    &--next
+      border-radius: $paginator-next-radius
+
+  &__icon
+    fill: $paginator-button-color
+    pointer-events: none
+
+  .Select:not(:first-child)
+    margin-left: 20px
+
+  .Select-control
+    min-width: 110px
+
+  .Select.Select--single .Select-multi-value-wrapper
+    max-width: 100%

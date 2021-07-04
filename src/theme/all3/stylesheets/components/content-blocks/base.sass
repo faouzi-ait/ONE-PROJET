@@ -1,0 +1,263 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: transparent
+$content-block-bg-shade: $base-color-dark
+$content-block-padding: 50px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: $base-color-dark
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block, 
+.custom .mock-page .content-block
+  > .container
+    overflow: visible
+
+  &--light + .content-block--light,
+  &--shade + .content-block--shade
+    padding-top: 1px
+
+  &__heading
+    font-size: 36px
+    letter-spacing: -1.6px
+    margin: 0 0 25px
+
+    .button
+      margin-left: auto
+      letter-spacing: 0
+
+  &--shade,
+  &--brand
+    color: $white
+    .content-block__heading,
+    blockquote,
+    .content-block__service,
+    .show-hide,
+    .tweet__title,
+    .tweet__copy,
+    .carousel__counter,
+    .contact,
+    .statistic,
+    .account-manager__title,
+    .account-manager__text
+        color: $white
+
+    .button:not(.button--filled),
+    .wysiwyg .wysiwyg__button a
+      color: $white
+      +hover
+        color: $base-color
+
+  &--brand
+    background-image:  url('../../../../images/theme/banner-bg.png')
+    background-repeat: no-repeat
+    background-size: auto 100%
+
+  &--banner-carousel
+    .carousel
+      &__arrow
+        &--prev
+          top: calc(50% - 22px)
+
+        &--next
+          top: calc(50% - 74px)
+
+      &__dot
+        border-color: $brand-color
+
+        &--active
+          background-color: $brand-color
+
+    + .content-block
+      padding-top: 50px
+
+  &--promo-carousel
+    .container
+      position: relative
+
+    .content-block
+
+      &__heading
+        max-width: 380px
+
+    .carousel
+      margin-bottom: 25px
+
+    .tabs
+      position: absolute
+      border: none
+      margin: 0
+      top: -80px
+      right: 30px
+      max-width: calc(100% - 380px)
+
+      &__item
+        border: solid 2px transparent
+        border-radius: 3px
+        font-size: 16px
+        font-weight: 600
+        padding: 12px 20px
+        min-width: 0
+
+        &--active 
+          background-color: transparent
+          border-color: $brand-color  
+
+  &--stats
+    .grid__item
+      padding: 10px
+      box-sizing: border-box
+      width: calc(25% - 10px)
+
+    .statistic
+      &__detail
+        display: block
+
+  &--most-popular
+    position: relative
+
+    .carousel
+      position: static
+
+      &__list
+        overflow: visible
+
+  &--gallery
+    .carousel
+      overflow: inherit
+      position: static
+
+  &--quote
+  blockquote
+    max-width: 850px
+    margin: 0 auto
+    padding-left: 30px
+    padding-right: 30px
+    position: relative
+
+    &::after
+      background: $brand-color
+      content: ''
+      display: block
+      left: 0
+      height: 100%
+      position: absolute
+      top: 0
+      width: 4px
+
+    h2
+      font-size: 36px
+      line-height: 1.1
+      margin-bottom: 20px
+
+    cite
+      font-size: 11px
+      font-style: normal
+      font-weight: bold
+      letter-spacing: 3px
+      opacity: .5
+      text-transform: uppercase
+
+  +breakpoint(1350, min)
+    &--text
+
+      .wysiwyg        
+
+        &:first-child      
+          padding-left: 20px
+ 
+
+  +breakpoint(large, min)
+    &--text
+      padding-bottom: 20px
+
+      .wysiwyg
+        box-sizing: border-box
+        width: calc(55% - 140px)
+        margin-left: 110px
+        max-width: 650px
+  
+        &:first-child      
+          margin-left: auto
+          margin-right: 110px
+
+        &:first-child:last-child
+          margin-right: auto
+          max-width: 780px
+
+      .grid
+        align-items: center
+        
+      > .container
+        padding: 0
+        max-width: none
+
+      .content-block__media
+        width: calc(45% - 30px)
+
+        &--programme
+          width: auto
+          max-width: 410px
+
+          &.content-block__media--left
+            margin: 0 0 0 155px
+            border-radius: 0 5px 5px 0
+
+          &.content-block__media--right
+            margin-left: 0
+            margin-right: auto
+            border-radius: 5px 0 0 5px
+
+          & + .wysiwyg
+            max-width: 780px
+            width: auto
+
+        &--right
+          + .wysiwyg
+            margin-left: auto   
+            margin-right: 110px 
+
+  @media screen and (max-width: '1350px') and (min-width: '1025px')
+    &--text
+      .content-block__media
+        &--right
+          + .wysiwyg
+            margin-left: 20px  
+      
+  +breakpoint(900)
+    &--stats
+      .grid__item
+        width: calc(50% - 10px)
+
+  +breakpoint(small)
+    padding-top: 30px
+    padding-bottom: 30px
+
+    &--light + .content-block--light,
+    &--shade + .content-block--shade
+      padding-top: 1px
+
+    &__heading
+      font-size: 22px
+      letter-spacing: -1px
+      margin-bottom: 15px
+      
+    &--stats
+      .grid__item
+        width: 100%
+
+    &--text
+      padding-bottom: 20px
+
+    &--banner-carousel
+      + .content-block
+        padding-top: 30px
+

@@ -1,0 +1,80 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tabs-background: $brand-color
+$tabs-border: 2px solid $tabs-background
+$tabs-spacing: 30px
+$tabs-active-color: $white
+$tabs-padding: 10px
+$tabs-border-radius: 100px
+
+//***********************************
+
+$tabs-item-font-size: 16px
+$tabs-item-weight: 700
+$tabs-item-background: transparent
+
+//***********************************
+
+$tabs-select-margin: 0 0 20px 0
+
+//***********************************
+
+.cms-tabs
+  border: $tabs-border
+  border-radius: $tabs-border-radius
+  display: flex
+  margin-bottom: $tabs-spacing
+  overflow: hidden
+
+  &__item
+    appearance: none
+    background-color: $tabs-item-background
+
+    border: none
+    border-right: $tabs-border
+    cursor: pointer
+    flex: 1
+    font-size: $tabs-item-font-size
+    font-weight: $tabs-item-weight
+    margin: 0
+    outline: none
+    padding: $tabs-padding
+
+    &:last-child
+      border-right: none
+
+    &--active
+      background: $tabs-background
+      color: $tabs-active-color
+
+  &__icon
+    fill: $base-color
+    margin-right: 15px
+
+  &__select
+    margin: $tabs-select-margin
+
+  &__sub
+    display: block
+    margin-top: 5px
+
+  .sub-navigation &
+    border-radius: 3px
+    border-color: $athens-gray
+
+    &__item
+      background-color: $tabs-background
+      border-color: $athens-gray
+      color: $athens-gray
+      font-size: 14px
+
+      &--active
+        background-color: $athens-gray
+        border-color: $athens-gray
+        color: $base-color

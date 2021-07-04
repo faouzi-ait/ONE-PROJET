@@ -1,0 +1,52 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 20px 0
+$section-bgc: $cod-gray
+$section-shade-bgc: $base-color-dark
+
+//***********************************
+
+$section-copy-color: $white
+$section-copy-hover-color: $base-color
+$section-copy-margin: 0 0 20px
+$section-copy-size: $base-font-size
+$section-copy-weight: normal
+
+//***********************************
+
+$section-header-text-align: left
+
+//***********************************
+
+$section-actions-align: center
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+  color: $white
+
+  &__header
+    font-size: map-get($heading-sizes, 3)
+    font-weight: 900
+    text-transform: uppercase
+
+  &--shade
+    color: $white
+
+    .section__copy,
+    .form__input
+      color: $white
+
+  &--light
+    background: $white
+    color: $black
+
+    .section__copy
+      color: $black
+
+    .tabs__item
+      color: $black

@@ -1,0 +1,249 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 600px
+$banner-tablet-min-height: 540px
+$banner-mobile-min-height: 480px
+$banner-short-min-height: 280px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 100px 0 60px 28px
+$banner-tablet-content-padding: 80px 0 40px
+$banner-content-width: 700px
+
+//***********************************
+
+$banner-intro-min-height: 280px
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 100px 0 50px 28px
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 20px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  align-items: flex-end
+  box-sizing: border-box
+  padding-left: 50px
+  padding-right: 50px
+
+  &::after
+    background: linear-gradient($base-color-dark 1%, transparent 33%)
+
+  .container
+    padding: 0
+    max-width: 1480px
+
+  &__wrap-title
+    margin-top: 50px
+
+  &__title
+    display: inline
+    line-height: 1.3
+    text-transform: uppercase
+    box-shadow: -28px -12px 0 $black, 28px 7px 0 $black, 28px -12px 0 $black, -28px 7px 0 $black
+    background-color: $black
+
+  &__copy
+    color: $white
+    display: inline
+    position: relative
+
+  &__content
+    max-width: 700px
+
+    .tag--unregistered
+      position: absolute
+      top: 0
+
+  &__wrap-copy
+    background: $black
+    box-decoration-break: clone
+    box-shadow: -28px -12px 0 $black, 28px 7px 0 $black, 28px -12px 0 $black, -28px 7px 0 $black
+    display: inline
+    margin-bottom: 20px
+    outline: 1px solid $black
+    &:after
+      content: ''
+      display: table
+
+  &__label
+    background: $black
+    color: $white
+    font-size: (17/16)+rem
+    font-weight: 900
+    margin: 0
+    padding: 10px
+    text-transform: uppercase
+
+  &__actions
+    background: $black
+    padding: 30px
+    margin-top: -15px
+    margin-left: -28px
+    display: inline-flex
+
+  &--tall
+    .container
+      box-sizing: border-box
+      position: absolute
+      bottom: 60px
+      left: 50%
+      padding-left: 50px
+      padding-right: 50px
+      transform: translateX(-50%)
+
+    .banner
+      &__image
+        margin-left: -50px
+        margin-right: -50px
+        max-height: 90vh
+        display: block
+        overflow: hidden
+        position: static
+        width: calc(100% + 100px)
+
+      &__media
+        position: static
+        transform: none
+        max-width: 100%
+        display: block
+
+      &__content
+        padding-top: 0
+        padding-bottom: 0
+
+
+  &--center
+    .banner__content
+      margin: 0
+      text-align: left
+
+  &--intro,
+  &--short
+    .banner__title
+      font-size: 32px
+      line-height: 1.4
+
+  &--narrow
+    .banner__content
+      max-width: 500px
+
+  +breakpoint(xlarge)
+    &--tall
+      height: 0
+      padding-top: 56.25%
+
+      .banner
+        &__image
+          position: absolute
+
+      .container
+        bottom: 40px
+
+  +breakpoint(large)
+    padding-left: 20px
+    padding-right: 20px
+
+    &__title
+      font-size: 48px
+
+    &__title,
+    &__wrap-copy
+      box-shadow: -23px -11px 0 $black, 23px 7px 0 $black, 23px -11px 0 $black, -23px 7px 0 $black
+
+    &__content
+      padding: 0 0 0 43px
+
+    &__actions
+      margin-left: -23px
+      padding: 25px
+
+    &--tall
+      .container
+        padding-left: 20px
+        padding-right: 20px
+
+      .banner__image
+        margin-left: -20px
+        margin-right: -20px
+        width: calc(100% + 40px)
+
+  +breakpoint(medium)
+    &--tall
+      .container
+        bottom: 33px
+
+    &__title
+      font-size: 36px
+
+    &__title,
+    &__wrap-copy
+      box-shadow: -18px -9px 0 $black, 18px 7px 0 $black, 18px -9px 0 $black, -18px 7px 0 $black
+
+    &__content
+      padding: 100px 0 40px 38px
+
+    &__actions
+      margin-left: -18px
+      padding: 20px
+      margin-top: -10px
+
+    &--intro,
+    &--short
+      .banner__title
+        font-size: 18px
+        line-height: 1.5
+        
+
+  +breakpoint(small)
+    padding-left: 15px
+    padding-right: 15px
+
+    &__title
+      font-size: 30px
+
+    &__title,
+    &__wrap-copy
+      box-shadow: -13px -8px 0 $black, 13px 7px 0 $black, 13px -8px 0 $black, -13px 7px 0 $black
+
+    &__content
+      padding: 100px 0 40px 30px
+
+    &__actions
+      margin-left: -13px
+      padding: 15px
+      margin-top: -5px
+      max-width: calc(100% - 30px)
+
+    &--tall
+
+      .container
+        padding-left: 15px
+        padding-right: 15px
+
+      .banner__image
+        margin-left: -15px
+        margin-right: -15px
+        width: calc(100% + 30px)
+
+  +breakpoint(small)
+    &--tall
+      min-height: 380px

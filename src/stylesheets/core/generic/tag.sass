@@ -1,0 +1,59 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/tag'
+
+//***********************************
+
+.tags
+  display: flex
+  flex-wrap: wrap
+
+.tag
+  background-color: $tag-bgc
+  border-radius: $tag-radius
+  color: $tag-color
+  display: inline-block
+  font-size: $tag-font-size
+  font-weight: $tag-font-weight
+  line-height: 1
+  margin: $tag-margin
+  padding: $tag-padding
+  text-decoration: none
+  transition: background-color .3s
+
+  &--count
+    border-radius: 2px
+    font-size: 12px
+    padding: 3px 6px
+    margin: 0
+    min-width: 50px
+    text-align: center
+    background-color: $success-color
+
+  &__icon
+    fill: $tag-color
+    margin: -3px 0 0 5px
+    vertical-align: middle
+    width: 8px
+
+  &--disabled
+    background-color: $base-color-light
+
+  &--Unregistered,
+  &--unregistered
+    background-color: $error-color
+
+  &--Internal,
+  &--internal,
+  &--new
+    background-color: $success-color
+
+  &--External,
+  &--external
+    background-color: $warning-color
+
+a.tag
+  +hover
+    background-color: $tag-hover-bgc

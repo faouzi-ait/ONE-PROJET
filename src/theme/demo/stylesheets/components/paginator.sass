@@ -1,0 +1,48 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$paginator-margin: 40px 0
+
+//***********************************
+
+$paginator-button-spacing: 0.7rem
+$paginator-button-color: $white
+$paginator-button-border: 2px solid $brand-color
+$paginator-button-bgc: $brand-color
+$paginator-button-padding: 5px
+$paginator-button-size: 34px
+$paginator-button-active-color: $brand-color
+$paginator-button-active-bgc: $white
+
+//***********************************
+
+$paginator-ellipsis-bgc: $brand-color
+$paginator-ellipsis-color: $white
+
+//***********************************
+
+$paginator-arrow-padding: 5px
+$paginator-previous-radius: 0
+$paginator-next-radius: 0
+$paginator-disabled-arrow-bgc: tint($brand-color, 25%)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .paginator
+
+        &__button
+            border-radius: 4px
+            line-height: 1em
+
+        &__arrow
+            border-radius: 4px
+        
+        &__arrow--is-disabled
+            display: none

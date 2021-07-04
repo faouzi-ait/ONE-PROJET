@@ -1,0 +1,104 @@
+{
+    "baseUrl": "http://localhost:5000",
+    "chromeWebSecurity": false,
+    "projectId": "yztqo5",
+    "env": {
+        "CLIENT": "ae",
+        "URL": "http://localhost:5000",
+        "ae": {
+            "CATALOGUE_ITEM_NAME": "Six",
+            "CATALOGUE_NAME": "Catalogue",
+            "OKTA": {
+                "session_token_url": "https://aenetworks-external.okta.com/api/v1/authn",
+                "auth_token_url": "https://aenetworks-external.okta.com/oauth2/default/v1/authorize",
+                "redirect_uri": "https://catalogue.aenetworks.com/oauth/okta/redirect"
+            },
+            "USES_APP": true
+        },
+        "all3": {
+            "CATALOGUE_ITEM_NAME": "10k holiday home",
+            "USES_TALENTS": true,
+            "USES_TERRITORIES": true,
+            "USES_IMPORT": true,
+            "USES_MARKETING": true,
+            "MEETINGS_OFF": true,
+            "USER_NAME": "sara",
+            "CATALOGUE_NAME": "Catalogue",
+            "USES_APP": true,
+            "USES_BROADCASTERS": true,
+            "USES_PROGRAMME_TYPES": true
+        },
+        "amc": {
+            "CATALOGUE_ITEM_NAME": "Lodge 49",
+            "CATALOGUE_NAME": "Catalog",
+            "USES_APP": true
+        },
+        "amcnetworks": {
+            "CATALOGUE_ITEM_NAME": "Lodge 49",
+            "CATALOGUE_NAME": "Catalog"
+        },
+        "banijaygroup": {
+            "CATALOGUE_ITEM_NAME": "Peaky Blinders",
+            "USES_IMPORT": true,
+            "USES_VIDEO_DOWNLOAD_LINKS": true,
+            "CATALOGUE_NAME": "Programmes",
+            "USES_APP": true
+        },
+        "cineflix": {
+            "CATALOGUE_ITEM_NAME": "Marcella",
+            "REGISTER_BUTTON_IN_NAVIGATION": true,
+            "TOP_NAVIGATION": true,
+            "CATALOGUE_NAME": "Our Catalogue",
+            "USES_APP": true
+        },
+        "demo": {
+            "CATALOGUE_ITEM_NAME": "40 Years of Lego",
+            "USER_NAME": "Cameron",
+            "CATALOGUE_NAME": "Catalogue",
+            "USES_APP": true
+        },
+        "discovery": {
+            "CATALOGUE_ITEM_NAME": "Beyond the canvas",
+            "CATALOGUE_NAME": "Library"
+        },
+        "drg": {
+            "CATALOGUE_ITEM_NAME": "The Oslo Killing",
+            "CATALOGUE_NAME": "Catalogue",
+            "USES_APP": true
+        },
+        "endeavor": {
+            "CATALOGUE_ITEM_NAME": "Killing Eve",
+            "MEETINGS_OFF": true,
+            "CATALOGUE_NAME": "Sales Slate"
+        },
+        "fremantle": {
+            "CATALOGUE_ITEM_NAME": "Empires of new york",
+            "USER_NAME": "sara",
+            "CATALOGUE_NAME": "All Titles",
+            "USES_APP": true
+        },
+        "itv": {
+            "CATALOGUE_ITEM_NAME": "Bodyguard",
+            "USES_PASSPORT": true,
+            "USER_NAME": "Simone",
+            "PRODUCER_NAME": "12 Yard",
+            "PRIVATE_PAGES": true,
+            "CATALOGUE_NAME": "Catalogue",
+            "USES_APP": true,
+            "USES_WEIGHTED_SEARCH": true
+        },
+        "keshet": {
+            "CATALOGUE_ITEM_NAME": "Anna's Search",
+            "CATALOGUE_NAME": "Catalogue",
+            "USES_APP": true
+        },
+        "storylab": {
+            "CATALOGUE_ITEM_NAME": "Ninja Warrior",
+            "CATALOGUE_NAME": "Catalogue"
+        },
+        "wildbrain": {
+            "CATALOGUE_ITEM_NAME": "Fireman Sam",
+            "CATALOGUE_NAME": "Catalogue"
+        }
+    }
+}

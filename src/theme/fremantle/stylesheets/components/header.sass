@@ -1,0 +1,60 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: transparent
+$header-max-width: 1520px
+$header-padding: 31px 20px
+$header-welcome-color: $white
+$header-user-color: $white
+$header-user-hover-color: $brand-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+    background: linear-gradient(180deg, rgba($black, 0.75), rgba($black,0))
+    position: fixed
+    transition: background-color .3s
+
+    &--impersonating
+        top: 75px
+
+    &__controls > *,
+    .text-button
+        margin-left: 30px
+
+    &--sticky,
+    &--searching
+        background: $cod-gray
+        z-index: 32
+
+    .button
+        border: none
+
+    .text-button
+        padding: 2px 0 0
+
+    .text-button,
+    &__welcome
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+        font-size: 18px
+        font-weight: 600
+        margin-right: 0
+
+    .programme-search
+        margin: -17px 0 -17px 30px
+
+    &--meetings
+        padding: 31px 20px
+
+    +breakpoint(large)
+        .programme-search
+            background-color: $cod-gray
+            margin: 0 -20px

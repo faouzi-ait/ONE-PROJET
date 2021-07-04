@@ -1,0 +1,42 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$page-controls-padding: 20px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .page-controls
+
+  &__control
+    > span
+      font-size: 15px
+
+  &__count
+    align-items: center
+    display: flex
+    font-size: 20px
+    text-transform: uppercase
+
+    &:before
+      background: linear-gradient($roti, $tussock)
+      content: ''
+      height: 27px
+      margin-right: 15px
+      width: 5px
+
+  .per-page
+    margin-left: 60px
+
+  +breakpoint(medium)
+    display: flex
+    justify-content: flex-end
+
+    .per-page
+      margin-left: 20px
+
+    &__count
+      margin: 0 0 10px
+      font-size: 18px

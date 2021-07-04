@@ -1,0 +1,47 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$info-size: 14px
+$info-color: $base-color-light
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+  .heading
+    &--two,
+    &--three
+      text-transform: uppercase
+
+    &--underline
+      border-bottom: 1px solid $iron
+      padding-bottom: 5px
+
+    &--underline-dark
+      border-bottom: 1px solid $black
+      margin-bottom: 20px
+      padding-bottom: 20px
+
+    &--five
+      font-size: (17/16)+rem
+      font-weight: 900
+      text-transform: uppercase
+
+  +breakpoint(large)
+
+    .heading
+      &--two
+        font-size: 26px
+
+  +breakpoint(small)
+
+    .heading
+      &--two
+        font-size: 20px

@@ -1,0 +1,101 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-image-radius: 0
+$programme-image-spacing: 10px
+
+//***********************************
+
+$programme-title-font-size: (17/16)+rem
+$programme-title-font-size-small: 14px
+
+//***********************************
+
+$programme-copy-font-size: 14px
+$programme-copy-color: $casper
+
+//***********************************
+
+$programme-icon-size: 50px
+$programme-icon-background: $white
+$programme-icon-border: 0
+$programme-icon-radius: 0
+
+//***********************************
+
+$programme-icon-arrow-size: 29px
+$programme-icon-arrow-color: $black
+
+//***********************************
+
+$programme-strip-bgc: $error-color
+$programme-strip-color: $white
+$programme-strip-font-size: 12px
+$programme-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme
+
+  &__actions
+    right: 30%
+    top: 88px
+    transform: translateY(-50%)
+
+  &__icon
+    transition: opacity .3s
+
+    &:hover,
+    &:focus
+      background: $tradewind
+
+  &__title
+    font-weight: 900
+    text-transform: uppercase
+
+  &--with-actions
+    .programme__icon
+      left: 30%
+      top: 88px
+      transform: translateY(-50%)
+      transition: background .3s
+
+  &--with-single-action
+    .programme__icon
+      left: calc(50% - 25px)
+
+  .icon-button
+    background: $brand-color
+    height: $programme-icon-size
+    transition: background .3s
+    width: $programme-icon-size
+
+    svg
+      transition: fill .3s
+
+      path
+        &:last-child
+          fill: $black
+
+    &:hover,
+    &:focus
+      background: $tradewind
+
+      svg
+        fill: $tradewind
+
+  +breakpoint(large)
+    &__actions
+      right: 19%
+
+    &--with-actions
+      .programme__icon
+        left: 19%
+

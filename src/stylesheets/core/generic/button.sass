@@ -1,0 +1,234 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import ../../_theme/generic/button
+
+//***********************************
+
+button
+  border-radius: 0
+
+.button,
+.custom .mock-page .content-block .button,
+.button-nav
+  background-color: $button-bgc
+  border: $button-border
+  border-radius: $button-border-radius
+  color: $button-color
+  cursor: pointer
+  display: inline-block
+  font-family: $button-font-family
+  font-size: $button-font-size
+  font-weight: $button-font-weight
+  line-height: 1
+  padding: $button-padding
+  text-decoration: none
+  transition: $button-transition
+  appearance: none
+
+  &[disabled]
+    opacity: 0.25
+
+  +hover
+    background-color: $button-hover-bgc
+
+
+  &--icon
+    align-items: center
+    display: flex
+    font-size: 0 !important
+    height: $button-icon-size
+    justify-content: center
+    padding: $button-icon-padding !important
+    min-width: $button-icon-size
+
+    .button__icon
+      margin: 0
+
+  &--reporting
+    width: 32px
+    height: 32px
+    padding: 6px !important
+
+  &--with-icon
+    padding: $button-with-icon-padding
+
+  &--full
+    box-sizing: border-box
+    width: 100%
+
+  &--filled
+    background-color: $button-filled-bgc
+    color: $button-filled-color
+
+    &.button--highlight-hover
+      background-color: transparent
+
+      +hover
+        background-color: rgba($white, .7)
+        color: $button-filled-color
+
+    &.button--reversed
+      background-color: $white
+      color: $button-color
+
+      +hover
+        background-color: rgba($white, 0.8)
+
+    +hover
+      background-color: $button-filled-hover-bgc
+      border-color: $button-filled-hover-bgc
+
+
+    .button__icon
+      fill: $button-filled-icon-color
+
+  &--small
+    font-size: $button-small-font-size
+    padding: $button-small-padding
+
+  &--error
+    background-color: $button-error-background
+    border: $button-error-border
+    color: $button-error-color
+
+    &.button--loading
+      &::before
+        border-color: rgba($white, 0.4)
+        border-bottom-color: transparent
+
+      &::after
+        border-color: $white
+        border-left-color: transparent
+
+    .button__icon
+      fill: $white
+
+    +hover
+      background-color: $button-error-hover-background
+      border-color: $button-error-hover-background
+
+  &--success
+    background-color: $button-success-background
+    border: $button-success-border
+    color: $button-success-color
+
+    &.button--loading
+      &::before
+        border-color: rgba($white, 0.4)
+        border-bottom-color: transparent
+
+      &::after
+        border-color: $white
+        border-left-color: transparent
+
+    .button__icon
+      fill: $white
+
+    +hover
+      background-color: $button-success-hover-background
+      border-color: $button-success-hover-background
+
+  &--null
+    background-color: $button-null-background
+    border: $button-null-border
+    color: $button-null-color
+
+    +hover
+      background-color: $button-null-hover-background
+
+  &--transparent
+    background-color: transparent
+    border: none
+    color: transparent
+
+    +hover
+      background-color: transparent
+
+  &--reversed
+    border-color: $white
+    color: $white
+
+    +hover
+      background-color: $white
+      border-color: $white
+      color: $button-color
+
+  &__icon
+    fill: $button-color
+    margin: $button-icon-margin
+    transform: translateY(-1px)
+    vertical-align: middle
+    cursor: pointer
+
+    &--right
+      margin: $button-icon-margin-right
+
+    &--filled
+      background-color: $brand-color
+      border-radius: 100%
+      padding: 5px
+      fill: $white
+
+  &--alert
+    position: relative
+
+    &::before
+      background: $button-alert-color
+      border-radius: 100%
+      content: ""
+      display: block
+      height: $button-alert-size
+      position: absolute
+      right: $button-alert-right
+      top: 0
+      transform: translateY(-50%)
+      width: $button-alert-size
+
+  &--loading
+    color: transparent
+    pointer-events: none
+    position: relative
+
+    &::before
+      animation: rotate-alt 1s infinite linear
+      border: 2px solid tint($brand-color, 40%)
+      border-bottom-color: transparent
+      border-radius: 50%
+      content: ""
+      display: block
+      height: 20px
+      left: 50%
+      margin: (-12px) 0 0 -12px
+      position: absolute
+      top: 50%
+      width: 20px
+
+    &::after
+      animation: rotate 1s infinite linear
+      border: 2px solid $brand-color
+      border-left-color: transparent
+      border-radius: 50%
+      content: ""
+      height: 14px
+      left: 50%
+      margin: (-9px) 0 0 -9px
+      position: absolute
+      top: 50%
+      width: 14px
+
+  &__count
+    background-color: $white
+    color: $brand-color
+    border-radius: 10px
+    min-width: 8px
+    height: 16px
+    display: inline-block
+    line-height: 16px
+    margin-right: 5px
+    padding: 0 4px
+
+  +breakpoint(small)
+    font-size: $button-small-font-size
+    padding: $button-small-padding

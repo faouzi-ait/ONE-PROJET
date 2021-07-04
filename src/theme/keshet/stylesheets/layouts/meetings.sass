@@ -1,0 +1,41 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$actions-padding: 20px 0
+$actions-background: $white
+
+//***********************************
+
+$actions-inner-display: flex
+$actions-inner-flex-wrap: wrap
+$actions-inner-align: center
+$actions-inner-justify: flex-end
+$actions-inner-margin: -10px -5px 0px 0px
+
+//***********************************
+
+$actions-item-margin: 10px 5px 0px 0px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .meetings
+  &__range
+    > *
+      margin-right: 0
+
+    .button--icon
+      background-color: $tuna
+      border-color: $tuna
+
+      &:hover
+        background-color: $brand-color
+        border-color: $brand-color
+
+      &:first-child
+        border-radius: 3px 0 0 3px
+
+      &:last-child
+        border-radius: 0 3px 3px 0

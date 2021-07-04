@@ -1,0 +1,182 @@
+$modal-bgc: rgba($base-color, .9)
+
+.modal--is-hiding
+  opacity: 0
+
+.cms-modal
+  align-items: center
+  animation: modal-fade .3s
+  background-color: $modal-bgc
+  bottom: 0
+  display: flex
+  justify-content: center
+  left: 0
+  padding: 40px
+  position: fixed
+  right: 0
+  top: 0
+  transform: translate3d(0, 0, 0)
+  transition: opacity .3s
+  z-index: 999
+
+  &--stretch-select
+    .Select-menu-outer
+      position: relative
+
+  &--is-hiding
+    opacity: 0
+
+    .cms-modal__wrapper
+      transform: scale(1.2)
+
+  a:not([class]),
+  a.active
+    color: $brand-color
+    font-weight: bold
+
+  &--warning
+    .cms-modal
+      &__wrapper
+        background-color: $error-color
+        color: $white
+
+        a:not([class]),
+        a.active
+          color: $white
+          font-weight: bold
+          text-decoration: underline
+          transition: color .3s
+
+      &__header
+        background-color: shade($error-color, 15%)
+
+      &__close
+        svg
+          fill: $white
+
+        +hover
+          svg
+            fill: rgba($white, .8)
+
+      &__title-icon
+        fill: $white
+        transform: translateY(2px)
+
+    .cms-button--filled
+      color: $error-color
+      +hover
+        color: $error-color
+
+  &__wrapper
+    animation: modal-drop .3s
+    background-color: $white
+    border-radius: 4px
+    max-height: 100%
+    max-width: 600px
+    min-width: 470px
+    overflow: auto
+    position: relative
+    transition: transform .3s
+
+    &--wide
+      width: 1600px
+      max-width: 100%
+      padding: 40px
+      box-sizing: border-box
+
+  &__header
+    background-color: $athens-gray
+    border-radius: 4px 4px 0 0
+    padding: 40px 30px 15px
+    position: relative
+
+  &__title
+    font-size: 30px
+    font-weight: bold
+    margin: 0
+    word-wrap: break-word
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__title-icon
+    fill: $base-color
+    margin-right: 10px
+    transform: translateY(-2px)
+
+  &__close
+    background-color: transparent
+    border: 0
+    cursor: pointer
+    font-size: 0
+    position: absolute
+    right: 20px
+    top: 20px
+
+    +hover
+      svg
+        fill: $brand-color
+
+    svg
+      fill: $base-color-light
+      transition: fill .3s
+
+  &--filters &
+
+    &__header
+      left: 0
+      padding: 15px
+      text-align: center
+
+    &__title
+      font-size: 20px
+
+    &__title-icon
+      transform: none
+
+    &__content
+      padding: 2px 0 0
+
+
+  &__content
+    box-sizing: border-box
+    min-width: 390px
+    padding: 30px
+
+  &--large
+    > .cms-modal__wrapper
+      max-width: 800px
+      width: 100%
+
+  &--xlarge
+    > .cms-modal__wrapper
+      max-width: 960px
+      width: 100%
+
+  &--full-width
+    .cms-modal
+      &__wrapper
+        height: 100%
+        width: 100%
+
+  &--video &
+    &__wrapper
+      background-color: transparent
+      max-width: none
+
+    &__title
+      color: $white
+
+@keyframes modal-fade
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@keyframes modal-drop
+  from
+    transform: scale(1.2)
+
+  to
+    transform: scale(1)

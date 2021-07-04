@@ -1,0 +1,10 @@
+https://fremantle.thisisone.tv   https://fremantlescreenings.com   301!
+https://fremantle.thisisone.tv/*   https://fremantlescreenings.com/:splat   301
+https://fmscreenings.com   https://fremantlescreenings.com   301!
+https://fmscreenings.com/*   https://fremantlescreenings.com/:splat   301
+https://www.fmscreenings.com   https://fremantlescreenings.com   301!
+https://www.fmscreenings.com/*   https://fremantlescreenings.com/:splat   301
+
+
+
+/*   /index.html   200

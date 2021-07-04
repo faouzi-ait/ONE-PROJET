@@ -1,0 +1,38 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: white
+$content-block-bg-shade: $brand-color-light
+$content-block-padding: 40px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: $brand-color-dark
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block
+  &--promo-carousel
+    .carousel
+      padding-bottom: 10px
+
+      &__arrow
+        top: 90px
+
+  &--brand
+    background: url(../../../../images/theme/brand-bg.svg) no-repeat right $brand-color-dark
+    background-size: auto 100%
+    color: $white
+
+  &__heading
+    .button
+      margin-left: 30px
+
+  &--most-popular
+    .carousel > .container
+      overflow: hidden

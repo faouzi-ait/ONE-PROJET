@@ -1,0 +1,111 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-image-radius: 0
+$programme-image-spacing: 10px
+
+//***********************************
+
+$programme-title-font-size: (20/16)+rem
+$programme-title-font-size-small: 14px
+
+//***********************************
+
+$programme-copy-font-size: 14px
+$programme-copy-color: $casper
+
+//***********************************
+
+$programme-icon-size: 72px
+$programme-icon-background: rgba($casper, .8)
+$programme-icon-border: 2px solid $brand-color
+$programme-icon-radius: 100%
+
+//***********************************
+
+$programme-icon-arrow-size: 20px
+$programme-icon-arrow-color: $white
+
+//***********************************
+
+$programme-strip-bgc: $error-color
+$programme-strip-color: $white
+$programme-strip-font-size: 12px
+$programme-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme
+  position: relative
+  padding-bottom: 10px
+
+  &__image
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background:  rgba($black, .6)
+      pointer-events: none
+      opacity: 0
+      transition: opacity .3s
+
+  &:hover, &:active
+    .programme__image
+      &:before
+        opacity: 1
+
+    .programme__icon,
+    .programme__actions
+      opacity: 1
+
+  &__title
+    font-weight: 900
+    line-height: .9
+    
+    font-size: (18/16)+rem
+
+  &__count
+    font-size: (14/16)+rem
+    font-weight: 700
+    margin-top: 0
+    
+
+  &__actions
+    right: auto
+    left: 50%
+    top: 50%
+    transform: translate(-50% , -50%)
+    margin-top: -15px
+    margin-left: -30px
+    opacity: 0
+
+  &__icon
+    border-color: $white
+    padding-top: 46px
+    width: 50px
+    background-color: transparent
+    margin-left: 30px
+    box-sizing: border-box
+    margin-top: -15px
+    cursor: pointer
+    opacity: 0
+
+    &:hover, &:focus
+      background: $white
+      &:after
+        border-left-color: $brand-color
+
+  &--with-single-action
+    .programme__icon
+      left: calc(50% - 30px)
+      top: 45%

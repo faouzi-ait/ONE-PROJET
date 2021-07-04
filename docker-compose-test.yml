@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  test_app:
+    build:
+      context: .
+      dockerfile: Dockerfile-test
+    ports:
+      - '8080:8080'
+      - '5000:5000'
+    env_file:
+      - '.env'
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+    ipc: host
+    environment:
+         DISPLAY:
+    network_mode: host
+    command: npm run test:docker:open
+

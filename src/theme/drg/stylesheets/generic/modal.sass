@@ -1,0 +1,134 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$modal-overlay-bgc: rgba($white, .9)
+$modal-overlay-padding: 20px
+$modal-overlay-padding-bp-small: 10px
+
+//***********************************
+
+$modal-warning-bgc: $error-color
+$modal-warning-color: $white
+
+//***********************************
+
+$modal-wrapper-bgc: $dark-brand-color
+$modal-wrapper-radius: 4px
+$modal-max-width: 1180px
+$modal-min-width: 300px
+
+//***********************************
+
+$modal-header-bgc: transparent
+$modal-header-padding: 50px 50px 20px
+$modal-header-padding-bp-large: 40px 30px 15px
+$modal-header-padding-bp-medium: 30px 20px 15px
+$modal-header-padding-bp-small: 30px 15px 10px
+
+//***********************************
+
+$modal-content-bgc: transparent
+$modal-content-padding: 30px 50px
+$modal-content-padding-bp-large: 30px
+$modal-content-padding-bp-medium: 20px
+$modal-content-padding-bp-small: 15px
+$modal-link-color: $brand-color
+$modal-link-weight: bold
+
+//***********************************
+
+$modal-close-color: $base-color-light
+$modal-close-hover-color: $white
+
+//***********************************
+
+$modal-header-padding-filters: 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .modal
+  color: $white
+
+  &__wrapper
+    box-shadow: 0 0 15px rgba($black, .8)
+
+  &--video
+    .modal__wrapper
+      background-color: $white
+
+  &__title
+    color: $white
+    
+
+  &__header,
+  &__content
+    z-index: 2
+
+  .form__label
+    color: $white
+
+  .react-datepicker__input-container
+    input
+      color: $white
+
+  .text-button
+    color: $white
+
+  .form__error
+    max-width: 100%
+
+  .Select-value-icon
+     color: $white
+
+  .note__text
+    color: $white
+
+  &__search
+    input
+      background: transparent
+      color: $white
+
+      &::placeholder
+        color: $white
+
+  &--filters
+    .modal__title
+      font-size: (30/16)+rem!important
+      font-weight: 900
+
+  &--video
+    .modal__title
+      background: $brand-color
+      margin-bottom: 0
+      padding: 20px
+    
+    p
+      color: $black
+
+  &--meeting
+    .button
+      font-size: 18px
+      padding: 10px 20px 11px
+
+  +breakpoint(small)
+    &__close
+      top: 0
+      right: 0
+
+  +breakpoint(xlarge, min)
+    .form__error
+      left: 0
+      position: relative
+      margin-left: 0
+      min-width: 0
+      font-size: 12px
+
+      &::before
+        content: none

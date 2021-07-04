@@ -1,0 +1,72 @@
+//***********************************
+
+@import '../../core/imports'
+
+.custom:not(.admin) .wysiwyg,
+.custom .mock-page .wysiwyg
+    color: $white
+
+.custom .wysiwyg,
+.custom .ql-editor
+    h1, h2, h3
+        margin-bottom: 13px
+
+    p,
+    ul, 
+    ol   
+        line-height: 1.5
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+        font-size: 18px
+        margin-bottom: 30px
+
+    a
+        color: $white
+        text-decoration: underline
+        text-decoration-color: $abbey
+
+        +hover
+            color: $abbey
+            
+
+    .wysiwyg__button a,
+    a .wysiwyg__button
+        background: transparent
+        color: $white
+        margin-top: 20px
+
+        &:hover,
+        &:focus
+            background-color: $white
+            color: $cod-gray
+
+    +breakpoint(large)
+        h1
+            font-size: 52px
+
+        h2
+            font-size: 28px
+
+    +breakpoint(medium)
+        h1
+            font-size: 35px
+
+        h2
+            font-size: 24px
+            
+        p,
+        ul, 
+        ol   
+            line-height: 1.4
+            font-size: 16px
+            margin-bottom: 20px
+
+.admin.custom .wysiwyg,
+.admin.custom .ql-editor
+    .wysiwyg__button a,
+    a .wysiwyg__button
+        background-color: $base-color
+
+        &:hover,
+        &:focus
+            background-color: $white

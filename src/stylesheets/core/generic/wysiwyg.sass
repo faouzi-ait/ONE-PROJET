@@ -1,0 +1,47 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/wysiwyg'
+
+//***********************************
+
+.wysiwyg, .ql-editor
+  > *
+    margin-bottom: 0
+    margin-top: 0
+
+  img
+    display: block
+    max-width: 100%
+
+  h1
+    +heading(1)
+
+  h2
+    +heading(2)
+
+  h3
+    +heading(3)
+
+  a
+    color: $brand-color
+    text-decoration: none
+
+    +hover
+      color: $base-color
+
+  .wysiwyg__button a,
+  a .wysiwyg__button
+    @extend .button !optional
+    @extend .button--filled !optional
+
+
+  .ql-align-center
+    text-align: center
+
+  .ql-align-right
+    text-align: right
+
+  .ql-align-left
+    text-align: left

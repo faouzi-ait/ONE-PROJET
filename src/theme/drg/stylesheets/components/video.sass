@@ -1,0 +1,42 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$video-play-bgc: transparent
+$video-play-border: 2px solid $white
+$video-play-radius: 50%
+
+//***********************************
+
+$video-play-size: 100px
+
+//***********************************
+
+$video-play-arrow-bgc: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .video
+  overflow: hidden
+
+  &__poster
+    &:before
+      transition: background .2s
+
+  &:hover, &:focus
+    .video__poster
+      &:before
+        background: rgba($white, .3)
+
+
+  +breakpoint(small)
+    &__poster
+      &:before
+        width: 50px
+        height: 50px

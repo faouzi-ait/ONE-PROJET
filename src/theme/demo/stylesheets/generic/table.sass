@@ -1,0 +1,46 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$th-bgc: transparent
+$th-border-color: none
+$th-font-size: 20px
+$th-font-weight: 600
+$th-padding: 10px 20px
+
+$td-bgc: $black
+$td-border-color: $black
+$td-font-size: 16px
+$td-padding: 15px 20px
+$table-radius: 4px
+
+.custom .table
+
+  tr
+    border-top: 2px solid $cod-gray
+
+  th
+    border-left: none
+
+  &__sort
+    color: $edward
+
+    &:after
+      border-color: $edward
+
+  &--report 
+    th,
+    td
+      font-size: 17px
+      padding: 15px 30px
+      font-weight: bold
+
+    tbody tr:nth-child(2n) td
+      background-color: $black
+    
+    tbody tr:hover:nth-child(2n) td
+      background-color: $brand-color

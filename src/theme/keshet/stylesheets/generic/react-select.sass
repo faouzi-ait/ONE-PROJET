@@ -1,0 +1,78 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$react-select-bgc: $white
+$react-select-color: $regent-gray
+$react-select-border: 1px solid $heather
+$react-select-radius: 3px
+$react-select-focused-border: $brand-color
+$react-select-padding: 8px 0 3px 12px
+$react-select-height: 40px
+$react-select-width: 190px
+
+$react-select-single-padding: 7px 0 7px 12px
+$react-select-single-border: 1px solid $heather
+
+//***********************************
+
+$react-select-placeholder-color: $base-color-light
+
+//***********************************
+
+$react-select-value-bgc: $brand-color
+$react-select-value-radius: 12px
+$react-select-value-color: $white
+
+//***********************************
+
+$react-select-menu-border: 1px solid $heather
+$react-select-menu-radius: 3px
+
+//***********************************
+
+$react-select-option-border: 1px solid $heather
+$react-select-option-padding: 10px
+$react-select-option-color: $regent-gray
+$react-select-option-focus-bgc: $athens-gray
+$react-select-option-focus-color: $brand-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .Select
+  &.Select--single,
+  &.Select--multi
+
+    .Select-clear-zone
+      padding-right: 10px
+
+    .Select-input > input,
+    .Select-placeholder,
+    .Select-value
+      font-size: 15px
+
+    .Select-arrow-zone
+      background: url(../../images/theme/select-arrow-white.svg) 14px $brand-color no-repeat
+      border-radius: 0 3px 3px 0
+      display: block
+      padding: 0 0 0 40px
+      position: relative
+      right: -2px
+
+    .Select-value-icon
+      color: $white
+
+  &.Select--single
+    .Select-arrow-zone
+      margin: -8px 0
+
+  &.Select--bottom
+    .Select-menu-outer
+      bottom: 100%
+      top: auto

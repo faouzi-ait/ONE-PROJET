@@ -1,0 +1,44 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$grid-gutter: 30px
+$grid-margin-bottom: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .grid
+    &--right
+        justify-content: flex-end
+
+    > .card-group
+        margin-bottom: 0
+
+    +breakpoint(1200)
+
+        &--four
+            margin-right: -20px
+            > *
+                margin-right: 20px
+                width: calc(33.333333% - 20px)
+
+    +breakpoint(840)
+
+        &--four,
+        &--three
+            margin-right: -10px
+            > *
+                margin-right: 10px
+                width: calc(50% - 10px)
+
+
+    +breakpoint(small)
+
+        &--three,
+        &--four
+            margin-right: 0
+            > *
+                margin-right: 0
+                width: 100%

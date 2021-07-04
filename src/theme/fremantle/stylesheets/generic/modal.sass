@@ -1,0 +1,101 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$modal-overlay-bgc: rgba($base-color, .9)
+$modal-overlay-padding: 20px
+$modal-overlay-padding-bp-small: 10px
+
+//***********************************
+
+$modal-warning-bgc: $error-color
+$modal-warning-color: $white
+
+//***********************************
+
+$modal-wrapper-bgc: $shark
+$modal-wrapper-radius: 0
+$modal-max-width: 1180px
+$modal-min-width: 300px
+
+//***********************************
+
+$modal-header-bgc: $outer-space
+$modal-header-padding: 50px
+$modal-header-padding-bp-large: 40px 30px 15px
+$modal-header-padding-bp-medium: 30px 20px 15px
+$modal-header-padding-bp-small: 30px 15px 10px
+
+//***********************************
+
+$modal-content-bgc: transparent
+$modal-content-padding: 30px 50px
+$modal-content-padding-bp-large: 30px
+$modal-content-padding-bp-medium: 20px
+$modal-content-padding-bp-small: 15px
+$modal-link-color: $brand-color
+$modal-link-weight: bold
+
+//***********************************
+
+$modal-close-color: $white
+$modal-close-hover-color: $brand-color
+
+//***********************************
+
+$modal-header-padding-filters: 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .modal
+    color: $white
+
+    &__title.heading--two
+        margin-bottom: 0
+
+    &__search
+        margin: 20px
+
+        input
+            background: url(../../images/theme/mag-glass.svg) 18px center/62px transparent no-repeat
+            background-color: $base-color 
+            border: 1px solid $mine-shaft
+            color: $white
+            font-size: 35px
+            font-weight: 800
+            padding: 19px 17px 19px 86px
+
+            &::placeholder
+                color: rgba($white, .4)
+
+        button,
+        p
+            margin-top: 0
+            top: 50%
+            transform: translateY(-50%)
+        
+    &__actions
+        border-color: $mine-shaft
+
+    &--video
+        .modal__close
+            background: transparent
+            border-radius: 0
+
+            +hover
+                svg
+                    fill: $brand-color
+
+    +breakpoint(1200)
+        &__search
+            input
+                background-size: 42px
+                background-position-x: 10px
+                font-size: 20px
+                padding-left: 50px

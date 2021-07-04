@@ -1,0 +1,49 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$custom-select-min-width: 100px
+$custom-select-max-width: 500px
+$custom-select-bgc: $white
+$custom-select-border: 1px solid $pumice
+$custom-select-radius: 0
+$custom-select-height: 40px
+$custom-select-padding: 0 40px 0 12px
+$custom-select-icon-fill: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .custom-select
+
+  &::after
+    background-color: $base-color-dark
+    content: ''
+    height: 40px
+    position: absolute
+    right: -1px
+    top: -1px
+    width: 40px
+
+  &__select
+    font-size: 18px
+    font-weight: 600
+    z-index: 3
+
+  &__icon
+    right: 13px
+    z-index: 2
+    
+  .react-datepicker__tether-enabled
+    input
+      border-color: $brand-color
+
+.custom:not(.admin) .react-datepicker
+  &__input-container input
+    font-size: 18px
+    font-weught: 600

@@ -1,0 +1,46 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/section'
+
+//***********************************
+
+.section
+  background-color: $section-bgc
+  padding: $section-padding
+
+  &--shade
+    background-color: $section-shade-bgc
+
+  &--collapse
+    padding: 1px 0
+
+  &--collapse-top
+    padding-top: 1px
+
+  &--collapse-bottom
+    padding-bottom: 1px
+
+  &__copy
+    color: $section-copy-color
+    font-size: $section-copy-size
+    font-weight: $section-copy-weight
+    margin: $section-copy-margin
+
+    &:last-child
+      margin-bottom: 0
+
+    a
+      color: inherit
+      text-decoration: none
+      transition: color .3s
+
+      +hover
+        color: $section-copy-hover-color
+
+  &__header
+    text-align: $section-header-text-align
+
+  &__actions
+    text-align: $section-actions-align

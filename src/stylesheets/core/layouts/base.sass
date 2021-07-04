@@ -1,0 +1,135 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/base'
+
+//***********************************
+
+body
+  margin: 0
+
+.no-scroll
+  overflow: hidden
+
+  #app
+    overflow: hidden
+
+#app
+  background-color: $body-bgc
+  margin: $body-margin
+  padding: $body-padding
+
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  position: relative
+  width: 100%
+
+  &__wrapper
+    flex-grow: 1
+    overflow: hidden
+    position: relative
+
+  &__cover
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 20
+
+    &--menu
+      z-index: 8
+
+  &__overlay
+    background-color: rgba($brand-color, .95)
+    bottom: 0
+    color: $white
+    display: none
+    font-size: 20px
+    left: 0
+    padding: 15px
+    position: fixed
+    right: 0
+    text-align: center
+    top: 0
+    z-index: 999
+
+  &::before
+    background-color: $page-before-color
+    bottom: 0
+    content: ''
+    left: 0
+    opacity: 0
+    pointer-events: none
+    position: fixed
+    right: 0
+    top: 0
+    transition: opacity .5s $easing
+    z-index: 20
+
+  &.nav-open
+    &::before
+      opacity: 1
+      pointer-events: auto
+
+  &__title
+    padding: 30px 20px
+    text-align: center
+
+main
+  display: block
+  min-height: 640px
+  overflow: hidden
+
+.scroller
+  width: 100%
+  overflow: auto
+
+.u-align-center
+  text-align: center
+
+.u-align-right
+  text-align: right
+
+.fade-on-load
+  animation: fade-in 1s
+
+.u-center-content
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.sticky-container
+  padding-bottom: 20px
+
+@keyframes fade-in
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
++breakpoint(large)
+  .page__overlay
+    align-items: center
+    display: flex
+    justify-content: center
+
+@media (max-height: 567px)
+  .page__overlay--fixed-height
+    align-items: center
+    display: flex
+    justify-content: center
+
+.shorthand-embed-body
+  main,
+  .page__wrapper
+    overflow: initial
+
+.account-cards
+  .card__title
+    text-align: center

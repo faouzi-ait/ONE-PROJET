@@ -1,0 +1,69 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$top-nav-border-bottom: 0
+$top-nav-max-width: 800px
+$top-nav-padding: 0
+
+$top-nav-link-border-bottom: 2px solid $brand-color
+$top-nav-link-color: $white
+$top-nav-link-font-size: 14px
+$top-nav-link-font-weight: 600
+$top-nav-link-padding: 10px 10px 20px
+
+$nav-link-hover-color: $brand-color
+$nav-link-active-color: $top-nav-link-color
+
+$top-nav-breakpoint: 1160
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .top-navigation
+
+  &__item
+    flex: 1 1 auto
+
+    &:last-child
+      .top-navigation__link
+        padding-right: 10px
+
+  &__link
+    letter-spacing: 1.75px
+    text-transform: uppercase
+    padding-right: 35px
+
+
+
+    &--is-active
+      background: url('../../../images/theme/c-red.svg') center bottom no-repeat
+      border-bottom: 0
+      padding-bottom: 32px
+
+      &:before,
+      &:after
+        background: $brand-color
+        bottom: 10px
+        content: ''
+        height: 2px
+        position: absolute
+        width: calc(50% - 20px)
+
+      &:before
+        left: 0
+
+      &:after
+        right: 0
+
+  +breakpoint(1400px)
+    .top-navigation
+      max-width: 700px
+
+      &__link
+        padding-right: 5px
+

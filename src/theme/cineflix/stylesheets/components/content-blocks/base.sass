@@ -1,0 +1,292 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: $white
+$content-block-bg-shade: transparent
+$content-block-padding: 20px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: rgba($brand-color, .3)
+
+//***********************************
+// Fonts
+//***********************************
+// normal
+@font-face
+  font-family: 'Gotham'
+  font-style: normal
+  font-weight: 300
+  font-display: auto
+  src: url('/assets/fonts/Gotham-Thin.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: normal
+  font-weight: 200
+  font-display: auto
+  src: url('/assets/fonts/Gotham-XLight.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: normal
+  font-weight: 300
+  font-display: auto
+  src: url('/assets/fonts/Gotham-Light.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: normal
+  font-weight: 400
+  font-display: auto
+  src: url('/assets/fonts/Gotham-Book.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: normal
+  font-weight: 500
+  font-display: auto
+  src: url('/assets/fonts/Gotham-Medium.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: normal
+  font-weight: 600
+  font-display: auto
+  src: url('/assets/fonts/Gotham-Bold.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: normal
+  font-weight: 700
+  font-display: auto
+  src: url('/assets/fonts/Gotham-Black.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: normal
+  font-weight: 900
+  font-display: auto
+  src: url('/assets/fonts/Gotham-Ultra.otf') format('opentype')
+
+// italic
+@font-face
+  font-family: 'Gotham'
+  font-style: italic
+  font-weight: 300
+  font-display: auto
+  src: url('/assets/fonts/Gotham-ThinItalic.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: italic
+  font-weight: 200
+  font-display: auto
+  src: url('/assets/fonts/Gotham-XLightItalic.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: italic
+  font-weight: 300
+  font-display: auto
+  src: url('/assets/fonts/Gotham-LightItalic.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: italic
+  font-weight: 400
+  font-display: auto
+  src: url('/assets/fonts/Gotham-BookItalic.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: italic
+  font-weight: 500
+  font-display: auto
+  src: url('/assets/fonts/Gotham-MediumItalic.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: italic
+  font-weight: 600
+  font-display: auto
+  src: url('/assets/fonts/Gotham-BoldItalic.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: italic
+  font-weight: 700
+  font-display: auto
+  src: url('/assets/fonts/Gotham-BlackItalic.otf') format('opentype')
+
+@font-face
+  font-family: 'Gotham'
+  font-style: italic
+  font-weight: 900
+  font-display: auto
+  src: url('/assets/fonts/Gotham-UltraItalic.otf') format('opentype')
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block
+
+  >.container>.grid
+    margin-bottom: -20px
+
+  &__actions
+    margin-top: 20px
+
+  &__heading
+    color: $mako
+    font-size: (24/16)+rem
+    font-weight: 600
+    justify-content: center
+    margin-bottom: 10px
+    margin-top: 0
+    padding-bottom: 30px
+    position: relative
+
+    &:before
+      background: $delta
+      bottom: 12px
+      content: ''
+      left: 30%
+      height: 2px
+      position: absolute
+      width: 40%
+
+    .button
+      position: absolute
+      right: 0
+
+  &__media--image
+    border-radius: 8px
+
+  &--light
+    + .content-block--light
+        padding-top: 0
+
+    .carousel__dot
+      background-color: $delta
+
+      &--active
+        background-color: $brand-color 
+
+  .wysiwyg
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &:last-child
+    padding-bottom: 60px
+
+  &--shade
+    background: url('../../../../images/theme/shaded-bg.jpg') center no-repeat
+    background-size: cover
+
+  &--brand
+    background: url('../../../../images/theme/branded-bg.jpg') center no-repeat
+    background-size: cover
+
+  &--recommended-genres
+    .container
+        padding-bottom: 20px
+
+  &--quote
+    color: $mako
+
+    blockquote
+      margin: 0
+
+    .container
+      max-width: 780px
+
+      h2
+        font-size: (24/16)+rem
+        font-style: italic
+        font-weight: 700
+        line-height: 1.2
+        margin-bottom: 10px
+        margin-top: 0
+
+      cite
+        font-style: normal
+        font-weight: 300
+
+  &--banner-carousel
+    background: $orient
+    min-height: 600px
+
+    .carousel
+      &__list
+        padding-bottom: 0
+
+  &--promo-carousel
+    >.container
+      box-sizing: border-box
+      padding-left: 20px
+      padding-right: 20px
+
+  &--most-popular
+    .card__title
+      max-width: calc(100% - 30px)
+ 
+
+  &--most-popular.content-block--light
+    .carousel__scroll-track
+      background-color: $athens-gray
+
+  +breakpoint(large, min)
+    &--text
+      .grid--two
+        .wysiwyg
+          padding-left: 25px
+          padding-right: 90px
+
+          + .content-block__media--video
+            width: calc(58% - 20px)
+
+          + .content-block__media--image
+            width: calc(33.333% - 20px)
+
+        .content-block__media--video
+          width: calc(58% - 20px)
+          + .wysiwyg
+            padding-left: 90px
+            padding-right: 25px
+            width: calc(42% - 135px)
+
+        .content-block__media--image
+          width: calc(33.333% - 20px)
+          + .wysiwyg
+            padding-left: 70px
+            padding-right: 25px
+            width: calc(66.666% - 115px)
+
+  +breakpoint(large)
+    &--banner-carousel
+      min-height: 540px
+
+  +breakpoint(medium)
+    &--banner-carousel
+      min-height: 480px
+
+  +breakpoint(small)
+    &__heading
+      flex-wrap: wrap
+      font-size: (20/16)+rem
+
+      .button
+        position: relative
+
+      > *
+        flex: 0 1 auto
+
+
+    &--banner-carousel
+      min-height: 290px

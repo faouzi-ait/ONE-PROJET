@@ -1,0 +1,36 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$list-modal-padding: 20px 0
+$list-modal-background: $athens-gray
+$list-modal-transform: translateY(100%)
+
+//***********************************
+
+$list-modal-list-display: flex
+$list-modal-list-spacing: 10px
+$list-modal-list-padding: 0 0 20px
+
+//***********************************
+
+$list-modal-title-margin: 0 auto 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .list-modal
+    +breakpoint(1180)
+        .container
+            padding-left: 20px
+            padding-right: 20px
+
+    +breakpoint(small)
+        .container
+            padding-left: 10px
+            padding-right: 10px

@@ -1,0 +1,40 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$sharer-bg: $brand-color
+$sharer-padding: 10px 20px
+$sharer-color: $black
+$sharer-font-size: 18px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .sharer
+
+  &__link--youtube
+    background: $thunderbird
+    &:hover,
+    &:focus
+      .sharer__icon
+        fill: $thunderbird
+
+  &__link--instagram
+    background: $instagram-gradient
+    &:hover,
+    &:focus
+      background: $instagram-gradient-hover
+
+  &__link--instagram
+    background: $deep-cerulean
+    &:hover,
+    &:focus
+      background: $deep-cerulean
+
+  &--footer
+    background-color: transparent

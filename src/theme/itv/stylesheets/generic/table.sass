@@ -1,0 +1,45 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$th-bgc: transparent
+$th-border-color: rgba($white, .4)
+$th-font-size: 20px
+$th-font-weight: 600
+$th-padding: 10px 20px
+
+$td-bgc: transparent
+$td-border-color: rgba($white, .4)
+$td-font-size: 16px
+$td-padding: 15px 20px
+$table-radius: 4px
+
+.custom .table
+  th
+    border-left: none
+    color: $spun-pearl
+
+  td
+    color: $gallery
+
+  tr
+    &.with-action
+      +hover
+        td,
+        th
+          color: $bright-gray
+
+  &__sub-total
+    td
+      background-color: $charade
+
+  &__sort
+    color: $spun-pearl
+
+  &--report
+    tbody tr:nth-child(even) td
+      background-color: $charade

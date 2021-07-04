@@ -1,0 +1,129 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 28px
+
+//***********************************
+
+$carousel-group-background: $tyrian
+$carousel-group-border-radius: 0
+$carousel-group-color: $white
+$carousel-group-font-size: 12px
+$carousel-group-margin: 0 $carousel-spacing 20px 0
+$carousel-group-padding: 4px 10px
+
+//***********************************
+
+$carousel-arrow-background-color: $brand-color
+$carousel-arrow-background-size: 70px
+$carousel-arrow-color: $white
+$carousel-arrow-size: 12px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: none
+$carousel-arrow-hover-background-color: $tyrian
+$carousel-arrow-border-radius: 0 30px 30px 0
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 0
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 20px 0 0 0
+$carousel-dots-radius: 100%
+$carousel-dots-border: 2px solid $brand-color
+$carousel-dots-size: 8px
+$carousel-dots-active-background: $brand-color
+
+//***********************************
+
+$carousel-scroll-spacing: 30px
+$carousel-scroll-height: 12px
+$carousel-scroll-background: $dove-gray
+$carousel-scroll-handle-background: $brand-color
+$carousel-scroll-handle-radius: $carousel-scroll-height * 2
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 10px
+$carousel-pager-padding: 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+
+    &__dot
+        background: $white
+
+        &--active
+            background-color: $brand-color
+            border-color: $brand-color
+
+    &__group
+        line-height: 1
+        height: 20px
+        position: relative
+        text-transform: uppercase
+
+        &:after
+            background: $base-color
+            border: solid transparent
+            content: " "
+            height: 0
+            width: 0
+            border-left-color: $tyrian
+            border-width: 10px
+            position: absolute
+            right: -10px
+            top: 0
+
+    &__arrow
+        height: 60px
+        z-index: 5
+        
+        &--next
+            border-radius: 30px 0 0 30px
+            right: 0
+
+        &--prev
+            left: 0
+
+        &--small
+            height: 30px
+
+    &--prev
+      left: 20px
+                
+    .banner
+        align-items: center
+
+        &__content
+            max-width: 330px
+            padding-left: 0
+            padding-right: 0
+            
+    .programme
+        background: $tyrian
+        height: 100%
+
+        &__image
+            height: 100%

@@ -1,0 +1,129 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$button-bgc: transparent
+$button-border-radius: 0
+$button-border: 2px solid $brand-color
+$button-hover-bgc: $brand-color
+
+//***********************************
+
+$button-filled-bgc: $brand-color
+$button-filled-color: $black
+$button-filled-hover-bgc: $tradewind
+$button-filled-icon-color: $black
+
+//***********************************
+
+$button-small-padding: 6px 14px
+$button-with-icon-padding: 11px 20px
+$button-small-font-size: 14px
+
+//***********************************
+
+$button-error-background: $button-bgc
+$button-error-color: $brand-color
+$button-error-border: $button-border
+
+$button-error-hover-background: $button-hover-bgc
+
+$button-success-background: $success-color
+$button-success-color: $white
+$button-success-border: 2px solid $success-color
+
+$button-success-hover-background: shade($success-color, 10%)
+
+//***********************************
+
+$button-null-background: $base-color-dark
+$button-null-color: $white
+$button-null-border: 2px solid $base-color-dark
+
+$button-null-hover-background: $base-color-dark
+
+//***********************************
+
+$button-color: $brand-color
+$button-font-family: $base-font-family
+$button-font-size: 14px
+$button-font-weight: 600
+
+//***********************************
+
+$button-padding: 11px 20px
+
+//***********************************
+
+$button-transition: background-color .3s, border-color .3s, color .3s
+
+//***********************************
+
+$button-alert-color: $error-color
+$button-alert-size: 14px
+$button-alert-right: 10px
+
+//***********************************
+
+$button-icon-padding: 9px
+$button-icon-size: 44px
+$button-icon-margin: 0 5px 0 0
+$button-icon-margin-right: 0 0 0 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .button,
+.custom .mock-page .content-block .button
+
+  +hover
+    color: $black
+
+  &--with-icon
+    align-items: center
+    display: inline-flex
+    border-color: $white
+    color: $white
+
+    .button__icon
+      fill: $white
+      margin: -10px 5px -10px -5px
+
+    +hover
+      border-color: $brand-color
+      color: $black
+
+      .button__icon
+        fill: $black
+
+    &.button--filled
+      border-color: $button-filled-bgc
+      color: $button-filled-color
+
+      .button__icon
+        fill: $button-filled-icon-color
+
+      +hover
+        border-color: $button-filled-hover-bgc
+        color: $button-filled-color
+
+        .button__icon
+          fill: $button-filled-icon-color
+
+  &--center
+    margin: 0 auto
+    display: block
+
+  &--reversed
+    color: $black
+
+  &--deep
+    padding-bottom: 16px
+    padding-top: 16px
+
+

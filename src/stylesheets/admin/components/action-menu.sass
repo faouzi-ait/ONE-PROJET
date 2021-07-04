@@ -1,0 +1,73 @@
+@import '../imports'
+$list-shadow: rgba($base-color, .25)
+
+.action-menu
+  position: relative
+
+  &--is-open
+    z-index: 30
+
+    .action-menu__list
+      display: block
+
+  &__trigger
+    background-color: $brand-color
+    border: 0
+    border-radius: 50px
+    color: $white
+    cursor: pointer
+    font-family: $droid
+    font-size: 14px
+    font-weight: normal
+    min-width: 116px
+    padding: 4px 20px
+    transition: background-color .2s
+
+    &:disabled
+      opacity: 0.4
+      cursor: default
+
+    +hover
+      background-color: shade($brand-color, 5%)
+
+  &__icon
+    fill: $white
+    margin-left: 10px
+    transform: translateY(-1px)
+
+  &__item
+    &:first-child
+      border-top: none
+
+    &--divide
+      border-top: 1px solid shade($athens-gray, 5%)
+
+  &__list
+    background-color: $white
+    border: 1px solid shade($athens-gray, 15%)
+    border-radius: 4px
+    box-shadow: 0 10px 5px $list-shadow
+    color: $base-color
+    display: none
+    list-style: none
+    margin: 0
+    min-width: 235px
+    padding: 0
+    position: absolute
+    right: 0
+    text-align: left
+    top: 100%
+    width: 100%
+
+  &__action
+    color: $base-color
+    cursor: pointer
+    display: block
+    font-size: 14px
+    font-weight: bold
+    padding: 9px 20px
+    text-decoration: none
+    transition: background-color .2s
+
+    +hover
+      background-color: tint($brand-color, 80%)

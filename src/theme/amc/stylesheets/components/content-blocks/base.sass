@@ -1,0 +1,153 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: $white
+$content-block-bg-shade: $athens-gray
+$content-block-padding: 20px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: rgba($brand-color, .3)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+  .content-block
+    color: $black
+
+    &--related-pages
+      padding-bottom: 0
+
+    &--full
+      padding: 0
+
+      .container
+        padding: 0
+        max-width: none
+
+        .grid
+          align-items: center
+          margin: 0 !important
+
+      .content-block__media
+        margin: 0
+        width: 66.666%
+
+        .video,
+        .video__image
+          height: 100%
+          object-fit: cover
+
+      .wysiwyg
+        margin: 0
+        width: 33.333%
+        padding: 3vw
+
+      +breakpoint(xlarge)
+        .container
+          .grid
+            align-items: stretch
+        .content-block__media,
+        .wysiwyg
+          width: 50%
+
+      +breakpoint(large)
+        .content-block__media,
+        .wysiwyg
+          width: 100%
+
+        .wysiwyg
+          padding: 40px
+
+      +breakpoint(medium)
+        .wysiwyg
+          padding: 30px
+
+      +breakpoint(small)
+        .wysiwyg
+          padding: 20px
+
+    &--shade
+      background: $cod-gray
+      color: $white
+
+      .statistic__detail
+        color: $white
+
+    &--light
+      .tabs__item
+        color: $black
+
+      .card__copy + .card__copy
+        color: $black
+
+      .carousel__scroll-track
+        background-color: rgba($brand-color, .5)
+      .carousel__scroll-handle
+        background-color: $brand-color
+
+    &__heading
+      font-weight: 900
+      text-transform: uppercase
+
+    &--recommended-genres
+      .card__media-link
+        background-color: transparent
+
+    &--text
+      .wysiwyg
+        box-sizing: border-box
+
+        p > a
+          color: $brand-color
+          text-decoration: none
+
+          &:hover,
+          &:focus
+            text-decoration: underline
+
+    &--quote
+      blockquote
+        margin-top: 20px
+        padding-top: 50px
+        position: relative
+        text-align: center
+
+        &:before
+          color: $brand-color
+          content: '”'
+          font-size: 160px
+          font-weight: 900
+          height: 60px
+          left: 0
+          line-height: 1
+          position: absolute
+          text-align: center
+          top: -20px
+          width: 100%
+
+        h2
+          color: $brand-color
+          font-size: map-get($heading-sizes, 3)
+          font-weight: 900
+          line-height: 1
+          margin-bottom: 10px
+          text-transform: uppercase
+
+      cite
+        display: block
+        font-size: (12/16)+rem
+        font-style: normal
+
+    &--most-popular
+      .carousel
+        .card__brand
+          top: 65px
+
+.custom .mock-page__warning
+  color: $white

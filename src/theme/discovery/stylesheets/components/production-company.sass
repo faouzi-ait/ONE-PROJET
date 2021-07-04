@@ -1,0 +1,55 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$production-company-horizontal-padding: 0
+$production-company-vertical-padding: 80px
+
+$production-company-buttom-margin-top: 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .production-company
+  .container
+    max-width: 1180px
+
+  .grid--three
+    margin-bottom: -30px
+
+  .card
+    background-color: $white
+    box-sizing: border-box
+    padding: 70px 40px 50px
+    position: relative
+    width: 42%
+
+    &__title
+      color: $brand-color
+      font-size: 18px
+      margin-bottom: 20px
+
+    &__media:first-of-type:last-of-type
+      border-bottom-right-radius: 0
+
+    &__copy
+      margin-bottom: 35px
+
+
+  &:nth-child(4n+3)
+    .card__title
+      color: $golden-bell
+
+  &:nth-child(4n)
+    .card__title
+      color: $fern-green
+
+  +breakpoint(medium)
+    .card
+      padding: 40px 20px
+      width: 100%

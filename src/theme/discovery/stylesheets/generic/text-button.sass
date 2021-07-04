@@ -1,0 +1,32 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$text-button-color: $brand-color
+$text-button-font-family: $base-font-family
+$text-button-font-size: 18px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .text-button
+  font-weight: 700
+  text-decoration: none
+
+  +hover
+    color: $base-color
+
+  &--secondary
+    color: $base-color-dark
+    font-weight: 600
+
+    +hover
+      color: $brand-color
+  
+  +breakpoint(small)
+    font-size: 16px

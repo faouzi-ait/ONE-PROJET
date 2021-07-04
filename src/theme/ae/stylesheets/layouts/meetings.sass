@@ -1,0 +1,54 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .meetings
+
+  &__wrapper
+    max-width: 1350px
+    margin: 0 auto
+    padding: 0 20px
+
+  &__container
+    padding: 40px 0
+
+  &,
+  &__wrapper,
+  &__controls
+    background-color: $background-color
+
+  &__filters .form__label
+    font-size: 18px
+    margin-bottom: 5px
+
+  &__range
+    > *
+      margin-right: 0
+    .button
+      border: solid 1px $white
+      &:first-child,
+      &:after
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+        border-right-width: 0        
+
+      &:last-child,
+      &:after
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        border-left-width: 0
+
+    .react-datepicker__input-container
+      input
+        border-radius: 0
+
+      &::before
+        display: none
+
+      &::after
+        background-image: url(../../images/theme/select-arrow-white.svg)

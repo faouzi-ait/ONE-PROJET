@@ -1,0 +1,29 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$asset-border-color: $white
+$asset-selected-bg: tint($brand-color, 80%)
+$asset-padding: 13px
+$asset-font-size: 14px
+$asset-font-family: $base-font-family
+$asset-media-bg: $athens-gray
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .asset
+    &--display
+        border: none
+        
+        .asset__media
+            height: auto
+            width: 35px
+
+            img.file-type
+                padding: 0

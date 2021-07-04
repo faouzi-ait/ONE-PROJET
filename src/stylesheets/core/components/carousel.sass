@@ -1,0 +1,265 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../imports'
+@import '../../_theme/components/carousel'
+
+//***********************************
+
+.carousel
+  $this: &
+  overflow: hidden
+  position: relative
+
+  img:not(.banner__media):not(.banner__logo):not(.card__logo):not(.programme__logo):not(.card__media):not(.featured-content-grid__media)
+    display: block
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+
+  &__list
+    margin-right: -$carousel-spacing
+
+  &__track
+    display: flex
+    transition: transform .3s
+
+    > *
+      flex: none
+      margin-right: $carousel-spacing
+      width: calc(100% - #{$carousel-spacing})
+
+  &--no-spacing &
+    &__list
+      margin-right: 0
+
+    &__track > *
+      width: 100%
+      margin-right: 0
+
+  &__group
+    background: $carousel-group-background
+    border-radius: $carousel-group-border-radius
+    box-sizing: border-box
+    color: $carousel-group-color
+    font-size: $carousel-group-font-size
+    margin: $carousel-group-margin
+    padding: $carousel-group-padding
+
+  &__item
+    transition: opacity .3s
+
+    &:not(&--active)
+      opacity: .4
+      pointer-events: none
+      video
+        opacity: 0
+
+      &.carousel__item--flex-height
+        height: 0
+
+  &__arrow
+    appearance: none
+    background: $carousel-arrow-background-color
+    border: 0
+    border-radius: $carousel-arrow-border-radius
+    box-shadow: $carousel-arrow-shadow
+    color: transparent
+    cursor: pointer
+    font-size: 0
+    height: $carousel-arrow-background-size
+    outline: none
+    padding: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    transition: background-color .3s ease-in-out, opacity .3s
+    width: $carousel-arrow-background-size
+
+    &:after
+      border-bottom: $carousel-arrow-width solid $carousel-arrow-color
+      border-right: $carousel-arrow-width solid $carousel-arrow-color
+      box-sizing: border-box
+      content: ''
+      height: $carousel-arrow-size
+      left: 50%
+      margin-top: -$carousel-arrow-size / 2
+      position: absolute
+      top: 50%
+      width: $carousel-arrow-size
+
+    +hover
+      background-color: $carousel-arrow-hover-background-color
+
+    &--next
+      right: 20px
+
+      &:after
+        margin-left: -($carousel-arrow-size + $carousel-arrow-width) / 2
+        transform: rotate(-45deg)
+
+    &--prev
+      left: 20px
+
+      &:after
+        margin-left: -($carousel-arrow-size - $carousel-arrow-width) / 2
+        transform: rotate(135deg)
+
+    &--small
+      height: $carousel-arrow-background-size / 2
+      width: $carousel-arrow-background-size / 2
+
+      &:after
+        height: $carousel-arrow-size / 2
+        margin-top: -$carousel-arrow-size / 4
+        width: $carousel-arrow-size / 2
+
+      &.carousel__arrow--next
+        &:after
+          margin-left: -($carousel-arrow-size + $carousel-arrow-width) / 4
+
+      &.carousel__arrow--prev
+        &:after
+          margin-left: -($carousel-arrow-size - $carousel-arrow-width) / 4
+
+    &--small
+      height: $carousel-arrow-small-background-size
+      left: auto
+      position: relative
+      right: auto
+      transform: none
+      width: $carousel-arrow-small-background-size
+      box-shadow: none
+
+      &:after
+        height: $carousel-arrow-small-size
+        margin-top: -$carousel-arrow-small-size / 2
+        width: $carousel-arrow-small-size
+
+      &.carousel__arrow
+        &--next:after
+          margin-left: -($carousel-arrow-small-size + $carousel-arrow-width) / 2
+        &--prev:after
+          margin-left: -($carousel-arrow-small-size - $carousel-arrow-width) / 2
+
+    &[disabled]
+      opacity: .2
+
+  &__arrow-icon
+    fill: $carousel-arrow-color
+    pointer-events: none
+
+  &__blank-item
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    color: $brand-color
+    min-height: 160px
+
+  &__dots
+    display: $carousel-dots-display
+    justify-content: $carousel-dots-justify
+    list-style: none
+    margin: $carousel-dots-margin
+    margin-right: -$carousel-dots-spacing
+    flex-wrap: wrap
+    padding-left: 0
+
+    > *
+      flex: none
+      margin-right: $carousel-dots-spacing
+
+  &--fixed-dots &__dots
+    position: absolute
+    bottom: $carousel-dots-spacing
+    width: 100%
+
+  &__dot
+    border: $carousel-dots-border
+    border-radius: $carousel-dots-radius
+    color: transparent
+    font-size: 0
+    height: $carousel-dots-size
+    width: $carousel-dots-size
+
+    &--active
+      background: $carousel-dots-active-background
+
+  &__scroll-track
+    background: $carousel-scroll-background
+    border-radius: $carousel-scroll-handle-radius
+    height: $carousel-scroll-height
+    margin-top: $carousel-scroll-spacing
+
+  &__scroll-handle
+    background: $carousel-scroll-handle-background
+    border-radius: $carousel-scroll-handle-radius
+    height: 100%
+    transition: transform .3s
+    min-width: 3px
+
+  &__counter
+    margin: 0
+
+  &__pager
+    display: $carousel-pager-display
+    align-items: $carousel-pager-align
+    justify-content: $carousel-pager-justify
+    margin-right: -#{$carousel-pager-spacing}
+    padding: $carousel-pager-padding
+
+    &-text
+      margin: 0
+
+    > *
+      flex: none
+      margin-right: $carousel-pager-spacing
+
+  &--arrows-under
+    +breakpoint($carousel-arrows-under-breakpoint)
+      #{$this}__arrow
+        top: 10px
+        transform: translateY(0)
+        width: $carousel-arrows-under-size
+        height: $carousel-arrows-under-size
+
+        &--next
+          border-radius: $carousel-arrow-border-radius $carousel-arrows-under-border-radius $carousel-arrows-under-border-radius $carousel-arrow-border-radius
+          right: 0
+
+        &--prev
+          border-radius: $carousel-arrows-under-border-radius $carousel-arrow-border-radius $carousel-arrow-border-radius $carousel-arrows-under-border-radius
+          left: 0
+
+  .card
+    min-height: 100%
+
+  &__thumbs
+    margin-top: $carousel-spacing
+
+  .banner__iefix
+    height: 100%
+
+  &--2-items,
+  &--3-items
+    .banner__programme
+      bottom: 20px
+      right: 20px
+      max-width: 90%
+
+    .banner__logo
+      max-height: 100px
+
+  &--2-items
+    .banner__title
+      +heading(2)
+
+  &--3-items
+    .banner__title
+      +heading(3)
+
+  +breakpoint(medium)
+    &__thumbs
+      display: none

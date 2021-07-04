@@ -1,0 +1,58 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+
+.bear-with
+  align-items: center
+  background: url('../../images/theme/bear-with.jpg')
+  background-size: cover
+  color: $white
+  font-family: $base-font-family
+  display: flex
+  height: 100vh
+  position: relative
+  text-align: center
+
+  &::before
+    background-color: rgba($black, .5)
+    content: ''
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+  .container
+    margin-top: 30px
+    position: relative
+    z-index: 1
+
+  .heading--one
+    font-size: 80px
+    line-height: 1
+    margin: 0
+
+  p
+    font-size: 30px
+    margin: 0 0 20px
+
+    &.small
+      font-size: 18px
+
+  .button
+    margin-top: 40px
+
+  +breakpoint(small)
+
+    .heading--one
+      font-size: 50px
+
+    p
+      font-size: 22px
+      margin-bottom: 20px
+
+

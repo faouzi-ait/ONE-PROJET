@@ -1,0 +1,95 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$button-bgc: transparent
+$button-border-radius: 2px
+$button-border: 2px solid $brand-color
+$button-hover-bgc: $brand-color
+
+//***********************************
+
+$button-filled-bgc: $brand-color
+$button-filled-color: $base-color-dark
+$button-filled-hover-bgc: $base-color
+$button-filled-icon-color: $base-color-dark
+
+//***********************************
+
+$button-small-padding: 6px 12px
+$button-with-icon-padding: 10px 20px 9px 16px
+$button-small-font-size: 14px
+
+//***********************************
+
+$button-error-background: $error-color
+$button-error-color: $white
+$button-error-border: 2px solid $error-color
+
+$button-error-hover-background: shade($error-color, 10%)
+
+$button-success-background: $success-color
+$button-success-color: $white
+$button-success-border: 2px solid $success-color
+
+$button-success-hover-background: shade($success-color, 10%)
+
+//***********************************
+
+$button-null-background: $dark-gray
+$button-null-color: $white
+$button-null-border: 2px solid $dark-gray
+
+$button-null-hover-background: $onyx
+
+//***********************************
+
+$button-color: $base-color
+$button-font-family: $base-font-family
+$button-font-size: 16px
+$button-font-weight: 600
+
+//***********************************
+
+$button-padding: 13px 15px 12px
+
+//***********************************
+
+$button-transition: background-color .3s, border-color .3s
+
+//***********************************
+
+$button-alert-color: $error-color
+$button-alert-size: 14px
+$button-alert-right: 10px
+
+//***********************************
+
+$button-icon-padding: 9px
+$button-icon-size: 40px
+$button-icon-margin: 0 10px 0 0
+$button-icon-margin-right: 0 0 0 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .button
+  &__count
+    background-color: $tundora
+    color: $white
+    font-size: 13px
+
+  +hover
+    color: $base-color-dark
+
+  &--filled
+    +hover
+      color: $white
+
+      .button__icon
+        fill: $white

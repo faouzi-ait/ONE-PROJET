@@ -1,0 +1,74 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/inline-video'
+
+//***********************************
+
+.static-video
+  height: calc(100% - 100px)
+  position: relative
+  width: 100%
+
+  iframe,
+  video
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+.inline-video,
+.video-js
+  align-items: center
+  background: $black
+  justify-content: center
+  display: flex
+  z-index: 1
+
+  iframe,
+  video
+    max-height: 100%
+    max-width: 100%
+
+  .container &
+    width: 100%
+
+.video-js
+  height: auto
+
+  > div
+
+    &:not(.not-hover)
+      .vjs-control-bar
+        display: flex!important
+        transform: none!important
+
+  .rh5v-Overlay_component
+    display: none!important
+
+  .vjs-big-play-button
+    top: 50%
+    left: 50%
+
+.video-js-player .vjs-big-play-button
+  top: calc(50% - 25px)
+  left: calc(50% - 50px)
+
+.brightcove-player
+  height: 0
+  padding-bottom: 56.25%
+  width: 80vw
+
+.cms-modal
+  .inline-video,
+  .video-js
+    max-width: $inline-video-vw + vw
+    height: $inline-video-vw + vh
+    padding-bottom: 0
+    width: $inline-video-vw/57*100 + vh
+
++breakpoint(xsmall)
+  .inline-video
+    width: 100%

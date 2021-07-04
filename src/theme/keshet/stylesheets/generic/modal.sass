@@ -1,0 +1,118 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$modal-overlay-bgc: rgba($black, .8)
+$modal-overlay-padding: 20px
+$modal-overlay-padding-bp-small: 10px
+
+//***********************************
+
+$modal-warning-bgc: $error-color
+$modal-warning-color: $white
+
+//***********************************
+
+$modal-wrapper-bgc: $white
+$modal-wrapper-radius: 10px
+$modal-max-width: 1180px
+$modal-min-width: 300px
+
+//***********************************
+
+$modal-header-bgc: $athens-gray
+$modal-header-padding: 30px 40px
+$modal-header-padding-bp-large: 40px 30px 15px
+$modal-header-padding-bp-medium: 30px 20px 15px
+$modal-header-padding-bp-small: 30px 15px 10px
+
+//***********************************
+
+$modal-content-bgc: transparent
+$modal-content-padding: 40px
+$modal-content-padding-bp-large: 30px
+$modal-content-padding-bp-medium: 20px
+$modal-content-padding-bp-small: 15px
+$modal-link-color: $brand-color
+$modal-link-weight: bold
+
+//***********************************
+
+$modal-close-color: $gull-gray
+$modal-close-hover-color: $brand-color
+
+//***********************************
+
+$modal-header-padding-filters: 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .modal
+  iframe
+    border: none
+
+  &__title,
+  .heading--two
+
+    &::after
+      display: none
+
+  &__close
+    top: 25px
+
+  &--filters 
+    .modal__title
+      font-size: 24px !important
+
+      &-icon
+        display: none
+
+    .modal__header
+        background: transparent
+        padding: 25px
+
+    .modal__content
+      padding-bottom: 20px
+
+  &__copy
+    color: $entertainment
+    font-weight: bold
+    font-size: 18px
+
+  &__search
+    .modal__close
+      top: 9px
+
+    input
+      padding-left: 40px
+
+  &--meeting &
+
+    &__header
+      text-align: left
+
+  &--video,
+  &--image
+    .modal__close
+      background: url('../../images/theme/btn-pebble-brand.svg') no-repeat
+      background-size: auto 100%
+      border-radius: 0
+
+  +breakpoint(1140)
+    &--custom-content
+
+      .container
+        padding: 0 20px
+
+  +breakpoint(small)
+    &--custom-content
+      padding: 0
+
+      .container
+        padding: 0 20px

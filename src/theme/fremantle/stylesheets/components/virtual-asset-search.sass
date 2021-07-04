@@ -1,0 +1,43 @@
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$virtual-asset-search-control-border-radius: 4px
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .virtual-asset-search
+
+  &__list-button
+    line-height: 0
+
+  &__filters
+    .Select .Select-control .Select-arrow-zone
+      background: transparent url(../../../images/theme/select-arrow.svg) 18px no-repeat
+
+  &__pdf-asset
+    .virtual-asset-search__titles
+      height: 72px
+
+  &__selector
+    .carousel
+      max-width: 70vw
+
+    .programme__icon
+      top: 50%
+      left: 50%
+      bottom: unset
+      right: unset
+
+    .programme__strip
+      width: 140px
+
+  .programme-search__input
+    background-position-x: 8px
+    background-size: 35px
+    border: none

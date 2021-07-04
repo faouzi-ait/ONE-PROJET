@@ -1,0 +1,81 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: tint($casper, 70%)
+$psearch-padding: 20px 0
+
+//***********************************
+
+$psearch-input-border: 2px solid tint($casper, 40%)
+$psearch-input-focus-border: $brand-color
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: 20px
+$psearch-input-padding: 8px 20px
+$psearch-input-radius: 22px 0 0 22px
+$psearch-input-radius-open: 22px 0 0 0
+
+//***********************************
+
+$psearch-button-radius: 0 22px 22px 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: $base-color-light
+$psearch-clear-hover-fill: $brand-color
+
+//***********************************
+
+$psearch-input-radius-bp-small: 22px
+$psearch-button-radius-bp-small: 22px
+$psearch-input-radius-open-bp-small: 22px 22px 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .team-search
+
+  border-bottom: 1px solid tint($casper, 40%)
+
+  &--global
+    border-bottom: none
+
+  &__input
+    border-right: 0
+
+  +breakpoint(medium)
+
+    &__input
+      font-size: $base-font-size
+
+    .button
+      font-size: $base-font-size
+
+  +breakpoint(small)
+
+    .container
+      display: block
+
+    &__input
+      border-radius: $psearch-input-radius-bp-small
+      border-right: $psearch-input-border
+      box-sizing: border-box
+      font-size: 14px
+      height: 40px
+      margin-bottom: 10px
+      width: 100%
+
+    &__clear
+      display: none
+
+    .button
+      border-radius: $psearch-button-radius-bp-small
+      display: block
+      width: 100%

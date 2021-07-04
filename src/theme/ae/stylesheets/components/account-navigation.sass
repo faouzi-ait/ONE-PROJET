@@ -1,0 +1,44 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$account-navigation-bg-color: $rhino
+$account-navigation-padding: 13px 0
+
+$account-navigation-list-align: center
+
+$account-navigation-divider-width: 1px
+$account-navigation-divider-color: $oslo
+
+$account-navigation-font-size: 18px
+$account-navigation-font-weight: bold
+$account-navigation-color: $oslo
+$account-navigation-hover-color: $white
+
+$account-navigation-item-spacing: 20px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .account-navigation
+  &__list
+    width: 100%
+
+  &__item
+    flex: 1
+    margin-top: 10px
+    margin-bottom: 10px
+
+  &__link
+    justify-content: center
+    text-transform: uppercase
+
+  +breakpoint(medium)
+    &__item
+      max-width: 200px
+    

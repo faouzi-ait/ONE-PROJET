@@ -1,0 +1,36 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 70px
+$programme-details-border: none
+$programme-details-side-width: 280px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+  .wysiwyg
+    margin-bottom: 50px
+
+  &__series
+    .wysiwyg
+      margin-bottom: 30px
+
+  .asset
+    margin-bottom: 30px
+
+  &__side
+    .heading--four
+      margin-bottom: 5px
+
+  +breakpoint(large)
+    &__main
+      margin-right: 0
+      margin-bottom: 50px
+      padding-right: 0
+
+  +breakpoint(small)
+    &__side
+      width: auto

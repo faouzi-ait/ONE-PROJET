@@ -1,0 +1,94 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/slide-toggle'
+
+//***********************************
+
+.slide-toggle
+  align-items: center
+  display: flex
+  text-align: left
+
+  &--disabled
+    opacity: 30%
+
+  &__input
+    display: none
+
+    &:checked + .slide-toggle__toggle
+      background-color: $slide-toggle-active-bg
+
+      &::before
+        transform: translateX(100%)
+
+  &__label
+    flex: 1
+    font-size: 14px
+    min-width: 100px
+    font-weight: bold
+
+    &:first-child
+      text-align: right
+
+  &__toggle
+    background-color: $slide-toggle-bg
+    border-radius: 40px
+    cursor: pointer
+    height: 40px
+    margin: 0 10px
+    position: relative
+    transition: background-color .3s
+    width: 76px
+
+    &::before
+      background-color: $white
+      border-radius: 36px
+      content: ''
+      height: 36px
+      left: 2px
+      position: absolute
+      top: 2px
+      transition: transform .3s
+      width: 36px
+
+  &--small
+    .slide-toggle__toggle
+      height: 20px
+      width: 40px
+      &::before
+        top: 1px
+        height: 18px
+        width: 18px
+
+  &__hint
+    width: 30px
+    height: 30px
+    border-radius: 100%
+    background: rgba(0, 0, 0, 0.1)
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 12px
+    outline: none
+    margin: 0
+    padding: 0
+    border: none
+    position: relative
+
+  &__hint-copy
+    background: $slide-toggle-bg
+    border-radius: 4px
+    padding: 10px
+
+  &--reversed &
+    &__label
+      color: $white
+
+    &__toggle
+      border: 2px solid $white
+
+  &:last-child
+    &__toggle
+      margin-right: 0

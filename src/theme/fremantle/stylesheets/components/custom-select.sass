@@ -1,0 +1,32 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$custom-select-min-width: 100px
+$custom-select-max-width: 400px
+$custom-select-bgc: $base-color 
+$custom-select-border: 1px solid $mine-shaft
+$custom-select-radius: 0
+$custom-select-height: 48px
+$custom-select-padding: 0 40px 0 17px
+$custom-select-icon-fill: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .custom-select
+  &__select
+    color: $white
+    font-family: $secondary-font-family
+    letter-spacing: 0.5px
+    font-size: 15px
+    font-weight: 800
+    text-transform: uppercase
+
+    option
+      color: $base-color

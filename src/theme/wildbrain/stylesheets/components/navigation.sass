@@ -1,0 +1,58 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$nav-bgc: $brand-color
+$nav-divide-color: rgba(white, .3)
+$nav-width: 400px
+$nav-width-bp-large: 320px
+
+//***********************************
+
+$nav-close-left: auto
+$nav-close-right: 40px
+$nav-close-top: 30px
+
+//***********************************
+
+$nav-item-divide-margin: 0 0 16px 0
+$nav-item-divide-padding: 0 0 16px 0
+
+//***********************************
+
+$nav-list-padding: 95px 60px
+$nav-list-padding-bp-large: 25px 50px
+
+//***********************************
+
+$nav-link-active-color: $white
+$nav-link-color: $white
+$nav-link-hover-color: $white
+$nav-link-padding: 10px 23px
+
+//***********************************
+
+$sub-nav-margin: 0
+$sub-nav-padding: 0 0 0 25px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .navigation
+  &__link
+    background: $brand-color
+    border-radius: 30px
+    border-bottom-right-radius: 0
+    font-weight: 600
+    transition: background .3s
+
+    +hover
+      background: $brand-color-dark
+      
+  &__sub-nav
+    list-style: none

@@ -1,0 +1,89 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: $shark
+$psearch-padding: 20px 0
+
+//***********************************
+
+$psearch-input-border: solid 1px $mine-shaft
+$psearch-input-focus-border: $brand-color
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: 35px
+$psearch-input-padding: 19px 17px 19px 86px
+$psearch-input-radius: 0
+$psearch-input-radius-open: 0
+
+//***********************************
+
+$psearch-button-radius: 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: $white
+$psearch-clear-hover-fill: $brand-color
+
+//***********************************
+
+$psearch-input-radius-bp-small: 0
+$psearch-button-radius-bp-small: 0
+$psearch-input-radius-open-bp-small: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-search
+
+  .container
+    position: relative
+
+  &__input
+    background: url(../../images/theme/mag-glass.svg) 18px center/62px $base-color no-repeat
+    color: $white
+
+    &::placeholder
+      color: rgba($white, .4)
+
+  &__clear
+    background: transparent
+    border: none
+    position: absolute
+    right: 30px
+    top: 0 
+    bottom: 0
+
+    svg
+      width: 10px
+
+  .button
+    display: none
+
+  &--global
+    .programme-search__input
+
+        &:focus
+          border-color: $mine-shaft
+
+
+  +breakpoint(1200)
+    &--global
+      .programme-search__input
+        background-size: 42px
+        background-position-x: 10px
+        font-size: 20px
+        padding-left: 50px
+
+  +breakpoint(medium)
+    &__input
+      background-size: 42px
+      background-position-x: 10px
+      padding: 15px 15px 15px 50px
+      font-size: 18px

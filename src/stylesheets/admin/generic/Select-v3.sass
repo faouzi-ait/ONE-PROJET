@@ -1,0 +1,103 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$react-select-bgc: $white
+$react-select-color: $base-color
+$react-select-border: 2px solid $base-color-light
+$react-select-radius: 22px
+$react-select-focused-border: $brand-color
+$react-select-padding: 5px 0px 5px 14px
+
+// $react-select-single-padding: 7px 0 7px 20px
+// $react-select-single-border: 2px solid $brand-color
+
+//***********************************
+
+$react-select-placeholder-color: $base-color-light
+
+//***********************************
+
+$react-select-value-bgc: $brand-color
+$react-select-value-radius: 12px
+$react-select-value-color: $white
+
+//***********************************
+
+$react-select-menu-border: 2px solid $base-color-light
+$react-select-menu-radius: 6px
+
+//***********************************
+
+$react-select-option-border: 1px solid shade($athens-gray, 5%)
+$react-select-option-padding: 10px
+$react-select-option-color: $base-color
+$react-select-option-focus-bgc: tint($brand-color, 80%)
+$react-select-option-focus-color: $base-color
+
+.cms-SelectV3
+  .Select
+    color: $react-select-color
+    background-color: $react-select-bgc
+
+    &__control
+      box-shadow: none
+      border: $react-select-border
+      border-radius: $react-select-radius
+
+      &:hover
+        border-color: $react-select-focused-border
+
+      &--is-focused
+        border-color: $react-select-focused-border
+
+        .Select__placeholder
+          display: none
+
+    &__value-container
+      padding: $react-select-padding
+
+    &__menu
+      border: $react-select-menu-border
+      border-radius: $react-select-menu-radius
+
+    &__placeholder
+      color: $react-select-placeholder-color
+
+    &__option
+      border: $react-select-option-border
+      color: $react-select-option-color
+      padding: $react-select-option-padding
+
+      &--is-focused
+        background-color: $react-select-option-focus-bgc
+        color: $react-select-option-focus-color
+
+      &--is-selected
+        background-color: inherit
+        color: inherit
+
+        &:hover
+          background-color: $react-select-option-focus-bgc
+          color: $react-select-option-focus-color
+
+    &__multi-value
+      background-color: $react-select-value-bgc
+      border-radius: $react-select-value-radius
+      color: $react-select-value-color
+      padding: 3px
+
+      &__label
+        font-size: 12px
+        line-height: 1.2
+        padding: 2px 0px 2px 10px
+        color: $react-select-value-color
+
+      &__remove
+        svg
+          width: 16px
+          height: 16px
+
+        &:hover
+          background-color: inherit
+          color: inherit

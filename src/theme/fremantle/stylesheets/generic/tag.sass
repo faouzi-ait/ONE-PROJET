@@ -1,0 +1,38 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tag-bgc: transparent
+$tag-hover-bgc: transparent
+$tag-margin: 0 5px 5px 0
+$tag-padding: 0
+$tag-radius: 0
+
+//***********************************
+
+$tag-font-size: 14px
+$tag-font-weight: normal
+$tag-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tag
+  font-family: $secondary-font-family
+  letter-spacing: 0.5px
+  transition: background-color 0.3s, color 0.3s
+
+  &__icon
+    fill: $white
+
+  +hover
+    color: $brand-color
+
+  @each  $genre, $color in $genre-colors
+    &--#{$genre}
+       background-color: $color

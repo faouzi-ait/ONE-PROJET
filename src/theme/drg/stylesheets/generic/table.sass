@@ -1,0 +1,45 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$th-bgc: $white
+$th-border-color: shade($athens-gray, 5%)
+$th-font-size: 20px
+$th-font-weight: 700
+$th-padding: 10px 20px
+
+$td-bgc: $white
+$td-border-color: shade($athens-gray, 5%)
+$td-font-size: 16px
+$td-padding: 15px 20px
+$table-radius: 4px
+
+.custom .table
+  td
+    background-color: transparent
+
+    &:first-child:not(.table__image)
+      padding-left: 15px
+
+  th
+    background: rgba($white, .3)
+    border-color: transparent
+    &:first-child
+      max-width: 400px
+
+  tbody
+    tr.with-action
+      &:hover, &:focus
+        td
+          background: rgba($white, .2)
+
+  .button
+    border-color: $white
+
+
+  &--report
+    color: $black

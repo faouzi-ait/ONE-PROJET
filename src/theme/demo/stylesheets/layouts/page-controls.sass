@@ -1,0 +1,59 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$page-controls-padding: 20px calc((100% - 1290px / 2)/2)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .page-controls
+
+    justify-content: flex-end
+    flex-flow: row nowrap
+    margin: 0 calc((100% - 1290px / 2)/-2)
+    background-color: $cod-gray
+
+    +breakpoint(large)
+        margin: 0 -20px
+        padding: 20px 20px
+
+    &__left
+        flex: 1 1 auto
+        margin: 0
+    
+    &__center
+        margin: 0 1em
+        +breakpoint(large)
+            margin: 0
+
+    &__right
+        margin: 0 1em
+        +breakpoint(large)
+            margin: 0
+
+    .button--filled
+        background-color: $brand-color
+
+    &__control
+        +breakpoint(small)
+        +breakpoint(medium)
+            margin-top: 1rem
+        +breakpoint(large)
+            display: flex
+            flex-flow: column nowrap
+            align-items: stretch
+            > *
+                margin-right: 0
+            > span
+                margin-right: 1rem
+
+    +breakpoint(large)
+        display: flex
+        flex-flow: column nowrap
+        align-items: stretch
+
+        .button
+            margin-top: 1rem
+            width: 100%

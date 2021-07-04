@@ -1,0 +1,33 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$panel-section-panel-bg: transparent
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .panel-section
+  background: $ebony-clay
+  border-radius: 8px
+  padding: 25px 38px
+  margin-bottom: 80px
+  position: relative
+
+  &__panel
+    padding: 0
+
+  &__title
+    font-size: 24px
+    text-transform: uppercase
+
+  .custom-select
+    min-width: 200px
+
+  +breakpoint(medium)
+    margin-bottom: 60px
+
+  +breakpoint(small)
+    margin-bottom: 40px
+    padding: 20px

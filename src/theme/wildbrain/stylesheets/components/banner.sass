@@ -1,0 +1,60 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 600px
+$banner-tablet-min-height: 540px
+$banner-mobile-min-height: 480px
+$banner-short-min-height: 240px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 0
+$banner-tablet-content-padding: 0
+$banner-content-width: 430px
+
+//***********************************
+
+$banner-intro-min-height: 240px
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 100px 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 20px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: 20px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+    &__title
+        &:last-child
+            margin-bottom: 0
+
+    &:after
+        background: linear-gradient(270deg, rgba(0,0,0,0) 0%, #000000 100%)
+        pointer-events: none
+
+    &--intro,
+    &--short
+        &:after
+            display: none
+
+        .banner__media
+            min-height: calc(100% + 1px)
+
+    +breakpoint(large, min)
+        &:after
+            width: 50%

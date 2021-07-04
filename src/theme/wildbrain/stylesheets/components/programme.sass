@@ -1,0 +1,68 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-image-radius: 0
+$programme-image-spacing: 10px
+
+//***********************************
+
+$programme-title-font-size: 15px
+$programme-title-font-size-small: 12px
+
+//***********************************
+
+$programme-copy-font-size: 14px
+$programme-copy-color: $casper
+
+//***********************************
+
+$programme-icon-size: 60px
+$programme-icon-background: rgba($base-color, .8)
+$programme-icon-border: 2px solid $white
+$programme-icon-radius: 50%
+
+//***********************************
+
+$programme-icon-arrow-size: 30px
+$programme-icon-arrow-color: $white
+
+//***********************************
+
+$programme-strip-bgc: $error-color
+$programme-strip-color: $white
+$programme-strip-font-size: 12px
+$programme-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme
+    &__strip,
+    &__title
+        font-weight: 600
+
+    &__icon
+        +hover
+            background-color: $brand-color
+            border-color: $brand-color
+
+    
+
+    &__actions
+        right: 0
+        top: 0
+
+    &__logo
+        margin-left: 10px
+        max-height: 60px
+        margin-top: -35px
+        position: relative
+
+    img.programme__logo
+        max-width: none

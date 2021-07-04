@@ -1,0 +1,18 @@
+dimensions:
+  - name: Page
+    url: https://storylab.rawnet.one/admin/pages/page/5/images
+    components:
+      Banner: 3200x1336
+      Thumbnail: 1120x1000
+
+  - name: Programme
+    url: https://storylab.rawnet.one/catalogue/2
+    components:
+      Banner: 3200x1800
+      Thumbnail: 1120x700
+      Logo: 400x60
+
+  - name: News Article
+    components:
+      Banner: 3200x1336
+      Thumbnail: 560x350

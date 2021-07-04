@@ -1,0 +1,31 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$text-button-color: $oslo
+$text-button-font-family: $base-font-family
+$text-button-font-size: 12px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .text-button
+  font-weight: normal
+  line-height: 1
+  text-decoration: none
+  transition: color .3s $easing
+
+  &--large
+    font-size: 18px
+    text-decoration: underline
+
+  +hover
+    color: $ziggurat
+
+  .button__icon
+    margin-right: 14px

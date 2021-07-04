@@ -1,0 +1,195 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 478px
+$banner-tablet-min-height: 478px
+$banner-mobile-min-height: 432px
+$banner-short-min-height: 0
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 0
+$banner-tablet-content-padding: 0
+$banner-content-width: 420px
+
+//***********************************
+
+$banner-intro-min-height: 528px
+$banner-intro-align-items: center
+$banner-intro-content-padding: 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 30px
+
+//***********************************
+
+$banner-copy-margin: 0 0 30px
+$banner-copy-size: 18px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  background:  url('../../../images/theme/banner-bg.png') no-repeat $base-color-dark
+  background-size: auto 100%
+  border-bottom: solid 50px $base-color-dark
+  overflow: hidden
+
+  &:after
+    background-color: $brand-color
+    height: 100%
+    width: 8px
+
+  .button:not(.button--filled)
+    color: $white
+
+    +hover
+      color: $base-color
+
+  &__title
+    font-size: 56px
+    line-height: 1
+    letter-spacing: -2.9px
+
+  &__logo
+    margin-bottom: 20px
+
+  &__sub-title
+    color: $brand-color
+    letter-spacing: -1px
+
+  &__image
+    border-radius: 5px 0 0 5px
+    left: 600px
+    width: auto
+    height: auto
+    right: 0
+    bottom: 0
+    top: auto
+    max-width: 1000px
+
+  &__media
+    display: block
+    position: static
+    transform: none
+
+  &__copy
+    font-weight: bold
+
+  &__tag
+    color: $brand-color
+    margin-right: 16px
+
+  .icon-button
+    height: 46px
+    width: 46px
+
+  &--programme
+    background:  $base-color-dark
+    border-bottom-width: 40px
+    
+    .banner
+      &__content
+        display: flex
+        flex-direction: column
+        padding: 20px 0
+
+      &__sub-title
+        order: -2
+
+      &__title
+        order: -1
+        font-size: 66px
+        margin-bottom: 10px
+
+      &__copy
+        font-weight: 300
+        margin-bottom: 20px 
+
+  &--short
+    background:  $base-color-dark
+
+    .banner
+      &__title
+        font-size: 66px
+
+      &__content
+        padding: 10px 0
+
+        &:after
+          height: calc(100% - 24px)
+
+  &--catalogue
+    align-items: flex-start
+    min-height: 200px
+    overflow: visible
+
+    &:after
+      height: calc(100% + 20px)
+
+    .banner__content
+      padding-bottom: 30px
+
+  +breakpoint(1350)
+    &__image
+      left: 500px
+
+  +breakpoint(medium)
+    border-bottom-width: 37px
+
+    &__title
+      font-size: 36px
+      margin-bottom: 20px
+
+    &__copy
+      font-size: 16px
+      font-weight: 300
+
+    &__image
+      left: 0
+      border-radius: 0
+
+    &:before
+      content: ''
+      background: rgba($base-color-dark, 0.3)
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 2
+
+    &--short
+      min-height: 0
+      border-bottom-width: 20px
+
+      .banner
+        &__title
+          font-size: 42px
+
+    &--catalogue
+
+      .banner__content
+        padding-bottom: 10px
+
+    &--programme
+      border-bottom-width: 0
+
+      .banner
+        &__title
+          font-size: 42px
+
+.custom .cropper__preview
+  .banner
+    border-bottom: none
+    &__image
+      left: 0

@@ -1,0 +1,89 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+$border: 2px solid $brand-color
+$background-color: $white
+
+//***********************************
+
+.cms-programme-search
+  width: 100%
+
+  &:not(:last-child)
+    margin-right: 10px
+
+  .container
+    display: flex
+    padding: 0
+    margin-bottom: 0
+    position: relative
+
+  .react-autosuggest__container
+    flex: 1
+
+  &--global
+    background-color: transparent
+    margin: 0
+    padding: 0
+
+  &__input
+    background: none
+    border-radius: 22px
+    background-color: $background-color
+    border: $border
+    display: block
+    font-size: 16px
+    height: 34px
+    padding: 4px 0px 4px 20px
+    width: calc(100% - 20px)
+    outline: none
+
+    .react-autosuggest__container--open &
+      right: -32px
+
+
+    &:focus
+      border-color: tint($brand-color, 20%)
+
+  &__clear
+    background: none
+    border: none
+    cursor: pointer
+    font-size: 0
+    height: 25px
+    position: absolute
+    right: 5px
+    top: 10px
+
+    &--focused
+      border-color: tint($brand-color, 20%)
+
+    +hover
+      svg
+        fill: $black
+
+    svg
+      fill: grey
+
+  .cms-button
+    display: none
+
+  & + .text-button
+    font-size: 16px
+    height: 46px
+    white-space: nowrap
+
+  +breakpoint(large)
+    &--global
+      left: 20px
+      position: absolute
+      right: 20px
+      top: 100%
+
+  +breakpoint(small)
+
+    &--global
+      left: 10px
+      right: 10px
+

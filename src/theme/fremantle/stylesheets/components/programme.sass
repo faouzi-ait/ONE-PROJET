@@ -1,0 +1,87 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-image-radius: 0
+$programme-image-spacing: 0
+
+//***********************************
+
+$programme-title-font-size: 24px
+$programme-title-font-size-small: 14px
+
+//***********************************
+
+$programme-copy-font-size: 12px
+$programme-copy-color: $abbey
+
+//***********************************
+
+$programme-icon-size: 60px
+$programme-icon-background: rgba($abbey, 0.6)
+$programme-icon-border: solid 2px $white
+$programme-icon-radius: 50%
+
+//***********************************
+
+$programme-icon-arrow-size: 20px
+$programme-icon-arrow-color: $white
+
+//***********************************
+
+$programme-strip-bgc: $shark
+$programme-strip-color: $white
+$programme-strip-font-size: 12px
+$programme-strip-padding: 5px 8px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme
+    &__image
+        margin-bottom: 10px
+
+    &__title
+        color: $white
+        font-weight: normal
+        transition: color .3s
+
+        & + .programme__copy
+            margin-top: 8px
+
+    &__copy,
+    &__strip
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+        font-weight: 800
+        text-transform: uppercase
+
+    +hover
+        .programme__title
+            color: $brand-color
+
+    +breakpoint(medium)
+        &__actions
+            top: 0
+            right: 0
+
+        &__icon
+            padding-top: 40px
+            width: 40px
+            
+
+.custom .recently-viewed .programme
+    &__title
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+        font-weight: 600
+        font-size: 14px
+
+    &__image
+        margin-bottom: 15px
+        

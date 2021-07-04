@@ -1,0 +1,152 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 20px
+
+//***********************************
+
+$carousel-group-background: rgba($gallery, .1)
+$carousel-group-border-radius: 11px
+$carousel-group-color: $spun-pearl
+$carousel-group-font-size: 14px
+$carousel-group-margin: 0 $carousel-spacing 20px 0
+$carousel-group-padding: 2px 15px
+
+//***********************************
+
+$carousel-arrow-background-color: $brand-color
+$carousel-arrow-background-size: 48px
+$carousel-arrow-color: $white
+$carousel-arrow-size: 16px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: 0 10px 15px rgba($black, .15)
+$carousel-arrow-hover-background-color: shade($brand-color, 10%)
+$carousel-arrow-border-radius: 50%
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 4px
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 20px 0 0 0
+$carousel-dots-radius: 100%
+$carousel-dots-border: 2px solid $brand-color
+$carousel-dots-size: 8px
+$carousel-dots-active-background: $brand-color
+
+//***********************************
+
+$carousel-scroll-spacing: 20px
+$carousel-scroll-height: 6px
+$carousel-scroll-background: $white
+$carousel-scroll-handle-background: $brand-color
+$carousel-scroll-handle-radius: $carousel-scroll-height * 2
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 5px
+$carousel-pager-padding: 20px 0 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+  padding: 10px 0
+
+  &--fixed
+    .carousel-dots
+      bottom: 40px
+
+  &--3-items 
+    .banner__title
+      font-size: 20px
+
+  .banner
+    margin: -10px 0
+
+  &__group
+    font-weight: bold
+    text-transform: uppercase
+
+  +breakpoint(medium, min)
+
+    &--2-items,
+    &--3-items
+      .banner__content
+        padding-bottom: 100px
+
+  +breakpoint(medium)
+    .banner
+
+      &__content
+        padding-left: 0
+        padding-right: 0
+
+.custom
+  .content-block--text-and-items
+    .carousel
+      &__list
+        margin-left: 40px
+        transform: translateX(20px)
+
+  .content-block--banner-carousel
+    .carousel
+      &__arrow
+        width: 110px
+        height: 110px
+
+        &:after
+          width: 20px
+          height: 20px
+          border-width: 5px
+          border-radius: 4px
+          margin-left: -10px
+          margin-top: -10px
+
+        &--prev
+          left: -55px
+
+          &:after
+            left: 70%
+
+        &--next
+          right: -55px
+
+          &:after
+            left: 30%
+
++breakpoint(xlarge)
+  .custom
+    .content-block--text-and-items
+      overflow: hidden
+      
+      .carousel
+        &__list
+          margin-left: 0
+          transform: none
+
+    .content-block--banner-carousel
+      .carousel
+        &__arrow
+          transform: scale(.5) translateY(-100%)
+
+  

@@ -1,0 +1,228 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$card-base-color: $base-color
+$card-bgc: $white
+$card-border-radius: 0
+$card-padding: 27px 25px 30px
+
+//***********************************
+
+$card-title-color: $base-color
+$card-title-hover-color: $brand-color
+$card-title-margin: 0 0 15px
+$card-title-size: 20px
+$card-title-weight: 500
+
+//***********************************
+
+$card-date-color: rgba($black, .4)
+$card-date-font-size: 14px
+$card-date-margin: -5px 0 10px
+
+//***********************************
+
+$card-copy-color: $base-color
+$card-copy-hover-color: $base-color
+$card-copy-margin: 0 0 10px
+$card-copy-size: 17px
+$card-copy-weight: normal
+
+//***********************************
+
+$card-count-color: $white
+$card-count-background: transparent
+$card-count-padding: 0
+$card-count-weight: 500
+$card-count-border-radius: 15px
+$card-count-spacing: 8px
+$card-count-offset: -3px
+
+//***********************************
+
+$card-toggle-position: absolute
+$card-toggle-right: 10px
+$card-toggle-top: 0px
+$card-toggle-transform: translateY(-50%)
+
+//***********************************
+
+$card-tags-margin: 0 -5px 5px 0
+$card-tag-margin: 0 5px 5px 0
+$card-tag-font-size: 11px
+$card-tag-color: $white
+$card-tag-border: none
+$card-tag-padding: 5px 9px 4px
+$card-tag-radius: 3px
+
+//***********************************
+
+$card-active-shadow: none
+
+//***********************************
+
+$card-small-content-padding: 10px
+
+//***********************************
+
+$card-small-title-size: 14px
+
+//***********************************
+
+$card-icon-fill: $white
+
+//***********************************
+
+$card-strip-bgc: $cinnabar
+$card-strip-color: $white
+$card-strip-font-size: 11px
+$card-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card
+    box-shadow: 0 12px 14px -7px rgba($black,0.3)
+    display: flex
+    flex-direction: column
+    position: relative
+    transition: box-shadow .3s ease-in-out
+
+    &__title
+        text-transform: uppercase
+
+    &__over
+        overflow: hidden
+
+        + .card__content
+            .card__title
+                padding-right: 40px
+
+    &__hover
+        padding: 26px
+
+    &__strip
+        text-transform: uppercase
+        border-radius: 3px
+        top: 10px
+        left: 10px
+        bottom: auto
+
+    &__content
+        align-items: flex-start
+        display: flex
+        flex: 1 0 auto
+        flex-direction: column
+        position: static
+
+        &:after
+            background: $downy
+            bottom: 0
+            content: ''
+            left: 0
+            position: absolute
+            height: 0
+            width: 100%
+            transition: height .3s ease-in-out
+
+        > *
+            order: 2
+
+    &__copy
+        max-width: 100%
+
+    &__actions
+        order: 1
+        margin-left: auto
+        margin-bottom: -40px
+        position: static
+        padding-right: 0
+        transform: none
+
+        > *
+            margin-right: 0
+            margin-left: 5px
+
+    &__icon
+        background-color: $brand-color
+        border-radius: 3px
+        padding: 3px 4px
+
+        +hover
+            background-color: $downy
+
+    &__count
+        fill: $brand-color
+        display: inline-block
+        margin-bottom: 0
+        height: 31px
+        padding: 0
+        position: relative
+        vertical-align: middle
+
+        span
+            align-items: flex-end
+            bottom: 0
+            color: $white
+            display: flex
+            font-size: 13px
+            justify-content: center
+            left: 0
+            padding-bottom: 5px
+            position: absolute
+            right: 0
+            top: 0
+
+        + .card__copy
+            font-size: 13px
+            opacity: .6
+            display: inline-block
+            text-transform: uppercase
+
+    &__logo
+        margin: 0 20px 20px 0
+
+        &-wrapper
+            align-items: flex-end
+            background: linear-gradient(180deg, rgba($black,0) 0%, $black 100%)
+            bottom: 0
+            display: flex
+            justify-content: flex-end
+            height: 97px
+            position: absolute
+            width: 100%
+
+    &--toggle
+        .card
+            &__content
+                position: relative
+            
+            &__strip
+                top: auto
+                bottom: calc(100% + 10px)
+
+    &--active
+        box-shadow: none
+
+        .card__media-link
+            opacity: .5
+
+    &--with-like
+        min-height: 400px
+
+    +hover
+        box-shadow: 0 0 14px -7px rgba($black,0.3)
+
+        .card__content
+            &:after
+                height: 6px
+
+    +breakpoint(large)
+        &__content
+            padding: 25px 20px 20px

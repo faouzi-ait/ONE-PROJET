@@ -1,0 +1,55 @@
+@import '../imports'
+
+$contols-height: 60px
+
+.programme-filter-modal
+
+  &__basket
+    position: relative
+    background-color: white
+    min-width: 812px
+    height: $contols-height
+    border-bottom: 1px solid #e3e5e7
+
+    &--limit-warning
+      height: 80px
+
+  &__basket-content
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    margin: auto
+    height: $contols-height
+    width: 460px
+    height: 60px
+
+  &__action
+    display: flex
+    align-items: center
+    position: absolute
+    right: 16px
+    top: 0px
+    width: 160px
+    height: $contols-height
+
+    &--limit-warning
+      top: 20px
+
+  &__selected-msg
+    font-size: 20px
+    padding-right: 20px
+
+  &__limit-warning
+    width: 100%
+    color: red
+    text-align: center
+
+  &__select-all
+    text-align: right
+    min-width: 118px
+
+  &__select-all-label
+    font-size: 16px
+    font-weight: normal
+    padding-right: 8px

@@ -1,0 +1,53 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-meta-bg: $cod-gray
+$programme-meta-padding: 0 0 33px
+
+//***********************************
+
+.custom .programme-meta
+    .container
+        display: flex
+        flex-wrap: wrap
+        padding-bottom: 0
+        
+        &:before
+            background: $mine-shaft
+            content: ''
+            margin-bottom: 20px
+            height: 1px
+            width: 100%
+
+        > *
+            width: 145px
+            padding-right: 10px
+
+    .heading--three,
+    .heading--four
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+        font-size: 12px
+        font-weight: 800
+        color: $abbey
+        margin-bottom: 10px
+        text-transform: uppercase
+
+    .tag[class^="tag--"]
+        margin-top: -3px
+
+    +breakpoint(medium)
+        padding: 20px 0
+        
+        .container
+            margin-right: -10px
+
+            &::before
+                display: none
+
+            > *
+                margin-right: 10px
+                padding-right: 0
+                padding-bottom: 20px
+                width: calc(50% - 10px)

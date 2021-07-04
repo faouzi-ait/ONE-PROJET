@@ -1,0 +1,28 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .like
+  &__menu
+    background-color: $background-color
+    color: $white
+
+    &::before,
+    &::after
+      background-color: $background-color
+
+  &__button
+    color: $white
+
+    +hover
+      background-color: rgba($brand-color, .8)

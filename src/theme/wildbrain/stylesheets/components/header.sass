@@ -1,0 +1,62 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: white
+$header-max-width: 1520px
+$header-padding: 25px 20px
+$header-welcome-color: $brand-color
+$header-user-color: $brand-color
+$header-user-hover-color: $brand-color-dark
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+    border-bottom: solid 4px $brand-color
+    position: relative
+
+    .text-button
+        color: $brand-color
+        margin: 0 0 0 30px
+
+    .button
+        border: none
+        &:hover,
+        &:focus
+            background: none
+
+            .button__icon
+                fill: $brand-color-dark
+
+        &__icon
+            fill: $brand-color
+
+    &__controls
+        > *
+            margin-left: 30px
+
+    &__welcome
+        margin-right: 0
+        font-weight: 600
+
+    .programme-search
+        margin-left: 30px
+
+    +breakpoint(large)
+        .programme-search
+            margin-left: 0
+            border-top: solid 4px $brand-color
+
+
+    +breakpoint(small)
+        padding: 20px
+
+        .text-button,
+        &__controls > *
+            margin-left: 20px

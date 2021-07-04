@@ -1,0 +1,149 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 30px
+
+//***********************************
+
+$carousel-group-background: $tundora
+$carousel-group-border-radius: 0
+$carousel-group-color: $white
+$carousel-group-font-size: 11px
+$carousel-group-margin: 0 $carousel-spacing 15px 0
+$carousel-group-padding: 3px 15px 0
+
+//***********************************
+
+$carousel-arrow-background-color: $base-color-dark
+$carousel-arrow-background-size: 46px
+$carousel-arrow-color: $white
+$carousel-arrow-size: 16px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: 0 10px 15px rgba($black, .15)
+$carousel-arrow-hover-background-color: shade($brand-color, 10%)
+$carousel-arrow-border-radius: 3px 0 0 3px
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 4px
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 20px 0 0 0
+$carousel-dots-radius: 100%
+$carousel-dots-border: 2px solid $base-color-dark
+$carousel-dots-size: 8px
+$carousel-dots-active-background: $base-color-dark
+
+//***********************************
+
+$carousel-scroll-spacing: 20px
+$carousel-scroll-height: 10px
+$carousel-scroll-background: $tundora
+$carousel-scroll-handle-background: $brand-color
+$carousel-scroll-handle-radius: 2px
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 5px
+$carousel-pager-padding: 20px 0 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+    
+  &__dot
+    margin-top: 4px
+    margin-bottom: 4px
+
+  &__scroll-track
+    box-shadow: inset 0 0 0 2px $base-color-dark
+
+  &__group
+    min-height: 20px
+    position: relative
+    letter-spacing: 0.7px
+    font-weight: bold
+    text-transform: uppercase
+
+    &:before
+      border-radius: 2px 0 0 2px
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: calc(100% - 15px)
+      height: 20px
+      background-color: $tundora
+      z-index: -1
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      width: 0
+      height: 0
+      border-top: 10px solid transparent
+      border-bottom: 10px solid transparent
+      border-left: 15px solid $tundora
+
+  .card
+    margin-left: auto
+    margin-right: auto
+
+  &__arrow
+    top: calc(50% + 3px)
+    transform: none
+
+    &[disabled]
+      opacity: .5
+
+    &--prev
+      left: auto
+      right: 0
+
+    &--next
+      top: calc(50% - 49px)
+      right: 0
+
+    &--small
+      border-radius: 2px
+
+    &:not(.carousel__arrow--small)
+      &:after
+        content: none
+
+  .banner__content
+    padding-left: 0
+    padding-right: 0
+
+  +breakpoint($carousel-arrows-under-breakpoint)
+    &--arrows-under
+      .carousel__arrow
+
+        &--next
+          top: 60px
+
+      

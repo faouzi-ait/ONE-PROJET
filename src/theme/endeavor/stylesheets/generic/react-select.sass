@@ -1,0 +1,86 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$react-select-bgc: $white
+$react-select-color: $base-color
+$react-select-border: 1px solid $iron
+$react-select-radius: 3px
+$react-select-focused-border: $brand-color
+$react-select-padding: 8px 0 3px 10px
+$react-select-height: 40px
+$react-select-width: 190px
+
+$react-select-single-padding: 5px 0 5px 20px
+$react-select-single-border: 1px solid $iron
+
+//***********************************
+
+$react-select-placeholder-color: $base-color-light
+
+//***********************************
+
+$react-select-value-bgc: $brand-color
+$react-select-value-radius: 3px
+$react-select-value-color: $white
+
+//***********************************
+
+$react-select-menu-border: 2px solid $brand-color
+$react-select-menu-radius: 3px
+
+//***********************************
+
+$react-select-option-border: 1px solid $iron
+$react-select-option-padding: 10px
+$react-select-option-color: $base-color
+$react-select-option-focus-bgc: $brand-color
+$react-select-option-focus-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .Select
+
+    &.Select--single
+        .Select-placeholder,
+        .Select-value
+            font-size: 17px
+
+        .Select-arrow-zone
+            background: $brand-color url(../../images/theme/select-arrow-white.svg) 13px no-repeat
+            border-radius: 0 3px 3px 0
+            height: 40px
+            margin: -6px -1px -7px 10px
+            padding-left: 40px
+
+        .Select-multi-value-wrapper
+            max-width: none
+
+        .Select-clear-zone
+            padding-right: 10px
+
+    &-value-icon
+        color: $white
+
+.custom:not(.admin)
+
+    .react-datepicker__input-container
+        &:before
+            background-color: $brand-color
+            border-radius: 0 3px 3px 0
+            content: ''
+            position: absolute
+            bottom: 0
+            right: 0
+            top: 0
+            width: 40px
+
+        &:after
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9'%3E%3Cpath fill='%23ffffff' d='M0.3,0.4c0.5-0.5,1.1-0.5,1.6,0l4,3.9l4-3.9c0.6-0.5,1.2-0.5,1.6,0c0.5,0.5,0.4,1.2,0,1.7 c-0.4,0.4-4.9,4.6-4.9,4.6C6.6,6.9,6.3,7,6,7C5.7,7,5.4,6.9,5.2,6.7c0,0-4.4-4.2-4.9-4.6C-0.1,1.6-0.1,0.8,0.3,0.4'/%3E%3C/svg%3E")
+            right: 13px

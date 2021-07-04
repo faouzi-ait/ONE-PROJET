@@ -1,0 +1,76 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/team-member'
+
+//***********************************
+
+.team-member
+  background: $team-member-background
+  border-radius: $team-member-radius
+  color: $team-member-color
+  width: $team-member-width
+  max-width: 100%
+  position: relative
+  overflow: hidden
+
+  &__header
+    background: $team-member-header-background
+    padding: $team-member-heading-padding
+
+  &__aside
+    float: right
+    width: $team-member-side-width
+    padding-bottom: 40px
+
+  &__image
+    width: 100%
+    display: block
+    margin-bottom: 40px
+
+  &__content
+    padding: $team-member-content-padding
+    width: $team-member-content-width
+    box-sizing: border-box
+
+  &__title
+    font-size: $team-member-title-size
+    margin: 0 0 10px
+
+  &__sub
+    font-size: $team-member-sub-size
+    margin: 0 0 5px
+
+  &__copy
+    margin: 0 0 5px
+    word-break: break-word
+    display: flex
+
+  &__icon
+    margin-right: 10px
+    fill: $team-member-icon-fill
+    vertical-align: middle
+    flex: 1 0 22px
+    align-items: center
+
+  +breakpoint(medium)
+    &__header
+      background: transparent
+      padding: 40px 30px 0
+
+    &__aside
+      float: none
+      padding-bottom: 0
+      width: 100%
+
+    &__image
+      margin-bottom: 20px
+
+    &__title
+      font-size: 24px
+      padding-top: 20px
+
+    &__content
+      padding:
+      width: 100%

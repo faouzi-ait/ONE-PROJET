@@ -1,0 +1,39 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$asset-border-color: $gallery
+$asset-selected-bg: $pumice
+$asset-padding: 10px 20px
+$asset-font-size: 14px
+$asset-font-family: $base-font-family
+$asset-media-bg: $athens-gray
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .asset
+    border-bottom-width: 4px
+    
+    &__size
+        color: $base-color
+
+    &__media
+        margin-right: 10px
+
+    &--display
+        padding-top: 40px
+        padding-bottom: 40px
+
+    +breakpoint(small)
+        &--display
+            .asset__details
+                flex: auto
+
+            .text-button
+                word-break: break-all

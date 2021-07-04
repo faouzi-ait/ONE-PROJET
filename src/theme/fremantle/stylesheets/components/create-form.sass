@@ -1,0 +1,46 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$create-form-display: flex
+
+//***********************************
+
+$create-form-button-background: $white
+$create-form-button-font-size: 15px
+$create-form-button-font-family: $secondary-font-family
+$create-form-button-font-weight: 800
+$create-form-button-color: $shark
+$create-form-button-padding: 10px 23px
+$create-form-button-radius: 0
+
+//***********************************
+
+$create-form-input-padding: 15px 18px
+$create-form-input-border: 1px solid $mine-shaft
+$create-form-input-radius: 0
+$create-form-input-font-size: 15px
+$create-form-input-font-family: $secondary-font-family
+
+//***********************************
+
+$create-form-button-hover-background: shade($brand-color, 10%)
+$create-form-button-hover-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .create-form
+    &__input
+        background-color: $base-color 
+        color: $white
+        font-weight: 800
+
+    &__input,
+    &__button
+        text-transform: uppercase

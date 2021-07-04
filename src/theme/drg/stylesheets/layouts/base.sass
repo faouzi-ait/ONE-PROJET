@@ -1,0 +1,82 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$body-bgc: $background-color
+$body-margin: 0
+$body-padding: 0
+$container-padding: 20px
+//***********************************
+
+$page-before-color: rgba($base-color, .8)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+  -moz-osx-font-smoothing: grayscale
+
+  main
+    min-height: 700px
+
+  .page
+
+    &::before
+      background-color: rgba($white, .9)
+
+  .main
+    position: relative
+
+  .sticky
+    color: $base-color
+    .list-controls
+      .text-button
+        color: $base-color
+
+    &--circle-bottom-right
+      &::before
+        $circle-size: 840px
+        background: $light-brand-color
+        border-radius: 50%
+        bottom: 560 - $circle-size
+        content: ''
+        height: $circle-size
+        right: 420 - $circle-size
+        opacity: .8
+        position: absolute
+        width: $circle-size
+        pointer-events: none
+        z-index: 0
+
+  .panel
+    .form__input
+      background: $white
+      color: $base-color
+
+// helpers
+
+.u-bg-brand
+  background: $dark-brand-color
+  color: $white
+
+.u-bg-white
+  background: $white
+
+.u-text-up
+
+
+// spacing helper classes
+$spacing-directions: ( null: null, 't': '-top', 'r': '-right', 'b': '-bottom', 'l': '-left', 'h': '-left' '-right', 'v': '-top' '-bottom')
+$spacing-properties: ( 'p': 'padding', 'm': 'margin')
+$plus: \+
+$spacing-sizes: ( null: $container-padding, '-': $container-padding/2, $plus: $container-padding*2, '0': 0)
+
+@each $property-namespace, $property in $spacing-properties
+    @each $direction-namespace, $direction-rules in $spacing-directions
+        @each $size-namespace, $size in $spacing-sizes
+            .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}
+                @each $direction in $direction-rules
+                    #{$property}#{$direction}: $size
+
+

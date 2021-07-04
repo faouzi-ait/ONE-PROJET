@@ -1,0 +1,64 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$paginator-margin: 40px 0
+
+//***********************************
+
+$paginator-button-spacing: 10px
+$paginator-button-color: $gallery
+$paginator-button-border: 2px solid $brand-color
+$paginator-button-bgc: $bright-gray
+$paginator-button-padding: 5px
+$paginator-button-size: 34px
+$paginator-button-active-color: $brand-color
+$paginator-button-active-bgc: $white
+//***********************************
+
+$paginator-ellipsis-bgc: transparent
+$paginator-ellipsis-color: $base-color
+
+//***********************************
+
+$paginator-arrow-padding: 8px
+$paginator-previous-radius: 100%
+$paginator-next-radius: 100%
+$paginator-disabled-arrow-bgc: tint($bright-gray, 75%)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .paginator
+  flex-wrap: wrap
+
+  &__button
+    border-radius: 100%
+    font-size: 14px
+
+    &:hover
+      background-color: $brand-color
+      color: $white
+
+  &__arrow
+    background-color: $brand-color
+
+    &--is-disabled
+      opacity: .3
+
+    &--previous
+      padding-left: 10px
+      padding-right: 6px
+      text-align: left
+
+    .paginator__icon
+      fill: $white
+
+.custom:not(.admin) .paginator
+  &__ellipsis
+    color: $gallery

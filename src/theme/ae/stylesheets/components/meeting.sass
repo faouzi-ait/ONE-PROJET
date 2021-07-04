@@ -1,0 +1,73 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$meeting-background: $white
+$meeting-background-hover: $wildsand
+$meeting-border-radius: 4px
+$meeting-border: 4px solid $brand-color
+$meeting-padding: 10px
+$meeting-active-box-shadow: 0 12px 5px rgba($black, 0.2)
+
+//***********************************
+
+$meeting-copy-color: $base-color
+$meeting-copy-size: $base-font-size
+$meeting-copy-weight: normal
+$meeting-icon-fill: $brand-color
+
+//***********************************
+
+$meeting-toggle-position-bp-medium: absolute
+$meeting-toggle-right-bp-medium: 10px
+$meeting-toggle-top-bp-medium: 0px
+$meeting-toggle-transform-bp-medium: translateY(-50%)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .meeting
+  &:not(.meeting--passed)
+    color: $base-color
+
+    .meeting
+      &__time
+        background-color: $rhino
+        color: $white
+
+      &__header
+        margin-bottom: 7px
+
+      &__room
+        font-size: 14px
+
+      &__icon
+        fill: $chambray
+
+  &--passed
+    background-color: $rhino
+    color: $silver
+
+    .meeting__time
+      background-color: $white
+      color: $mirage
+
+  &__attendee-warning
+    top: 50px
+
+  &__form
+    .form__group
+      flex-wrap: unset
+
+      .form__control
+        min-width: auto
+        flex: auto
+
+    .button__count
+      height: 25px
+      width: 25px

@@ -1,0 +1,69 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/loader'
+
+//***********************************
+
+.loader
+  animation: loader-fade-in .5s forwards
+  left: 50%
+  position: absolute
+  top: 50%
+  transform: translate(-50%, -50%)
+
+  &::before
+    animation: rotate-alt 1s infinite linear
+    border: $loader-inner-border
+    border-bottom-color: transparent
+    border-radius: 50%
+    content: ''
+    display: block
+    height: $loader-inner-size
+    margin: 0 auto
+    width: $loader-inner-size
+
+  &::after
+    animation: rotate 1s infinite linear
+    border: $loader-outer-border
+    border-left-color: transparent
+    border-radius: 50%
+    content: ''
+    height: $loader-outer-size
+    left: 50%
+    margin: -53px 0 0 -53px
+    position: absolute
+    top: 50%
+    width: $loader-outer-size
+
+  &--small
+    &::before
+      height: 50px
+      width: 50px
+    &::after
+      height: 34px
+      width: 34px
+      margin: -21px 0 0 -21px
+
+
+@keyframes rotate
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(360deg)
+
+@keyframes rotate-alt
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(-360deg)
+
+@keyframes loader-fade-in
+  from
+    opacity: 0
+
+  to
+    opacity: 1

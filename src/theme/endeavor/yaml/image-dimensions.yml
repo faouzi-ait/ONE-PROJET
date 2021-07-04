@@ -1,0 +1,22 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x800
+      Thumbnail: 1120x700
+
+  - name: Programme
+    url: https://endeavor.rawnet.one/catalogue/2
+    components:
+      Banner: 3200x2000
+      Thumbnail: 1120x700
+      Logo: 400x60
+
+  - name: News Article
+    components:
+      Banner: 3200x800
+      Thumbnail: 1120x700
+
+  - name: Custom Catalogue
+    components:
+      Banner: 3200x800
+      Thumbnail: 560x350

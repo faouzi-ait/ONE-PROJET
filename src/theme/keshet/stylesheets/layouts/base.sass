@@ -1,0 +1,36 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$body-bgc: $background-color
+$body-margin: 0
+$body-padding: 0
+
+//***********************************
+
+$page-before-color: rgba($base-color, .8)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+  .page__wrapper
+    display: flex
+    flex-direction: column
+
+    main
+      flex-grow: 1
+
+  @each  $genre, $color in $genre-colors
+
+    .tag--#{$genre},
+    main.#{$genre} .banner__title:after,
+    main.#{$genre} .heading--two:after
+      background-color: map-get($genre-colors, $genre)
+
+    main.#{$genre} .icon-button svg
+      fill: map-get($genre-colors, $genre)
+
+  .sticky
+    background-color: $athens-gray

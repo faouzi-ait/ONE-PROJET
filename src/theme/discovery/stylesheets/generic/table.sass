@@ -1,0 +1,39 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$th-bgc: $white
+$th-border-color: $porcelain
+$th-font-size: 20px
+$th-font-weight: 600
+$th-padding: 10px 20px
+
+$td-bgc: $white
+$td-border-color: $porcelain
+$td-font-size: 16px
+$td-padding: 15px 20px
+$table-radius: 4px
+
+.custom .table
+
+  th
+    border-left: none
+
+  &--approvals
+    & + .paginator
+      margin-top: 50px
+
+  &--hover tbody tr:hover td,
+      background-color: $gallery
+      color: $base-color-dark
+
+  tr
+    &.with-action
+      +hover
+        td,
+        th
+          background-color: $gallery

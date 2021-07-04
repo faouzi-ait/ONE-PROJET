@@ -1,0 +1,51 @@
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$promo-color: $white
+$promo-padding: 50px 60px
+
+$promo-title-font-size: (36/16)+rem
+$promo-title-line-height: 1
+$promo-title-margin: 0 0 15px
+$promo-copy-margin: 0 0 20px
+
+$promo-content-width: 53%
+
+$promo-media-margin: 0 0 -60px auto
+$promo-media-width: 38%
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .promo
+    border-radius: 10px
+    font-weight: 500
+
+    &__brand
+        img
+            max-width: 100%
+
+    &__title
+        .heading--one
+            font-weight: $bold
+            padding-bottom: 20px
+            position: relative
+
+            &::after
+                background: $white
+                bottom: 0
+                content: ''
+                height: 6px
+                left: 0
+                position: absolute
+                width: 80px
+
+    +breakpoint(small)
+        padding: 20px
+
+        &__content
+            margin-top: 0

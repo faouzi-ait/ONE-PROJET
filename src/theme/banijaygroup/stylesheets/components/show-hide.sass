@@ -1,0 +1,88 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$show-hide-border: 1px solid $nobel
+
+//***********************************
+
+$show-hide-wrap-align: center
+$show-hide-wrap-display: flex
+
+//***********************************
+
+$show-hide-title-flex: 1
+$show-hide-title-font-family: $base-font-family
+
+//***********************************
+
+$show-hide-trigger-background: transparent
+$show-hide-trigger-border-radius: 0
+$show-hide-trigger-width: 2px
+$show-hide-trigger-flex: none
+$show-hide-trigger-size: 30px
+$show-hide-trigger-spacing: 10px
+
+//***********************************
+
+$show-hide-arrow-width: 3px
+$show-hide-arrow-color: $brand-color
+$show-hide-arrow-size: 10px
+
+//***********************************
+
+$show-hide-wrap-icon-button-margin: 15px
+$show-hide-gap: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .show-hide
+    padding-top: 15px
+
+    > *
+        padding-bottom: 15px
+
+    &__trigger
+        border: none
+
+    &--active
+        .show-hide__trigger
+            background: none
+
+            &:before
+                border-color: $cod-gray
+
+    &__title-wrap
+        display: block
+        position: relative
+        padding-right: 90px
+
+        .tag
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+
+    &__title
+        font-size: 22px
+        line-height: 1
+
+    &__sub-title
+        font-family: $sub-font-family
+        font-size: 14px
+        line-height: 1
+        margin: 0
+
+    +breakpoint(medium)
+        &__title-wrap
+
+            .tag
+                position: static
+                margin-left: 0
+                transform: none

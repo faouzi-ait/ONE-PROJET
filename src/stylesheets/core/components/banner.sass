@@ -1,0 +1,240 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import ../../_theme/components/banner
+
+//***********************************
+
+// TODO: Responsive
+
+.banner
+  align-items: center
+  background-position: center center
+  background-size: cover
+  color: $banner-color
+  display: flex
+  min-height: $banner-min-height
+  position: relative
+  z-index: 1
+  text-de
+  width: 100%
+
+  &__logo
+    max-height: 200px
+
+  &__iefix
+    display: flex
+
+  picture
+    display: block
+    width: 100%
+
+  &:after
+    background-color: rgba(0, 0, 0, 0.4)
+    content: ""
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 3
+    pointer-events: none
+
+  &--short,
+  &--short-zoomed
+    min-height: $banner-short-min-height
+
+  &--intro
+    align-items: $banner-intro-align-items
+    min-height: $banner-intro-min-height
+
+    .banner__content
+      max-width: $banner-intro-content-width
+      padding: $banner-intro-content-padding
+
+  &--center &
+    &__content
+      margin: 0 auto
+      text-align: center
+
+  .container
+    position: relative
+    width: 100%
+    z-index: 4
+    pointer-events: none
+
+  &__image
+    height: 100%
+    left: 0
+    overflow: hidden
+    position: absolute
+    top: 0
+    width: 100%
+
+    > picture
+      background-position: center
+      background-size: cover
+      height: 100%
+      width: 100%
+      will-change: transform
+
+  &__media
+    left: 50%
+    max-width: none
+    min-height: 100%
+    min-width: 100%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  &__content
+    max-width: $banner-content-width
+    padding: $banner-content-padding
+    pointer-events: none
+
+    .button,
+    .icon-button
+      pointer-events: all
+
+    .carousel &
+      padding-left: 40px
+      padding-right: 40px
+
+  &__title
+    margin: $banner-title-margin
+
+    +heading(1)
+
+  &__copy
+    font-size: $banner-copy-size
+    margin: $banner-copy-margin
+
+  &__sub-title
+    +heading(3)
+    margin: 0 0 10px
+
+  &__label
+    bottom: 30px
+    position: absolute
+    right: 30px
+
+  &__actions
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    margin-right: -10px
+    margin-bottom: -10px
+    pointer-events: all
+
+    > *
+      flex: none
+      margin-bottom: 10px
+      margin-right: 10px
+
+  &__programme
+    position: absolute
+    bottom: 30px
+    right: 30px
+    z-index: 11
+
+    &-title
+      font-size: 28px
+      font-weight: bold
+      color: $white
+      margin: 0
+
+    &-link
+      color: inherit
+      text-decoration: inherit
+
+  &--medium-media
+    min-height: $banner-mobile-min-height
+    z-index: 10 !important
+
+    &.banner--short
+      min-height: $banner-short-min-height
+
+    &.banner--intro
+      min-height: $banner-intro-min-height
+
+    .banner__title
+      +heading(2)
+
+    .copy
+      font-size: $base-font-size
+
+  &--large-media
+    min-height: $banner-tablet-min-height
+    z-index: 10 !important
+
+    &.banner--short
+      min-height: $banner-short-min-height
+
+    &.banner--intro
+      min-height: $banner-intro-min-height
+
+    .banner__title
+      +heading(2)
+
+    .copy
+      font-size: $base-font-size
+
+  &--xlarge-media
+    z-index: 10 !important
+
+  +breakpoint(large)
+    min-height: $banner-tablet-min-height
+
+    &__content
+      padding: $banner-tablet-content-padding
+
+    &__title
+      +heading(2)
+
+    &__copy
+      font-size: $base-font-size
+
+    &__label
+      bottom: 10px
+      font-size: 12px
+      right: 10px
+
+    &__programme
+      right: 10px
+
+      &-title
+        font-size: 24px
+
+    &--short
+      min-height: $banner-short-min-height
+
+    &--intro
+      min-height: $banner-intro-min-height
+
+
+  +breakpoint(medium)
+    min-height: $banner-mobile-min-height
+
+    .container
+      box-sizing: border-box
+
+    &--short
+      min-height: $banner-short-min-height
+
+    &--intro
+      min-height: $banner-intro-min-height
+
+    &__content
+      .carousel &
+        padding-left: 20px
+        padding-right: 20px
+
+    &__programme
+      left: 10px
+
+      &-title
+        font-size: 18px
+
+a.banner
+  text-decoration: none

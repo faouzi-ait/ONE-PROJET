@@ -1,0 +1,70 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$chart-placeholder-bg: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .chart
+
+    .highcharts-legend-item
+        text
+            fill: $white !important //need to override inline style
+
+    .highcharts-axis-labels
+        text
+            fill: $edward !important //need to override inline style
+
+    .highcharts-container
+        background-color: black
+
+    &__controls
+        flex-flow: row nowrap
+        
+        > div
+            display: flex
+            flex: 1 1 auto
+            align-items: center
+            max-width: 250px
+            margin-right: 10px
+
+            &:last-of-type
+                margin-right: 1rem
+
+            label
+                flex-grow: 1
+                text-align: right
+                margin-right: 10px
+                margin-left: 0
+                font-weight: 600
+                font-size: 14px
+                margin-bottom: 0
+            
+            
+
+            +breakpoint(small)
+                
+    .button
+        width: auto
+        flex: 1 1 auto
+        margin-left: auto
+        align-self: stretch
+        background-color: $brand-color
+
+    +breakpoint(xlarge)
+        &__controls
+            
+            > div
+                flex-direction: column
+                align-items: flex-start
+                margin-right: 20px
+
+        .button
+            align-self: flex-end

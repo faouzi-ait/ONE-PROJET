@@ -1,0 +1,249 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 600px
+$banner-tablet-min-height: 540px
+$banner-mobile-min-height: 480px
+$banner-short-min-height: 260px
+$banner-color: $base-color
+
+//***********************************
+
+$banner-content-padding: 0 0 20px 40px
+$banner-tablet-content-padding: 80px 0 40px
+$banner-content-width: 500px
+
+//***********************************
+
+$banner-intro-min-height: 600px
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 100px 0 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 5px 0 25px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: 16px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  align-items: flex-start
+  background: $athens-gray
+  margin-bottom: 2.425vw
+  position: relative
+
+  .container
+    max-width: 1500px
+
+  &:before
+    bottom: -2.425vw
+    content: url('../../../images/theme/banner-curve-grey.svg')
+    height: 17.089vw
+    position: absolute
+    right: 0
+    width: 100vw
+
+  &::after
+    background: none
+    content: url('../../../images/theme/banner-curve-grey-bottom.svg')
+    position: absolute
+    right: 0
+    pointer-events: none
+    top: calc(100% + 2.425vw)
+    width: 100%
+
+  .banner__actions
+    .icon-button
+      margin-right: 10px
+
+  &__image
+    left: auto
+    right: 0
+    width: calc(100% - 320px)
+    z-index: -1
+
+  &__title
+    font-family: $heading-font-family
+    font-weight: bold
+    line-height: .9
+    text-transform: uppercase
+
+    &::after
+      background: $base-color
+      content: ''
+      display: block
+      height: 8px
+      margin-top: 25px
+      width: 70px
+
+    .banner__tag + &
+      margin-top: 10px
+
+  &__title
+    // for IE11 purposes
+    max-width: calc(100% + 4vw)
+
+  &__copy
+    // for IE11 purposes
+    max-width: 100%
+    
+
+  &__content
+    align-items: flex-start
+    position: relative
+    max-width: 310px
+    justify-content: center
+    display: flex
+    flex-direction: column
+    height: 520px
+
+    &:before
+      content: url('../../../images/theme/banner-pebble.svg')
+      position: absolute
+      height: 719px
+      top: -180px
+      left: -290px
+      width: 750px
+      z-index: -1
+
+  &__programme
+    bottom: auto
+    top: 30px
+
+    &-title
+      font-family: $heading-font-family
+      font-weight: bold
+      text-transform: uppercase
+
+  &--short,
+  &--intro
+    align-items: center
+    margin-bottom: 0
+
+    &:before,
+    &:after,
+    .banner__content:before,
+    .banner__title:after
+      display: none
+
+    .banner__content
+      padding: 0
+      height: auto
+      max-width: none
+
+    .banner__copy
+      color: $white
+
+    .banner__image
+      width: 100%
+
+    .banner__title
+      color: $white
+      font-size: 48px 
+      margin-bottom: 10px
+
+      &:last-child
+        margin-bottom: 0
+
+    .container
+      max-width: 1180px
+
+  &__iefix
+
+      & ~ .breadcrumbs,
+      & ~ .section,
+          position: relative
+          z-index: 2
+
+          &--collapse,
+          &--z-index
+            z-index: 3
+
+  @media all and (min-width: 1540px)
+    &__image
+      width: calc(50vw + 410px)
+
+
+  @media all and (min-width: 1800px)
+    &::after
+      top: 80%
+      z-index: -2
+
+  +breakpoint(xlarge)
+    &__content
+      padding-left: 4vw
+
+    &__image
+      width: calc(96vw - 250px)
+
+  +breakpoint(large)
+    background: $white
+    min-height: 0
+    padding-top: 480px
+
+    &::after
+      display: none
+
+    &:before
+      content: url('../../../images/theme/banner-curve-white.svg')
+      height: 17.333vw
+      left: -1vw
+      top: calc(480px - 17.333vw)
+      width: 102vw
+
+    &__title
+      margin-bottom: 10px
+
+      &::after
+        margin-top: 10px
+
+    &__image
+      height: 480px
+      width: 100%
+
+    &__content
+      padding-top: 20px
+      max-width: none
+      height: auto
+
+      &:before
+        display: none
+
+    &--short,
+    &--intro
+      padding-top: 260px
+
+      &:before
+        display: block
+        top: calc(260px - 17.333vw)
+
+      .banner__image
+        height: 260px
+
+      .banner__copy,
+      .banner__title
+        color: $base-color
+
+      .banner__content
+        padding: 20px 0
+
+  +breakpoint(medium)
+    &__content
+      padding-left: 0
+
+    &--short,
+    &--intro
+      .banner__title
+        font-size: 36px 

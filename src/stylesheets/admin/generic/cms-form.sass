@@ -1,0 +1,513 @@
+.cms-form
+
+  &--large &
+    &__label
+      min-width: 240px
+      &--with-description
+        margin-bottom: 23px
+
+    &__collection
+      margin-left: 215px
+
+    &__control
+      &--actions
+        flex-wrap: wrap
+        margin-top: 45px
+
+        .cms-button
+          flex: none
+
+  &__inner
+    flex-grow: 1
+    .cms-modal &
+        max-width: 575px
+
+    .cms-modal:not(.cms-modal--large) &
+        max-width: 410px
+
+    .cms-modal--large &:first-child:last-child
+      max-width: none
+
+  &__inner &
+    &__input
+      width: 100%
+
+  &__info
+    color: $casper
+    font-size: 12px
+    font-style: italic
+    margin: 5px 10px 0 0
+    text-align: right
+    &--left
+      text-align: left
+
+  &__images
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  &__table
+    display: table
+    width: calc(100% - 200px)
+    margin-left: 200px
+
+    .cms-form__input,
+    .Select,
+    .react-datepicker-wrapper
+      width: calc(100% - 15px)
+      margin: 0 15px 15px 0
+
+    .cms-form__control
+      display: table-row
+
+      > *
+        display: table-cell
+        width: 426px
+
+        &:last-child
+          width: auto
+
+    &--wide
+      margin-left: 0
+      width: 100%
+
+  &__uploader
+    align-items: center
+    background-color: tint($brand-color, 80%)
+    display: flex
+    justify-content: center
+    height: 250px
+    margin-bottom: 20px
+
+  .grid--two,
+  &__group
+    .cms-form__control
+      display: block
+      margin-right: 20px
+      width: calc(50% - 20px)
+
+      &--full
+        width: calc(100% - 20px)
+
+      p
+        margin: 0 0 5px
+
+    .cms-form__input
+      width: 100%
+
+    .cms-form__label
+      display: block
+      margin: 0 0 5px
+      width: auto !important
+
+  .sharer__link
+    margin-right: 10px
+
+  &__inline
+    display: flex
+    align-items: center
+
+  &__group
+    background-color: tint($brand-color, 80%)
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -20px 20px
+    padding: 20px 0 10px 20px
+    position: relative
+
+    &--hidden
+      &::after
+        background: tint($brand-color, 80%)
+        border: 1px dashed $brand-color
+        content: ''
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+
+      .cms-form__group-actions
+        display: none
+
+    &:first-child
+      margin-top: 30px
+
+    &-actions
+      font-size: 0
+      margin-right: 20px
+      text-align: right
+      width: 100%
+
+      .cms-button
+        border: none
+        margin-left: 5px
+
+
+  .Select
+    flex: 1
+    width: auto
+
+    & + .Select
+      margin-left: 20px
+
+    &.Select--single .Select-value
+      font-size: 16px
+
+  &__copy
+    flex: 1
+    a
+      color: $brand-color
+
+  a:not([class]),
+  a.active
+    color: $brand-color
+
+  &__flex
+    align-items: flex-start
+    display: flex
+    flex: 1
+
+    > *
+      margin-left: 10px
+
+      &:first-child
+        margin-left: 0
+
+  &__control
+    align-items: center
+    display: flex
+    justify-content: center
+    margin-bottom: 15px
+
+    &--start
+      justify-content: flex-start
+
+    &--top
+      align-items: flex-start
+
+    &--tall
+      align-items: flex-start
+
+      .cms-form__label
+        padding-top: 10px
+
+    &--actions
+      margin-top: 30px
+
+      &:last-child
+        margin-bottom: 0
+
+      .cms-button
+        flex: 1
+
+        + .cms-button
+          margin-left: 10px
+
+    .cms-form__input
+      & + .cms-form__input, & + .cms-button
+        margin-left: 20px
+
+    .cms-form__control
+      margin-bottom: 0
+
+    &--shrink
+      flex: none
+
+  &__actions
+    align-items: center
+    display: flex
+    justify-content: flex-end
+
+  &__collection
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    flex: 1
+    margin-left: 125px
+
+    .cms-modal--large &
+      margin-left: 165px
+
+    .checkbox,
+    .checkbox:first-child
+      margin-right: 20px
+      margin-top: 10px
+
+  &__preview
+    height: auto
+    width: 100px
+
+  &__image-selection
+    flex: 1
+    p
+      margin: 0 0 10px
+      &:empty
+        margin-bottom: 0
+
+  &__input,
+  .quill
+    background-color: $white
+    border: 2px solid $base-color-light
+    border-radius: 22px
+    box-sizing: border-box
+    color: $base-color
+    flex: 1
+    font-family: $droid
+    font-size: 14px
+    min-width: 200px
+    outline: none
+    padding: 12px 20px
+    transition: border-color .2s
+
+    &[readonly]
+      background-color: tint($base-color-light, 90%)
+      border-color: $base-color-light !important
+
+    &--textarea
+      height: 150px
+      line-height: 1.6
+
+    &:focus
+      border-color: $brand-color
+
+    &--phone
+      padding: 3px 15px
+      background-color: $white
+
+    &--focus
+      border-color: $brand-color
+
+    &--small
+      max-width: 100px
+      min-width: 0
+
+  .quill
+    padding: 0
+
+    .ql-container.ql-snow,
+    .ql-toolbar.ql-snow
+      border: none
+
+    .ql-toolbar.ql-snow
+      border-bottom: 2px solid $base-color-light
+
+    .ql-editor
+      font-size: 14px
+      height: 150px
+      resize: auto
+
+      &:focus
+        box-shadow: 0 0 0 2px $brand-color
+        border-radius: 0 0 22px 22px
+
+        &:last-child
+          margin-bottom: 0
+
+  &__heading
+    border-top: solid 1px $base-color-light
+    font-weight: bold
+    padding-top: 20px
+    margin: 10px 0
+    width: calc(100% - 20px)
+
+  &__label
+    font-weight: bold
+    margin-right: 15px
+    min-width: 110px
+    flex: none
+
+    .cms-modal--large &
+      width: 150px
+
+    & + .cms-form__inner
+
+      .cms-form__collection
+        margin-left: 0
+
+    &--suffix,
+    &--prefix
+      font-size: 14px
+      margin-left: 5px
+      font-weight: normal
+      min-width: 0
+
+      .cms-modal--large &
+        width: auto
+
+    &--prefix
+      margin-right: 5px
+      font-weight: normal
+
+  &__error
+    color: $error-color
+    width: 100%
+    font-size: 12px
+
+  &__errors
+    color: $error-color
+    width: 100%
+    padding: 0
+    margin: 0
+
+    &--light
+      color: $white
+
+    &--spaced
+      margin-bottom: 20px
+
+  &__title
+    border-bottom: 1px solid $base-color-light
+    font-size: 20px
+    margin: 80px 0 20px
+    padding-bottom: 20px
+
+    &--compact
+      margin: 20px 0 20px
+
+.cms-custom-select
+  flex: 1
+  height: 44px
+  position: relative
+
+  + .cms-custom-select
+    margin-left: 20px
+
+  &__icon
+    pointer-events: none
+    position: absolute
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1
+
+  select
+    appearance: none
+    background-color: $white
+    border: 2px solid $base-color-light
+    border-radius: 100px
+    color: $base-color
+    font-family: $droid
+    font-size: 14px
+    height: 100%
+    left: 0
+    outline: none
+    padding: 0 40px 0 20px
+    position: absolute
+    top: 0
+    width: 100%
+
+    &:focus
+      border-color: $brand-color
+
+.checkbox
+  &__input
+    display: none
+
+    &:checked
+      + .checkbox__label
+        &::before
+          background-color: $white
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9'%3E%3Cpath fill='%2312c49d' d='M1.9,3.7L1.9,3.7c-0.4-0.5-1.1-0.5-1.5,0c-0.4,0.4-0.4,1.1,0,1.6l3.2,3.3l0.1,0.1c0.4,0.4,1.1,0.4,1.5,0l6.6-6.8c0.4-0.4,0.4-1.1,0-1.6c-0.4-0.4-1.1-0.4-1.5,0l-5.8,6L1.9,3.7z'/%3E%3C/svg%3E")
+          background-position: center
+          background-repeat: no-repeat
+          background-size: 12px 9px
+          border-color: $brand-color
+          text-align: center
+
+    &[disabled]
+      + .checkbox__label
+        &::before
+          background-color: $athens-gray
+          border-color: shade($athens-gray, 20%)
+      &:checked
+        + .checkbox__label
+          &::before
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9'%3E%3Cpath fill='%23e3e3e3' d='M1.9,3.7L1.9,3.7c-0.4-0.5-1.1-0.5-1.5,0c-0.4,0.4-0.4,1.1,0,1.6l3.2,3.3l0.1,0.1c0.4,0.4,1.1,0.4,1.5,0l6.6-6.8c0.4-0.4,0.4-1.1,0-1.6c-0.4-0.4-1.1-0.4-1.5,0l-5.8,6L1.9,3.7z'/%3E%3C/svg%3E")
+
+  &__label
+    cursor: pointer
+    padding: 3px 0 0 35px
+    position: relative
+    user-select: none
+
+    &::before
+      background-color: $white
+      border: 2px solid $base-color-light
+      border-radius: 3px
+      content: ''
+      cursor: pointer
+      height: 20px
+      left: 0
+      position: absolute
+      top: 0
+      transition: border-color .2s
+      width: 20px
+
+.file-input
+  align-items: center
+  display: flex
+  position: relative
+
+  & + &,
+  & + .cms-button
+    margin-top: 20px
+
+  &__preview
+    background-color: $casper
+    margin-right: 20px
+    min-height: 169px
+    width: 300px
+    position: relative
+
+    &--logo
+      min-height: 60px
+      background: transparent
+
+    &--invisible
+      background-color: transparent
+
+    img
+      display: block
+      max-width: 100%
+
+  &__remove
+    position: absolute
+    top: -5px
+    left: -5px
+    width: 20px
+    height: 20px
+    border-radius: 100%
+    background-color: $error-color
+    display: flex
+    border: none
+    outline: none
+    padding: 0
+    align-items: center
+    justify-content: center
+    z-index: 5
+
+    svg
+      width: 10px
+      height: 10px
+      fill: $white
+
+  &__path
+    font-style: italic
+    font-size: 14px
+    margin-left: 10px
+    word-break: break-all
+
+  &__input
+    cursor: pointer
+    height: 100%
+    left: 0
+    opacity: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+    +hover
+      + .cms-button
+        background-color: shade($brand-color, 10%)
+        border-color: shade($brand-color, 10%)
+

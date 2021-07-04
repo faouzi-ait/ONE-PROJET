@@ -1,0 +1,54 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$breadcrumbs-bgc: $shark
+$breadcrumbs-padding: 8px 0
+
+//***********************************
+
+$breadcrumbs-item-color: $white
+$breadcrumbs-item-margin: 0 20px 0 0
+$breadcrumbs-item-padding: 0 20px 0 0
+
+//***********************************
+
+$breadcrumbs-link-color: $white
+$breadcrumbs-link-hover-color: $abbey
+$breadcrumbs-link-size: 14px
+
+//***********************************
+
+$breadcrumbs-seperator-width: 6px
+$breadcrumbs-seperator-height: 10px
+$breadcrumbs-seperator-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234E5859' viewBox='0 0 6 10'%3E%3Cpath d='M0.8,10c0.2,0,0.4-0.1,0.6-0.3L6,5L1.4,0.3c-0.3-0.3-0.9-0.3-1.2,0c-0.3,0.3-0.3,0.9,0,1.2L3.7,5L0.2,8.5c-0.3,0.3-0.3,0.9,0,1.2C0.4,9.9,0.6,10,0.8,10z'/%3E%3C/svg%3E")
+
+//***********************************
+
+$breadcrumbs-border-color: $athens-gray
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .breadcrumbs
+    font-family: $secondary-font-family
+    letter-spacing: 0.5px
+
+    &--bordered
+        .breadcrumbs__list
+            border: none
+
+    &--plain
+        background: $outer-space
+        padding-top: 25px
+
+    &__link
+        border-bottom: solid 2px transparent
+
+        &:hover
+            border-color: $abbey

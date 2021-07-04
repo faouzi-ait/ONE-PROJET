@@ -1,0 +1,187 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 50px
+$programme-details-border: none
+$programme-details-side-width: 45%
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  &__side
+    max-width: 540px
+
+  &__tags
+    border-bottom: solid 1px $oslo
+    padding: 12px 0
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    padding-left: 110px
+
+    .tags
+      margin-bottom: -12px
+
+  &__tag-heading
+    align-items: center
+    color: $oslo
+    display: flex
+    font-size: 14px
+    line-height: 1.2
+    height: 48px
+    margin: 0 20px 0 -110px
+    vertical-align: middle
+    text-transform: uppercase
+    flex: 0 0 90px
+    min-width: 25%
+
+  .heading--two
+    text-transform: uppercase
+    margin: 30px 0
+
+  &__main
+    > .heading--two:first-child
+      border-bottom: solid 1px $oslo
+      padding-bottom: 15px
+      margin: 0 0 20px
+
+    > .tags
+      margin-bottom: 20px
+
+  &--logged-out
+
+    .programme-details__side
+      background: $mirage
+      border-radius: 30px
+      box-shadow: 0 10px 20px rgba($black, .4)
+      margin: 20px
+      width: auto
+
+      .heading--three
+        line-height: 1
+        margin: 0 0 20px
+        padding: 30px 50px
+        border-bottom: solid 1px $oslo
+
+      .modal__content
+        padding: 0 50px 30px
+
+      .form--skinny
+        width: auto
+
+  +breakpoint(1120, min)
+    &--logged-out
+      justify-content: flex-end
+
+
+  +breakpoint(medium, min)
+    position: relative
+    padding-top: 90px
+    &__main
+      > .heading--two:first-child
+        position: absolute
+        top: -5px
+        margin-bottom: 0
+        width: 100%
+
+      > .asset--display
+        position: absolute
+        top: 0
+        right: 0
+
+    &--logged-out
+      padding-top: 0
+
+  +breakpoint(large)
+    padding-bottom: 0
+
+    &__main
+      margin: 0 0 50px
+      padding-right: 0
+
+    &__side
+      max-width: none
+      width: 70%
+
+  +breakpoint(medium)
+    .heading--two
+      margin-bottom: 20px
+
+  +breakpoint(small)
+    &__side
+      max-width: none
+      width: 100%
+
+    &__main
+
+      > .tags
+        margin-bottom: 20px
+
+.custom
+  .banner__iefix + :not(.section--shade)
+    .programme-details
+      &--logged-out
+        &:after
+          background: linear-gradient(rgba($background-color, 0), $bluewood)
+          content: ''
+          bottom: -80px
+          display: block
+          height: 230px
+          position: absolute
+          width: 200%
+          left: -50%
+
+        .programme-details__side
+          background: $mirage
+          border-radius: 30px
+          box-shadow: 0 10px 20px rgba($black, .4)
+          margin: 0
+          width: auto
+
+          .heading--three
+            line-height: 1
+            margin: 0 0 20px
+            padding: 30px 50px
+            border-bottom: solid 1px $oslo
+
+          .modal__content
+            padding: 0 50px 30px
+
+          .form--skinny
+            width: auto
+
+      +breakpoint(1400)
+
+        .programme-details__side
+          width: 400px
+
+          .heading--three,
+          .modal__content
+            padding-left: 30px
+            padding-right: 30px
+
+      +breakpoint(1120, min)
+        height: 60px
+
+        .programme-details__side
+          transform: translateY(-100%)
+          position: relative
+          z-index: 1
+
+      +breakpoint(1120)
+        display: block
+        padding: 20px 0 50px
+
+      +breakpoint(medium, min)
+        padding-top: 0
+
+      +breakpoint(large)
+        padding-bottom: 40px
+
+      +breakpoint(small)
+        .programme-details__side
+            width: auto

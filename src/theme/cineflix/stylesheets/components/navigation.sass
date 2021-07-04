@@ -1,0 +1,85 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$nav-bgc: $brand-color
+$nav-divide-color: transparent
+$nav-width: 300px
+$nav-width-bp-large: 320px
+
+//***********************************
+
+$nav-close-left: 20px
+$nav-close-right: auto
+$nav-close-top: 13px
+
+//***********************************
+
+$nav-item-divide-margin: 0
+$nav-item-divide-padding: 0
+
+//***********************************
+
+$nav-list-padding: 10px 0
+$nav-list-padding-bp-large: 10px 0 50px 0
+
+//***********************************
+
+$nav-link-active-color: $white
+$nav-link-color: $white
+$nav-link-hover-color: $white
+$nav-link-padding: 14px 40px
+
+//***********************************
+
+$sub-nav-margin: 0
+$sub-nav-padding: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .navigation
+    z-index: 1000
+
+    &__list
+        border-top: 2px solid rgba($black, .2)
+        margin-top: 70px
+
+    &__sub-nav
+        list-style: none
+
+        .navigation__link
+            padding-left: 60px
+
+    &__link
+        box-sizing: border-box
+        font-size: (15/16)+rem
+        font-weight: 600
+        position: relative
+        text-transform: uppercase
+        letter-spacing: 1.75px
+
+        &:hover,
+        &:focus
+            background: rgba($black, .2)
+
+        &.button-nav
+            padding: 10px 40px
+            text-align: left
+
+    &--is-active
+        background: rgba($black, .2)
+
+    &__item
+        &--mobile
+            display: none
+
+    +breakpoint(1160)
+        &__item
+            &--mobile
+                display: block

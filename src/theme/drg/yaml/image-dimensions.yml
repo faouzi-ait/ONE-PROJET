@@ -1,0 +1,25 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x1336
+      Thumbnail: 1120x700
+
+  - name: Programme
+    url: https://drg.rawnet.one/catalogue/2
+    components:
+      Banner: 3200x2200
+      Thumbnail: 1056x594
+      Logo: 400x60
+
+
+  - name: Custom Catalogue
+    components:
+      Banner: 1600x668
+      Thumbnail: 560x350
+
+
+  - name: News Article
+    components:
+      Banner: 3200x560
+      Thumbnail: 560x350
+

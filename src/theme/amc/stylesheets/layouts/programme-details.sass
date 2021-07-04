@@ -1,0 +1,51 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 80px
+$programme-details-border: 1px solid $athens-gray
+$programme-details-side-width: 310px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  &__main
+    margin-right: 120px
+    border-right: 0
+
+    &> .wysiwyg
+      margin-bottom: 30px
+
+  &__side
+    .form--skinny
+      padding: 40px 20px
+
+  .heading--two
+    border-bottom: 1px solid $iron
+    font-size: map-get($heading-sizes, 3)
+    padding-bottom: 5px
+
+  .heading--three
+    font-size: (18/16)+rem
+    font-weight: 600
+    margin-bottom: 2px
+
+  +breakpoint(xlarge)
+    &__main
+      margin-right: 100px
+
+  +breakpoint(large)
+    &__main
+      border: 0
+      border-bottom: $programme-details-border
+      margin: 0
+      margin-bottom: 30px
+      padding: 0
+      padding-bottom: 30px
+
+  +breakpoint(small)
+    &__side
+      width: 100%

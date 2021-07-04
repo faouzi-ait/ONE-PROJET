@@ -1,0 +1,91 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 20px
+
+//***********************************
+
+$carousel-group-background: $casper
+$carousel-group-border-radius: 0
+$carousel-group-color: $white
+$carousel-group-font-size: 14px
+$carousel-group-margin: 0 $carousel-spacing 20px 0
+$carousel-group-padding: 2px 15px
+
+//***********************************
+
+$carousel-arrow-background-color: $white
+$carousel-arrow-background-size: 50px
+$carousel-arrow-color: $cod-gray
+$carousel-arrow-size: 16px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: none
+$carousel-arrow-hover-background-color: $brand-color
+$carousel-arrow-border-radius: 0
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 0
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 40px 0 0 0
+$carousel-dots-radius: 0
+$carousel-dots-border: 2px solid $brand-color
+$carousel-dots-size: 8px
+$carousel-dots-active-background: $brand-color
+
+//***********************************
+
+$carousel-scroll-spacing: 20px
+$carousel-scroll-height: 6px
+$carousel-scroll-background: $pumice
+$carousel-scroll-handle-background: $cod-gray
+$carousel-scroll-handle-radius: 0
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 5px
+$carousel-pager-padding: 20px 0 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+    &__arrow
+        border: 2px solid $brand-color
+        top: 70px
+
+        +hover
+            &:after
+                border-color: $white
+
+    .banner__content
+        padding-left: 0
+        padding-right: 0
+
+    &__item
+        display: flex
+        flex-direction: column
+        .card--pages
+            min-height: calc(100% - 80px)
+
+    

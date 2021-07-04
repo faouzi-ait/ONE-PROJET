@@ -1,0 +1,58 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/chart'
+
+//***********************************
+
+.chart
+  position: relative
+  transition: opacity .3s
+
+  &--loading
+    opacity: .2
+
+  &__controls
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    position: relative
+    margin-right: -20px
+
+    > *
+      margin-right: 20px
+      margin-bottom: 20px
+      flex: 1
+
+  &__placeholder
+    align-items: center
+    background-color: $chart-placeholder-bg
+    display: flex
+    height: 500px
+    justify-content: center
+    position: relative
+
+  &__message
+    font-size: 14px
+    margin: 40px auto
+    text-align: center
+
+  .button
+    align-self: flex-end
+    max-width: 170px
+
+  .form__label
+    margin: 0 10px 0 0
+
+  .highcharts-background
+    fill: none
+
+  +breakpoint(xlarge)
+
+    &__controls
+      margin-right: -10px
+
+      > *
+        margin-right: 10px
+        margin-bottom: 10px

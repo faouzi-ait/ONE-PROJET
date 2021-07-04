@@ -1,0 +1,25 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: transparent
+$header-max-width: 1290px
+$header-padding: 30px 20px
+$header-welcome-color: $white
+$header-user-color: $white
+$header-user-hover-color: $brand-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+    +breakpoint(medium, min)
+        &--searching
+            .programme-search
+                margin-top: -12px
+                margin-bottom: -12px

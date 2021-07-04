@@ -1,0 +1,50 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$checkbox-filters-margin: 0 0 2px 0
+
+//***********************************
+
+$checkbox-filters-header-bg: $brand-color
+$checkbox-filters-header-padding: 15px 45px 15px 70px
+
+//***********************************
+
+$checkbox-filters-content-padding: 20px 45px 10px 70px
+
+//***********************************
+
+$checkbox-filters-toggle-bg: $brand-color-dark
+$checkbox-filters-toggle-bg-active: darken($brand-color-dark, 10%)
+$checkbox-filters-toggle-padding: 5px 20px
+$checkbox-filters-toggle-radius: 20px
+$checkbox-filters-toggle-hover-bg: darken($brand-color-dark, 10%)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .checkbox-filters
+    &__header
+
+        .custom-checkbox__label
+            font-size: 20px
+            text-transform: none
+
+            &::before
+                top: -2px
+
+    &__toggle
+        border-bottom-right-radius: 0
+        font-size: 14px
+        font-weight: 400
+        text-transform: none
+
+    &__content 
+        .custom-checkbox
+            min-height: 28px

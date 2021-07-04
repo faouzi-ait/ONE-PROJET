@@ -1,0 +1,107 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 20px
+
+//***********************************
+
+$carousel-group-background: transparent
+$carousel-group-border-radius: 0
+$carousel-group-color: $dusty-gray
+$carousel-group-font-size: (12/16)+rem
+$carousel-group-margin: 0 $carousel-spacing 20px 0
+$carousel-group-padding: 2px 0
+
+//***********************************
+
+$carousel-arrow-background-color: $brand-color
+$carousel-arrow-background-size: 50px
+$carousel-arrow-color: $black
+$carousel-arrow-size: 10px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: 0 10px 15px rgba($black, .15)
+$carousel-arrow-hover-background-color: $tradewind
+$carousel-arrow-border-radius: 50%
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1000
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 4px
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 20px 0 0 0
+$carousel-dots-radius: 100%
+$carousel-dots-border: 2px solid $brand-color
+$carousel-dots-size: 8px
+$carousel-dots-active-background: $brand-color
+
+//***********************************
+
+$carousel-scroll-spacing: 20px
+$carousel-scroll-height: 6px
+$carousel-scroll-background: rgba($white, .1)
+$carousel-scroll-handle-background: rgba($dusty-gray, .3)
+$carousel-scroll-handle-radius: 0
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 5px
+$carousel-pager-padding: 20px 0 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+  &__arrow
+    border-radius: 0
+    transition: background .3s
+    margin-top: -52px
+
+  &__group
+    font-weight: 600
+
+  .banner__content
+    padding-left: 28px
+    padding-right: 0
+
+  &__list
+    display: flex
+    flex-direction: column
+
+    .carousel__track:first-child
+      order: 2
+
+  &--2-items,
+  &--3-items
+    .banner
+      &__title
+        box-shadow: -20px -7px 0 $black, 20px 2px 0 $black, 20px -7px 0 $black, -20px 1px 0 $black
+
+      &__content
+        padding-left: 20px
+
+      &__actions
+        margin-top: -7px
+        margin-left: -20px
+        padding: 20px 20px 20px
+
+      &--tall .banner__media
+        max-width: none

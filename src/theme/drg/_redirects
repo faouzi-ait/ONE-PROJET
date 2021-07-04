@@ -1,0 +1,7 @@
+https://drg.rawnet.one   https://nentstudiosuk.com   301!
+https://drg.rawnet.one/*   https://nentstudiosuk.com/:splat   301
+https://www.drg.tv/   https://nentstudiosuk.com   301!
+https://www.drg.tv/*   https://nentstudiosuk.com/:splat   301
+https://drg.tv/   https://nentstudiosuk.com   301!
+https://drg.tv/*   https://nentstudiosuk.com/:splat   301
+/*   /index.html   200

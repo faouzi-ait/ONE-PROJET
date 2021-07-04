@@ -1,0 +1,227 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../../_theme/components/content-blocks/base'
+
+//***********************************
+
+.content-block
+  background-color: $content-block-bg-light
+  padding: $content-block-padding
+
+  &__actions
+    margin-top: 20px
+
+  &--light
+    background-color: $content-block-bg-light
+
+    &:not(.content-block--banner-carousel) + &
+      padding-top: 1px
+
+  &--shade
+    background-color: $content-block-bg-shade
+
+  &--brand
+    background-color: $content-block-bg-brand
+
+  &--draft
+    border: 2px dashed $brand-color
+    position: relative
+    background-color: $content-block-bg-light
+    padding: 2px
+
+    &::before
+      position: relative
+      top: -2px
+      left: -2px
+      background-color: $brand-color
+      content: 'DRAFT BLOCK'
+      color: white
+      padding: 1px 10px
+
+  &__empty-dropzone
+    overflow: hidden !important
+    min-height: 40vh
+    background-color: $white
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__image
+    display: block
+    width: 100%
+
+  > .container
+    margin: 0 auto
+    overflow: hidden
+    padding: $content-block-container-padding
+
+    > *
+      &:first-child
+        margin-top: 0
+
+      &:last-child
+        margin-bottom: 0
+
+  &--content-placeholder
+
+    > .container
+      max-width: none
+      padding: 0
+
+  &__heading
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin-left: -5px
+
+    .button
+      text-transform: capitalize
+
+    > *
+      flex: none
+      margin-left: 5px
+      max-width: 100%
+
+  &__media
+    &--programme
+      width: 280px
+      max-width: 280px
+      margin-bottom: 40px
+
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin: -20px -20px 0 0
+
+    > *
+      flex: 1
+      margin: 20px 20px 0 0
+      min-width: calc(50% - 20px)
+
+  &__service
+    text-align: center
+    box-sizing: border-box
+    border-right: 1px solid $base-color-light
+    margin-bottom: 0 !important
+    padding: 15px 40px 15px 20px
+
+    > *
+      margin: 10px 0
+
+    &:nth-child(3n+0)
+      border-right: none
+
+  &__inner
+    padding-top: 1px
+
+  .actions__inner
+    .button
+      text-transform: capitalize
+
+  &--recommended-list
+    padding: 0
+
+    .container > div
+      padding: $content-block-padding
+
+  &--banner-carousel
+    padding: 0
+    .content-block__inner
+      padding-top: 0
+
+  &--promo-carousel,
+  &--banner-carousel,
+  &--production-companies,
+  &--account-manager
+    > .container
+      max-width: none
+      padding: 0
+
+  &--image
+    background-size: cover
+
+  &--recommended-programmes
+    .card__title
+      padding-right: 50px
+
+  &--most-popular
+    > .container
+      overflow: inherit
+    .carousel
+      overflow: inherit
+      > .container
+        max-width: 1080px
+      &__list
+        overflow: hidden
+      &__arrow
+        &--prev
+          left: -35px
+        &--next
+          right: -35px
+
+  &--genre-tags
+    .content-block__content
+      align-items: flex-start
+      display: flex
+      justify-content: space-between
+
+      > .button
+        flex: none
+
+  +breakpoint(xlarge)
+    &--most-popular
+      > .container
+        max-width: 1080px
+      .carousel
+        > .container
+          max-width: 940px
+        &__arrow
+          &--prev
+            left: -20px
+          &--next
+            right: -20px
+
+  +breakpoint(medium)
+    overflow: hidden
+
+    &--services
+      .grid
+        &--three
+          > *
+            width: 100%
+
+    &__service
+      border-right: none
+
+  +breakpoint(small)
+    &--recommended-programmes
+      .card
+        width: 100%
+
+    &--genre-tags
+      .content-block__content
+        display: block
+        > a.button
+          margin-top: 15px
+
+        .grid
+          display: flex
+          margin-right: -10px
+          > *
+            margin-right: 10px
+            width: auto
+
+
+@media all and (min-width: 768px)
+  .content-block__media--programme
+    &.content-block__media--left
+      margin-right: 40px
+    &.content-block__media--right
+      order: 2
+      margin-left: 40px
+
+    & + .wysiwyg
+      flex: 1
+      width: auto

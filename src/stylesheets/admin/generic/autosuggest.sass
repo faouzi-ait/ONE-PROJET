@@ -1,0 +1,24 @@
+@import '../../core/generic/autosuggest'
+
+.custom .react-autosuggest
+
+  &__suggestion
+    font-size: 16px
+
+    &--highlighted
+      background: tint($brand-color, 80%)
+
+  &__section-title
+    display: none
+
+  &__suggestions-container
+    background: $white
+    right: 0
+    max-height: 350px
+
+    &--open
+      border: 2px solid $brand-color
+      border-top: none
+
+  &__suggestion
+    color: $base-color

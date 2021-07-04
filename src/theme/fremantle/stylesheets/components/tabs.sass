@@ -1,0 +1,65 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tabs-background: $shark
+$tabs-border: none
+$tabs-spacing: 30px
+$tabs-active-color: $white
+$tabs-padding: 11px 42px
+$tabs-border-radius: 0
+
+//***********************************
+
+$tabs-item-font-size: 18px
+$tabs-item-weight: 600
+$tabs-item-background: transparent
+
+//***********************************
+
+$tabs-select-margin: 0 0 20px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tabs
+    border-bottom: solid 1px $mine-shaft
+    justify-content: center
+
+    &__item
+        border-bottom: solid 6px transparent
+        color: $abbey
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+        flex: none
+        text-transform: uppercase
+        transition: border-color .3s 
+
+        &--active
+            border-color: $white
+            color: $white
+            
+        +hover
+            border-color: rgba($white, .5)
+
+    &--underline
+        
+        .tabs
+            &__item
+                border: $tabs-border
+                border-width: 0 0 2px
+                padding-bottom: 25px
+
+                &--active
+                    border-style: solid
+                    border-color: $white
+                    color: $white
+
+.custom:not(.admin) .tabs
+    &__item
+        background: transparent

@@ -1,0 +1,51 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 60px
+$programme-details-border: 1px solid rgba($white, .4)
+$programme-details-side-width: 280px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  &__main
+    color: $gallery
+    
+    .heading--two
+      border-bottom: 1px solid rgba($white, .4)
+      margin-bottom: 30px
+      padding-bottom: 30px
+
+    .heading--three
+      color: $spun-pearl
+
+  &__side
+    .tags
+      margin-bottom: 20px
+
+  .wysiwyg
+    padding: 0
+    padding-bottom: 30px
+    margin-bottom: 30px
+    border-bottom: 1px solid rgba($white, .4)
+
+    p
+      font-size: 15px
+
+  &--logged-out
+    justify-content: center
+    .programme-details
+      &__main
+        display: none
+
+  +breakpoint(large)
+    padding-bottom: 0
+    
+    &__main
+      border: none
+      margin: 0 0 30px
+      padding: 0

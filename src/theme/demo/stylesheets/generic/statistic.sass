@@ -1,0 +1,54 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$stat-border: 0
+$stat-radius: 0
+$stat-title-size: 14px
+$stat-title-padding: 3px 10px
+$stat-detail-size: 60px
+$stat-add-size: 14px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .statistic
+    display: flex
+    flex-direction: column
+
+    &__box
+        background: $black
+        flex: 1
+        display: flex
+        flex-direction: column
+        padding: 10px
+
+    &__title
+        text-transform: capitalize
+        color: $edward
+        background-color: $black
+        font-weight: 600
+
+    &__additional
+        background-color: $cod-gray
+        min-height: 35px
+
+        strong
+            font-size: 22px
+
+    &__detail
+        font-weight: 800
+        margin: auto 0
+        padding-bottom: 0.5rem
+
+        strong
+            font-size: 22px
+
+    &--small
+        .statistic__detail
+            font-size: 33px

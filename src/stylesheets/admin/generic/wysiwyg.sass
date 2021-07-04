@@ -1,0 +1,73 @@
+@import '../../core/generic/button'
+@import '../../core/generic/wysiwyg'
+
+.wysiwyg
+  > *
+    margin-bottom: 0
+    margin-top: 0
+    font-family: $base-font-family
+    font-size: $base-font-size
+    line-height: $base-line-height
+
+  img
+    display: block
+    max-width: 100%
+
+  h1
+    +heading(1)
+
+  h2
+    +heading(2)
+
+  h3
+    +heading(3)
+
+  .wysiwyg__button a,
+  a .wysiwyg__button
+    @extend .button
+    @extend .button--filled
+
+  .ql-align-center
+    text-align: center
+
+  .ql-align-right
+    text-align: right
+
+  .ql-align-left
+    text-align: left
+
+
+#thisisone .ql-snow.ql-toolbar
+  button.ql-active,
+  button:hover
+    color: $brand-color
+
+    .ql-stroke
+      stroke: $brand-color
+
+    .ql-fill
+      fill: $brand-color
+
+  .ql-button
+    position: relative
+    color: #444
+    width: 48px
+
+    &:hover
+      color: $brand-color
+
+    &::before
+      border-radius: 30px
+      border: 2px solid currentColor
+      box-sizing: border-box
+      content: 'Button'
+      display: block
+      font-size: 6px
+      height: 16px
+      line-height: 11px
+
+.ql-editor
+  a .wysiwyg__button,
+  .wysiwyg__button a
+    @extend .button
+    @extend .button--filled

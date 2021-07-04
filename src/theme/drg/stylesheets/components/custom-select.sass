@@ -1,0 +1,84 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$custom-select-min-width: 100px
+$custom-select-max-width: 580px
+$custom-select-bgc: transparent
+$custom-select-border: 1px solid $blue-bayoux
+$custom-select-radius:  4px
+$custom-select-height: 40px
+$custom-select-padding: 0 40px 0 15px
+$custom-select-icon-fill: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .custom-select
+  position: relative
+  overflow: hidden
+
+  &:before
+    background: $blue-bayoux
+    bottom: 0
+    content: ''
+    height: 100%
+    position: absolute
+    right: 0
+    top: 0
+    width: 40px
+
+  &__select
+    font-size: (14/16)+rem
+    font-weight: 500
+    color: $black
+
+    option
+      color: $black
+
+    &:focus::-ms-value
+      background-color: $blue-bayoux !important
+
+  &__icon
+    right: 14px
+
+  &--white
+    border-color: $white
+
+    &:before
+      background: $white
+
+    &__icon
+      fill: $brand-color
+
+
+.custom:not(.admin)
+  .react-datepicker__input-container
+    input
+      font-weight: bold
+
+  .react-datepicker__tether-enabled
+    input
+      border-color: $brand-color
+
+.custom:not(.admin),
+  .section--shade,
+  .panel-section__panel
+    .custom-select
+      border-color: $white
+      &__select
+        color: $white
+
+        option
+          color: $black
+
+      &:before
+        background: $white
+
+      &__icon
+        fill: $brand-color

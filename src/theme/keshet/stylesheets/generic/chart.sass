@@ -1,0 +1,26 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$chart-placeholder-bg: $gallery
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .chart
+    +breakpoint(xlarge)
+        &__controls
+            display: flex
+
+        .react-datepicker__input-container,
+        .custom-select
+            max-width: none
+
+    +breakpoint(small)
+        .button
+            margin-left: 0

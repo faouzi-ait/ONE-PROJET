@@ -1,0 +1,140 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: $dark-brand-color
+$psearch-padding: 0
+
+//***********************************
+
+$psearch-input-border: 1px solid rgba($white, .25)
+$psearch-input-focus-border: $white
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: (30/16)+rem
+$psearch-input-padding: 11px 20px 11px 50px
+$psearch-input-radius: $base-border-radius
+$psearch-input-radius-open: $base-border-radius $base-border-radius 0 0
+
+//***********************************
+
+$psearch-button-radius: 0 $base-border-radius $base-border-radius 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: $base-color-light
+$psearch-clear-hover-fill: $white
+
+//***********************************
+
+$psearch-input-radius-bp-small: $base-border-radius
+$psearch-button-radius-bp-small: $base-border-radius
+$psearch-input-radius-open-bp-small: $base-border-radius $base-border-radius 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-search
+
+  .container
+    position: relative
+
+  &__input
+    font-weight: 900
+
+    background: url(../../images/theme/mag-glass.svg) left center / 50px  transparent no-repeat
+    color: $white
+
+    &::placeholder
+      color: $white
+
+  .button
+    color: $black
+    &:hover, &:focus
+      color: $white
+
+  .button__icon
+    fill: $black
+
+  &__clear
+    background-color: transparent
+    border: 0
+    bottom: 0
+    position: absolute
+    right: 20px
+    top: 0
+    &:hover, &:focus
+      svg
+        fill: $white
+
+  &--reporting
+    padding-top: 30px
+    padding-bottom: 30px
+
+    .page-controls
+      background: none
+
+  &--global
+    border-bottom: none
+
+    .programme-search__input
+      background: $white
+      border-color: $white
+      color: $black
+      font-size: (20/16)+rem
+      padding: 8px 20px
+
+  .button--search
+    display: none
+
+  &--space-above
+        padding-top: 20px
+
+  +breakpoint(medium)
+    padding: 20px 0 0
+
+    &__input
+      font-size: $base-font-size
+
+    .button
+      font-size: $base-font-size
+
+  +breakpoint(medium)
+    padding: 20px 0
+
+
+  +breakpoint(small)
+
+    &--global
+      background: rgba($black, .8)
+      left: 0
+      padding-left: 20px
+      padding-right: 20px
+      right: 0
+
+    .container
+      display: block
+
+    &__input
+      border-radius: $psearch-input-radius-bp-small
+      border-right: $psearch-input-border
+      box-sizing: border-box
+      font-size: 14px
+      height: 40px
+      margin-bottom: 10px
+      width: 100%
+
+    &__clear
+      display: none
+
+    .button
+      border-radius: $psearch-button-radius-bp-small
+      display: block
+      width: 100%
+

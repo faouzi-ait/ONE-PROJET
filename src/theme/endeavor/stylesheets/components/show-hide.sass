@@ -1,0 +1,66 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$show-hide-border: 1px solid $iron
+
+//***********************************
+
+$show-hide-wrap-align: center
+$show-hide-wrap-display: flex
+
+//***********************************
+
+$show-hide-title-flex: 1
+$show-hide-title-font-family: $base-font-family
+
+//***********************************
+
+$show-hide-trigger-background: transparent
+$show-hide-trigger-border-radius: 0
+$show-hide-trigger-width: 2px
+$show-hide-trigger-flex: none
+$show-hide-trigger-size: 30px
+$show-hide-trigger-spacing: 10px
+
+//***********************************
+
+$show-hide-arrow-width: 3px
+$show-hide-arrow-color: $cod-gray
+$show-hide-arrow-size: 10px
+
+//***********************************
+
+$show-hide-wrap-icon-button-margin: 15px
+$show-hide-gap: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .show-hide
+    > * 
+        padding-bottom: 13px
+
+    &__trigger
+        border: none
+
+        &:before
+            border-color: $brand-color
+
+    &--active
+        .show-hide__trigger
+            background: none
+
+            &:before
+                border-color: $brand-color
+
+    &__title
+        font-size: 18px
+        text-transform: uppercase
+
+        

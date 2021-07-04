@@ -1,0 +1,72 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .video-carousel
+    background: $base-color
+    padding-bottom: 20px
+
+    &__controls
+        justify-content: flex-end
+        margin-top: -50px
+
+        .custom-select
+            width: 220px
+            z-index: 2
+
+    &__select-filter-row
+        justify-content: flex-end
+
+    .carousel
+        padding-top: 10px
+
+    .programme
+        padding-bottom: 30px
+
+        &:before
+            border-radius: 0
+            bottom: 30px
+
+        &__image
+            border-radius: 0
+
+        &__title
+            font-size: 18px
+            line-height: 1.1
+            left: 20px
+            bottom: 54px
+            padding-right: 50px
+
+        .icon-button
+            border-radius: 0 0 25px 25px
+
+        .text-button
+            font-family: $sub-font-family
+            font-size: 14px
+            left: 10px
+            bottom: 0
+            position: absolute
+            right: 0
+
+            +hover
+                color: $white
+
+    .carousel
+        .programme
+            background: transparent
+            height: auto
+
+    +breakpoint(large)
+        padding-bottom: 7vw
+
+        &__controls
+            margin-top: -20px
+
+    +breakpoint(medium)
+        &__controls,
+        &__select-filter-row
+            justify-content: center

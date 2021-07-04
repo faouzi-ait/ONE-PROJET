@@ -1,0 +1,265 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: $bright-gray
+$content-block-bg-shade: $bright-gray
+$content-block-padding: 60px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: rgba($brand-color, .3)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block
+  position: relative
+
+  > .container
+    overflow: initial
+
+  &--shade
+    background: linear-gradient(180deg, $bright-gray 0%, $charade 100%)
+
+  &__media--image
+    position: relative
+
+  &--gallery
+    padding-bottom: 40px
+
+  &__heading
+    color: $spun-pearl
+    font-size: 26px
+    margin: 0 0 30px
+    text-transform: uppercase
+
+    .button
+      margin-left: auto
+
+  &__select
+    margin-bottom: 80px
+
+  &--text
+
+    .wysiwyg
+      position: relative
+
+    .grid--two 
+      align-items: center
+      
+      .wysiwyg
+        width: calc(66.66% - 20px)
+
+      .content-block__media
+        width: calc(33.33% - 20px)
+
+    &.content-block--image
+      background-position: top center
+      background-size: 100% auto
+      background-repeat: no-repeat
+      padding-top: 445px
+
+      &:before
+        background: linear-gradient(180deg, rgba($bright-gray,.5) 0%, rgba($bright-gray,100) 75%)
+        content: ''
+        position: absolute
+        height: 100%
+        left: 0
+        bottom: 0
+        width: 100%
+
+  &--text-and-items
+    .content-block__items
+      position: relative
+      margin-top: -90px
+      margin-left: 40px
+
+    .content-block__carousel
+      position: relative
+      margin-top: -90px
+
+      .tabs
+        margin: 10px 60px 0
+
+    .card
+      &__title
+
+        &:last-child
+          margin-left: auto
+          margin-right: auto
+          text-align: center
+
+    .wysiwyg
+      padding-bottom: 80px
+
+  &--intro
+    text-align: center
+    padding-bottom: 80px
+
+    .wysiwyg
+      padding-top: 0
+      padding-left: 15%
+      padding-right: 15%
+
+    .content-block__heading
+      font-size: 36px
+      justify-content: center
+
+  &--production-companies
+    overflow: hidden
+    .text-button
+      text-decoration: none
+      text-align: left
+
+  &--locations
+    .card
+      position: relative
+      overflow: hidden
+      height: 340px
+
+      &__media
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+      &__content
+        height: 100%
+        background-color: rgba($gallery, .9)
+        top: calc(100% - 70px)
+        transition: top .3s
+
+      &__copy
+        font-size: 16px
+
+      &:hover
+        .card__content
+          top: 0
+
+      &__title
+        font-weight: bold
+        margin-bottom: 0
+
+      &__subtitle
+        margin-bottom: 20px
+
+      &__phone
+        color: $brand-color
+        fill: $brand-color
+        display: flex
+        align-items: center
+
+        svg
+          margin-right: 10px
+
+  &--promo-carousel
+    .container .container
+      padding: 0 20px
+
+  &--logos
+    .grid
+      justify-content: center
+
+    img
+      margin: 0 auto
+      display: block
+      max-width: 80%
+
+  &--team-members
+    margin-top: 0
+
+    .content-block__heading
+      font-size: 36px
+      justify-content: center
+
+  &--banner-scroller
+    padding: 0
+    .content-block__inner
+      padding-top: 0
+
+  +breakpoint(1680px)
+    &--text
+      &.content-block--image
+        background-size: auto 75%
+
+  +breakpoint(large)
+    &--intro
+      .wysiwyg
+        padding-left: 40px
+        padding-right: 40px
+
+
+  +breakpoint(xlarge)
+    &--text-and-items
+      .content-block__items
+        margin-top: -80px
+        margin-left: 0
+
+      .content-block__carousel
+        margin-top: -80px
+
+        .tabs
+          margin-left: 0
+          margin-right: 0
+
+  +breakpoint(medium)
+    padding: 20px 0
+
+    &--text-and-items
+      .content-block--text
+        padding: 0
+        
+      .content-block__items
+        margin-top: 0
+
+        &--flipped
+          background-color: $white
+          margin-bottom: 0
+
+      .content-block__carousel
+        margin-top: 0
+
+      .wysiwyg
+        padding-bottom: 20px
+
+    &__select
+      margin-left: 20px
+      margin-right: 20px
+
+    &__heading
+      font-size: 24px
+      flex-wrap: wrap
+      margin: 0 0 10px
+
+      > *
+        max-width: 100%
+        
+    &--team-members
+
+      .content-block__heading
+        font-size: 26px
+
+    &--banner-scroller
+      padding: 0
+
+  +breakpoint(small)
+
+    &--text
+
+      .grid--two 
+        .wysiwyg,
+        .content-block__media
+          width: 100%
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    &--locations
+      .card
+        &__media
+          height: auto
+
+.custom.mock-page .content-block
+  color: $gallery

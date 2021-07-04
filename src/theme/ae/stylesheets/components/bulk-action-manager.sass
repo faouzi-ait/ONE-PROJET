@@ -1,0 +1,25 @@
+@import '../../core/imports'
+
+$contols-height: 40px
+
+.custom .bulk-manager
+  &__select-all
+    min-width: 0
+
+  +breakpoint(small)
+    justify-content: flex-start
+    height: auto
+    width: auto
+    left: 20px
+    margin: 0
+
+    &__select-all
+      margin-left: 0
+      margin-right: 10px
+
+    &__basket
+      height: 50px
+      .button
+        margin-right: 0
+
+

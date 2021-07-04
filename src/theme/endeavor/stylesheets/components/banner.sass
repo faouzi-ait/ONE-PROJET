@@ -1,0 +1,165 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 600px
+$banner-tablet-min-height: 500px
+$banner-mobile-min-height: 500px
+$banner-short-min-height: 400px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 80px 0 10px
+$banner-tablet-content-padding: 80px 0 10px
+$banner-content-width: 400px
+
+//***********************************
+
+$banner-intro-min-height: 400px
+$banner-intro-align-items: center
+$banner-intro-content-padding: 140px 0 20px
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 10px
+
+//***********************************
+
+$banner-copy-margin: 0 0 25px
+$banner-copy-size: 17px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  background: $thunder
+
+  &:after
+    background: linear-gradient(180deg, rgba($thunder, .6) 0%, rgba($thunder,.1) 170px)
+
+  &:not(.banner--short):not(.banner--intro)
+    height: $banner-min-height
+
+    &.banner--programme
+      height: 1000px
+
+    &.banner--medium-media,
+    &.banner--large-media
+      height:auto !important
+
+  .container
+    max-width: 1400px
+
+  &__title
+    line-height: 1.1
+    text-transform: uppercase
+
+  &__logo
+    margin-bottom: 20px
+    max-width: 100%
+
+  &--programme
+    align-items: flex-end
+    min-height: 700px
+    max-height: 90vh
+
+    .container
+      display: flex
+      justify-content: flex-end
+      max-width: none
+
+    .banner
+      &__content
+        max-width: 300px
+        padding-bottom: 120px
+        padding-right: 80px
+        text-align: right
+        
+      &__actions
+        justify-content: flex-end
+
+  &--short,
+  &--intro
+    .banner
+      &__image
+        left: auto
+        right: 0
+        width: 66.66%
+
+        &::after
+          background: linear-gradient(90deg, $thunder 0%, rgba($thunder,0) 100%)
+          content: ''
+          height: 100%
+          left: 0
+          position: absolute
+          top: 0
+          width: 370px
+
+      &__content
+        padding: 140px 0 20px
+
+  +breakpoint(large)
+    &:not(.banner--short):not(.banner--intro)
+      height: $banner-tablet-min-height
+      min-height: 0
+
+      &.banner--programme
+        height: $banner-tablet-min-height
+
+      .banner__content
+        max-width: 500px
+
+    &--programme
+
+      .banner
+        &__content
+          padding-bottom: 60px
+          padding-right: 40px
+
+    &__logo
+      max-height: 100px
+
+  +breakpoint(medium)
+    &:not(.banner--short):not(.banner--intro)
+      height: $banner-mobile-min-height
+      min-height: 0
+      
+      &.banner--programme
+        height: $banner-mobile-min-height
+
+      .banner__content
+        max-width: none
+
+    .banner__title
+      font-size: 24px
+
+    &--short,
+    &--intro
+      min-height: 300px
+
+  +breakpoint(small)
+    &__logo
+      margin-bottom: 10px
+
+    &__copy
+      font-size: 15px
+
+    &--programme
+      .banner
+        &__content
+          padding-bottom: 20px
+          padding-right: 0
+
+    &--short,
+    &--intro
+      .banner
+        &__image
+          width: 100%
+    

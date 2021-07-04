@@ -1,0 +1,64 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/programme-details'
+
+//***********************************
+
+.programme-details
+  display: flex
+
+  &__main
+    border-right: $programme-details-border
+    flex: 1
+    margin-right: $programme-details-gutter
+    padding-right: $programme-details-gutter
+
+    .asset:last-child
+      padding-top: 40px
+      padding-bottom: 0
+
+  &__side
+    width: $programme-details-side-width
+
+    .modal__content
+      padding: 0
+
+  &__series
+    &--collapsible
+      max-height: 2000px
+      overflow: hidden
+      transition: max-height .5s
+
+    &--closed
+      max-height: 130px
+      position: relative
+
+  &__breakdown
+    clear: both
+
+  .gallery--static
+    margin: 30px -#{$grid-gutter} 30px 0
+    .gallery__item
+      margin-right: $grid-gutter
+      min-width: 0
+      width: calc(25% - #{$grid-gutter})
+  
+  &--full
+    display: block
+
+  +breakpoint(large)
+    display: block
+    padding-bottom: $programme-details-gutter
+
+  +breakpoint(medium)
+    .gallery--static
+      margin: 20px 0
+
+      &__item
+        width: calc(50% - #{$grid-gutter})
+
+    &__main
+      .asset:last-child
+        padding-top: 20px

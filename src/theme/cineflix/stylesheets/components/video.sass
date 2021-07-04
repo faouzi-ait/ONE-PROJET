@@ -1,0 +1,41 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$video-play-bgc: rgba($black, .5)
+$video-play-border: 2px solid $brand-color
+$video-play-radius: 50%
+
+//***********************************
+
+$video-play-size: 90px
+
+//***********************************
+
+$video-play-arrow-bgc: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .video
+    border-radius: 10px
+    overflow: hidden
+
+    &__poster
+        &:before
+            transition: background .2s
+
+        &:after
+            border-radius: 2px
+            border-width: 20px 0 20px 34px
+
+    &:hover,
+    &:focus
+        .video__poster
+            &:before
+                background: rgba($black, .7)

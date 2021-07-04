@@ -1,0 +1,47 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/ie-warning'
+
+//***********************************
+
+.ie-warning
+  font-family: "Droid Sans", sans-serif
+  font-size: 14px
+  width: 100vw
+  padding: 10px 30px
+  background-color: #FEA436
+  color: white
+  position: fixed
+  top: 0
+  min-height: 20px
+  z-index: 1000
+
+  &__title
+    display: inline-block
+    font-weight: bold
+  &__content
+    display: inline-block
+    margin-left: 5px
+    font-size: 11px
+
++breakpoint(xlarge)
+  .ie-warning
+    padding: 5px 10px
+    &__title
+      display: block
+      text-align: center
+    &__content
+      display: block
+      text-align: center
+      max-width: 95%
+
++breakpoint(medium)
+  .ie-warning
+    font-size: 12px
+    &__content
+      font-size: 10px
+
+#app .ie-warning ~ .page .header
+  top: $ie-warning-header-top

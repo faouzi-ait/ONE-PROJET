@@ -1,0 +1,138 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$modal-overlay-bgc: rgba($black, .8)
+$modal-overlay-padding: 20px
+$modal-overlay-padding-bp-small: 10px
+
+//***********************************
+
+$modal-warning-bgc: $error-color
+$modal-warning-color: $white
+
+//***********************************
+
+$modal-wrapper-bgc: $mirage
+$modal-wrapper-radius: 30px
+$modal-max-width: 1180px
+$modal-min-width: 300px
+
+//***********************************
+
+$modal-header-bgc: transparent
+$modal-header-padding: 35px 56px
+$modal-header-padding-bp-large: 40px 30px 15px
+$modal-header-padding-bp-medium: 30px 20px 15px
+$modal-header-padding-bp-small: 10px 15px 10px
+
+//***********************************
+
+$modal-content-bgc: transparent
+$modal-content-padding: 35px 56px 60px
+$modal-content-padding-bp-large: 30px
+$modal-content-padding-bp-medium: 20px
+$modal-content-padding-bp-small: 15px
+$modal-link-color: $brand-color
+$modal-link-weight: bold
+
+//***********************************
+
+$modal-close-color: $oslo
+$modal-close-hover-color: $brand-color
+
+//***********************************
+
+$modal-header-padding-filters: 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .modal
+  &__close
+    stroke: $oslo
+
+    +hover
+      stroke: $ziggurat
+
+  &__header
+    border-bottom: solid 1px $oslo
+    text-align: center
+
+  &__actions
+    border-color: $oslo
+
+  &__title
+    font-size: 32px
+
+  &__search
+    input
+      background: url(../../images/theme/search.svg) 15px center / 28px  no-repeat
+      color: $oslo
+      font-size: 20px
+      padding: 18px 200px 18px 60px
+
+    button
+      top: 0
+      padding: 11px 5px
+
+  &--filters
+    .modal__wrapper
+      max-height: none
+      overflow: visible
+
+    .modal__content
+      max-height: calc(100vh - 140px)
+
+  &--video
+    .modal__wrapper
+      border-radius: 0
+
+  .form__group
+    border-bottom: 1px solid $iron
+    margin-bottom: 40px
+    padding-bottom: 20px
+
+    &:last-child
+      border: none
+      margin-bottom: 0
+
+  +breakpoint(medium, min)
+    &--filters
+      .modal__title
+        font-size: 32px
+
+  +breakpoint(medium)
+    &__wrapper
+        border-radius: 20px
+
+    &__title
+      font-size: 20px
+
+  +breakpoint(small)
+    &__wrapper
+      border-radius: 10px
+
+    &__close
+      transform: scale(0.8)
+      padding: 8px
+
+//login form speific
+.custom .modal--login,
+.custom .programme-details--logged-out
+  .form__label
+    text-indent: -9999px
+    height: 0
+    margin: 0
+
+  .form__input
+    font-size: 14px
+
+  .form__control--actions
+    &:first-child
+      justify-content: center

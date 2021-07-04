@@ -1,0 +1,18 @@
+{
+  "staging": {
+    "ae": "https://api.netlify.com/build_hooks/5d9c56409fabeae25e3a7d61",
+    "all3": "https://api.netlify.com/build_hooks/5d9c568b15d2459392c55368",
+    "amc": "https://api.netlify.com/build_hooks/5d9c56c0c98c24bdcf8d77f8",
+    "cineflix": "https://api.netlify.com/build_hooks/5d9c571c979d77453de0bbc5",
+    "demo": "https://api.netlify.com/build_hooks/5d9c574e9fabea2c8c3a7d45",
+    "drg": "https://api.netlify.com/build_hooks/5d9c577e2d3a5a9de55a37dd",
+    "fremantle": "https://api.netlify.com/build_hooks/5e2edc8a8dc8da0b4c003961",
+    "fremantleprod": "https://api.netlify.com/build_hooks/5e3d1be567a01df4720bd984",
+    "itv": "https://api.netlify.com/build_hooks/5d9c58a8fd555ed2c6f522c4",
+    "keshet": "https://api.netlify.com/build_hooks/5d9c58cb9b054127006d2ca5",
+    "one-lite": "https://api.netlify.com/build_hooks/5dd80cb4019035877a31d6ee",
+    "rtv": "https://api.netlify.com/build_hooks/5d9c5913107a90caea84c95c",
+    "storylab": "https://api.netlify.com/build_hooks/5d9c58f946a6a0ed84c964e3",
+    "wildbrain": "https://api.netlify.com/build_hooks/5e2edaf6b956f62d26627ca9"
+  }
+}

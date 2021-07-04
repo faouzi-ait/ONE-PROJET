@@ -1,0 +1,45 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$page-controls-padding: 30px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .page-controls
+    flex-wrap: wrap
+
+    &__control
+        margin-left: 0
+        margin-right: 80px
+
+        > span
+            font-family: $sub-font-family
+            font-size: 18px
+            font-weight: bold
+            letter-spacing: -1px
+
+    &__right
+        &:not(:last-child)
+            margin-right: 20px
+
+    &__left
+        font-size: 18px
+        font-weight: 700
+
+    +breakpoint(small)
+        padding-top: 10px
+        
+        &__control
+            margin-right: 0
+
+            > span
+                font-size: 16px
+
+        .per-page
+            .Select-control
+                min-width: 120px
+
+        

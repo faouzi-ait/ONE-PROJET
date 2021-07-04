@@ -1,0 +1,25 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$slide-toggle-bg: $base-color
+$slide-toggle-active-bg: $success-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .slide-toggle
+    &__label
+        color: $white
+        font-family: $secondary-font-family
+        font-size: 18px
+        font-weight: 600
+        letter-spacing: 0.5px
+
+    &__toggle
+        margin-right: 0

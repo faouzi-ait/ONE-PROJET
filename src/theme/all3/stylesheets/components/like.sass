@@ -1,0 +1,35 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .like
+
+  &__menu
+    background-color: $base-color
+
+    &::before
+      background-color: $base-color
+
+    &::after
+      content: none
+
+  &__button
+    color: $white
+
+    &:hover
+      background-color: $tarawera
+      color: $brand-color
+
+  &__item
+    border-bottom: 1px solid rgba($black, .4)
+

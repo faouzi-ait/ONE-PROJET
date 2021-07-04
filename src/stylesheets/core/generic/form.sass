@@ -1,0 +1,201 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/form'
+
+//***********************************
+
+.form
+  max-width: 100%
+  width: $form-width
+
+  a:not([class]),
+  a.active
+    color: $brand-color
+
+  &--open-select
+    padding-bottom: 120px
+
+    .programme-filters &
+      padding-bottom: 0
+
+      .modal__content
+        padding-bottom: 120px
+
+  &--skinny
+    margin: 0 auto
+    width: $form-skinny-width
+
+  &__inner
+    flex-grow: 1
+
+  &__inner &
+    &__input
+      width: 100%
+
+  &--inline
+    width: auto
+
+  &__info
+    font-size: 12px
+    font-style: italic
+    margin: 5px 0 0 10px
+
+  &__control
+    margin: 0 0 20px
+    max-width: $form-skinny-width
+
+    &--full-width
+      max-width: none
+
+      .form__input
+        rezize: none
+        max-width: none
+
+    &--inline
+      align-items: center
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      .custom-select
+        width: auto
+
+      .form__label
+        width: 100%
+
+    &--bordered
+      border-top: 1px solid $base-color-light
+      margin-top: 20px
+      padding-top: 20px
+      max-width: none
+
+    &--actions
+      align-items: center
+      display: flex
+      justify-content: center
+      margin-top: 30px
+      text-align: center
+      margin-left: auto
+      margin-right: auto
+
+      .button
+        flex: 1
+
+        + .button
+          margin-left: 10px
+
+    &--large
+      margin-bottom: 40px
+      max-width: none
+
+      &:last-child
+        margin-bottom: 0
+
+      .form__input
+        font-size: $base-font-size * 1.5
+        max-width: none
+        border-radius: $form-input-radius * 1.5
+
+    .form__label +  .form__info
+      margin-left: 0
+
+    .form__info
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  &__group
+    display: flex
+    align-items: flex-start
+
+    .form__control
+      margin-right: 20px
+      flex-grow: 1
+
+      &:last-child
+        margin-right: 0
+
+    .slide-toggle
+      margin-top: 36px
+
+    .delete
+      margin-top: 47px
+
+  &__label
+    display: block
+    font-weight: bold
+    margin: 0 0 10px
+    text-align: left
+
+    &--required
+      &::before
+        content: '*'
+
+  &__error
+    color: $error-color
+    display: block
+    font-size: 13px
+    font-weight: bold
+    margin-top: 5px
+    text-align: right
+
+  &__input
+    border: $form-input-border
+    border-radius: $form-input-radius
+    box-sizing: border-box
+    color: $base-color
+    display: block
+    font-family: $base-font-family
+    font-size: $base-font-size
+    line-height: $base-line-height
+    max-width: $form-skinny-width
+    outline: none
+    padding: $form-input-padding
+    transition: border-color .3s
+    width: 100%
+
+    &--wide
+      max-width: none
+
+    &:focus
+      border-color: $form-input-focus-border
+
+    &--textarea
+      border-radius: $form-textarea-radius
+      height: $form-textarea-height
+
+    &--phone
+      padding: $form-input-phone-padding
+      background-color: $white
+
+    &--focus
+      border-color: $form-input-focus-border
+
+  ul.form__error
+    text-align: left
+
+  .react-datepicker__input-container
+    display: block
+
+  .grecaptcha-wrapper
+    .grecaptcha-badge
+      z-index: 10
+      visibility: visible !important
+      display: block
+      transition: right 0.3s ease 0s
+      box-shadow: gray 0px 0px 5px
+      border-radius: 2px
+      overflow: hidden
+      width: 256px
+      height: 60px
+
+    &--invisible
+      .grecaptcha-badge
+        position: fixed
+        bottom: 14px
+        right: -186px
+
+    &--normal
+      .grecaptcha-badge
+        position: static

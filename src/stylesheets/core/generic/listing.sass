@@ -1,0 +1,41 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/listing'
+
+//***********************************
+
+.listing
+
+  &__item
+    border-bottom: $listing-item-border
+    padding-left: calc(#{$listing-thumbnail-width} + #{$listing-item-gutter})
+    margin-bottom: $listing-item-gutter
+    padding-bottom: $listing-item-gutter
+    overflow: hidden
+
+    &:last-child
+      border-bottom: none
+
+  &__left-col
+    float: left
+    margin-left: calc(#{-$listing-thumbnail-width} - #{$listing-item-gutter})
+    max-width: $listing-thumbnail-width
+    position: relative
+
+  &__heading
+    font-size: $listing-heading-font-size
+    margin: $listing-heading-margin
+
+  &__sub-heading
+    font-size: $listing-sub-heading-font-size
+    margin: $listing-sub-heading-margin
+
+  &__date
+    color: $listing-date-color
+    font-size: $listing-date-font-size
+
+  &__copy
+    color: $listing-copy-color
+    font-size: $listing-copy-font-size

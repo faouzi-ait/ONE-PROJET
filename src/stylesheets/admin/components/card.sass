@@ -1,0 +1,277 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$admin-card-base-color: $base-color
+$admin-card-bgc: $white
+$admin-card-border-radius: 4px
+$admin-card-padding: 26px 30px
+
+//***********************************
+
+$admin-card-title-color: $base-color
+$admin-card-title-hover-color: $brand-color
+$admin-card-title-margin: 0 0 10px
+$admin-card-title-size: 20px
+$admin-card-title-weight: bold
+
+//***********************************
+
+$admin-card-date-color: $base-color-light
+$admin-card-date-font-size: 14px
+$admin-card-date-margin: -5px 0 10px
+
+//***********************************
+
+$admin-card-copy-color: $base-color
+$admin-card-copy-hover-color: $base-color
+$admin-card-copy-margin: 0 0 10px
+$admin-card-copy-size: 15px
+$admin-card-copy-weight: normal
+
+//***********************************
+
+$admin-card-count-color: $white
+$admin-card-count-background: $brand-color
+$admin-card-count-padding: 2px 12px
+$admin-card-count-weight: bold
+$admin-card-count-border-radius: 15px
+$admin-card-count-spacing: 5px
+$admin-card-count-offset: -3px
+
+//***********************************
+
+$admin-card-toggle-position: absolute
+$admin-card-toggle-right: 10px
+$admin-card-toggle-top: 0px
+$admin-card-toggle-transform: translateY(-50%)
+
+//***********************************
+
+$admin-card-tags-margin: 5px -5px 5px 0
+$admin-card-tag-margin: 0 5px 5px 0
+$admin-card-tag-font-size: 11px
+$admin-card-tag-color: $base-color-light
+$admin-card-tag-border: 1px solid $base-color-light
+$admin-card-tag-padding: 1px 10px 0
+$admin-card-tag-radius: 50px
+
+//***********************************
+
+$admin-card-active-shadow: 0 12px 5px rgba($base-color-dark, 0.2)
+
+//***********************************
+
+$admin-card-small-content-padding: 10px
+
+//***********************************
+
+$admin-card-small-title-size: 14px
+
+//***********************************
+
+$admin-card-icon-fill: $brand-color
+
+.admin-card
+  background-color: $admin-card-bgc
+  border-radius: $admin-card-border-radius
+  overflow: hidden
+
+  &__media-link
+    display: block
+    position: relative
+
+    &::after
+      clear: both
+      content: ''
+      display: block
+
+    +hover
+      ~ .card__content .card__title
+        color: $admin-card-title-hover-color
+
+  &__move-icon,
+  &__display-icon
+    fill: $white
+    left: 10px
+    position: absolute
+    top: 10px
+
+  &__display-icon
+    left: auto
+    right: 10px
+
+  &__video-image
+    position: relative
+    
+    &:after
+      content: ''
+      clear: both
+      display: block
+
+  &__media
+    display: block
+    float: left
+    height: auto
+    width: 50%
+
+    &:nth-of-type(odd)
+      clear: both
+
+    &:first-of-type
+      &:last-of-type
+        width: 100%
+
+  &__content
+    clear: both
+    padding: $admin-card-padding
+    position: relative
+
+  &__title
+    color: $admin-card-title-color
+    font-size: $admin-card-title-size
+    font-weight: $admin-card-title-weight
+    margin: $admin-card-title-margin
+    word-wrap: break-word
+
+    &--small
+      font-size: $admin-card-small-title-size
+
+    a
+      color: inherit
+      text-decoration: none
+      transition: color .2s
+
+      +hover
+        color: $admin-card-title-hover-color
+
+  &__date
+    color: $admin-card-date-color
+    display: block
+    font-size: $admin-card-date-font-size
+    margin: $admin-card-date-margin
+
+  &__copy
+    color: $admin-card-copy-color
+    font-size: $admin-card-copy-size
+    font-weight: $admin-card-copy-weight
+    margin: $admin-card-copy-margin
+
+    &--file
+      word-wrap: break-word
+
+    a
+      color: inherit
+      text-decoration: none
+      transition: color .3s
+
+      +hover
+        color: $admin-card-copy-hover-color
+
+
+    &:last-child
+      margin-bottom: 0
+
+  &__count
+    background: $admin-card-count-background
+    border-radius: $admin-card-count-border-radius
+    color: $admin-card-count-color
+    display: inline-block
+    font-weight: $admin-card-count-weight
+    margin-right: $admin-card-count-spacing
+    margin-top: $admin-card-count-offset
+    padding: $admin-card-count-padding
+    vertical-align: middle
+
+  &__tags
+    display: flex
+    flex-wrap: wrap
+    margin: $admin-card-tags-margin
+
+  &__tag
+    border: $admin-card-tag-border
+    border-radius: $admin-card-tag-radius
+    color: $admin-card-tag-color
+    font-size: $admin-card-tag-font-size
+    margin: $admin-card-tag-margin
+    padding: $admin-card-tag-padding
+
+  .toggle
+    position: $admin-card-toggle-position
+    right: $admin-card-toggle-right
+    top: $admin-card-toggle-top
+    transform: $admin-card-toggle-transform
+
+  &--active
+    box-shadow: $admin-card-active-shadow
+
+  &--hidden
+    opacity: 0
+
+  &--draggable
+    cursor: move
+
+  &--small &
+    &__content
+      padding: $admin-card-small-content-padding
+
+    &__title
+      font-size: $admin-card-small-title-size
+
+  &--poster
+    background: $black
+    position: relative
+
+    +hover
+      .card__media
+          opacity: .25
+
+  &--poster &
+
+    &__content
+      left: 50%
+      padding: 0
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+
+    &__media
+      opacity: .5
+      transition: opacity .2s
+
+    &__title
+      color: $white
+
+      a
+        +hover
+          color: $white
+
+    &__media-link
+      +hover
+
+        ~ .card__content .card__title
+          color: $white
+
+  &__actions
+    display: flex
+    padding-right: 5px
+    position: absolute
+    right: 0
+    top: 0
+    transform: translateY(-50%)
+
+    > *
+      flex: none
+      margin-right: 5px
+
+  &__icon
+    background: transparent
+    border: 0
+    cursor: pointer
+    fill: $admin-card-icon-fill
+    outline: none
+    padding: 0

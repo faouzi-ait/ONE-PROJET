@@ -1,0 +1,32 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$quote-card-padding: 90px 0 25px 0
+$quote-card-title-margin: 0 0 20px 0
+$quote-card-border-color: $brand-color
+
+$quote-card-name-size: 20px
+$quote-card-author-size: 12px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .quote-card
+  color: $white
+  &:before
+    height: 9px
+    width: 100%
+
+  &__name
+    position: absolute
+    top: 35px
+
+  &__name,
+  &__author
+    color: $oslo

@@ -1,0 +1,80 @@
+
+@import '../imports'
+
+$checkbox-filters-margin: 0 0 2px 0
+
+$checkbox-filters-header-bg: $athens-gray
+$checkbox-filters-header-padding: 10px 30px 10px 40px
+
+$checkbox-filters-content-padding: 20px 60px 20px
+
+$checkbox-filters-toggle-bg: $brand-color
+$checkbox-filters-toggle-bg-active: $casper
+$checkbox-filters-toggle-padding: 5px 20px
+$checkbox-filters-toggle-radius: 4px
+$checkbox-filters-toggle-hover-bg: $casper
+
+//***********************************
+
+.cms-checkbox-filters
+  margin: $checkbox-filters-margin
+
+  &__header
+    align-items: center
+    background-color: $checkbox-filters-header-bg
+    display: flex
+    padding: $checkbox-filters-header-padding
+
+    .cms-custom-checkbox__label
+      font-size: 20px
+      font-weight: bold
+      text-transform: uppercase
+
+      &::before
+        top: 3px
+
+  &__toggle
+    background-color: $checkbox-filters-toggle-bg
+    border: none
+    border-radius: $checkbox-filters-toggle-radius
+    color: $white
+    cursor: pointer
+    font-size: 13px
+    font-weight: bold
+    margin-left: auto
+    min-width: 185px
+    outline: none
+    padding: $checkbox-filters-toggle-padding
+    text-transform: uppercase
+
+    svg
+      fill: $white
+      margin: -2px 10px 0 0
+      vertical-align: middle
+
+    &--is-active
+      background-color: $checkbox-filters-toggle-bg-active
+
+      svg
+        transform: rotate(-180deg)
+
+    +hover
+      background-color: $checkbox-filters-toggle-hover-bg
+
+  &__content
+    align-items: flex-start
+    display: flex
+    flex-wrap: wrap
+    padding: $checkbox-filters-content-padding
+
+    &--is-disabled
+      .cms-custom-checkbox
+        cursor: auto
+        opacity: .5
+        pointer-events: none
+
+    .cms-custom-checkbox
+      margin-bottom: 10px
+      width: calc(33.333% - 10px)
+
+

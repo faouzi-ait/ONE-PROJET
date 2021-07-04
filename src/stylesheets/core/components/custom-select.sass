@@ -1,0 +1,51 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/custom-select'
+
+//***********************************
+
+.custom-select
+  background-color: $custom-select-bgc
+  border: $custom-select-border
+  border-radius: $custom-select-radius
+  box-sizing: border-box
+  cursor: pointer
+  height: $custom-select-height
+  max-width: $custom-select-max-width
+  min-width: $custom-select-min-width
+  position: relative
+  width: 100%
+
+  &--is-disabled
+    cursor: auto
+    opacity: .5
+
+    .custom-select__select
+      cursor: auto
+
+  &__icon
+    fill: $custom-select-icon-fill
+    pointer-events: none
+    position: absolute
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
+
+  &__select
+    appearance: none
+    background-color: transparent
+    border: 0
+    cursor: pointer
+    font-family: $base-font-family
+    font-size: $base-font-size
+    height: 100%
+    left: 0
+    outline: none
+    padding: $custom-select-padding
+    position: absolute
+    top: 0
+    width: 100%
+    &::-ms-expand
+      display: none

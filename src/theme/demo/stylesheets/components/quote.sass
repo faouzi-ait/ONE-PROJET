@@ -1,0 +1,63 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+//***********************************
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .quote
+    align-items: center
+    color: $black
+    background-color: $porcelain
+    
+    img
+        flex-shrink: 0
+        height: 100%
+        width: 100%
+
+    +breakpoint(large)
+        flex-flow: column nowrap
+
+    &__main-image
+        margin-top: 64px
+        max-width: 50%
+        order: 2
+        +breakpoint(xlarge)
+            max-width: 40%
+        +breakpoint(large)
+            max-height: 30vh
+            max-width: 100%
+            margin: 2rem
+            
+
+
+    &__content
+        order: 1
+
+    &__head
+        font-weight: 800
+        font-size: 30
+        line-height: 31px
+        letter-spacing: -1px
+        margin-right: 10rem
+        +breakpoint(large)
+            margin-right: 0
+
+        &:before
+            content: ""
+            width: 63px
+            height: 49px
+            background-image: url(../../../images/temp/quote.png)
+            background-size: 63px 49px
+            display: block
+            margin-bottom: 1rem
+    
+    &__citation-text
+        font-style: normal    

@@ -1,0 +1,24 @@
+https://screenmedia.thisisone.tv   https://sr.cssentertainment.com/   301!
+https://screenmedia.thisisone.tv/*   https://sr.cssentertainment.com/:splat   301
+
+https://itvmedia.thisisone.tv   https://firstlook.itvmedia.co.uk   301!
+https://itvmedia.thisisone.tv/*   https://firstlook.itvmedia.co.uk/:splat   301
+
+https://cake.thisisone.tv   https://cakeentertainment.com   301!
+https://cake.thisisone.tv/*   https://cakeentertainment.com/:splat   301
+https://www.cakeentertainment.com   https://cakeentertainment.com   301!
+https://www.cakeentertainment.com/*   https://cakeentertainment.com/:splat   301
+
+https://fredmedia.thisisone.tv   http://www.fredmedia.com.au/   301!
+https://fredmedia.thisisone.tv/*   http://www.fredmedia.com.au/:splat   301
+https://fredmedia.com.au   http://www.fredmedia.com.au/   301!
+https://fredmedia.com.au/*   http://www.fredmedia.com.au/:splat   301
+
+https://totalcontent.thisisone.tv   https://www.totalcontentdigital.com   301!
+https://totalcontent.thisisone.tv/*   https://www.totalcontentdigital.com/:splat   301
+https://totalcontentdigital.com   https://www.totalcontentdigital.com   301!
+https://totalcontentdigital.com/*   https://www.totalcontentdigital.com/:splat   301
+
+
+/*   /index.html   200
+

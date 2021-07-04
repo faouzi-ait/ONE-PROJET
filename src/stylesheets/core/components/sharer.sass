@@ -1,0 +1,70 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/sharer'
+
+//***********************************
+
+.sharer
+  background-color: $sharer-bg
+  color: $sharer-color
+  font-size: $sharer-font-size
+  padding: $sharer-padding
+
+  &__list
+    align-items: center
+    display: flex
+    justify-content: center
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__item
+    margin: 0 5px
+
+  &__icon
+    fill: $white
+    transition: fill .2s
+
+  &__link
+    align-items: center
+    border-radius: 50%
+    display: flex
+    font-size: 0
+    height: 40px
+    justify-content: center
+    transition: background-color .2s
+    width: 40px
+
+    &:hover
+      background-color: $white
+
+    &--facebook
+      background-color: #3A5799
+
+      &:hover
+        .sharer__icon
+          fill: #3A5799
+
+    &--twitter
+      background-color: #53AAEF
+
+      &:hover
+        .sharer__icon
+          fill: #53AAEF
+
+    &--linkedin
+      background-color: #0B75B4
+
+      &:hover
+        .sharer__icon
+          fill: #0B75B4
+
+    &--instagram
+      background: linear-gradient(46.05deg, #FFD700 0%, #F80000 49.52%, #BC00B2 100%)
+
+      &:hover
+        background: $white
+        .sharer__icon
+          fill: #f80000

@@ -1,0 +1,28 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$page-controls-padding: 20px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .page-controls
+    .button
+        padding-left: 20px
+        padding-right: 20px
+
+    &__count
+        font-family: $heading-font-family
+        font-weight: bold
+        margin: 0
+        text-transform: uppercase
+
+    .per-page
+        .Select-control
+            min-width: 90px
+
+    +breakpoint(medium)
+        &__control
+            justify-content: center

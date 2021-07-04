@@ -1,0 +1,53 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/typography'
+
+//***********************************
+
+.app // fe wrapper
+  -webkit-font-smoothing: $base-font-smoothing
+  -webkit-tap-highlight-color: rgba($brand-color, .5)
+  color: $base-color
+  font-family: $base-font-family
+  font-size: $base-font-size
+  line-height: $base-line-height
+
+  h1,h2,h3
+    font-weight: $base-heading-weight
+
+.heading
+
+  &--one
+    +heading(1)
+
+  &--two
+    +heading(2)
+
+  &--three
+    +heading(3)
+
+.info
+  color: $info-color
+  font-size: $info-size
+  font-style: italic
+
+  + .form__control--actions
+    margin-top: 0
+
+a:not([class]),
+button.text-link
+  svg
+    fill: $base-color-light
+    transition: fill .2s
+
+  +hover
+    svg
+      fill: $brand-color
+
+.sr-only
+    height: 0
+    left: -10000px
+    overflow: hidden !important
+    position: absolute

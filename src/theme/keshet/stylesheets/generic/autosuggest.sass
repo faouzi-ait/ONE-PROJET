@@ -1,0 +1,47 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$as-radius: 0
+$as-border: none
+
+//***********************************
+
+$as-title-bg: $tuna
+$as-title-weight: bold
+$as-title-size: 18px
+$as-title-padding: 15px 20px
+$as-title-border: none
+
+//***********************************
+
+$as-suggestion-size: 16px
+$as-suggestion-padding: $as-title-padding
+$as-suggestion-border: none
+$as-suggestion-hover-bg: $brand-color
+$as-description-color: $base-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .react-autosuggest
+
+  &__suggestion .suggestion__title
+    color: $brand-color
+
+  &__section-title,
+  &__suggestion--highlighted,
+  &__suggestion--highlighted .suggestion__description,
+  &__suggestion--highlighted .suggestion__title
+    color: $white
+
+  &__suggestions-container
+    box-shadow: 0 22px 24px 0 rgba($black,.5)
+    top: calc(100% + 20px)
+
+  

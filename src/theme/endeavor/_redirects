@@ -1,0 +1,8 @@
+https://endeavor.thisisone.tv   https://ecitv.endeavorcontent.com   301!
+https://endeavor.thisisone.tv/*   https://ecitv.endeavorcontent.com/:splat   301
+https://endeavorcontent.com   https://ecitv.endeavorcontent.com   301!
+https://endeavorcontent.com/*   https://ecitv.endeavorcontent.com/:splat   301
+https://www.endeavorcontent.com   https://ecitv.endeavorcontent.com   301!
+https://www.endeavorcontent.com/*   https://ecitv.endeavorcontent.com/:splat   301
+
+/*   /index.html   200

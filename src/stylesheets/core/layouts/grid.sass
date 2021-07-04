@@ -1,0 +1,121 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/grid'
+
+//***********************************
+
+.grid
+  display: flex
+  margin: 0 -10px $grid-margin-bottom 0
+
+  > *
+    flex: none
+    margin-right: 10px
+    margin-bottom: 10px
+
+  > .lg-hidden
+    overflow: hidden
+
+  &--stretch
+
+    > *
+      flex: 1
+
+  &--justify
+    justify-content: center
+
+  &--justify-space-between
+    justify-content: space-between
+
+  &--row-reverse
+    flex-direction: row-reverse
+
+  &--end
+    justify-content: flex-end
+
+  &--center
+    align-items: center
+
+  &--full
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+    width: 100%
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+
+  &--two
+    flex-wrap: wrap
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+      width: calc(50% - #{$grid-gutter})
+
+  &--three
+    flex-wrap: wrap
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+      width: calc(33.33% - #{$grid-gutter})
+
+  &--four
+    flex-wrap: wrap
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+      width: calc(25% - #{$grid-gutter})
+
+  &--five
+    flex-wrap: wrap
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+      width: calc(20% - #{$grid-gutter})
+
+  &--six
+    flex-wrap: wrap
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+      width: calc(16.666666% - #{$grid-gutter})
+
+  &--wrap
+    flex-wrap: wrap
+
+  +breakpoint(large)
+
+    &--four,
+    &--six
+      > *
+        width: calc(33.333333% - #{$grid-gutter})
+
+    &--five
+      > *
+        width: calc(50% - #{$grid-gutter})
+
+  +breakpoint(medium)
+
+    &--four,
+    &--three,
+    &--five,
+    &--six
+      > *
+        width: calc(50% - #{$grid-gutter})
+
+    &--two
+      > *
+        width: calc(100% - #{$grid-gutter})
+
+  +breakpoint(xsmall)
+    display: block
+    margin-right: 0
+
+    > *
+      margin-right: 0
+      width: 100%

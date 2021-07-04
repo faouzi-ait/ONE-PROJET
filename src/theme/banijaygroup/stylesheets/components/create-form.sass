@@ -1,0 +1,48 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$create-form-display: flex
+
+//***********************************
+
+$create-form-button-background: $brand-color
+$create-form-button-font-size: $base-font-size
+$create-form-button-font-family: $base-font-family
+$create-form-button-font-weight: normal
+$create-form-button-color: $white
+$create-form-button-padding: 15px 20px
+$create-form-button-radius: 4px 25px 25px 4px
+
+//***********************************
+
+$create-form-input-padding: 10px 0
+$create-form-input-border: none
+$create-form-input-radius: 0
+$create-form-input-font-size: 20px
+$create-form-input-font-family: $base-font-family
+
+//***********************************
+
+$create-form-button-hover-background: shade($brand-color, 10%)
+$create-form-button-hover-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .create-form
+    &__input
+        background: transparent
+        border-bottom: solid $brand-color 1px
+        margin-right: 30px
+        max-width: 400px
+        width: 400px
+
+    +breakpoint(small)
+        &__input
+            font-size: 14px

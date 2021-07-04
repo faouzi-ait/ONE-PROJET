@@ -1,0 +1,49 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tag-bgc: transparent
+$tag-hover-bgc: transparent
+$tag-margin: 0 5px 5px 0
+$tag-padding: 2px 0
+$tag-radius: 0
+
+//***********************************
+
+$tag-font-size: 14px
+$tag-font-weight: bold
+$tag-color: $base-color-light
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tag
+    transition: color .2s
+    text-transform: uppercase
+
+    &[href]
+        text-decoration: underline
+
+        +hover
+            color: $brand-color
+
+    &--Unregistered,
+    &--unregistered
+        font-size: 11px
+
+    &--Unregistered,
+    &--unregistered,
+    &--Internal,
+    &--internal,
+    &--External,
+    &--external
+        color: white
+        padding: 6px
+        
+        &:before
+            display: none

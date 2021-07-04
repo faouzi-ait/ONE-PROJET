@@ -1,0 +1,109 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$button-bgc: transparent
+$button-border-radius: 4px
+$button-border: 1px solid $brand-color
+$button-hover-bgc: $brand-color
+
+//***********************************
+
+$button-filled-bgc: $tundra
+$button-filled-color: $white
+$button-filled-hover-bgc: shade($brand-color, 10%)
+$button-filled-icon-color: $white
+
+//***********************************
+
+$button-small-padding: 7px 16px
+$button-with-icon-padding: 9px 20px 7px 16px
+$button-small-font-size: 12px
+
+//***********************************
+
+$button-error-background: $error-color
+$button-error-color: $white
+$button-error-border: 2px solid $error-color
+
+$button-error-hover-background: shade($error-color, 10%)
+
+$button-success-background: $success-color
+$button-success-color: $white
+$button-success-border: 2px solid $success-color
+
+$button-success-hover-background: shade($success-color, 10%)
+
+//***********************************
+
+$button-null-background: $base-color-dark
+$button-null-color: $white
+$button-null-border: 2px solid $base-color-dark
+
+$button-null-hover-background: $base-color-dark
+
+//***********************************
+
+$button-color: $white
+$button-font-family: $base-font-family
+$button-font-size: 16px
+$button-font-weight: bold
+
+//***********************************
+
+$button-padding: 11px 30px
+
+//***********************************
+
+$button-transition: background-color .3s, border-color .3s
+
+//***********************************
+
+$button-alert-color: $error-color
+$button-alert-size: 14px
+$button-alert-right: 10px
+
+//***********************************
+
+$button-icon-padding: 9px
+$button-icon-size: 44px
+$button-icon-margin: 0 10px 0 0
+$button-icon-margin-right: 0 0 0 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .button,
+.custom .mock-page .content-block .button
+    font-weight: bold
+    &--filled
+        border: 0
+    &--icon
+        border: 0
+    &--list
+        border-radius: 0
+        text-transform: uppercase
+    &--list:first-of-type:last-of-type
+        border-radius: $button-border-radius
+    &--list:first-of-type:not(:last-of-type)
+        border-radius: $button-border-radius 0 0 $button-border-radius
+    &--list:last-of-type:not(:first-of-type)
+        border-radius: 0 $button-border-radius $button-border-radius 0
+
+    &--with-icon
+        background-color: $brand-color
+        border: 0
+        height: 50px
+
+    &:not(.button-filled)
+        transition: fill 0.3s
+        &:hover g
+            fill: $white
+
+.custom .meetings__container .button
+    background-color: $cod-gray

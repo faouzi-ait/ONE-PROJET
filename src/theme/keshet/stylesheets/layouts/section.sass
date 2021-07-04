@@ -1,0 +1,89 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 20px 0
+$section-bgc: transparent
+$section-shade-bgc: $athens-gray
+
+//***********************************
+
+$section-copy-color: $base-color
+$section-copy-hover-color: $base-color
+$section-copy-margin: 0 0 20px
+$section-copy-size: $base-font-size
+$section-copy-weight: normal
+
+//***********************************
+
+$section-header-text-align: left
+
+//***********************************
+
+$section-actions-align: center
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+
+  &__copy
+    font-family: $base-font-family
+    font-size: $base-font-size
+    text-transform: initial
+
+  &__header, &__header .section__copy
+    font-family: $heading-font-family
+    font-size: 24px
+    font-weight: bold
+    text-transform: uppercase
+    
+  &--curved,
+  &--curved-over
+    position: relative
+
+    > *
+      position: relative
+      z-index: 2
+
+      &.programme-search
+        z-index: 3
+
+    &:before
+      bottom: -7px
+      content: url('../../images/theme/section-curve-grey.svg')
+      position: absolute
+      right: 0
+      width: 135%
+
+  &--curved-over
+    background: $athens-gray
+
+    &:before
+      bottom: auto
+      content: url('../../images/theme/section-curve-over.svg')
+      top: 0
+      width: 100%
+      z-index: 1
+
+  &--shade.section--curved
+    &:before
+      content: url('../../images/theme/section-curve-white.svg')
+
+.custom .fade-on-load
+
+  > .section--shade
+    position: relative
+
+    &:not(.section--curved)
+
+      &:last-child
+        &:before
+          background: $section-shade-bgc
+          content: ''
+          position: absolute
+          top: 100%
+          width: 100%
+          height: 1000px
+          z-index: 1

@@ -1,0 +1,47 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/actions'
+
+//***********************************
+
+.actions
+  padding: $actions-padding
+  background: $actions-background
+  transition: box-shadow .3s
+
+  &.sticky
+    box-shadow: 0 0 5px rgba($black, .1)
+
+  &__inner
+    display: $actions-inner-display
+    align-items: $actions-inner-align
+    justify-content: $actions-inner-justify
+    flex-wrap: $actions-inner-flex-wrap
+    margin: $actions-inner-margin
+
+    > *
+      flex-shrink: none
+      margin: $actions-item-margin
+
+  .grid
+    margin-bottom: 0px
+
+    > *
+      flex: none
+
+  .custom-select
+    width: auto
+    min-width: 180px
+
+  &--center &
+    &__inner
+      justify-content: center
+
+  +breakpoint(large)
+    &__inner
+      justify-content: flex-start
+
+      > *
+        width: 100%

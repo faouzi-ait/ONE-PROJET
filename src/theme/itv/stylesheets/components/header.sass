@@ -1,0 +1,83 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: $bright-gray
+$header-max-width: 1520px
+$header-padding: 20px
+$header-welcome-color: $spun-pearl
+$header-user-color: $gallery
+$header-user-hover-color: $brand-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+  box-sizing: border-box
+  position: fixed
+  height: 100px
+
+  &--impersonating
+    top: 75px
+
+  .programme-search
+    margin-left: 40px
+
+    .button
+      margin-left: 0
+
+  &--meetings
+    padding: $header-padding
+
+  &__welcome
+    font-weight: 700
+    text-transform: uppercase
+    margin-right: 0
+
+  .text-button,
+  .button
+    color: $gallery
+    border-radius: 0
+    margin-right: 0
+    margin-left: 40px
+    text-transform: uppercase
+
+  .button
+    margin-bottom: 0
+
+  .button__icon
+    fill: $brand-color
+
+  &__controls
+    & > *
+      margin-left: 40px
+
+  .brand
+    img
+      height: 59px
+
+  .programme-search
+    .button__icon
+      fill: $white
+
+  +breakpoint(large)
+    .programme-search
+      margin-left: 0
+
+  +breakpoint(small)
+    height: 80px
+    &__controls
+      & > *
+        margin-left: 20px
+
+    .text-button
+      margin-left: 20px
+
+    .programme-search
+      .button
+          margin-left: 0

@@ -1,0 +1,156 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$react-select-bgc: $white
+$react-select-color: $base-color
+$react-select-border: 2px solid $base-color-light
+$react-select-radius:  4px
+$react-select-focused-border: $brand-color
+$react-select-padding: 8px 0 3px 10px
+$react-select-height: 40px
+$react-select-width: 190px
+
+$react-select-single-padding: 7px 0 7px 20px
+$react-select-single-border: 1px solid $blue-bayoux
+
+//***********************************
+
+$react-select-placeholder-color: $base-color-light
+
+//***********************************
+
+$react-select-value-bgc: $brand-color
+$react-select-value-radius: 0
+$react-select-value-color: $white
+
+//***********************************
+
+$react-select-menu-border: 2px solid $base-color-light
+$react-select-menu-radius: 6px
+
+//***********************************
+
+$react-select-option-border: 1px solid shade($athens-gray, 5%)
+$react-select-option-padding: 10px
+$react-select-option-color: $base-color
+$react-select-option-focus-bgc: tint($brand-color, 80%)
+$react-select-option-focus-color: $base-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .Select
+  font-size: (15/16)+rem
+  font-weight: 500
+  flex-grow: 1
+
+  &-menu-outer
+    color: $base-color
+
+  &.Select--single,
+  &.Select--multi
+    .Select-control
+      background-color: transparent
+      border-color: $blue-bayoux
+      border-width: 1px
+      justify-content: space-between
+      color: $white
+
+    .Select-clear-zone
+      padding-right: 10px
+
+
+    .Select-input > input,
+    .Select-placeholder,
+    .Select-value
+      color: $black
+      font-size: (14/16)+rem
+
+    .Select-arrow-zone
+      background: url(../../images/theme/select-arrow-white.svg) 14px $blue-bayoux no-repeat
+      display: block
+      border-radius: 0 4px 4px 0
+      padding: 0 0 0 40px
+
+    .Select-value
+      white-space: nowrap
+
+    .Select-value-icon
+      padding: 0 3px
+
+  &.Select--single
+    .Select-arrow-zone
+      margin: -8px -1px -8px 10px
+
+  &-clear-zone
+      color: $base-color
+      position: absolute
+      right: 40px
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 10
+
+.custom:not(.admin)
+  .react-datepicker__input-container
+    border-radius: 4px
+    border: 1px solid $blue-bayoux
+    overflow: hidden
+    position: relative
+
+    input
+      background-color: transparent
+      border-width: 1px
+      border: 0
+      color: $black
+      font-size: (14/16)+rem
+      font-weight: 500
+      justify-content: space-between
+      max-width: 100%
+      min-height: 40px
+      overflow: hidden
+      padding: 0 20px
+
+    &:after
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9'%3E%3Cpath fill='%23ffffff' d='M0.3,0.4c0.5-0.5,1.1-0.5,1.6,0l4,3.9l4-3.9c0.6-0.5,1.2-0.5,1.6,0c0.5,0.5,0.4,1.2,0,1.7 c-0.4,0.4-4.9,4.6-4.9,4.6C6.6,6.9,6.3,7,6,7C5.7,7,5.4,6.9,5.2,6.7c0,0-4.4-4.2-4.9-4.6C-0.1,1.6-0.1,0.8,0.3,0.4'/%3E%3C/svg%3E") $blue-bayoux no-repeat
+      background-size: 100% 28%
+      background-position-y: 56%
+      bottom: 0
+      height: 100%
+      right: 0
+      top: 0
+      transform: translate(0)
+      width: 40px
+
+.custom:not(.admin)
+  .modal__wrapper,
+  .page-controls,
+  .panel-section__panel,
+  .section--shade,
+    .Select
+      &.Select--single,
+      &.Select--multi
+        .Select-input > input,
+        .Select-placeholder,
+        .Select-value,
+        .Select-clear-zone
+          color: $white
+
+        .Select-control
+          border-color: $white
+
+      .Select-arrow-zone
+        background: url(../../images/theme/select-arrow.svg) 14px $white no-repeat
+
+    .react-datepicker__input-container
+      border-color: $white
+
+      &:after
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9'%3E%3Cpath fill='%2300aeff' d='M0.3,0.4c0.5-0.5,1.1-0.5,1.6,0l4,3.9l4-3.9c0.6-0.5,1.2-0.5,1.6,0c0.5,0.5,0.4,1.2,0,1.7 c-0.4,0.4-4.9,4.6-4.9,4.6C6.6,6.9,6.3,7,6,7C5.7,7,5.4,6.9,5.2,6.7c0,0-4.4-4.2-4.9-4.6C-0.1,1.6-0.1,0.8,0.3,0.4'/%3E%3C/svg%3E") center $white no-repeat
+        background-size: 100% 28%
+        background-position-y: 56%

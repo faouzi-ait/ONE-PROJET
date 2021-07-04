@@ -1,0 +1,92 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$show-hide-border: 1px solid $athens-gray
+
+//***********************************
+
+$show-hide-wrap-align: center
+$show-hide-wrap-display: flex
+
+//***********************************
+
+$show-hide-title-flex: 1
+$show-hide-title-font-family: $base-font-family
+
+//***********************************
+
+$show-hide-trigger-background: transparent
+$show-hide-trigger-border-radius: 50%
+$show-hide-trigger-width: 0
+$show-hide-trigger-flex: none
+$show-hide-trigger-size: 38px
+$show-hide-trigger-spacing: 5px
+
+//***********************************
+
+$show-hide-arrow-width: 2px
+$show-hide-arrow-color: $mako
+$show-hide-arrow-size: 11px
+
+//***********************************
+
+$show-hide-wrap-icon-button-margin: 10px
+$show-hide-gap: 55px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .show-hide
+    padding-top: 5px
+
+    > *
+        padding-left: 38px
+
+    &__wrap
+        padding-bottom: 5px
+
+    &__title
+        font-size: (15/16)+rem
+        font-weight: 500
+        margin-right: 10px
+
+    &__sub-title
+        flex: 5
+
+    &__trigger
+        &:before
+            content: none
+
+    &__icon
+        fill: $mako
+
+    &--active
+        .show-hide__trigger
+            background-color: transparent
+            transform: rotate(180deg)
+
+        .show-hide__icon
+            fill: $edward
+
+    &__title-wrap
+        .tag
+            order: 3
+
+    +breakpoint(medium)
+        > *
+            padding-left: 0
+
+    +breakpoint(small)
+        &__wrap
+            flex-wrap: wrap
+
+        &__sub-title
+            flex: none
+            order: 5
+            width: 100%

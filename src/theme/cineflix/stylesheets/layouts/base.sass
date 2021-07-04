@@ -1,0 +1,48 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$body-bgc: $background-color
+$body-margin: 0
+$body-padding: 0
+
+//***********************************
+
+$page-before-color: rgba($black, .8)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+    font-weight: 400
+
+    .u-pb\+
+        padding-bottom: 60px
+
+    .u-mb
+        margin-bottom: 20px
+
+    .u-mb\+
+        margin-bottom: 40px
+
+    .page__wrapper
+        display: flex
+        flex-flow: column nowrap
+
+    main
+        flex-grow: 1
+        display: flex
+        flex-flow: column nowrap
+
+        > .fade-on-load
+            flex-grow: 1
+            display: flex
+            flex-flow: column nowrap
+
+            .container
+                box-sizing: border-box
+                width: 100%
+
+            > :last-child
+                flex-grow: 1

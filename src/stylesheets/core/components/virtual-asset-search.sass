@@ -1,0 +1,306 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+@import '../../_theme/components/virtual'
+@import '../../_theme/components/virtual-asset-search'
+
+@keyframes scroll-text
+  100%
+    transform: translate3d(-50%, 0, 0)
+
+//***********************************
+.virtual-asset-search
+  width: 100%
+  height: 40px
+  display: flex
+
+  &__list-button
+    min-width: 220px
+    border: 1px solid $brand-color
+    background-color: transparent
+    color: white
+    line-height: 0
+
+    +hover
+      background-color: $brand-color
+
+    &--selected
+      background-color: $brand-color
+
+  &__selector
+    padding: 10px 20px
+    margin-top: 20px
+    width: calc(100% - 40px)
+    min-height: 220px
+    border-radius: 10px
+    background-color: black
+
+    .programme__icon
+      left: calc(50% + 20px)
+      top: 50%
+
+    .carousel
+      max-width: 65vw
+
+      .programme
+        background-color: transparent
+
+        &::before,
+        &::after
+          background: none
+
+    .carousel__group
+      padding: 0px
+
+    .programme__strip
+      background: $error-color
+      color: white
+      font-size: 12px
+      padding: 6px
+      position: absolute
+      bottom: 0
+      left: 0
+      top: unset
+      right: unset
+
+  &__video-article
+
+    &--selected,
+      .virtual-asset-search__present-button button
+        background-color: $virtual-green
+
+      .programme__image
+        border: 3px solid $virtual-green
+
+      .programme__icon
+        display: none
+
+  &__video-copy
+    display: flex
+    height: 45px
+    margin-top: 8px
+    color: $white
+
+  &__present-button,
+  &__view-pdf-button
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-right: 5px
+    border: none
+
+    button
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 0
+      border: none
+      border-radius: 4px
+      background-color: #7a7979
+      appearance: none
+      outline: none
+      width: 40px
+      height: 40px
+
+      svg
+        width: 20px
+        height: 20px
+
+      +hover
+        background-color: $virtual-green
+
+  &__pdf-buttons
+    display: flex
+    justify-content: flex-end
+    width: 100%
+
+  &__view-pdf-button
+      button
+        background-color: white
+        border-color: white
+        svg
+          fill: black
+
+        +hover
+          border-color: grey
+          svg
+            fill: black
+
+  &__titles
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    width: 80%
+    height: 40px
+
+  &__titles-name
+    padding-top: 3px
+    font-size: 14px
+
+  &__titles-desc,
+    font-size: 12px
+
+  &__titles-name,
+  &__titles-desc
+    max-height: 40px
+    margin: 0
+
+    &--ellipsis
+      white-space: nowrap
+      display: inline-block
+      word-break: break-all
+      min-width: 200%
+
+      &::after
+        content: attr(data-title)
+        display: inline-block
+        padding-right: 90px
+
+      > *
+        display: inline-block
+        padding-right: 90px
+        box-sizing: border-box
+
+      &:hover
+        animation: scroll-text 5s linear infinite
+
+  &__pdf-asset
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-direction: column
+    height: 110px
+    border: 1px solid #6e6d6d
+    border-radius: 4px
+    padding: 15px 8px
+    margin: 18px 0px
+
+    &--selected,
+      border: 2px solid $virtual-green
+
+      .virtual-asset-search__present-button button
+        background-color: $virtual-green
+
+    .virtual-asset-search__titles
+      margin-top: 5px
+      height: 70px
+      width: 100%
+
+    .programme__strip
+      position: relative
+      padding: 0px 4px
+      margin-top: 3px
+      width: 110px
+      border-radius: 3px
+
+  &__filters
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    .Select-control
+      background-color: white
+      border-radius: $virtual-asset-search-control-border-radius
+
+    .Select-value,
+    .Select-placeholder
+      color: black !important
+
+  &__filter-desc
+    padding-right: 8px
+    font-weight: 600
+
+  &__filter-btns
+    padding-right: 5px
+
+  &__filter-btn
+    min-width: 75px
+    height: 40px
+    border: 1px solid $brand-color
+    background-color: transparent
+    color: white
+    font-family: $base-font-family
+    font-weight: bold
+    font-size: 16px
+    letter-spacing: 0.3px
+
+    &:first-child
+      border-top-left-radius: $virtual-asset-search-control-border-radius
+      border-bottom-left-radius: $virtual-asset-search-control-border-radius
+
+    &:last-child
+      border-top-right-radius: $virtual-asset-search-control-border-radius
+      border-bottom-right-radius: $virtual-asset-search-control-border-radius
+
+    &--selected
+      background-color: $brand-color
+
+  .programme-search
+    padding: 0
+    margin-left: 5px
+    width: 100%
+    max-width: 100%
+    color: white
+    border: 1px solid #6e6d6d
+    border-radius: 6px
+    background-color: transparent
+
+    .container
+      display: flex
+      padding: 0
+      margin-bottom: 0
+      max-width: 100%
+      position: relative
+
+    .react-autosuggest__container
+      flex: 1
+      right: 0
+
+    &__input
+      background: left center / 50px url(../../../images/mag-glass-light.svg) transparent no-repeat
+      display: block
+      font-size: 16px
+      height: 34px
+      padding: 8px 0px 4px 50px
+      width: calc(100% - 20px)
+      outline: none
+
+      .react-autosuggest__container--open &
+        right: -32px
+
+      &:focus
+        border-color: tint($brand-color, 20%)
+
+      &::-webkit-input-placeholder
+      &::-moz-placeholder,
+      &::-ms-input-placeholder
+      &::placeholder
+        color: rgba($white, .7)
+
+    &__clear
+      background: none
+      border: none
+      cursor: pointer
+      font-size: 0
+      height: 25px
+      position: absolute
+      right: 5px
+      top: 5px
+
+      &--focused
+        border-color: tint($brand-color, 20%)
+
+      +hover
+        svg
+          fill: white
+
+      svg
+        fill: grey
+
+    .button
+      display: none
+
+    & + .text-button
+      font-size: 16px
+      height: 46px
+      white-space: nowrap

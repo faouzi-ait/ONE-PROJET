@@ -1,0 +1,76 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/video'
+
+//***********************************
+
+.video
+  position: relative
+  max-width: 100%
+  background-color: $background-color
+
+  &:before
+    content: ''
+    display: block
+    padding-top: 56.25%
+
+  &__iframe,
+  .video-js
+    border: 0
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+  .video-js
+    height: 0
+
+  &__poster
+    bottom: 0
+    left: 0
+    overflow: hidden
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 10
+    transition: opacity .3s, visibility 0s .3s
+    cursor: pointer
+
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      pointer-events: none
+
+    &::before
+      width: $video-play-size
+      height: $video-play-size
+      background-color: $video-play-bgc
+      border: $video-play-border
+      border-radius: $video-play-radius
+
+    &::after
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 10px 0 10px 16px
+      border-color: transparent transparent transparent $video-play-arrow-bgc
+      margin-left: 2px
+
+    &--hide
+      opacity: 0
+      visibility: hidden
+
+  &__image
+    display: block
+    width: 100%
+
+  &--with-poster
+    .video-js
+      opacity: 0

@@ -1,0 +1,33 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$custom-select-min-width: 100px
+$custom-select-max-width: 400px
+$custom-select-bgc: $white
+$custom-select-border: 1px solid $iron
+$custom-select-radius: 3px
+$custom-select-height: 44px
+$custom-select-padding: 0 40px 0 20px
+$custom-select-icon-fill: $base-color-dark
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .custom-select
+
+  &__select
+    font-weight: 600
+    color: $base-color-dark
+
+    option
+      color: $base-color-dark
+
+  &__icon
+    z-index: 2
+    right: 12px

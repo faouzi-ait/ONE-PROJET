@@ -1,0 +1,54 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$footer-bgc: $cod-gray
+$footer-padding: 60px 0
+
+//***********************************
+
+$footer-brand-margin: 0 auto
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .footer
+    background-image: url(../../../images/temp/footer.png)
+    background-size: cover
+    min-height: 14vw
+    padding-top: 4rem
+    
+    &__link
+        font-size: 14px
+
+    &__nav
+        display: flex
+        flex-flow: column nowrap
+        &:after
+            font-size: 14px
+            margin: 1rem 0
+            text-align: center
+            content: "\00A9 R.TV - All rights reserved."
+
+    .sharer
+        &__item
+            margin: 0 3px
+        &__link
+            border-radius: 0
+            height: 44px
+            width: 44px
+            img
+                width:  100%
+        &__link--twitter
+            background: transparent
+        &__link--facebook
+            background: transparent
+        &__link--youtube
+            background: transparent
+        &__link--instagram
+            background: transparent

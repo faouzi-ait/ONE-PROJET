@@ -1,0 +1,68 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tag-bgc: transparent
+$tag-hover-bgc: transparent
+$tag-margin: 3px 30px 9px 0
+$tag-padding: 3px 0 0
+$tag-radius: 0
+
+//***********************************
+
+$tag-font-size: 11px
+$tag-font-weight: bold
+$tag-color: $tundora
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tag
+  letter-spacing: 1px
+  text-transform: uppercase
+
+  &__icon
+    fill: $tag-color
+    margin-top: -2px
+
+  &--brand
+    background-color: $brand-color
+    padding: 5px 8px 3px
+
+  &--unregistered,
+  &--Unregistered
+    background: none
+    color: $error-color
+
+  &.eps,
+  &.ep
+    background-color: rgba($cape-cod, .3)
+    border: solid 1px rgba($white, .3)
+    border-radius: 3px
+    color: $white
+    padding: 3px 7px
+    margin-right: 15px
+
+  &:not([href])
+    min-width: 33px
+
+  &[href]
+    &:after
+      content: ''
+      display: block
+      background: transparent
+      height: 5px
+      width: 100%
+      margin-top: 3px
+      transition: background-color .3s
+
+    +hover
+      &:after
+        background-color: $brand-color
+
+  

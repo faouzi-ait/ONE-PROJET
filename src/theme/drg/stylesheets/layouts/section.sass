@@ -1,0 +1,128 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 40px 0
+$section-bgc: $white
+$section-shade-bgc: $dark-brand-color
+
+//***********************************
+
+$section-copy-color: $base-color
+$section-copy-hover-color: $base-color
+$section-copy-margin: 0 0 20px
+$section-copy-size: $base-font-size
+$section-copy-weight: normal
+
+//***********************************
+
+$section-header-text-align: center
+
+//***********************************
+
+$section-actions-align: center
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+  color: $base-color
+
+  &__header
+    font-size: (30/16)+rem
+    font-weight: 900
+    text-align: left
+    
+
+  &__copy
+    font-size: (20/16)+rem
+    font-weight: 900
+    line-height: .9
+    margin-bottom: 50px
+    
+
+  &--shade
+    color: $white
+
+    .text-button
+      color: $white
+
+    .tabs
+      border-color: $white
+
+    .react-datepicker__input-container
+      input
+        color: $white
+
+    .section:not(.section--shade)
+      .react-datepicker__input-container
+        input
+          color: $black
+
+    .section__copy
+      color: $white
+
+    .card__title
+      color: $white
+
+    .card__copy
+      color: $white
+
+    .card__description
+      .card__copy
+        color: $black
+
+    .button--filled
+      &:hover, &:focus
+        border-color: $white
+
+  &--circle
+    position: relative
+    overflow: hidden
+    padding-bottom: 60px
+
+    .container
+      z-index: 1
+      position: relative
+
+    &::before
+      $circle-size: 840px
+      border-radius: 50%
+      bottom: 560 - $circle-size
+      content: ''
+      height: $circle-size
+      right: 420 - $circle-size
+      opacity: .85
+      position: absolute
+      width: $circle-size
+      pointer-events: none
+      z-index: 0
+
+
+@each $genre, $color in $genre-colors
+  .#{$genre} .section--circle
+    &::before
+      $circle-size: 593px
+      background: map-get($genre-colors, $genre)
+      bottom: 245 - $circle-size
+      height: $circle-size
+      right: 480 - $circle-size
+      width: $circle-size
+
+
+.custom .fade-on-load
+  >.section:last-child
+    padding-bottom: 80px
+
+.custom:not(.admin) .section
+  &--shade
+
+    .custom-select
+      &__select
+        color: $white
+
+    .section:not(.section--shade)
+      .custom-select
+        &__select
+          color: $black

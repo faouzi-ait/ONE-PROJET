@@ -1,0 +1,144 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../imports'
+@import '../../_theme/components/header'
+
+//***********************************
+
+.header
+  background-color: $header-bgc
+  left: 0
+  padding: $header-padding
+  position: absolute
+  right: 0
+  top: 0
+  z-index: 11
+
+  .brand
+      margin-right: 20px
+
+  &--meetings
+    padding: 15px 10px
+
+    & ~ .page__wrapper
+      overflow: visible
+
+  &__controls
+    align-items: center
+    display: flex
+    margin-left: auto
+
+    > *
+      margin-left: 10px
+
+  &__welcome
+    color: $header-welcome-color
+    margin: 0 40px 0 0
+
+  &__user
+    color: $header-user-color
+    text-decoration: none
+    &:hover
+      color: $header-user-hover-color
+      text-shadow: 1px 0px 0px $header-user-hover-color
+
+  > .container
+    align-items: center
+    display: flex
+    max-width: $header-max-width
+    padding: 0
+
+  .button
+    color: $white
+
+    &__icon
+      fill: $white
+
+  .text-button
+    color: $white
+    margin-right: 20px
+    text-decoration: none
+
+    .no-touch &:hover
+      color: $brand-color
+
+  .programme-search
+    flex: 1
+    margin-left: 0
+
+  &--searching &
+    &__controls
+      flex: 1
+
+  .burger
+    background-color: transparent
+    border: none
+    font-size: 0
+    height: 25px
+    padding: 0
+    width: 40px
+    outline: none
+    cursor: pointer
+
+    +hover
+      .burger__line
+        background-color: $white
+
+    &__line
+      background-color: $brand-color
+      border-radius: 0
+      display: block
+      height: 4px
+      margin-bottom: 6px
+      width: 40px
+      transition: background-color .3s
+
+      &:nth-child(2)
+        width: 30px
+
+      &:nth-child(3)
+        width: 20px
+        margin-bottom: 0
+
+  +breakpoint(large)
+    &--searching &
+      &__controls
+        flex: none
+
+  +breakpoint(small)
+    padding: 10px
+
+    .brand
+        margin-right: 5px
+
+    &__logo
+      max-width: 150px
+
+    &__welcome
+      display: none
+
+    .text-button
+      margin-right: 10px
+
+      &:first-child
+        display: none
+
+    .burger
+      height: 20px
+      margin-top: -1px
+      width: 30px
+      margin-left: 20px
+
+      &__line
+        height: 3px
+        margin-bottom: 5px
+        width: 30px
+
+        &:nth-child(2)
+          width: 20px
+
+        &:nth-child(3)
+          margin-bottom: 0
+          width: 10px

@@ -1,0 +1,66 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$react-select-bgc: $white
+$react-select-color: $base-color
+$react-select-border: 1px solid $iron
+$react-select-radius: 0
+$react-select-focused-border: $brand-color
+$react-select-padding: 8px 0 3px 10px
+$react-select-height: 40px
+$react-select-width: 190px
+
+$react-select-single-padding: 0 0 0 12px
+$react-select-single-border: 1px solid $iron
+
+//***********************************
+
+$react-select-placeholder-color: $base-color-light
+
+//***********************************
+
+$react-select-value-bgc: $brand-color
+$react-select-value-radius: 0
+$react-select-value-color: $white
+
+//***********************************
+
+$react-select-menu-border: 2px solid $brand-color
+$react-select-menu-radius: 0
+
+//***********************************
+
+$react-select-option-border: 1px solid $brand-color
+$react-select-option-padding: 10px
+$react-select-option-color: $base-color
+$react-select-option-focus-bgc: $brand-color-light
+$react-select-option-focus-color: $base-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .Select
+    &-value-icon
+        padding-bottom: 2px
+
+    &.Select--single
+        .Select-arrow-zone
+            background: $brand-color url(../../images/theme/select-arrow-white.svg) 13px no-repeat
+            height: 40px
+            margin: -1px
+            padding-left: 40px
+
+        .Select-multi-value-wrapper
+            max-width: none
+
+        .Select-clear-zone
+            padding-right: 10px
+
+    &-menu
+        max-height: 170px

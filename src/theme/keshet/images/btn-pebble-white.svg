@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="40px" viewBox="0 0 39 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>btn_pebble</title>
+    <desc>Created with Sketch.</desc>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="card/programme" transform="translate(-231.000000, -111.000000)" fill="#ffffff">
+            <g id="btn/add" transform="translate(231.000000, 111.000000)">
+                <path d="M9.27924362,39.1456698 C14.3332414,41.3138147 23.4048189,38.7829978 25.8488034,37.8422589 C28.2926436,36.8987954 35.4742912,33.7014306 37.8747129,29.2094026 C41.9847554,21.5258895 34.0137858,3.62274033 27.2197311,0.648657595 C21.4919536,-1.86107874 10.9359255,3.4922415 5.48971898,6.81680681 C-1.69524627,11.2051527 -0.0437572689,19.4062156 0.728543553,23.0815503 C1.43001888,26.4148633 3.53300238,36.6811061 9.27924362,39.1456698" id="btn_pebble"></path>
+            </g>
+        </g>
+    </g>
+</svg>

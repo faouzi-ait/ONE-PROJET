@@ -1,0 +1,85 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$modal-overlay-bgc: rgba($base-color, .8)
+$modal-overlay-padding: 20px
+$modal-overlay-padding-bp-small: 10px
+
+//***********************************
+
+$modal-warning-bgc: $error-color
+$modal-warning-color: $white
+
+//***********************************
+
+$modal-wrapper-bgc: $white
+$modal-wrapper-radius: 0
+$modal-max-width: 1180px
+$modal-min-width: 300px
+
+//***********************************
+
+$modal-header-bgc: $white
+$modal-header-padding: 50px 80px 20px
+$modal-header-padding-bp-large: 40px 30px 15px
+$modal-header-padding-bp-medium: 30px 20px 15px
+$modal-header-padding-bp-small: 30px 15px 10px
+
+//***********************************
+
+$modal-content-bgc: transparent
+$modal-content-padding: 30px 80px 50px
+$modal-content-padding-bp-large: 30px
+$modal-content-padding-bp-medium: 20px
+$modal-content-padding-bp-small: 15px
+$modal-link-color: $brand-color
+$modal-link-weight: bold
+
+//***********************************
+
+$modal-close-color: $base-color
+$modal-close-hover-color: $brand-color
+
+//***********************************
+
+$modal-header-padding-filters: 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .modal
+    &__title
+        font-size: 40px
+        padding-bottom: 40px
+        text-transform: uppercase
+
+        &.heading--two
+            font-size: 40px
+
+    &__header
+        &:after
+            background-color: $gallery
+            content: ''
+            height: 6px
+            display: block
+            width: 100%
+
+        &--with-action
+            flex-wrap: wrap
+
+    &--filters 
+        .modal__title
+            font-size: 24px
+            padding-bottom: 0
+
+        .modal__header
+            &:after
+                display: none
+
+

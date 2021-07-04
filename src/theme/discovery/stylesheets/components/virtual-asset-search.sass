@@ -1,0 +1,46 @@
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$virtual-asset-search-control-border-radius: 4px
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+
+.custom .virtual-asset-search
+
+  .programme-search
+    &__input
+      color: $white
+
+    &__clear
+      top: 6px
+
+  .react-autosuggest
+
+    &__container
+      padding-top: 2px
+
+    &__section-title
+      text-transform: none
+
+    &__suggestion
+      color: black
+
+  &__selector
+    color: $white
+
+    .programme__icon
+      top: 50%
+      left: 50%
+      bottom: unset
+      right: unset
+
+  &__filters
+    .Select .Select-control .Select-arrow-zone
+      background: transparent url(../../../images/theme/select-arrow.svg) 18px no-repeat

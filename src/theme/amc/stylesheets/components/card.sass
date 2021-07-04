@@ -1,0 +1,392 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$card-base-color: $base-color
+$card-bgc: transparent
+$card-border-radius: 0
+$card-padding: 0 10px 10px
+
+//***********************************
+
+$card-title-color: $white
+$card-title-hover-color: $brand-color
+$card-title-margin: 0 0 10px
+$card-title-size: 18px
+$card-title-weight: 900
+
+//***********************************
+
+$card-date-color: $edward
+$card-date-font-size: 12px
+$card-date-margin: 0 0 0
+
+//***********************************
+
+$card-copy-color: $white
+$card-copy-hover-color: $base-color
+$card-copy-margin: 10px 0
+$card-copy-size: $base-font-size
+$card-copy-weight: normal
+
+//***********************************
+
+$card-count-color: $white
+$card-count-background: $black
+$card-count-padding: 5px 8px
+$card-count-weight: 600
+$card-count-border-radius: 0
+$card-count-spacing: 0
+$card-count-offset: 0
+
+//***********************************
+
+$card-toggle-position: absolute
+$card-toggle-right: 10px
+$card-toggle-top: 0
+$card-toggle-transform: translateY(-50%)
+
+//***********************************
+
+$card-tags-margin: 5px -5px 5px 0
+$card-tag-margin: 0 5px 5px 0
+$card-tag-font-size: 11px
+$card-tag-color: $base-color-light
+$card-tag-border: 1px solid $base-color-light
+$card-tag-padding: 0
+$card-tag-radius: 50px
+
+//***********************************
+
+$card-active-shadow: 0 12px 5px rgba($base-color-dark, 0.2)
+
+//***********************************
+
+$card-small-content-padding: 0 10px 10px
+
+//***********************************
+
+$card-small-title-size: 17px
+
+//***********************************
+
+$card-icon-fill: $black
+
+//***********************************
+
+$card-strip-bgc: $error-color
+$card-strip-color: $white
+$card-strip-font-size: 12px
+$card-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card
+  position: relative
+
+  a,
+  span:not(.card__sub-title)
+    position: relative
+
+  &__top
+    position: relative
+
+  &:not(.card--small)
+    .card__actions
+      transform: translateY(-25px)
+      + .card__title-wrap
+        transform: translateY(-25px)
+
+  &__count
+    line-height: 1
+    position: absolute
+    right: 15px
+    top: 15px
+
+  &__content
+    position: static
+    width: calc(100% - 6px)
+    box-sizing: border-box
+
+  &__head
+    align-items: flex-start
+    display: inline-flex
+    width: 100%
+
+    + .card__title
+      display: block
+      top: 12px
+      margin-bottom: 16px
+
+    ~ .card__date
+      position: static
+      margin-left: -10px
+      padding: 5px 10px
+
+  &__title
+    background: $black
+    box-decoration-break: clone
+    box-shadow: 0 0 0 13px $black
+    display: inline
+    left: 3px
+    line-height: 1.48
+    position: relative
+    text-transform: uppercase
+    top: 6px
+
+    span
+      position: relative
+
+  &__date
+    background: $black
+    bottom: 5px
+    left: 0
+    padding: 5px
+    position: absolute
+
+  &__list-count
+    font-family: $base-font-family
+    color: $brand-color
+    font-size: 12px
+    background-color: $black
+    padding: 10px 13px 0
+    display: inline-block
+    font-weight: 600
+    margin: -4px 0 0 -10px
+    text-transform: uppercase
+    position: relative
+    z-index: 1
+
+  &__tags
+    margin-top: 20px
+
+  &:not(.card--person)
+    .card__copy
+      box-sizing: border-box
+      height: 100%
+      left: 0
+      margin: 0
+      max-height: 165px
+      opacity: 0
+      overflow: hidden
+      padding: 35px
+      pointer-events: none
+      position: absolute
+      top: 0
+      transition: opacity .3s
+      width: 100%
+
+      &--small
+        font-size: 12px
+
+      + .card__copy,
+      + .card__date
+        margin: 20px 0
+        max-height: 100%
+        opacity: 1
+        padding: 0
+        position: relative
+
+      + .card__date
+        background: transparent
+        bottom: auto
+
+      + .like
+        left: 10px
+
+  &--person
+    .card__title
+      margin-bottom: 0
+
+      & + .card__copy
+        background: $black
+        box-decoration-break: clone
+        box-shadow: 0 0 0 13px $black
+        color: $dusty-gray
+        clear: both
+        float: left
+        display: inline
+        margin-bottom: 20px
+        position: relative
+        text-transform: uppercase
+        top: 6px
+        left: 3px
+
+        & + .card__copy
+          clear: both
+
+  &__actions
+    padding-right: 0
+    position: relative
+    transform: none
+    margin-left: -10px
+    flex-shrink: 0
+    height: 50px
+
+    + .card__title-wrap
+      margin-top: 7px
+      margin-left: 10px
+
+    > *
+      margin-right: 0
+
+
+
+  &__icon
+    background: $brand-color
+    padding: 8px
+
+    &:hover,
+    &:focus
+      background: $tradewind
+
+  &__sub-title
+    background: $white
+    box-shadow: 0 0 0 3px $white
+    bottom: calc(100% + 11px)
+    color: $black
+    display: block
+    font-size: 14px
+    font-weight: 600
+    left: -7px
+    padding: 0 5px
+    position: absolute
+    text-transform: uppercase
+
+  &__media
+    transition: opacity .3s
+    will-change: opacity
+
+  &__media + .card__content .card__title
+    float: left
+    margin-top: -18px
+
+  &__media-link
+    background-color: $base-color-dark
+
+  &__move-icon,
+  &__display-icon
+    left: auto
+    right: 10px
+    z-index: 2
+
+  &__brand
+    top: 50%
+    position: absolute
+    right: 10px
+    max-width: 80px
+
+  &--active
+    box-shadow: none
+
+    img
+      filter: brightness(40%)
+
+  &--small
+    .card__title-wrap
+      transform: translateY(-18px)
+
+  &--hover,
+  &--cast
+    +hover
+      .card__copy
+        opacity: 1
+
+      .card__media
+        opacity: .1
+
+      .programme__icon
+        opacity: 0
+
+    @supports (filter: brightness(.25))
+      .card__media
+        transition: filter .3s
+
+      +hover
+        .card__media
+          opacity: 1
+          filter: brightness(.25)
+
+  &--poster
+    background: transparent
+
+    .card__content
+      float: left
+      margin-top: -22px
+      padding: $card-padding
+      position: static
+      transform: none
+
+    .card__title
+      font-size: 30px
+
+    .card__media
+      opacity: 1
+
+  .toggle
+    box-shadow: 1px 1px 6px rgba($black, .3)
+    left: 10px
+    right: auto
+    top: 22px
+
+  .button--reporting
+    right: 5px
+    top: 20px
+
+  &__strip
+    bottom: auto
+    top: 0
+
+  .like ~ .card__strip
+    top: 7px
+    left: 100px
+
+  +breakpoint(small)
+    &--poster
+      .card__content
+        float: none
+
+.custom .content-block--programme-grid .card
+
+  &__head
+    position: relative
+
+  &__content
+    position: absolute
+    bottom: 30px
+    left: 22px
+    width: calc(100% - 62px)
+
+  &__title
+    font-size: (30/16)+rem
+    line-height: 1.3
+
+  img
+    transform: scale(1.01)
+
+  +breakpoint(large)
+
+    &__title
+      font-size: (17/16)+rem
+      line-height: normal
+
+    &:hover,
+    &:active
+
+      .card__content
+        opacity: 0
+
+.no-touch .custom .card
+  &--poster:hover
+    .card__media
+      opacity: 1
+
+.custom .list-modal .card
+    &__content
+        padding-top: 1em

@@ -1,0 +1,29 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .video-carousel
+    &__label,
+    .bulk-manager__select-all-label
+        color: $white
+        font-family: $sub-font-family
+        font-size: 18px
+        font-weight: bold
+
+    &__select
+        margin-bottom: 10px
+
+    .carousel__dot
+        border-color: $white
+
+        &--active
+            background-color: $white
+
+    +breakpoint(small)
+        &__label
+            font-size: 16px
+            padding-bottom: 5px

@@ -1,0 +1,77 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/custom-checkbox'
+
+//***********************************
+
+.custom-checkbox
+  display: inline-block
+  margin-right: 10px
+  vertical-align: middle
+
+  &--toggle
+    margin-right: 5px
+
+  &--no-label &
+    &__label
+      height: 24px
+      display: block
+      padding-left: 24px
+
+  &--no-label
+    .table &
+      margin: 0
+
+  &__input
+    display: none
+
+    &:checked
+      + .custom-checkbox__label
+
+        &::before
+          background: $checkbox-bg-selected
+          background-size: $checkbox-bgsz
+          border-color: $checkbox-border-color-selected
+
+  &__label
+    cursor: pointer
+    display: inline-block
+    padding-left: $checkbox-size + 10
+    position: relative
+
+    &--disabled
+      color: $checkbox-label-disabled-color
+      pointer-events: none
+
+    &::before
+      background: $checkbox-bg
+      border: $checkbox-border
+      border-radius: $checkbox-radius
+      content: ''
+      height: $checkbox-size
+      left: 0
+      position: absolute
+      top: 0px
+      transition: border-color .3s, background-color .3s
+      width: $checkbox-size
+
+  &--toggle &
+
+    &__input
+      &:checked
+        + .custom-checkbox__label
+          background-color: $checkbox-toggle-bgc-selected
+          color: $checkbox-toggle-color-selected
+
+    &__label
+      background-color: $checkbox-toggle-bgc
+      border: $checkbox-toggle-border
+      border-radius: $checkbox-toggle-radius
+      font-weight: bold
+      padding: $checkbox-toggle-padding
+      transition: background-color .3s, color .3s
+
+      &::before
+        display: none

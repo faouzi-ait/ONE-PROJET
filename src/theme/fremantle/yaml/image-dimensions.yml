@@ -1,0 +1,17 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x700
+      Thumbnail: 1120x630
+
+  - name: Programme
+    url: https://fremantle.thisisone.tv/catalogue/10
+    components:
+      Banner: 3200x1400
+      Thumbnail: 1120x630
+      Logo: 400x60
+
+  - name: News Article
+    components:
+      Banner: 3200x700
+      Thumbnail: 560x350

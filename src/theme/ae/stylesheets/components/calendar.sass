@@ -1,0 +1,53 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$calendar-row-height: 130px
+$calendar-row-border: 1px solid $iron
+$calendar-column-width: 380px
+
+//***********************************
+
+$calendar-time-width: 65px
+$calendar-days-height: 50px
+
+//***********************************
+
+$calendar-slot-bg: $background-color
+$calendar-slot-bg-disabled: rgba($rhino, .3)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .calendar
+  &__times,
+  &__view
+    background-color: $background-color
+
+  &__days
+    border-bottom: $calendar-row-border
+
+  &__day
+    background-color: $rhino
+    font-size: 18px
+    font-weight: normal
+
+    button
+      margin-left: 50px
+      margin-right: -50px
+
+  &__row
+    border-bottom: $calendar-row-border
+
+  &__times
+    .calendar__row
+      border: none
+
+  &__add-meeting
+    background-color: $mako
+    border-radius: 5px

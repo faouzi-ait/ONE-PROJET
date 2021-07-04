@@ -1,0 +1,40 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/meeting-summary'
+
+//***********************************
+
+.meeting-summary
+  display: flex
+
+  > div
+    flex: 1
+    padding: 0 40px
+
+    &:nth-child(2)
+      flex: 2
+
+  &__label
+    color: $base-color-light
+    font-size: 14px
+    font-weight: normal
+    margin: 0
+
+    &--spaced
+      margin-bottom: 10px
+
+  &__copy
+    font-size: 14px
+    margin: 0 0 10px
+
+    small
+      color: $base-color-light
+      display: block
+      font-size: 14px
+
+    svg
+      fill: #F4E435
+      vertical-align: middle
+      margin-top: -4px

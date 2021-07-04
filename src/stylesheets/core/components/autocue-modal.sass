@@ -1,0 +1,131 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/autocue-modal'
+
+//***********************************
+
+.autocue
+  position: relative
+  height: 85%
+  width: 100%
+
+  &__content-wrapper
+    position: absolute
+    top: 0
+    height: 100%
+    width: 100%
+    z-index: 2
+    background-color: black
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__content-block
+    width: 380px
+    height: 380px
+    text-align: center
+
+  &__content
+    height: 30%
+    width: 100%
+    float: left
+    color: $white
+    word-break: break-all
+
+  &__timer
+    height: 50%
+    width: 100%
+    float: left
+    position: relative
+
+  &__actions
+    margin-top: 15px
+    width: 100%
+    float: left
+    color: $white
+
+  &__center
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: calc((#{$diameter} / 2) * -1)
+    margin-left: calc((#{$diameter} / 2) * -1)
+
+  &__circle
+    width: $diameter
+    height: $diameter
+    border-radius: 999px
+    box-shadow: inset 0 0 0 $width rgba(255,255,255,0.5)
+
+  &__l-half,
+  &__r-half
+    float: left
+    width: 50%
+    height: 100%
+    overflow: hidden
+
+    &:before
+      content: ""
+      display: block
+      width: 100%
+      height: 100%
+      box-sizing: border-box
+      border: $width solid $timer-color
+      animation-duration: $time
+      animation-iteration-count: 1
+      animation-timing-function: linear
+      animation-fill-mode: forwards
+
+  &__l-half
+    &:before
+      border-right: none
+      border-top-left-radius: 999px
+      border-bottom-left-radius: 999px
+      transform-origin: center right
+      animation-name: l-rotate
+
+  &__r-half
+    &:before
+      border-left: none
+      border-top-right-radius: 999px
+      border-bottom-right-radius: 999px
+      transform-origin: center left
+      animation-name: r-rotate
+
+  &__count
+    position: absolute
+    width: 100%
+    line-height: $diameter
+    text-align: center
+    font-weight: 800
+    font-size: calc((#{$diameter} - (#{$width} * 2)) / 2)
+    color: $timer-color
+    z-index: 2
+    animation: fadeout .5s calc(#{$time} + 1s) 1 linear
+    animation-fill-mode: forwards
+
+@keyframes l-rotate
+    0%
+      transform: rotate(0deg)
+    50%
+      transform: rotate(-180deg)
+    100%
+      transform: rotate(-180deg)
+
+
+@keyframes r-rotate
+    0%
+      transform: rotate(0deg)
+    50%
+      transform: rotate(0deg)
+    100%
+      transform: rotate(-180deg)
+
+
+@keyframes fadeout
+    0%
+      opacity: 1
+    100%
+      opacity: 0.5

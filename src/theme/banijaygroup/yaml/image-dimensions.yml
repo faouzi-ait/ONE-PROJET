@@ -1,0 +1,17 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x600
+      Thumbnail: 1120x700
+
+  - name: Programme
+    url: https://banijay.rawnet.one/catalogue/9792
+    components:
+      Banner: 3200x1800
+      Thumbnail: 1120x1340
+      Logo: 400x60
+
+  - name: News Article
+    components:
+      Banner: 3200x480
+      Thumbnail: 560x350

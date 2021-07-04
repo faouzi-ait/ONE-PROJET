@@ -1,0 +1,49 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$body-bgc: $background-color
+$body-margin: 0
+$body-padding: 0
+
+//***********************************
+
+$page-before-color: rgba($base-color, .8)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+
+  main
+    overflow: visible
+
+    @each  $genre, $color in $genre-colors
+      &.#{$genre}
+        .banner--catalogue-show
+          .banner__title:after
+            background-color: map-get($genre-colors, $genre)
+
+  .page
+    &__wrapper
+      overflow: visible
+      padding-top: 100px
+
+      .fade-on-load
+        > .section--shade:last-child,
+        > .content-block--shade:last-child
+          margin-bottom: -1px
+
+  .bg-background
+    background: $white
+    color: $base-color
+
+  +breakpoint(small)
+
+    .page__wrapper
+      padding-top: 80px
+
+.custom:not(.admin)
+  color: $gallery
+

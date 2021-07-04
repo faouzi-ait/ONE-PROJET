@@ -1,0 +1,67 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-image-radius: 5px
+$programme-image-spacing: 20px
+
+//***********************************
+
+$programme-title-font-size: 20px
+$programme-title-font-size-small: 14px
+
+//***********************************
+
+$programme-copy-font-size: 14px
+$programme-copy-color: $casper
+
+//***********************************
+
+$programme-icon-size: 0
+$programme-icon-background: $white
+$programme-icon-border: none
+$programme-icon-radius: 0
+
+//***********************************
+
+$programme-icon-arrow-size: 30px
+$programme-icon-arrow-color: $brand-color
+
+//***********************************
+
+$programme-strip-bgc: transparent
+$programme-strip-color: $error-color
+$programme-strip-font-size: 11px
+$programme-strip-padding: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme
+  &--with-actions
+    padding-bottom: 20px
+
+  &__image
+    position: static
+
+  &__icon
+    display: none
+
+  &__strip
+    font-weight: bold
+    letter-spacing: 1px
+    text-transform: uppercase
+
+  .icon-button
+    background-color: rgba($tundora, .5)
+
+    svg
+      fill: $white
+
+  .toggle
+    border-radius: 2px

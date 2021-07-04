@@ -1,0 +1,44 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$virtual-hr-background: #6e6d6d
+$virtual-hr-radius: 15px
+
+$virtual-presentation-max-height: calc(100vh - 200px)
+$virtual-presentation-width: calc(100vw - 100px)
+$virtual-presentation-margin-top: 20px
+
+$virtual-present-button-width: 42px
+
+$virtual-start-bar-height: 70px
+
+$virtual-green: #11d42a
+$virtual-red: #f10
+
+$virtual-chat-panel-width: 320px
+$virtual-chat-message-bg-color: tint($base-color, 5%)
+$virtual-chat-message-bg-color-shaded: tint($base-color, 10%)
+
+$virtual-pdf-icon-max-width: 65px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .virtual
+
+  &__chat
+    .tabs
+      position: relative
+      right: 10px
+      &__item
+        min-width: 100px
+
+  &__pdf-wrapper
+    button
+      position: absolute

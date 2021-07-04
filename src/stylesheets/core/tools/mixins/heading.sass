@@ -1,0 +1,15 @@
+//***********************************
+// Heading mixin
+//***********************************
+
+=heading($name, $color: '')
+  font-family: $base-font-family
+  font-weight: $base-heading-weight
+  @if not map-has-key($heading-sizes, $name)
+    @warn 'Warning: `#{$name}` is not a valid heading name.'
+
+  @else
+    font-size: map-get($heading-sizes, $name)
+
+  @if $color != ''
+    color: $color

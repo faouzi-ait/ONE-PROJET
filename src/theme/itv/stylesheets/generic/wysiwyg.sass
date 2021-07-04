@@ -1,0 +1,28 @@
+//***********************************
+
+@import '../../core/imports'
+
+.custom:not(.admin) .wysiwyg,
+.custom .mock-page .wysiwyg
+    color: $gallery
+
+.custom .wysiwyg, .custom .ql-editor
+  box-sizing: border-box
+
+  h1, h2, h3
+    margin-bottom: 30px
+  
+  p
+    font-size: 18px
+
+  a 
+    +hover
+      color: lighten($brand-color, 20%)
+
+  +breakpoint(medium)
+
+    h1
+      font-size: 28px
+
+    h2
+      font-size: 20px

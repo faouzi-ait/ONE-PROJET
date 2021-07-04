@@ -1,0 +1,56 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/breadcrumbs'
+
+//***********************************
+
+.breadcrumbs
+  background-color: $breadcrumbs-bgc
+
+  &__list
+    padding: $breadcrumbs-padding
+    align-items: center
+    display: flex
+    list-style: none
+    margin: 0
+
+  &__item
+    color: $breadcrumbs-item-color
+    font-size: $breadcrumbs-link-size
+    line-height: 1
+    margin: $breadcrumbs-item-margin
+    padding: $breadcrumbs-item-padding
+    position: relative
+
+    &:last-child
+      margin: 0
+      padding: 0
+
+      &::after
+        display: none
+
+    &::after
+      background: $breadcrumbs-seperator-bg
+      content: ''
+      height: $breadcrumbs-seperator-height
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: $breadcrumbs-seperator-width
+
+  &__link
+    color: $breadcrumbs-link-color
+    text-decoration: none
+    transition: color .2s
+
+    +hover
+      color: $breadcrumbs-link-hover-color
+
+  &--bordered &__list
+    border-bottom: 1px solid $breadcrumbs-border-color
+
+  +breakpoint(medium)
+    display: none

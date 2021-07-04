@@ -1,0 +1,67 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tag-bgc: $mako
+$tag-hover-bgc: $east-bay
+$tag-margin: 0 11px 11px 0
+$tag-padding: 10px 12px
+$tag-radius: 4px
+
+//***********************************
+
+$tag-font-size: 16px
+$tag-font-weight: bold
+$tag-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tag
+  &--unregistered
+    background: url(../../images/theme/lock.svg) no-repeat
+    padding: 0
+    width: 21px
+    height: 24px
+    text-indent: -99999px
+
+  &--secondary
+    background: none
+    border-right: solid 1px $white
+    border-radius: 0
+    font-size: 20px
+    margin: 0 25px 0 0 
+    padding: 5px 25px 6px 0 
+    text-transform: uppercase
+    
+    &:last-child
+      border: none
+      margin-right: 0
+      padding-right: 0
+
+  &--new
+    border-radius: 2px
+    font-size: 14px
+    padding: 8px 15px
+    text-transform: uppercase
+
+  +breakpoint(small)
+    &:not(.banner__tag)
+      font-size: 14px
+      padding: 10px
+
+    &--secondary
+      margin-right: 15px
+      padding: 0 15px 0 0
+
+    &--unregistered
+      padding: 0
+
+    &--new
+      font-size: 12px
+      padding: 4px 8px

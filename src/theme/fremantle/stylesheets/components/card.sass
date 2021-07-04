@@ -1,0 +1,219 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$card-base-color: $white
+$card-bgc: transparent
+$card-border-radius: 0
+$card-padding: 10px 0 0
+
+//***********************************
+
+$card-title-color: $white
+$card-title-hover-color: $brand-color
+$card-title-margin: 0 0 10px
+$card-title-size: 35px
+$card-title-weight: normal
+
+//***********************************
+
+$card-date-color: $white
+$card-date-font-size: 14px
+$card-date-margin: -5px 0 10px
+
+//***********************************
+
+$card-copy-color: $white
+$card-copy-hover-color: $white
+$card-copy-margin: 0 0 10px
+$card-copy-size: 18px
+$card-copy-weight: normal
+
+//***********************************
+
+$card-count-color: $white
+$card-count-background: $abbey
+$card-count-padding: 6px 8px
+$card-count-weight: 800
+$card-count-border-radius: 0
+$card-count-spacing: 10px
+$card-count-offset: -3px
+
+//***********************************
+
+$card-toggle-position: absolute
+$card-toggle-right: 10px
+$card-toggle-top: 0px
+$card-toggle-transform: translateY(-50%)
+
+//***********************************
+
+$card-tags-margin: 0 -5px 5px 0
+$card-tag-margin: 0 5px 5px 0
+$card-tag-font-size: 12px
+$card-tag-color: $white
+$card-tag-border: none
+$card-tag-padding: 6px 8px
+$card-tag-radius: 0
+
+//***********************************
+
+$card-active-shadow: 0 12px 5px rgba($base-color-dark, 0.2)
+
+//***********************************
+
+$card-small-content-padding: 10px
+
+//***********************************
+
+$card-small-title-size: 24px
+
+//***********************************
+
+$card-icon-fill: $base-color
+
+//***********************************
+
+$card-strip-bgc: $shark
+$card-strip-color: $white
+$card-strip-font-size: 12px
+$card-strip-padding: 5px 8px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card
+    position: relative
+
+    &__content
+        position: static
+
+    &__actions
+        top: 10px
+        transform: none
+
+    &__icon
+        background-color: $white
+        border: 2px solid $white
+        padding: 8px 9px
+        transition: background-color .3s
+
+        +hover
+            background-color: transparent
+            fill: $white
+         
+    &__copy,
+    &__date,
+    &__count,
+    &__strip
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+
+    &__copy
+        line-height: 1.55
+
+        &--small
+            font-family: $secondary-font-family
+            font-size: 14px
+            font-weight: 600
+            letter-spacing: 0.5px
+
+    &__count
+        font-size: 15px
+
+        & + .card__copy
+            display: inline-block
+            font-size: 14px
+            min-width: 15px
+            text-align: center
+            text-transform: uppercase
+
+    &__strip
+        bottom: auto
+        font-weight: 800
+        text-transform: uppercase
+        top: 0
+
+    &__tag
+        background: $abbey
+        font-weight: 800
+        font-size: 12px
+        padding: 6px 8px
+        text-transform: uppercase
+
+    &__hover
+        font-size: $card-copy-size
+
+    &--toggle
+        .card__content
+            padding-top: 15px
+            position: relative
+
+        .card__title
+            font-size: 24px
+
+            &--small
+                font-size: 18px
+
+        .card__strip
+            bottom: 100%
+            top: auto
+
+    &--catalogue,
+    &--cast
+        .card__title
+            font-size: 24px
+            &:last-child
+                margin-bottom: 0
+
+        .card__copy
+            font-size: 14px
+
+    &--list
+        .card__title
+            margin-bottom: 0
+
+        .card__count
+            margin-top: 10px
+
+    &--small
+        .card__title
+            font-family: $secondary-font-family
+            font-size: 18px
+            font-weight: 600
+            letter-spacing: 0.5px
+
+        .card__count
+            margin-top: 5px
+
+    &--with-like
+        min-height: 370px
+
+    +breakpoint(1100)
+        &__icon
+            padding: 0
+          
+    +breakpoint(large)
+        &__title
+            font-size: 24px
+
+        &__hover
+            font-size: 15px
+
+    +breakpoint(small)
+        &__title
+            font-size: 18px
+        &--toggle,
+        &--catalogue,
+        &--cast
+            .card__title
+                font-size: 18px
+
+.custom.admin form .card
+    background-color: $abbey
+    padding: 10px

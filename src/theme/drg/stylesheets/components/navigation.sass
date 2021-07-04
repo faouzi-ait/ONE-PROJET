@@ -1,0 +1,100 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$nav-bgc: $brand-color
+$nav-divide-color: transparent
+$nav-width: 410px
+$nav-width-bp-large: 320px
+
+//***********************************
+
+$nav-close-left: auto
+$nav-close-right: 20px
+$nav-close-top: 10px
+
+//***********************************
+
+$nav-item-divide-margin: 0
+$nav-item-divide-padding: 0
+
+//***********************************
+
+$nav-list-padding: 80px 0
+$nav-list-padding-bp-large: 80px 0 50px
+
+//***********************************
+
+$nav-link-active-color: $white
+$nav-link-color: $white
+$nav-link-hover-color: $white
+$nav-link-padding: 19px 80px
+
+//***********************************
+
+$sub-nav-margin: 0
+$sub-nav-padding: 0 0 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .navigation
+  
+  font-weight: 900
+  font-size: (20/16)+rem
+  line-height: .9
+
+  .button--icon
+    &:hover, &:focus
+      background: $dark-brand-color
+
+  &__link
+    position: relative
+
+    &:hover, &:focus
+      background: $dark-brand-color
+
+    &--is-active
+      &::before
+        background: $dark-brand-color
+        content: ''
+        height: 10px
+        left: 50px
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        width: 10px
+
+      &__icon
+        fill: $nav-link-active-color
+
+  &__sub-nav
+    .navigation__link
+      padding-left: 120px
+      padding-top: 10px
+      padding-bottom: 10px
+
+  &__item
+    &--divide
+      &:last-child
+        border-bottom: 0
+
+  +breakpoint(small)
+    .navigation__link
+      padding: 15px 50px
+      &::before
+        left: 20px
+
+    &__sub-nav
+      .navigation__link
+        padding: 10px 20px 10px 70px
+
+.custom .nav-open
+  .navigation
+    box-shadow: 0 0 50px 0 $black
+

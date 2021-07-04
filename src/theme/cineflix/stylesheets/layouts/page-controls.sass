@@ -1,0 +1,25 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$page-controls-padding: 20px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .page-controls
+
+    &__count
+        color: $mako
+        font-size: (18/16)+rem
+        font-weight: 500
+
+    +breakpoint(medium, min)
+
+        &__control
+            justify-content: flex-end
+            margin-left: 35px
+
+        &__right
+            margin-left: 20px

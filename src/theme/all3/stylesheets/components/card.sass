@@ -1,0 +1,359 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$card-base-color: $mine-shaft
+$card-bgc: $tundora
+$card-border-radius: 8px
+$card-padding: 25px
+
+//***********************************
+
+$card-title-color: $white
+$card-title-hover-color: $brand-color
+$card-title-margin: 0 0 20px
+$card-title-size: 20px
+$card-title-weight: bold
+
+//***********************************
+
+$card-date-color: rgba($white, .4)
+$card-date-font-size: 11px
+$card-date-margin: 0 0 10px
+
+//***********************************
+
+$card-copy-color: $white
+$card-copy-hover-color: $brand-color
+$card-copy-margin: 0 0 20px
+$card-copy-size: 18px
+$card-copy-weight: 300
+
+//***********************************
+
+$card-count-color: $base-color-dark
+$card-count-background: $white
+$card-count-padding: 3px 7px
+$card-count-weight: bold
+$card-count-border-radius: 3px
+$card-count-spacing: 10px
+$card-count-offset: -3px
+
+//***********************************
+
+$card-toggle-position: absolute
+$card-toggle-right: 27px
+$card-toggle-top: 0
+$card-toggle-transform: none
+
+//***********************************
+
+$card-tags-margin: 5px -12px -5px 0
+$card-tag-margin: 0 12px 5px 0
+$card-tag-font-size: 12px
+$card-tag-color: $brand-color
+$card-tag-border: none
+$card-tag-padding: 0
+$card-tag-radius: 0
+
+//***********************************
+
+$card-active-shadow: 0 12px 14px 0 rgba($black, .15)
+
+//***********************************
+
+$card-small-content-padding: 10px
+
+//***********************************
+
+$card-small-title-size: 14px
+
+//***********************************
+
+$card-icon-fill: $base-color-dark
+
+//***********************************
+
+$card-strip-bgc: $error-color
+$card-strip-color: $white
+$card-strip-font-size: 13px
+$card-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card
+  box-shadow: 0 12px 14px 0 rgba($black, .15)
+  display: flex
+  flex-direction: column
+  position: relative
+
+  .toggle
+    top: auto
+    bottom: 24px
+
+  &__tags
+    align-items: center
+    margin-top: auto
+
+  &__date
+    text-transform: uppercase
+    letter-spacing: 1px
+    border-left: solid 3px $brand-color
+    padding-left: 10px
+
+  &__tag
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: 1.1px
+
+    &--alt
+      background-color: rgba($cape-cod, .3)
+      border: solid 1px rgba($white, .3)
+      border-radius: 3px
+      color: $white
+      padding: 3px 7px
+      margin-right: 15px
+
+    &--restricted
+      color: $error-color
+
+  &__title
+    box-sizing: border-box
+    width: 100%
+    &--small
+      word-break: break-word
+      
+    &:last-child
+      margin-bottom: 0
+
+  &__sub-title
+    color: $brand-color
+    font-weight: bold
+    letter-spacing: -0.8px
+    margin-bottom: 5px
+
+  &__media-link
+    border-bottom-right-radius: 100px
+
+  &__copy
+    width: 100%
+
+    a
+      color: $brand-color
+      font-weight: bold
+      word-break: break-all
+
+  &__count
+    border: solid 1px rgba($cape-cod, .3)
+    display: inline-block
+    font-size: 12px
+    margin-top: 0
+    margin-bottom: 0
+
+    + .card__copy,
+    + .card__date
+      display: inline-block
+      width: auto
+
+    + .card__copy
+      font-size: 14px
+
+  &__actions
+    transform: none
+    top: 10px
+    right: 5px
+
+  &__icon
+    background-color: $brand-color
+    border-radius: 2px
+    width: 40px
+    height: 40px
+    transition: background-color .3s
+
+    &:hover
+      background-color: darken($brand-color, 20%)
+
+  &__date
+    font-weight: bold
+    margin-top: auto
+
+  &__logo,
+  &__media
+    flex: 0 0 auto
+
+  &--poster
+
+    .card__title
+      font-size: 25px
+
+  &--person
+    .card
+      &__content
+        position: relative
+        padding-left: 40px
+        padding-top: 20px
+
+        &:after
+          background: $brand-color
+          bottom: 0
+          content: ''
+          display: block
+          left: 20px
+          height: 50px
+          position: absolute
+          top: 20px
+          width: 4px
+
+  &--person,
+  &--cast
+    background: $white
+    overflow: hidden
+
+    .card
+      &__title,
+      &__copy
+        color: $base-color-dark
+
+        a
+          color: $base-color
+          font-size: 11px
+          font-weight: bold
+          letter-spacing: 1px
+          text-transform: uppercase
+
+          +hover
+            color: $brand-color
+
+      &__media
+        border-bottom-right-radius: 175px
+        
+      &__title
+        margin-bottom: 0
+
+  &--list
+    background: $white
+    
+    &:not(.card--small)
+      .card__content
+        display: block
+
+      .card__media-link
+        border-bottom-right-radius: 175px
+        margin: -6px 0 0 -6px
+
+      .card__media
+        margin: 6px 0 0 6px
+        width: calc(50% - 6px)
+
+    .card
+      &__title,
+      &__copy
+        color: $base-color-dark
+
+      &__title
+        font-size: 25px
+    
+      &__date
+        color: rgba($base-color-dark, .4)
+
+  &--format
+    background: $white
+    color: $base-color
+
+    .card__title,
+    .card__copy
+      color: $base-color
+
+  &--scripted
+    background: $base-color-dark
+
+  &__content
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    position: static
+
+  &--toggle
+    .card__tags
+      padding-right: 45px
+
+  &--catalogue
+
+    .card__content
+      padding: 25px 20px 25px 40px
+
+    .card__title:not(.card__title--small)
+      font-size: 25px
+      position: relative
+      
+      &:after
+        background: $brand-color
+        bottom: 0
+        content: ''
+        display: block
+        left: -20px
+        height: 100%
+        position: absolute
+        width: 4px
+
+    .card__title--small
+      margin-top: -15px
+
+    .card__sub-title + .card__title
+      &:after
+        height: calc(100% + 35px)
+
+    .card__media-link
+      border-bottom-right-radius: 175px
+
+    .card__tags
+      margin-left: -20px
+
+  &--small
+    .card__title
+      font-size: 16px
+
+    .card__content
+      > *:last-child
+        margin-top: auto
+
+    .toggle
+      bottom: 10px
+      right: 10px
+      height: 30px
+      width: 30px
+
+  .programme__icon
+    z-index: 4
+
+  .like
+    z-index: 4
+
+    &--reporting
+      right: 5px
+
+  &__strip
+    font-weight: bold
+
+.custom .grid--six .card
+  &__content
+    padding: 10px 15px
+
+  &__title
+    padding-right: 0
+
+  +breakpoint(small)
+    &__sub-title,
+    &__copy
+      font-size: 16px
+    
+    &--catalogue
+      .card__title:not(.card__title--small)
+        font-size: 22px

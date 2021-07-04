@@ -1,0 +1,320 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/card'
+
+//***********************************
+
+.card
+  background-color: $card-bgc
+  border-radius: $card-border-radius
+  text-decoration: none
+
+  +hover
+    .card__media-link + .card__content
+      .card__title
+        color: $card-title-hover-color
+
+    .card__move-icon
+      opacity: 1
+
+    .card__hover
+      opacity: 1
+
+  .like
+    position: absolute
+    top: 0
+    right: 56px
+    transform: translateY(-50%)
+    z-index: 1
+
+    &--reporting
+      right: 10px
+
+  .button--reporting
+    position: absolute
+    right: 50px
+    top: 0
+    transform: translateY(-50%)
+
+  &__media-link
+    display: block
+    position: relative
+    border-radius: $card-border-radius $card-border-radius 0 0
+    margin-right: -4px
+    margin-bottom: -4px
+    overflow: hidden
+
+    &::after
+      clear: both
+      content: ''
+      display: block
+
+    +hover
+      ~ .card__content .card__title
+        color: $card-title-hover-color
+
+    .card__media
+      &:first-of-type
+        &:last-of-type
+          border-radius: $card-border-radius $card-border-radius 0 0
+          width: calc(100% - 4px)
+
+  &__move-icon,
+  &__display-icon
+    fill: $white
+    left: 10px
+    position: absolute
+    top: 10px
+
+  &__move-icon
+    opacity: 0
+    transition: opacity .2s
+
+  &__display-icon
+    left: auto
+    right: 10px
+
+  &__video-image
+    position: relative
+
+    &:after
+      content: ''
+      clear: both
+      display: block
+
+  &__media
+    display: block
+    float: left
+    margin-right: 4px
+    margin-bottom: 4px
+    height: auto
+    width: calc(50% - 4px)
+
+    &:nth-of-type(odd)
+      clear: both
+
+    &:first-of-type
+      &:last-of-type
+        float: none
+        width: 100%
+
+    @supports (-ms-ime-align: auto)
+      width: calc(50% - 5px)
+
+  &__content
+    clear: both
+    padding: $card-padding
+    position: relative
+
+  &__title
+    color: $card-title-color
+    font-size: $card-title-size
+    font-weight: $card-title-weight
+    margin: $card-title-margin
+    word-wrap: break-word
+    transition: color .3s
+
+    &--small
+      font-size: $card-small-title-size
+
+    a
+      color: inherit
+      text-decoration: none
+      transition: color .2s
+
+      +hover
+        color: $card-title-hover-color
+
+  &__date
+    color: $card-date-color
+    display: block
+    font-size: $card-date-font-size
+    margin: $card-date-margin
+
+  &__copy
+    color: $card-copy-color
+    font-size: $card-copy-size
+    font-weight: $card-copy-weight
+    margin: $card-copy-margin
+    word-wrap: break-word
+
+    &--file
+      word-wrap: break-word
+
+    a
+      color: inherit
+      text-decoration: none
+      transition: color .3s
+
+      +hover
+        color: $card-copy-hover-color
+
+
+    &:last-child
+      margin-bottom: 0
+
+  &__hover
+    align-items: center
+    background: rgba($black, .7)
+    bottom: 4px
+    color: $white
+    display: flex
+    justify-content: center
+    left: 0
+    opacity: 0
+    padding: 20px
+    pointer-events: none
+    position: absolute
+    right: 4px
+    text-align: center
+    top: 0
+    transition: opacity .3s ease-in-out
+
+  &__count
+    background: $card-count-background
+    border-radius: $card-count-border-radius
+    color: $card-count-color
+    display: inline-block
+    font-weight: $card-count-weight
+    margin-right: $card-count-spacing
+    margin-top: $card-count-offset
+    padding: $card-count-padding
+    vertical-align: middle
+
+  &__tags
+    display: flex
+    flex-wrap: wrap
+    margin: $card-tags-margin
+
+  &__tag
+    border: $card-tag-border
+    border-radius: $card-tag-radius
+    color: $card-tag-color
+    font-size: $card-tag-font-size
+    margin: $card-tag-margin
+    padding: $card-tag-padding
+
+  &__logo
+    max-width: 50%
+
+  .toggle
+    position: $card-toggle-position
+    right: $card-toggle-right
+    top: $card-toggle-top
+    transform: $card-toggle-transform
+    z-index: 2
+
+  &__link
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+
+  &--active
+    box-shadow: $card-active-shadow
+
+  &--hidden
+    opacity: 0
+
+  &--draggable
+    cursor: move
+
+  &--small &
+    &__content
+      padding: $card-small-content-padding
+
+    &__title
+      font-size: $card-small-title-size
+
+  &--poster
+    background: $black
+    position: relative
+
+    .card__media-link
+      border-radius: $card-border-radius
+
+    +hover
+      .card__media
+          opacity: .25
+
+  &--poster &
+
+    &__content
+      left: 50%
+      padding: 0
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+
+    &__media
+      opacity: .5
+      transition: opacity .2s
+
+    &__title
+      color: $white
+
+      a
+        +hover
+          color: $white
+
+    &__media-link
+      +hover
+
+        ~ .card__content .card__title
+          color: $white
+
+  &__actions
+    display: flex
+    padding-right: 5px
+    position: absolute
+    right: 0
+    top: 0
+    transform: translateY(-50%)
+    z-index: 2
+
+    > *
+      flex: none
+      margin-right: 5px
+
+  &__icon-wrapper
+    display: flex
+
+    .card__icon
+      margin-right: 8px
+
+  &__icon
+    background: transparent
+    border: 0
+    cursor: pointer
+    fill: $card-icon-fill
+    outline: none
+    padding: 0
+
+  &-group
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    .card
+      margin-bottom: 10px
+      flex: 1 0 auto
+
+      + .Select
+        flex: 0
+
+  &__strip
+    background: $card-strip-bgc
+    color: $card-strip-color
+    font-size: $card-strip-font-size
+    padding: $card-strip-padding
+    position: absolute
+    bottom: 100%
+    left: 0
+
+  &--cast
+    .card__media
+      flex: 0 0 auto

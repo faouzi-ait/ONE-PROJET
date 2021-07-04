@@ -1,0 +1,87 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$th-bgc: $cod-gray
+$th-border-color: $cod-gray
+$th-font-size: (12/16)+rem
+$th-font-weight: 600
+$th-padding: 10px 20px
+
+$td-bgc: $black
+$td-border-color: $cod-gray
+$td-font-size: (15/16)+rem
+$td-padding: 15px 20px
+$table-radius: 4px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .table
+  tr
+    color: $dusty-gray
+
+    &.with-action
+      +hover
+        td,
+        th
+          color: $black
+          background-color: $white
+
+    &:last-child
+      td
+        &:last-child
+          border-radius: 0
+
+    &:first-child
+      td
+        &:first-child
+          border-radius: 0
+
+  td
+    font-weight: 600
+
+    &.table__image
+
+      img
+        width: 121px
+
+    &:first-child
+      color: $brand-color
+      font-size: (17/16)+rem
+      font-weight: 900
+      text-transform: uppercase
+
+      &:not(.table__image)
+        padding-left: 20px
+
+  th
+    border-left: 0
+
+    &:first-child,
+    &:last-child
+      border-radius: 0
+
+  &--report
+    tr
+      border-bottom: 2px solid $black
+
+    td
+      background: $white
+      color: $black
+
+  &__sort
+    color: $edward
+    font-size: 12px
+
+    &--active
+      color: $brand-color
+
+  &--hover 
+    tbody tr:hover td:first-child
+      color: $white

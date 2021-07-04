@@ -1,0 +1,66 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$footer-bgc: $base-color-dark
+$footer-padding: 0 0 50px
+$footer-link-color: $white
+
+//***********************************
+
+$footer-brand-margin: 0 auto
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .footer
+  .container
+    flex-direction: column
+    border-top: 1px solid $black
+    padding-top: 50px
+
+  .brand
+    margin-bottom: 40px
+
+  &__nav
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 10px
+    text-align: center
+
+  &__link
+    color: $footer-link-color
+    font-size: (12/16)+rem
+    line-height: 1
+    padding: 0 10px
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      text-decoration: underline
+
+    &:not(:last-child)
+      border-right: 1px solid $footer-link-color
+
+  &__copy
+    color: $white
+    font-size: (12/16)+rem
+    margin-bottom: 15px
+    text-align: center
+
+  &__list
+    justify-content: center
+
+  +breakpoint(xsmall)
+      &__nav
+        display: block
+
+      &__item
+        margin-top: 5px
+        margin-bottom: 5px

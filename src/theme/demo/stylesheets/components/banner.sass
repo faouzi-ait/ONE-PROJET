@@ -1,0 +1,132 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 0
+$banner-tablet-min-height: 540px
+$banner-mobile-min-height: 480px
+$banner-short-min-height: 400px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 0 0 10px
+$banner-tablet-content-padding: 80px 0 40px
+$banner-content-width: 740px
+
+//***********************************
+
+$banner-intro-min-height: none
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 100px 0 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 20px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: 20px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+.custom .banner
+  box-sizing: border-box
+  min-height: 56vw
+  align-items: flex-end
+  padding-bottom: 200px
+
+  &:after
+    background: linear-gradient(to bottom, rgba(30,30,30,1) 0%, rgba(30,30,30,0) 150px, rgba(30,30,30,0) calc(100% - 200px), rgba(30,30,30,1) 100%)
+    z-index: 3
+
+  &--short,
+  &--intro
+    min-height: 23vw
+    margin-bottom: 0
+    padding-bottom: 0
+    z-index: 0
+
+    &:after
+      background: linear-gradient(rgba(30,30,30,0), rgba(30,30,30,1))
+      height: 50%
+      top: auto
+      bottom: 0
+
+  &__title
+    line-height: 1em
+
+  .container
+    z-index: 4
+
+  &__media
+    height: 100%
+
+  &__programme-genres
+    display: none
+  
+  &__programme
+      left: auto
+
+  &__programme-title
+    display: flex
+    align-items: center
+    font-size: 17px
+    line-height: 21px
+    font-weight: 600
+    &:before
+      display: inline-block
+      content: ""
+      height: 32px
+      width: 32px
+      background-image: url(../../../images/theme/programmes.svg)
+      background-position-y: -2px
+
+  +breakpoint(small, min)
+
+    &--tall
+      min-height: 0
+      height: auto
+      padding-bottom: 0
+
+      .container
+        box-sizing: border-box
+        position: absolute
+        bottom: 200px
+        left: 50%
+        transform: translateX(-50%)
+        max-width: 1340px
+
+      .banner
+        &__image
+          min-height: 600px
+          max-height: 90vh
+          display: block
+          overflow: hidden
+          position: static
+          width: 100%
+
+        &__media
+          position: static
+          transform: none
+          max-width: 100%
+          display: block
+          height: auto
+
+        &__content
+          padding-top: 0
+          padding-bottom: 0
+          
+
+  +breakpoint(small)
+    min-height: 300px
+
+    .banner__media
+      height: auto

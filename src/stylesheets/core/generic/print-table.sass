@@ -1,0 +1,74 @@
+.print-table
+  border-collapse: collapse
+  border-spacing: 0
+  width: 100%
+  text-align: left
+
+  div
+    display: table
+  th
+    border: 2px solid black
+    text-transform: uppercase
+    font-size: 10px
+    padding: 5px
+    text-align: left
+    &.date
+      font-size: 14px
+      padding: 10px
+  td
+    font-size: 10px
+    padding: 5px
+    vertical-align: top
+    border: 2px solid black
+
+    &.big
+      font-size: 14px
+      font-weight: bold
+
+    &.no-border
+      border: none
+
+    ul
+      margin: 0
+
+      .company
+        font-size: 8px
+        display: block
+        font-style: italic
+
+  &--list
+    td
+      border: none
+      border-bottom: 1px solid black
+
+.event-report
+  width: 100%
+  text-align: center
+  max-width: 800px
+  margin: 0 auto
+  padding: 40px 0
+
+  hr
+    display: block
+    height: 1px
+    border: none
+    margin: 40px 0
+
+  .print-table
+    margin-bottom: 40px
+
+  &__dates
+    margin: 0
+    font-size: 12px
+
+  &__title
+    margin-bottom: 0
+
+  &__sub
+    margin-bottom: 0
+
+    + h5
+      margin-top: 5px
+
+  h5
+    margin-bottom: 10px

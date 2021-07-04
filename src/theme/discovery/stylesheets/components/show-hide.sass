@@ -1,0 +1,59 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$show-hide-border: 4px solid $gallery
+
+//***********************************
+
+$show-hide-wrap-align: center
+$show-hide-wrap-display: flex
+
+//***********************************
+
+$show-hide-title-flex: 1
+$show-hide-title-font-family: $base-font-family
+
+//***********************************
+
+$show-hide-trigger-background: transparent
+$show-hide-trigger-border-radius: 0
+$show-hide-trigger-width: 0
+$show-hide-trigger-flex: none
+$show-hide-trigger-size: 40px
+$show-hide-trigger-spacing: 10px
+
+//***********************************
+
+$show-hide-arrow-width: 3px
+$show-hide-arrow-color: $shark
+$show-hide-arrow-size: 12px
+
+//***********************************
+
+$show-hide-wrap-icon-button-margin: 10px
+$show-hide-gap: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .show-hide
+  padding-top: 20px
+
+  > *
+    padding-bottom: 20px
+
+  &__title
+    font-size: 22px
+    text-transform: uppercase
+
+  &--active 
+    .show-hide__trigger
+      background-color: transparent
+      &:before
+        border-color: $shark

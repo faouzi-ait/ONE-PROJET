@@ -1,0 +1,147 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/my-assets'
+
+//***********************************
+
+.my-assets
+  position: relative
+  padding-bottom: 25px
+
+  &__downloading-wrapper
+    height: 110px
+    width: 400px
+    background-color: $base-color
+    border-radius: 8px
+    color: $white
+    text-align: center
+    padding-top: 10px
+
+  &__downloading-progress
+    padding-top: 10px
+    height: 75px
+    text-align: center
+
+  &__controls
+    align-items: center
+    display: flex
+
+  &__search-input
+    flex: 1
+    padding-right: 8px
+
+    .search-input
+      padding-top: $search-bar-y-padding
+      padding-bottom: $search-bar-y-padding
+      font-size: $search-bar-font-size
+      font-family: $base-font-family
+      color: inherit
+
+    .form__input
+      max-width: 100%
+
+  &__search-checkbox
+    width: $my-assets-only-checkbox-width
+
+    .custom-checkbox__label::before
+      top: 15px
+
+  &__filters
+    display: inline-block
+    padding-top: $my-assets-padding-from-searchbar
+    padding-right: 25px
+    vertical-align: top
+    width: calc(24% - 25px)
+
+    .Select.Select--single .Select-multi-value-wrapper
+      max-width: calc(100% - 82px) !important
+
+    .Select.Select--multi .Select-control,
+    .Select.Select--single .Select-control,
+      font-family: $base-font-family
+
+    .Select.Select--multi .Select-value,
+    .Select.Select--single .Select-value,
+      text-transform: uppercase
+
+      .Select-value-label
+        font-size: 12px
+
+  &__list
+    display: inline-block
+    padding-top: 25px
+    padding-bottom: 15px
+    vertical-align: top
+    width: calc(76% - 25px)
+    th,
+    td
+      background-color: transparent
+      .custom-checkbox__label
+        bottom: 20px
+      .asset__media img.file-type
+        max-height: 100%
+
+
+
+  &__list-controls
+    display: flex
+    padding-top: $my-assets-padding-from-searchbar
+    padding-bottom: 20px
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+  &__count
+    font-size: $my-assets-selected-items-font-size
+
+  &__selected-items
+    display: flex
+    align-items: center
+    
+    > *
+      margin-right: 20px
+
+  &__download
+    display: flex
+    align-items: center
+    margin: 10px 0 10px -20px
+
+    > *
+      margin-left: 20px
+
+    .text-button--disabled
+      color: $my-assets-disabled-download-color
+      svg
+        fill: $my-assets-disabled-download-color
+
+  +breakpoint(large)
+    &__controls
+      flex-wrap: wrap
+    &__search-checkbox
+      width: 100%
+      padding-top: 15px
+      .custom-checkbox__label::before
+        top: 5px
+
+    &__filters
+      width: 100%
+
+    &__list
+      width: 100%
+
+  +breakpoint(medium)
+
+    &__search-checkbox
+      padding-top: 15px
+
+    &__list-controls
+      flex-direction: column
+
+    &__download
+      height: 85px
+
+    &__list
+      .table
+        margin-top: 80px

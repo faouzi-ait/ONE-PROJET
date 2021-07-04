@@ -1,0 +1,85 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$modal-overlay-bgc: rgba($mine-shaft, .9)
+$modal-overlay-padding: 20px
+$modal-overlay-padding-bp-small: 10px
+
+//***********************************
+
+$modal-warning-bgc: $error-color
+$modal-warning-color: $white
+
+//***********************************
+
+$modal-wrapper-bgc: $background-color
+$modal-wrapper-radius: 8px
+$modal-max-width: 1180px
+$modal-min-width: 300px
+
+//***********************************
+
+$modal-header-bgc: $base-color-dark
+$modal-header-padding: 40px
+$modal-header-padding-bp-large: 30px
+$modal-header-padding-bp-medium: 20px
+$modal-header-padding-bp-small: 20px
+
+//***********************************
+
+$modal-content-bgc: transparent
+$modal-content-padding: 50px
+$modal-content-padding-bp-large: 30px
+$modal-content-padding-bp-medium: 20px
+$modal-content-padding-bp-small: 15px
+$modal-link-color: $brand-color
+$modal-link-weight: bold
+
+//***********************************
+
+$modal-close-color: $base-color-light
+$modal-close-hover-color: $brand-color
+
+//***********************************
+
+$modal-header-padding-filters: 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .modal
+  &__header
+    color: $white
+    text-align: center
+
+  &__title
+    font-size: 25px
+
+  &__close
+    svg
+      fill: $white
+
+  &--video .modal__close
+    background: transparent
+    border-radius: 0
+    padding: 0
+
+  .u-center-content
+    margin-top: 80px
+
+  .form--skinny
+    width: 380px
+
+    .u-center-content
+      .text-button
+        margin-left: 10px
+        margin-right: 10px
+
+  &--custom-content
+    padding: 0

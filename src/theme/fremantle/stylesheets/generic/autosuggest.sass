@@ -1,0 +1,44 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$as-radius: 0
+$as-border: none
+
+//***********************************
+
+$as-title-bg: $mine-shaft
+$as-title-weight: 600
+$as-title-size: 14px
+$as-title-padding: 11px 20px
+$as-title-border: none
+
+//***********************************
+
+$as-suggestion-size: 20px
+$as-suggestion-padding: $as-title-padding
+$as-suggestion-border: solid 1px $mine-shaft
+$as-suggestion-hover-bg: $mine-shaft
+$as-description-color: $mine-shaft
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .react-autosuggest
+    &__suggestions-container
+        background: $shark
+        right: 0
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+
+    &__suggestions-list
+        border: solid 1px $mine-shaft
+
+    &__suggestion
+        color: $white
+

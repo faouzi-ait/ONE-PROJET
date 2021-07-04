@@ -1,0 +1,27 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/attributes'
+
+//***********************************
+
+.attributes
+  border-bottom: $attr-border
+  border-collapse: collapse
+  font-size: $attr-font-size
+  margin: $attr-margin
+  width: 100%
+
+  &__row
+    &:nth-child(odd)
+      background-color: $attr-bgc
+
+  &__cell
+    border-top: $attr-border
+    padding: $attr-cell-padding
+    vertical-align: top
+
+    &:first-child
+      font-weight: bold
+      width: 30%

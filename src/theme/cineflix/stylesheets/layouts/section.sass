@@ -1,0 +1,56 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 20px 0
+$section-bgc: $white
+$section-shade-bgc: transparent
+
+//***********************************
+
+$section-copy-color: $base-color
+$section-copy-hover-color: $base-color
+$section-copy-margin: 0 0 20px
+$section-copy-size: (24/16)+rem
+$section-copy-weight: 600
+
+//***********************************
+
+$section-header-text-align: center
+
+//***********************************
+
+$section-actions-align: center
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+
+    &__copy
+        line-height: 1.2
+
+    &__header
+        color: $mako
+        font-size: (24/16)+rem
+        font-weight: 600
+        justify-content: center
+        margin-bottom: 10px
+        padding-bottom: 30px
+        position: relative
+
+        &:before
+            background: $delta
+            bottom: 12px
+            content: ''
+            left: 25%
+            height: 2px
+            position: absolute
+            width: 50%
+
+.custom .fade-on-load
+    > .section--shade
+        &:last-child
+            padding-bottom: 60px
+

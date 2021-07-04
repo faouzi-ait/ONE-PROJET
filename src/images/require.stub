@@ -1,0 +1,9 @@
+module.exports = {
+  /*
+    This is a false module used by webpack NormalModuleReplacementPlugin.
+    Because our variable files are using require('images/...some-image')
+    for each client, we therefore are importing images that do not exist.
+    Any client specific images required that do not exist will have this
+    module replaced in to save require module failing.
+  */
+}

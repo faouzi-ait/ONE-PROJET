@@ -1,0 +1,92 @@
+@import '../imports'
+
+.cms-navigation
+  background-color: $base-color-dark
+  bottom: 0
+  left: 0
+  overflow: auto
+  position: absolute
+  top: 0
+  transition: width .3s
+  width: 190px
+  z-index: 1
+
+  .cms-header--with-sub &
+    box-shadow: 0 0 10px $black
+    width: 120px
+
+  &__list
+    display: flex
+    flex-direction: column
+    opacity: 1
+    list-style: none
+    margin: 0
+    padding: 0
+    transition: opacity .3s
+
+  &__item
+    border-bottom: 1px solid tint($base-color-dark, 10%)
+    margin-bottom: 1px
+    text-align: center
+
+    &--logout
+      margin-top: auto
+      padding: 20px 10px
+
+      a
+        color: $white
+        display: block
+        margin-bottom: 10px
+        text-decoration: none
+        transition: color .3s
+
+        +hover
+          color: $brand-color
+
+      .cms-button
+        box-sizing: border-box
+        color: $white
+        display: block
+        font-size: 14px
+        font-weight: normal
+        padding: 3px 20px 6px
+        width: 100%
+
+  &__link
+    background-color: transparent
+    border: 0
+    border-left: 3px solid transparent
+    box-sizing: border-box
+    color: $base-color-light
+    cursor: pointer
+    display: block
+    font-family: $droid
+    font-size: 12px
+    font-weight: bold
+    line-height: $base-line-height
+    padding: 16px
+    text-align: center
+    text-decoration: none
+    transition: background-color .2s, color .2s, padding .3s, border-color .2s
+    width: 100%
+
+    &--is-active
+      background-color: shade($base-color-dark, 25%)
+      border-left-color: $brand-color
+      color: $white
+
+      .cms-navigation__icon
+        fill: $nav-icon-hover-color
+
+    +hover
+      background-color: shade($base-color-dark, 25%)
+      color: $white
+
+      .cms-navigation__icon
+        fill: $nav-icon-hover-color
+
+  &__icon
+    display: block
+    fill: $base-color-light
+    margin: 0 auto 10px
+    transition: fill .2s

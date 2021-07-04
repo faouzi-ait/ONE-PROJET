@@ -1,0 +1,101 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$form-width: 980px
+$form-skinny-width: 580px
+
+//***********************************
+
+$form-input-padding: 8px 15px
+$form-input-radius: 4px
+$form-textarea-radius: 4px
+$form-input-border: 1px solid $white
+$form-input-focus-border: $white
+$form-textarea-height: 120px
+$form-input-phone-padding: 3px 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .form
+  position: relative
+
+  &__label
+    color: shade($base-color-light, 10%)
+    font-size: (12/16)+rem
+    font-weight: 400
+    margin-bottom: 5px
+
+  &__control
+    max-width: 100%
+
+    &--error
+      .form__input,
+      .custom-select--white
+        border-color: $error-color
+
+  &__input
+    font-size: (14/16)+rem
+    font-weight: 500
+    background-color: transparent
+    color: $white
+
+  +breakpoint(1600px, min)
+    &__control,
+    &__inner
+      position: relative
+
+    &__control
+      .form__error
+        background: $error-color
+        bottom: 0
+        color: $white
+        display: block
+        font-size: 14px
+        font-weight: 700
+        left: 100%
+        margin-left: 15px
+        margin-top: 5px
+        max-width: 290px
+        min-width: 240px
+        padding: 10px 15px
+        position: absolute
+        text-align: left
+
+        &::before
+          border-bottom: 10px solid transparent
+          border-right: 10px solid $error-color
+          border-top: 10px solid transparent
+          content: ''
+          display: inline-block
+          height: 0
+          position: absolute
+          right: 100%
+          top: 50%
+          transform: translateY(-50%)
+          width: 0
+
+      &--inline
+        position: static
+        margin: 0
+        white-space: normal
+        padding: 0
+        background-color: transparent
+        color: $error-color
+        &::before
+          display: none
+
+    > .form__error
+      margin-left: 0
+      position: static
+      white-space: normal
+
+      &::before
+        display: none
+    

@@ -1,0 +1,178 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 900px
+$banner-tablet-min-height: 600px
+$banner-mobile-min-height: 500px
+$banner-short-min-height: 387px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 0 0 50px
+$banner-tablet-content-padding: 0 0 20px
+$banner-content-width: 600px
+
+//***********************************
+
+$banner-intro-min-height: 387px
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 100px 0 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 10px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: 16px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  align-items: flex-end
+  background: $base-color
+  z-index: 0
+
+  &:after
+    background: linear-gradient(0deg, rgba($base-color,0) 0%, $base-color 100%)
+    height: 240px
+
+  &:before
+    background: linear-gradient(-90deg, rgba($base-color,0) 0%, rgba($base-color,.7) 100%)
+    bottom: 0
+    left: 0
+    position: absolute
+    content: ''
+    height: 100%
+    width: 60%
+    z-index: 3
+
+  &--programme
+    min-height: 750px
+
+    .banner__image
+      &:after
+        background: linear-gradient(180deg, rgba($base-color,0) 0%, $base-color 100%)
+        bottom: 0
+        content: ''
+        position: absolute
+        height: 180px
+        width: 100%
+
+    .banner__content
+      max-width: 800px
+
+    &.banner--large-media
+      min-height: 600px
+
+    &.banner--medium-media
+      min-height: 500px
+
+  &__title
+    font-size: 70px
+    line-height: 1.08
+
+  &__tag
+    background: $tyrian
+    border-radius: 2px
+    color: $white
+    letter-spacing: 1px
+    padding: 3px 6px
+
+  &__actions
+    > div:first-child
+      width: 100%
+
+  &--intro,
+  &--short
+    &:after
+      background: linear-gradient(-90deg, rgba($toledo,0) 0%, $toledo 100%)
+      height: 100%
+
+    &:before
+      display: none
+
+    .banner__content
+      padding-bottom: 100px
+      max-width: 770px
+
+    .banner__title
+      font-size: 68px
+
+    .banner__image
+      height: calc(100% - 100px)
+      top: 100px
+
+    &--medium-media
+      min-height: 340px
+
+  .button--secondary
+    border-bottom-right-radius: 25px
+    border-top-right-radius: 25px
+    background: transparent
+    color: $white
+
+    .button__icon
+        fill: $white
+
+  @media screen and (max-width: '1420px') and (min-width: '769px')
+    min-height: 820px
+
+    &--intro,
+    &--short
+      min-height: 387px
+
+    &--programme
+      min-height: 690px
+
+  +breakpoint(large)
+    &__title
+      font-size: 52px
+
+    &--programme
+      min-height: 600px
+
+  +breakpoint(medium)
+    &__title
+        font-size: 32px
+
+    &--programme
+      min-height: 500px
+
+    &--short,
+    &--intro
+      min-height: 340px
+
+      .banner__title
+        font-size: 32px
+
+    &__copy
+      font-size: 17px
+
+    &__logo
+      max-width: 150px
+
+
+.custom .cropper__preview
+  .banner--intro,
+  .banner--short
+    min-height: 300px
+    height: 300px
+
+    .banner__image
+      height: 100%
+      top: auto
+
+    &.banner--medium-media
+      min-height: 240px
+      height: 240px

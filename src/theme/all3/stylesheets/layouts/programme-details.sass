@@ -1,0 +1,44 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 70px
+$programme-details-border: none
+$programme-details-side-width: 410px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  .tags
+    border-bottom: solid 6px $gallery
+    padding-bottom: 10px
+    margin-bottom: 20px
+
+  &__series
+
+    &--closed
+
+      &:after
+        background: linear-gradient(180deg, rgba($black,0) 0%, $white 100%)
+        bottom: 0
+        content: ''
+        left: 0
+        height: 100px
+        position: absolute
+        pointer-events: none
+        width: 100%
+
+    
+  +breakpoint(large)
+    padding-bottom: 30px
+    
+    &__main
+      margin-right: 0
+      margin-bottom: 50px
+      padding-right: 0
+
+    &__side
+      width: auto

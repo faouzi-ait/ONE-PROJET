@@ -1,0 +1,77 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$paginator-margin: 40px 0
+
+//***********************************
+
+$paginator-button-spacing: 8px
+$paginator-button-color: $white
+$paginator-button-border: solid 1px $oslo 
+$paginator-button-bgc: $background-color
+$paginator-button-padding: 5px
+$paginator-button-size: 32px
+$paginator-button-active-color: $white
+$paginator-button-active-bgc: $rhino
+
+//***********************************
+
+$paginator-ellipsis-bgc: transparent
+$paginator-ellipsis-color: $oslo 
+
+//***********************************
+
+$paginator-arrow-padding: 5px 10px
+$paginator-previous-radius: 0
+$paginator-next-radius: 0
+$paginator-disabled-arrow-bgc: transparent
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .paginator
+  &__button
+    border-radius: 3px
+    transition: border-color .3s $easing
+    font-weight: 500
+    font-size: 14px
+    position: relative
+    overflow: hidden
+    z-index: 1
+
+    &:after
+      background: linear-gradient($wedgewood 0.15%, $steel-blue)
+      bottom: -1px
+      content: ''
+      position: absolute
+      height: 0
+      left: -1px
+      opacity: 0
+      transition: all .3s $easing
+      right: -1px
+      z-index: -1
+
+    +hover
+      border-color: transparent
+
+      &:after
+        height: calc(100% + 2px)
+        opacity: 1
+
+  &__ellipsis
+    font-size: 28px
+    line-height: .6
+    letter-spacing: -2px
+    margin: 0 0 0 -8px
+
+  &__arrow
+    border: none
+
+    &--is-disabled
+      opacity: .5

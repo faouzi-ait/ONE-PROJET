@@ -1,0 +1,44 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/user'
+
+//***********************************
+
+.user
+  align-items: flex-end
+  border-bottom: $user-border
+  display: flex
+  padding: $user-padding
+
+
+  &__name
+    margin-right: auto
+
+    p
+      margin: 0
+
+  &__title
+    margin: 0
+
+  &__detail
+    font-size: $user-detail-size
+    font-weight: bold
+    margin: $user-detail-margin
+    &-tag
+      border: $user-tag-border
+      border-radius: $user-tag-radius
+      color: $user-tag-color
+      font-size: $user-tag-font-size
+      margin: $user-tag-margin
+      padding: $user-tag-padding
+
+    small
+      color: $user-detail-label-color
+      display: block
+      font-size: $user-detail-label-size
+    &-wrapper
+      display: flex
+      flex-flow: row nowrap
+      align-items: flex-start

@@ -1,0 +1,56 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$body-bgc: $background-color
+$body-margin: 0
+$body-padding: 0
+
+//***********************************
+
+$page-before-color: rgba($base-color, .8)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+
+.page
+    &.kids
+        .card--catalogue,
+        .card--video
+            background: linear-gradient(180deg, $brand-color, $persian-plum)
+
+            &:after
+                background-color: $brand-color
+
+        .card__icon,
+        .carousel__arrow
+            background-color: $white
+            fill: $brand-color
+
+            &:after
+                border-color: $brand-color
+
+        .content-block--genre-tags
+            .button--filled
+
+                +hover
+                    background-color: $brand-color
+
+        .footer,
+        .content-block--genre-tags .button--filled
+            background-color: $tyrian
+            border-color: $tyrian
+
+        .brand
+            max-width: 320px
+
+        .footer
+            .brand
+                max-width: 260px
+
+        .content-block--banner-carousel
+            .carousel__arrow
+                background-color: transparent

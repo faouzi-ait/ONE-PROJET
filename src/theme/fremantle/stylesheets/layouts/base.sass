@@ -1,0 +1,51 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$body-bgc: $background-color
+$body-margin: 0
+$body-padding: 0
+
+//***********************************
+
+$page-before-color: rgba($base-color, .8)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+
+  @each  $genre, $color in $genre-colors
+
+    .tag--#{$genre},
+    .tag--#{$genre}.card__tag
+      background-color: map-get($genre-colors, $genre)
+      font-weight: 800
+      font-size: 12px
+      padding: 6px 8px
+      text-transform: uppercase
+
+      +hover
+        color: $white
+
+    .programme-meta
+        .tag--#{$genre}
+            margin-top: -5px
+            margin-bottom: 10px
+
+  .sticky
+    background-color: transparent
+    position: static
+
+  .bg-background
+    color: $white
+
+  .print-table
+    color: $white
+
+    td
+      font-size: 12px
+
+.custom:not(.admin)
+    color: $white

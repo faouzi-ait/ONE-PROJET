@@ -1,0 +1,33 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 80px
+$programme-details-border: 1px solid $pumice
+$programme-details-side-width: 280px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  &__main
+    margin-right: 60px
+
+  +breakpoint(xlarge)
+    &__main
+      margin-right: 30px
+      padding-right: 30px
+
+  +breakpoint(large)
+    &__main
+      border: 0
+      border-bottom: $programme-details-border
+      margin: 0
+      margin-bottom: 30px
+      padding: 0
+      padding-bottom: 30px
+      
+    &__side
+      width: auto

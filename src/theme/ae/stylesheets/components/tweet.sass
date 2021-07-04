@@ -1,0 +1,55 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tweet-base-color: $white
+$tweet-bgc: transparent
+
+//***********************************
+
+$tweet-title-color: $white
+$tweet-title-margin: 0 5px 0 0
+$tweet-title-size: 18px
+$tweet-title-weight: normal
+
+//***********************************
+
+$tweet-handle-color: $oslo
+$tweet-handle-font-size: 14px
+
+//***********************************
+
+$tweet-date-color: $oslo
+$tweet-date-font-size: 14px
+$tweet-date-margin: 0
+
+//***********************************
+
+$tweet-copy-color: $white
+$tweet-copy-hover-color: $base-color
+$tweet-copy-margin: 15px 0
+$tweet-copy-size: 18px
+$tweet-copy-weight: normal
+
+//***********************************
+
+
+$tweet-avatar-size: 60px
+$tweet-avatar-margin: 0 18px 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tweet
+  &__title,
+  &__handle
+    display: block
+
+  +breakpoint(medium, min)
+    padding-right: 30px
+    box-sizing: border-box

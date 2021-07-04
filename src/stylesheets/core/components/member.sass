@@ -1,0 +1,42 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/member'
+
+//***********************************
+
+.member
+  max-width: $member-max-width
+  margin: $member-margin
+  text-align: $member-text-align
+
+  &__image
+    border-radius: $member-image-radius
+    margin-bottom: $member-image-spacing
+    overflow: hidden
+    position: relative
+    background: $black
+    
+    &:before
+      content: ''
+      display: block
+      padding-top: 100%
+      width: 100%
+
+    img
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      display: block
+      width: 100%
+
+  &__title
+    font-size: $member-title-font-size
+    font-weight: $member-title-font-weight
+    margin: 0
+
+  &__copy
+    font-size: $member-copy-font-size
+    margin: 0

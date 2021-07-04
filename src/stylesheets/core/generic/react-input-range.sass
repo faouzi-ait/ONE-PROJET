@@ -1,0 +1,116 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/react-input-range'
+
+//***********************************
+
+
+.input-range
+  min-height: $input-range-height
+
+.input-range__filters
+  position: relative
+  width: 88%
+
+.input-range__slider
+  appearance: none
+  background: $input-range-slider-background
+  border: $input-range-slider-border
+  border-radius: 100%
+  cursor: pointer
+  display: block
+  height: $input-range-slider-height
+  margin-left: $input-range-slider-width / -2
+  margin-top: $input-range-slider-height / -2 + $input-range-track-height / -2
+  outline: none
+  position: absolute
+  top: 50%
+  transition: $input-range-slider-transition
+  width: $input-range-slider-width
+
+  &:active
+    transform: $input-range-slider-active-transform
+
+
+  &:focus
+    box-shadow: 0 0 0 $input-range-slider-focus-box-shadow-radius $input-range-slider-focus-box-shadow-color
+
+
+  .input-range--disabled &
+    background: $input-range-slider-disabled-background
+    border: $input-range-slider-disabled-border
+    box-shadow: none
+    transform: none
+
+
+
+.input-range__slider-container
+  transition: $input-range-slider-container-transition
+
+
+.input-range__label
+  color: $input-range-label-color
+  font-family: $input-range-font-family
+  font-size: $input-range-label-font-size
+  transform: translateZ(0)
+  white-space: nowrap
+
+
+.input-range__label--min,
+.input-range__label--max
+  bottom: $input-range-label-position-bottom
+  position: absolute
+
+
+.input-range__label--min
+  left: 0
+
+
+.input-range__label--max
+  right: 0
+
+
+.input-range__label--value
+  position: absolute
+  top: $input-range-label-value-position-top
+
+  .input-range__input
+    display: none
+
+
+.input-range__label-container
+  left: 0
+  position: relative
+
+.input-range__track
+  background: $input-range-track-background
+  border-radius: $input-range-track-height
+  cursor: pointer
+  display: block
+  height: $input-range-track-height
+  position: relative
+  transition: $input-range-track-transition
+
+  .input-range--disabled &
+    background: $input-range-track-disabled-background
+
+
+
+.input-range__track--background
+  left: 0
+  margin-top: -0.5 * $input-range-track-height
+  position: absolute
+  right: 0
+  top: 50%
+
+
+.input-range__track--active
+  background: $input-range-track-active-background
+
+.input-range__input
+  width: $input-range-input-width
+
+
+

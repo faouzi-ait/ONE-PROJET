@@ -1,0 +1,43 @@
+.list-panel
+  background-color: $white
+  border-radius: 4px
+  list-style: none
+  margin: 0
+  padding: 0
+
+  &__header
+    align-items: center
+    background-color: $brand-color
+    border-radius: 4px 4px 0 0
+    display: flex
+    padding: 10px 30px
+
+    .action-menu__trigger
+      background-color: $white
+      color: $brand-color
+
+  &__title
+    color: $white
+    font-size: 16px
+    font-weight: bold
+    margin: 0
+
+  &__list
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__sub-item
+    border-top: 1px solid shade($athens-gray, 5%)
+    display: flex
+    padding: 12px 30px 12px 50px
+    transition: background-color .2s
+
+    &:last-child
+      border-radius: 0 0 4px 4px
+
+    +hover
+      background-color: tint($brand-color, 80%)
+
+  .action-menu
+    margin-left: auto

@@ -1,0 +1,19 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x560
+      Thumbnail: 380x158
+
+  - name: Programme
+    url: https://amc.rawnet.one/catalog/2
+    components:
+      Banner: 3200x1800
+      Thumbnail: 1056x594
+      Logo: 400x60
+
+  - name: News Article
+    components:
+      Banner: 3200x560
+      Thumbnail: 560x350
+
+

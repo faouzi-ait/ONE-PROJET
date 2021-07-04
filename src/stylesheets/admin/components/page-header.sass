@@ -1,0 +1,81 @@
+@import '../../core/imports'
+@import '../imports'
+
+.page-header
+  background-color: $white
+  font-family: "Droid Sans"
+  margin-bottom: 20px
+  padding: 60px 0 30px
+  position: relative
+  z-index: 15
+
+  .Select-control
+    min-width: 210px
+
+  &__title
+    font-size: 30px
+    font-weight: bold
+    letter-spacing: -1px
+    margin: 0
+    padding-right: 30px
+
+  &__copy,
+  &__stats
+    color: $gull-gray
+    margin: 0
+
+  &__status
+    color: $brand-color
+    font-size: 20px
+    font-weight: bold
+
+  .container
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 0
+
+  .form__control
+    margin-bottom: 0
+
+  &__stats
+    font-size: 13px
+    margin-left: auto
+    margin-top: auto
+
+  .cms-button
+    margin-left: auto
+
+  .action-menu
+    margin-left: auto
+
+    & + .cms-button
+      margin-left: 10px
+
+  &__actions
+    display: flex
+    margin-left: auto
+    margin-bottom: 0
+    min-width: 350px
+
+    .cms-button
+      margin-left: 10px
+
+  &--branded
+    background: $brand-color
+    padding-bottom: 210px
+
+    .container
+      max-width: 1600px
+      padding: 0 40px
+
+    & + .container
+      margin-top: -180px
+      position: relative
+      z-index: 20
+
+    .page-header
+      &__title,
+      &__copy,
+      &__stats
+        color: white

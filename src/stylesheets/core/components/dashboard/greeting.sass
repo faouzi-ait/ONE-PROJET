@@ -1,0 +1,30 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../../_theme/components/dashboard/greeting'
+
+//***********************************
+
+
+.greeting
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  padding: $greeting-padding
+
+  &__title
+    padding: $greeting-title-padding
+    +heading(1)
+
+  &__sub-title
+    +heading(2)
+
+  +breakpoint(medium)
+
+    &__title
+      +heading(2)
+
+    &__sub-title
+      font-size: $base-font-size

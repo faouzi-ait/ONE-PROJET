@@ -1,0 +1,95 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-image-radius: 5px
+$programme-image-spacing: 10px
+
+//***********************************
+
+$programme-title-font-size: 18px
+$programme-title-font-size-small: 14px
+
+//***********************************
+
+$programme-copy-font-size: 14px
+$programme-copy-color: $casper
+
+//***********************************
+
+$programme-icon-size: 40px
+$programme-icon-background: $white
+$programme-icon-border: 0
+$programme-icon-radius: 4px
+
+//***********************************
+
+$programme-icon-arrow-size: 30px
+$programme-icon-arrow-color: $black
+
+//***********************************
+
+$programme-strip-bgc: $error-color
+$programme-strip-color: $white
+$programme-strip-font-size: 12px
+$programme-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme
+
+    &__icon
+        left: 50%
+        top: 70px
+        transform: translate(calc(-1 * (50% + 1.5rem)), -50%)
+        z-index: 2
+    &__actions
+        right: 50%
+        top: 70px
+        transform: translate(calc(50% + 1.5rem), -50%)
+        width: $programme-icon-size
+        height: $programme-icon-size
+        background-color: $brand-color
+        border-radius: $programme-icon-radius
+        display: flex
+        justify-content: center
+        z-index: 2
+        align-items: center
+
+    &__image
+        a
+            display: block
+            position: relative
+            &:after
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(30,30,30,1) 100%)
+                content: ""
+                height: 100%
+                left: 0
+                position: absolute
+                top: 0
+                width: 100%
+                z-index: 1
+
+    &__title
+        font-weight: 800
+        line-height: 22px
+
+.custom .recently-viewed .programme
+
+    &__actions
+        top: 0
+        right: 0
+        border-radius: 0
+        transform: none
+
+    &__title
+        font-size: 30px
+        line-height: 31px
+        font-weight: 800
+        letter-spacing: -1px

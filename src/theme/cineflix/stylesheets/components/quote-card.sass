@@ -1,0 +1,41 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$quote-card-padding: 5px 50px 5px 20px
+$quote-card-title-margin: 0 0 20px 0
+$quote-card-border-color: $brand-color
+
+$quote-card-name-size: 15px
+$quote-card-author-size: 12px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .quote-card
+
+    &:before
+        border-radius: 3px
+
+    &__title
+        font-size: (24/16)+rem
+        font-style: italic
+        font-weight: $bold
+        line-height: 1.2
+
+    &__name
+        font-style: normal
+        font-weight: 500
+
+    &__author
+        font-style: normal
+        font-weight: 300
+
+
+
+

@@ -1,0 +1,119 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/tabs'
+
+//***********************************
+
+.tabs
+  border: $tabs-border
+  border-radius: $tabs-border-radius
+  display: flex
+  margin-bottom: $tabs-spacing
+  overflow: hidden
+
+  &__item
+    appearance: none
+    background-color: $tabs-item-background
+    border: none
+    border-right: $tabs-border
+    cursor: pointer
+    flex: 1
+    font-size: $tabs-item-font-size
+    font-weight: $tabs-item-weight
+    font-family: $base-font-family
+    margin: 0
+    outline: none
+    padding: $tabs-padding
+
+    &:last-child
+      border-right: none
+
+    &--active
+      background: $tabs-background
+      color: $tabs-active-color
+
+    &--with-icon
+      align-items: center
+      display: flex
+      justify-content: center
+
+    .tabs__icon
+      fill: $tabs-active-color
+
+  &__icon
+    fill: $base-color
+    margin-right: 15px
+
+  &__select
+    margin: $tabs-select-margin
+
+  &__sub
+    display: block
+    margin-top: 5px
+
+  &--radio
+    border: none
+    flex-wrap: wrap
+    margin-right: -10px
+    margin-bottom: -10px
+    overflow: visible
+    width: 100%
+
+    .tabs__item
+      border: none
+      padding: 0
+      margin-right: 10px
+      margin-bottom: 10px
+      position: relative
+      min-width: calc(25% - 10px)
+      flex: 0 0 auto
+
+    .tabs__icon
+      position: absolute
+      right: 20px
+      top: 50%
+      transform: translateY(-50%)
+
+    .custom-checkbox
+      display: block
+
+      &__label
+        box-sizing: border-box
+        display: block
+        padding: $tabs-padding
+        width: 100%
+        &:before
+          display: none
+
+  &--underline
+    border: none
+    border-radius: 0
+    
+    .tabs
+      &__item
+        border: $tabs-border
+        border-width: 0 0 2px
+        padding-bottom: 25px
+
+        &--active
+          background: transparent
+          border-color: $brand-color
+          padding-bottom: 24px
+          border-bottom-width: 4px
+          color: $brand-color
+
+      &__title
+        font-size: 30px
+
+      &__sub
+        font-size: 14px
+
+  +breakpoint(small)
+    &--radio
+      margin-bottom: -12px
+
+    .tabs__item
+      margin-bottom: 12px
+      width: calc(50% - 10px)

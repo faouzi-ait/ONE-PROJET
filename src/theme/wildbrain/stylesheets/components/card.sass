@@ -1,0 +1,163 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$card-base-color: $base-color
+$card-bgc: $white
+$card-border-radius: 0
+$card-padding: 20px 20px 25px
+
+//***********************************
+
+$card-title-color: $base-color
+$card-title-hover-color: $brand-color
+$card-title-margin: 0 0 10px
+$card-title-size: 21px
+$card-title-weight: bold
+
+//***********************************
+
+$card-date-color: $base-color
+$card-date-font-size: 12px
+$card-date-margin: -5px 0 10px
+
+//***********************************
+
+$card-copy-color: $base-color
+$card-copy-hover-color: $base-color
+$card-copy-margin: 0 0 10px
+$card-copy-size: $base-font-size
+$card-copy-weight: normal
+
+//***********************************
+
+$card-count-color: $white
+$card-count-background: transparent
+$card-count-padding: 0
+$card-count-weight: bold
+$card-count-border-radius: 0
+$card-count-spacing: 5px
+$card-count-offset: 0
+
+//***********************************
+
+$card-toggle-position: absolute
+$card-toggle-right: 10px
+$card-toggle-top: 0px
+$card-toggle-transform: translateY(-50%)
+
+//***********************************
+
+$card-tags-margin: 0 -5px 5px 0
+$card-tag-margin: 0 5px 5px 0
+$card-tag-font-size: 11px
+$card-tag-color: white
+$card-tag-border: none
+$card-tag-padding: 5px 7px
+$card-tag-radius: 0
+
+//***********************************
+
+$card-active-shadow: 0 6px 8px 0 rgba(0,0,0,0.2)
+
+//***********************************
+
+$card-small-content-padding: 10px
+
+//***********************************
+
+$card-small-title-size: 14px
+
+//***********************************
+
+$card-icon-fill: $brand-color
+
+//***********************************
+
+$card-strip-bgc: $error-color
+$card-strip-color: $white
+$card-strip-font-size: 12px
+$card-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card
+    box-shadow: $card-active-shadow
+    display: flex
+    flex-direction: column
+
+    &__content
+        display: flex
+        flex-direction: column
+        flex: 1 0 auto
+
+    &__date
+        margin-top: auto
+
+    &__tag
+        background-color: $brand-color-dark
+
+    &__icon
+        +hover
+            svg
+                fill: $brand-color-dark
+
+    &__logo
+        align-self: flex-start
+        max-height: 90px
+        max-width: 140px
+        position: absolute
+        top: 0
+        transform: translateY(-50%)
+
+        & + div
+            margin-top: 35px
+
+        & ~ .card__strip
+            bottom: calc(100% + 50px)
+
+    &__count
+        align-self: flex-start
+        margin-bottom: 0
+        height: 31px
+        position: relative
+        vertical-align: middle
+
+        svg
+            fill: $brand-color
+
+        span
+            align-items: flex-end
+            bottom: 0
+            display: flex
+            font-size: 13px
+            justify-content: center
+            left: 0
+            padding-bottom: 7px
+            position: absolute
+            right: 0
+            top: 0
+
+        + .card__copy
+            display: inline-block
+            vertical-align: middle
+
+    &__strip
+        bottom: calc(100% + 10px)
+        left: 10px
+        font-weight: 600
+
+
+    &--poster
+        .card__media
+            opacity: 1
+
+        +hover
+            .card__media
+                opacity: .75

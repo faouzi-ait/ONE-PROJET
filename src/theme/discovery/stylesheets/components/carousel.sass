@@ -1,0 +1,91 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 30px
+
+//***********************************
+
+$carousel-group-background: rgba($brand-color, .24)
+$carousel-group-border-radius: 0 0 10px 0
+$carousel-group-color: $white
+$carousel-group-font-size: 12px
+$carousel-group-margin: 0 $carousel-spacing 10px 0
+$carousel-group-padding: 3px 6px
+
+//***********************************
+
+$carousel-arrow-background-color: $brand-color
+$carousel-arrow-background-size: 40px
+$carousel-arrow-color: $white
+$carousel-arrow-size: 9px
+$carousel-arrow-width: 2px
+$carousel-arrow-shadow: none
+$carousel-arrow-hover-background-color: $base-color
+$carousel-arrow-border-radius: 50%
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 0
+
+//***********************************
+
+$carousel-arrow-small-background-size: 40px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 9px
+$carousel-dots-margin: 0 0 11px 0
+$carousel-dots-radius: 50%
+$carousel-dots-border: 2px solid $base-color
+$carousel-dots-size: 7px
+$carousel-dots-active-background: $base-color
+
+//***********************************
+
+$carousel-scroll-spacing: 20px
+$carousel-scroll-height: 6px
+$carousel-scroll-background: $pumice
+$carousel-scroll-handle-background: $cod-gray
+$carousel-scroll-handle-radius: 3px
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 10px
+$carousel-pager-padding: 20px 0 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+    &__counter
+        font-size: 18px
+        
+    &__group
+        font-weight: 600
+        text-transform: uppercase
+
+    &--fixed-dots
+        .carousel__dot
+            border-color: $white
+
+            &--active
+                background-color: $white
+
+    &--2-items,
+    &--3-items
+        border-bottom-right-radius: 450px
+        .banner
+            border-bottom-right-radius: 0

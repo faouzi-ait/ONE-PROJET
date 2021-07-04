@@ -1,0 +1,32 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$page-controls-padding: 10px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .page-controls
+  background: $dark-brand-color
+  color: $white
+  font-size: (15/16)+rem
+
+  &__count
+    
+    visibility: hidden
+
+  &__right
+    font-size: 18px
+    padding: 5px 25px 3px
+
+    .button__icon
+      margin-right: 5px
+
+  .Select
+    flex-grow: 1
+
+  +breakpoint(medium)
+    .Select
+      margin-right: 0

@@ -1,0 +1,92 @@
+@import '../imports'
+
+$checkbox-size: 20px
+$checkbox-border: 2px solid $base-color-light
+$checkbox-radius: 50%
+$checkbox-bg: $white
+$checkbox-bgsz: 12px 9px
+
+
+$checkbox-border-color-selected: $brand-color
+$checkbox-bg-selected: $white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9'%3E%3Cpath fill='%2312c49d' d='M1.9,3.7L1.9,3.7c-0.4-0.5-1.1-0.5-1.5,0c-0.4,0.4-0.4,1.1,0,1.6l3.2,3.3l0.1,0.1c0.4,0.4,1.1,0.4,1.5,0l6.6-6.8c0.4-0.4,0.4-1.1,0-1.6c-0.4-0.4-1.1-0.4-1.5,0l-5.8,6L1.9,3.7z'/%3E%3C/svg%3E") center center no-repeat
+
+$checkbox-toggle-border: 2px solid $brand-color
+$checkbox-toggle-bgc: $white
+$checkbox-toggle-radius: 22px
+$checkbox-toggle-padding: 4px 18px
+
+$checkbox-toggle-bgc-selected: $brand-color
+$checkbox-toggle-color-selected: $white
+
+$checkbox-label-disabled-color: grey
+
+
+.cms-custom-checkbox
+  display: inline-block
+  margin-right: 10px
+  vertical-align: middle
+
+  &--toggle
+    margin-right: 5px
+
+  &--no-label &
+    &__label
+      height: 24px
+      display: block
+      padding-left: 24px
+
+  &--no-label
+    .table &
+      margin: 0
+
+  &__input
+    display: none
+
+    &:checked
+      + .cms-custom-checkbox__label
+
+        &::before
+          background: $checkbox-bg-selected
+          background-size: $checkbox-bgsz
+          border-color: $checkbox-border-color-selected
+
+  &__label
+    cursor: pointer
+    display: inline-block
+    padding-left: $checkbox-size + 10
+    position: relative
+
+    &--disabled
+      color: $checkbox-label-disabled-color
+      pointer-events: none
+
+    &::before
+      background: $checkbox-bg
+      border: $checkbox-border
+      border-radius: $checkbox-radius
+      content: ''
+      height: $checkbox-size
+      left: 0
+      position: absolute
+      top: 0px
+      transition: border-color .3s, background-color .3s
+      width: $checkbox-size
+
+  &--toggle &
+
+    &__input
+      &:checked
+        + .cms-custom-checkbox__label
+          background-color: $checkbox-toggle-bgc-selected
+          color: $checkbox-toggle-color-selected
+
+    &__label
+      background-color: $checkbox-toggle-bgc
+      border: $checkbox-toggle-border
+      border-radius: $checkbox-toggle-radius
+      font-weight: bold
+      padding: $checkbox-toggle-padding
+      transition: background-color .3s, color .3s
+
+      &::before
+        display: none

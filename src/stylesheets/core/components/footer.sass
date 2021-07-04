@@ -1,0 +1,47 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/footer'
+
+//***********************************
+
+.footer
+  background-color: $footer-bgc
+  padding: $footer-padding
+
+  .container
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .brand
+    margin: $footer-brand-margin
+
+  &__nav
+    margin-top: 40px
+
+  &__list
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+  &__item
+    border-right: 1px solid $white
+    line-height: 1
+
+    &:last-child
+      border-right: none
+      padding-right: 0
+
+  &__link
+    color: $white
+    font-size: 12px
+    text-decoration: none
+    padding: 0 10px
+
+    +hover
+      text-decoration: underline

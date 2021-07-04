@@ -1,0 +1,84 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/inline-video'
+
+//***********************************
+
+.static-video
+  height: calc(100% - 100px)
+  position: relative
+  width: 100%
+
+  iframe,
+  video
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+
+.inline-video,
+.video-js
+  align-items: center
+  background: $black
+  justify-content: center
+  display: flex
+  z-index: 1
+
+  iframe,
+  video
+    max-height: 100%
+    max-width: 100%
+
+  .container &
+    width: 100%
+
+.banner__image .video-js,
+.carousel__item .video-js
+  .vjs-tech
+    top: 50% !important
+    left: 50% !important
+
+.video-js
+  height: auto
+
+  > div
+
+    &:not(.not-hover)
+      .vjs-control-bar
+        display: flex!important
+        transform: none!important
+
+  .rh5v-Overlay_component
+    display: none!important
+  
+  // This is to align with code set by brightcove player
+  .vjs-big-play-button
+    top: 50%
+    left: 50%
+    margin-left: -45px
+    margin-top: -25px
+
+.brightcove-player
+  height: 0
+  padding-bottom: 56.25%
+  width: 80vw
+
+.modal:not(.modal--full-width)
+  .inline-video,
+  .video-js
+    margin: auto
+    max-width: $inline-video-vw + vw
+    height: $inline-video-vw + vh
+    padding-bottom: 0
+    width: $inline-video-vw/57*100 + vh
+
+    &.vjs-fullscreen
+      max-width: none
+
++breakpoint(xsmall)
+  .inline-video
+    width: 100%

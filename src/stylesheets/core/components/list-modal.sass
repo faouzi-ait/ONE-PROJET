@@ -1,0 +1,70 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/list-modal'
+
+//***********************************
+
+.list-modal
+  animation: list-modal-slide-in .3s forwards
+  background: $list-modal-background
+  padding: $list-modal-padding
+  position: relative
+  transform: $list-modal-transform
+  min-height: 35vh
+
+  .container
+    padding: 0 20px
+
+  &--is-hiding
+    animation: list-modal-slide-out .3s forwards
+
+  &__list
+    align-items: center
+    display: flex
+    margin-right: -#{$list-modal-list-spacing}
+    padding: $list-modal-list-padding
+
+    > *
+      flex: none
+      margin-right: $list-modal-list-spacing
+
+  &__title
+    margin: $list-modal-title-margin
+
+  .modal__close
+    background-color: $brand-color
+    border-radius: 50%
+    height: 44px
+    margin-right: -22px
+    right: 50%
+    top: -22px
+    transition: background-color .3s
+    width: 44px
+
+    +hover
+      background-color: $white
+
+      svg
+        fill: $brand-color
+
+    svg
+      fill: $white
+
+  +breakpoint(medium)
+    &__list
+      display: block
+
+    &__title
+      padding-bottom: 10px
+
+@keyframes list-modal-slide-in
+  to
+    transform: none
+
+@keyframes list-modal-slide-out
+  from
+    transform: none
+  to
+    transform: $list-modal-transform

@@ -1,0 +1,56 @@
+@import '../imports'
+
+.resource-list
+  background-color: tint($brand-color, 80%)
+  padding: 20px
+  margin-bottom: 10px
+
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin-right: -20px
+
+  &__item
+    position: relative
+    width: calc(33.33333% - 20px)
+    margin: 20px 20px 0 0
+    background-color: $white
+    padding: 5px
+    box-sizing: border-box
+    min-height: 150px
+
+    img
+      width: 100%
+      display: block
+
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+
+    > *
+      margin: 0 5px
+
+  &__remove
+    position: absolute
+    top: -5px
+    right: -5px
+    width: 20px
+    height: 20px
+    border-radius: 100%
+    background-color: $error-color
+    display: flex
+    border: none
+    outline: none
+    padding: 0
+    align-items: center
+    justify-content: center
+
+    svg
+      width: 10px
+      height: 10px
+      fill: $white
+
+  h3
+    margin: 0

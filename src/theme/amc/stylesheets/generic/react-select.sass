@@ -1,0 +1,99 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$react-select-bgc: transparent
+$react-select-color: $white
+$react-select-border: 0
+$react-select-radius: 0
+$react-select-focused-border: $brand-color
+$react-select-padding: 8px 0 3px 10px
+$react-select-height: 40px
+$react-select-width: 190px
+
+$react-select-single-padding: 6px 0 6px 20px
+$react-select-single-border: 2px solid $brand-color
+
+//***********************************
+
+$react-select-placeholder-color: $white
+
+//***********************************
+
+$react-select-value-bgc: $brand-color
+$react-select-value-radius: 0
+$react-select-value-color: $white
+
+//***********************************
+
+$react-select-menu-border: 1px solid $white
+$react-select-menu-radius: 0
+
+//***********************************
+
+
+$react-select-option-border: white
+$react-select-option-padding: 10px
+$react-select-option-color: $white
+$react-select-option-focus-bgc: $white
+$react-select-option-focus-color: $black
+
+//***********************************
+// Custom Override Styles
+
+.custom:not(.admin) .Select
+  font-weight: 600
+
+  &-control
+    border: 1px solid $white
+    color: $white
+
+    &::after
+      background: $white
+      bottom: 0
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 40px
+      z-index: 1
+
+  &-arrow-zone
+    background: center url(../../images/theme/select-arrow.svg) no-repeat
+    display: block
+    height: 40px
+    margin: -7px 0 -7px 10px
+    padding-left: 40px
+    position: relative
+    z-index: 2
+
+
+  &-menu-outer
+    background: $base-color
+    left: 0
+    margin-top: 0
+    width: calc(100% - 2px)
+
+  &-option
+    transition: background-color .3s, color .3s
+
+  &-input
+    > input
+      color: $white
+
+  &.Select--single
+    .Select-arrow-zone
+      background-position: center
+      padding-left: 40px
+
+    .Select-value,
+    .Select-placeholder
+      color: $white
+
+.custom .per-page
+  .Select-control
+    min-width: 120px

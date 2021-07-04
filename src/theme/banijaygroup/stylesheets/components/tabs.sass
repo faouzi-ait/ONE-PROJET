@@ -1,0 +1,47 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tabs-background: $brand-color
+$tabs-border: solid 2px $brand-color
+$tabs-spacing: 30px
+$tabs-active-color: $white
+$tabs-padding: 11px
+$tabs-border-radius: 4px
+
+//***********************************
+
+$tabs-item-font-size: 15px
+$tabs-item-weight: normal
+$tabs-item-background: $white
+
+//***********************************
+
+$tabs-select-margin: 0 0 20px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tabs
+
+    &--underline
+        .tabs__item
+            border: solid $nobel
+            border-width: 0 0 2px
+
+            &:last-child
+                border-right: none
+
+            &--active
+                border-color: $brand-color
+                border-bottom-width: 4px
+
+    &__item
+        &--active
+            &:last-child
+                border-right: $tabs-border

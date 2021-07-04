@@ -1,0 +1,85 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 80px
+$programme-details-border: 1px solid $mine-shaft
+$programme-details-side-width: 280px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+    padding-bottom: 1px
+
+    .wysiwyg
+        line-height: 1.6
+
+    &__main,
+    &__side
+        padding-top: 20px
+
+    &__main
+        > .wysiwyg
+            margin-bottom: 30px
+
+    &__side
+        .tags
+            margin-bottom: 25px
+            margin-top: -5px
+            align-items: center
+
+        .tag:not(:last-child)
+            &:after
+                content: ','
+                font-size: 18px
+                line-height: 0.6
+
+                
+
+    &__series
+        padding-right: 120px
+
+    &__breakdown
+        p
+            color: $white
+            font-size: 24px
+            margin: 0 0 23px
+
+        strong
+            font-weight: normal
+
+    .asset
+        margin-bottom: 70px
+
+    .attributes
+        max-width: 623px
+
+    .gallery--static
+        &__item
+            margin-right: 30px
+            width: calc(25% - 30px)
+
+    +breakpoint(large)
+        &__main
+            margin-right: 0
+            padding-right: 0
+            border-right: none
+            padding-top: 0
+
+    +breakpoint(medium)
+        > .wysiwyg
+            columns: 1
+            margin-bottom: 20px
+
+        .asset
+            margin-bottom: 30px
+
+        &__breakdown
+            p
+                font-size: 18px
+                margin-bottom: 10px
+
+        &__series
+            padding-right: 0

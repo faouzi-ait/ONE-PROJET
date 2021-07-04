@@ -1,0 +1,74 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$grid-gutter: 20px
+$grid-margin-bottom: -20px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .grid
+  margin-right: -#{$grid-gutter}
+  > *
+    margin-right: $grid-gutter
+    margin-bottom: $grid-gutter
+
+  &--five
+    .card--tall 
+      .card__content
+        padding-left: 15px
+        padding-right: 15px
+        
+      .card__title
+        font-size: 24px
+        margin-bottom: 10px
+
+  +breakpoint(xlarge)
+    &--five
+      .card--tall 
+          
+        .card__title
+          font-size: 20px
+
+  +breakpoint(large)
+    &--five
+        > *
+          width: calc(33.333% - #{$grid-gutter})
+
+  +breakpoint(medium, min)
+    &--three
+      margin-bottom: -48px
+
+      > *
+        margin-bottom: 48px
+
+  +breakpoint(910px)
+
+    &--three
+      > *
+        width: calc(50% - #{$grid-gutter})
+
+  +breakpoint(xsmall)
+    margin-right: 0
+
+    > *
+      margin-right: 0
+      width: 100%
+
+    &--five
+      display: flex
+      margin-right: -#{$grid-gutter}
+      > *
+        margin-right: $grid-gutter
+        width: calc(50% - #{$grid-gutter})
+
+    &--two
+      > *
+        width: 100%
+        
+      
+.custom .container--slim
+  .grid--three > *
+    margin-bottom: $grid-gutter

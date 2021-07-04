@@ -1,0 +1,36 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$chart-placeholder-bg: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .chart
+  text
+    font-family: $base-font-family !important
+
+  .highcharts-legend
+    text
+
+      &:hover, &:focus
+        text-decoration: underline
+
+  .button
+    font-size: 18px
+    padding: 10px 6px 11px
+
+  +breakpoint(xlarge)
+    &__controls
+      text-align: center
+
+    .custom-select,
+    .react-datepicker__input-container
+      margin: 0 auto 10px
+      text-align: center

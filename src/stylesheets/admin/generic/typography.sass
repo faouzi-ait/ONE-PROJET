@@ -1,0 +1,48 @@
+// @import '../imports'
+
+.cms-page
+  color: $base-color
+  font-family: $droid
+  font-size: 16px
+  line-height: $base-line-height
+
+  ::selection
+    background-color: rgba($brand-color, .8)
+    color: $white
+
+  ::-moz-selection
+    background-color: rgba($brand-color, .8)
+    color: $white
+
+.text-button
+  background: transparent
+  border: 0
+  color: $brand-color
+  cursor: pointer
+  display: inline
+  font-family: $droid
+  font-size: $base-font-size
+  margin: 0
+  outline: none
+  padding: 0
+
+.info
+  color: $casper
+  font-size: 14px
+  font-style: italic
+
+  + .form__control--actions
+    margin-top: 0
+
+#admin
+  .heading,
+  .cms-heading
+    &--one
+      font-family: $droid
+      font-weight: 700
+    &--two
+      font-family: $droid
+      font-weight: 700
+    &--three
+      font-family: $droid
+      font-weight: 700

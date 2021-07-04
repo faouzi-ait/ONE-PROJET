@@ -1,0 +1,42 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/contact'
+
+//***********************************
+
+.contact
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+  &__image
+    display: block
+    width: $contact-image-size
+    height: $contact-image-size
+    border-radius: $contact-image-border-radius
+
+  &__info
+    margin-left: $contact-info-margin
+
+  &__name
+    margin: 0
+
+  &__jobtitle
+    margin: 0
+    font-size: $contact-jobtitle-font-size
+
+  &__phone
+    margin-left: $contact-detail-margin
+
+  &__email
+    margin-left: $contact-detail-margin
+
+  +breakpoint(medium)
+
+    &__phone,
+    &__email
+      width: 100%
+      margin-left: 0
+      margin-top: 10px

@@ -1,0 +1,67 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$form-width: 980px
+$form-skinny-width: 400px
+
+//***********************************
+
+$form-input-padding: 10px 20px
+$form-input-radius: 4px
+$form-textarea-radius: 4px
+$form-input-border: 2px solid $brand-color
+$form-input-focus-border: $tyrian
+$form-textarea-height: 120px
+$form-input-phone-padding: 3px 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .form
+
+  &__label
+    font-size: 12px
+    font-family: $sub-font-family
+    font-weight: normal
+    margin-bottom: 5px
+
+  &__error
+    font-family: $sub-font-family
+    font-weight: normal
+
+  &__input
+    font-size: 14px
+
+  &__group
+    .delete
+      margin-top: 32px
+
+    & + .form__control--bordered
+      margin-top: 20px
+
+  &__control
+    > p
+      font-family: $sub-font-family
+      font-size: 15px
+
+      &.form__info
+        font-size: 12px
+
+    &--bordered
+      border-color: $nobel
+      margin-top: 40px
+      padding-top: 40px
+
+    &--large
+
+      .form__input
+        border-radius: none
+        padding: 16px 20px
+
+    

@@ -1,0 +1,89 @@
+//***********************************
+// Typography
+//***********************************
+
+@font-face
+  font-family: 'berlingskeSans'
+  src: url('/assets/fonts/BerlingskeSans-Rg.woff2') format('woff2'), url('/assets/fonts/BerlingskeSans-Rg.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+  font-display: auto
+
+@font-face
+  font-family: 'berlingskeSans'
+  src: url('/assets/fonts/BerlingskeSans-Bd.woff2') format('woff2'), url('/assets/fonts/BerlingskeSans-Bd.woff') format('woff')
+  font-weight: 600
+  font-display: auto
+
+@font-face
+  font-family: 'berlingskeSans'
+  src: url('/assets/fonts/BerlingskeSans-XBd.woff2') format('woff2'), url('/assets/fonts/BerlingskeSans-XBd.woff') format('woff')
+  font-weight: 800
+  font-display: auto
+
+@font-face
+  font-family: 'berlingskeSerif'
+  src: url('/assets/fonts/BerlingskeSerif-Rg.woff2') format('woff2'), url('/assets/fonts/BerlingskeSerif-Rg.woff') format('woff')
+  font-weight: normal
+  font-display: auto
+  font-style: normal
+
+$base-font-family: 'berlingskeSerif', serif
+$base-font-size: 20px
+$base-font-weight: normal
+$base-letter-spacing: 0
+$base-line-height: 1.25
+$base-font-smoothing: antialiased
+$heading-sizes: (1: 72px, 2: 35px, 3: 24px)
+$base-heading-weight: normal
+$secondary-font-family: 'berlingskeSans', sans-serif
+
+//***********************************
+// Colors
+//***********************************
+
+$athens-gray: #eff1f3
+$black: #000
+$brick-red: #d94857
+$bunker: #2a2f2f
+$casper: #a9b1bc
+$white: #fff
+$gamboge: #ef990b
+$ufo-green: #1ECD6E
+
+$delta: #A6A6A5
+$nobel: #B5B5B5
+$claret: #7F2346
+$cod-gray: #111111
+$cinnabar: #F43440
+$dove-gray: #616161
+$cloudy: #AFA99F
+$abbey: #4E5859
+$mine-shaft: #3F3F3F
+$shark: #202222
+$siroco: #798586
+$outer-space: #292C2C
+$iron: #C9CFD3
+
+//***********************************
+// Color Shortcuts
+//***********************************
+
+$base-color-dark: $shark
+$base-color: $cod-gray
+$base-color-light: $casper
+$error-color: $brick-red
+$success-color: $ufo-green
+$warning-color: $gamboge
+$background-color: $shark
+
+//***********************************
+// Breakpoints
+//***********************************
+
+$breakpoints: (xsmall: 567, small: 639, medium: 768, large: 1024, xlarge: 1279)
+
+//***********************************
+// Animation
+//***********************************
+$easing: cubic-bezier(0.86, 0, 0.07, 1)

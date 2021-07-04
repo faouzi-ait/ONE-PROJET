@@ -1,0 +1,69 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+@import '../../_theme/components/account-navigation'
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.account-navigation
+  background: $account-navigation-bg-color
+  padding: $account-navigation-padding
+  position: relative
+  z-index: 2
+
+  &__list
+    align-items: center
+    display: flex
+    list-style: none
+    flex-wrap: wrap
+    justify-content: $account-navigation-list-align
+    margin: 0
+    padding: 0
+
+  &__item
+    border: solid $account-navigation-divider-color
+    border-width: 0 $account-navigation-divider-width 0 0
+    color: $account-navigation-color
+    font-size: $account-navigation-font-size
+    font-weight: $account-navigation-font-weight
+    padding-right: $account-navigation-item-spacing
+    margin-right: $account-navigation-item-spacing
+
+    &:last-child
+      border: none
+      padding-right: 0
+      margin-right: 0
+
+  &__link
+    align-items: center
+    color: $account-navigation-color
+    display: flex
+    text-decoration: none
+    transition: color .5s $easing
+
+    +hover
+      color: $account-navigation-hover-color
+
+    &.active
+      color: $account-navigation-hover-color
+
+  &__select
+    display: none
+
+  &__icon
+    fill: $account-navigation-color
+    margin-right: 20px
+
+  +breakpoint(small)
+    &__list
+      display: none
+
+    &__select
+      display: block

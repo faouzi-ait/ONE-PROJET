@@ -1,0 +1,77 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$stat-border: 1px solid $oslo
+$stat-radius: 6px
+$stat-title-size: 16px
+$stat-title-padding: 8px 10px
+$stat-detail-size: 40px
+$stat-add-size: 14px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .statistic
+  &__title
+    background-color: $river-bed
+    font-weight: 500
+    text-transform: none
+    margin: -1px
+    border-radius: $stat-radius $stat-radius 0 0
+
+  &__detail
+    color: $white
+    margin: 10px 0
+    line-height: 1
+
+  &__box
+    padding-bottom: 25px
+
+    + .statistic__additional
+      margin-top: -30px
+
+  &__additional
+    color: $silver
+    font-weight: bold
+
+  &__label
+    color: $white
+    font-size: 18px
+    font-weight: bold
+    text-transform: uppercase
+
+  &--inline
+    padding-right: 0
+    &:after
+      border-color: $wildsand
+      height: 70%
+  
+  +breakpoint(medium)
+    &--inline
+      &:after
+        display: block
+
+      .statistic__detail
+        font-size: 32px
+
+  +breakpoint(small)
+    &--inline
+      position: relative
+      &:after
+        border-width: 30px
+        height: 1px
+        width: 0
+        min-height: 0
+        position: absolute
+        bottom: -10px
+        left: 0
+        margin-left: 0
+
+      .statistic__detail
+        font-size: 24px

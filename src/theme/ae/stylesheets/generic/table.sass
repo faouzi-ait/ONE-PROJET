@@ -1,0 +1,66 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$th-bgc: $rhino
+$th-border-color: $background-color
+$th-font-size: 20px
+$th-font-weight: bold
+$th-padding: 10px 30px
+
+$td-bgc: rgba($river-bed, .5)
+$td-border-color: $background-color
+$td-font-size: 16px
+$td-padding: 12px 30px
+$table-radius: 4px
+
+.custom .table
+  &__sort
+    color: $white
+    font-size: 16px
+
+    &:after
+      border-color: $white
+
+  th
+    border-left: none
+
+  tr
+    border-radius: 4px
+
+    &.with-action
+      +hover
+        td,
+        th
+          background-color: $river-bed
+
+  td
+    border-bottom-width: 2px
+
+    &:first-child
+      border-bottom-left-radius: $table-radius
+      border-top-left-radius: $table-radius
+
+    &:last-child
+      border-bottom-right-radius: $table-radius
+      border-top-right-radius: $table-radius
+
+    &.table__image
+      padding-left: 10px
+
+      img
+        width: calc(100% + 20px)
+        &:first-child
+          margin: 0
+
+  &--report 
+    tbody tr:nth-child(even) td
+      background-color: rgba($river-bed, .5)
+
+  &--hover
+    tbody tr:hover td
+      background-color: $river-bed

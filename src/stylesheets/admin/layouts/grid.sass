@@ -1,0 +1,107 @@
+$grid-gutter: 20px
+$grid-margin-bottom: 20px
+
+.grid
+  display: flex
+  margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+  > *
+    flex: none
+    margin-right: $grid-gutter
+
+  &--stretch
+
+    > *:not(.cms-form__control--shrink)
+      flex: 1
+
+  &--justify
+    justify-content: center
+
+  &--end
+    justify-content: flex-end
+
+  &--two
+    flex-wrap: wrap
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+      width: calc(50% - #{$grid-gutter})
+
+  &--center
+    align-items: center
+
+  &--three
+    flex-wrap: wrap
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+      width: calc(33.333% - #{$grid-gutter})
+
+  &--four
+    flex-wrap: wrap
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+      width: calc(25% - #{$grid-gutter})
+
+  &--six
+    flex-wrap: wrap
+    margin: 0 -#{$grid-gutter} $grid-margin-bottom 0
+
+    > *
+      margin: 0 $grid-gutter $grid-gutter 0
+      width: calc(16.666666% - #{$grid-gutter})
+
+  +breakpoint(xlarge)
+
+    &--three
+      > *
+        width: calc(50% - #{$grid-gutter})
+
+  +breakpoint(large)
+
+    &--four
+      > *
+        width: calc(33.333333% - #{$grid-gutter})
+
+    &--six
+      > *
+        width: calc(33.333333% - #{$grid-gutter})
+
+  +breakpoint(medium)
+
+    &--four
+      > *
+        width: calc(50% - #{$grid-gutter})
+
+    &--six
+      > *
+        width: calc(50% - #{$grid-gutter})
+
+    &--two
+      > *
+        width: calc(100% - #{$grid-gutter})
+
+  +breakpoint(xsmall)
+    display: block
+    margin-right: 0
+
+    > *
+      margin-right: 0
+      width: 100%
+
+
+  +breakpoint(1400px)
+    .mock-page &
+      &.grid--four
+        > *
+          width: calc(33.33% - #{$grid-gutter})
+
+  +breakpoint(1200px)
+    .mock-page &
+      &.grid--four
+        > *
+          width: calc(50% - #{$grid-gutter})

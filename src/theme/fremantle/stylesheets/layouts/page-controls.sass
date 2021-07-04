@@ -1,0 +1,48 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$page-controls-padding: 20px 0 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .page-controls
+    > *
+        margin-bottom: 10px
+
+    &__count
+        color: $white
+        margin-top: 0
+
+    &__control
+        font-size: 15px
+        color: $abbey
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+        font-weight: 600
+        padding: 0 28px
+        text-transform: uppercase
+
+    &__center
+        margin-left: 0
+        margin-right: 0
+
+    &__right + .page-controls__right
+        margin-left: 20px
+
+    .per-page
+        .Select-control
+            min-width: 100px
+
+    +breakpoint(large)
+        &__control
+            padding-left: 0
+            padding-right: 10px
+
+        &__right + .page-controls__right
+            margin-left: auto
+
+    +breakpoint(medium)
+        padding-top: 0

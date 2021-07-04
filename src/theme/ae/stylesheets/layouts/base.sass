@@ -1,0 +1,114 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$body-bgc: $background-color
+$body-margin: 0
+$body-padding: 0
+
+//***********************************
+
+$page-before-color: rgba($base-color, .8)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+
+  .page
+    margin: 0 auto
+    max-width: 1600px
+
+  ::-webkit-scrollbar-track
+    background: transparent
+
+  ::-webkit-scrollbar-thumb
+    background: $oslo
+
+  main
+    @each $genre, $color in $genre-colors
+
+      &.#{$genre}
+        .banner__content:before
+          @include title-marker
+          height: 62px
+          width: 9px
+          left: -20px
+          top: 8px
+
+          +breakpoint(1390, min)
+            left: calc(-50vw + 682px)
+
+          +breakpoint(1600, min)
+            left: -125px
+
+        .banner__content:before,
+        .content-block__heading:before
+          background: linear-gradient(map-get($color, 'light'), map-get($color, 'dark'))
+
+        .banner__iefix + .breadcrumbs
+
+          & + .content-block
+            background: transparent
+            position: relative
+            margin-top: -50px
+            z-index: 1
+
+          & + .section--shade,
+          & + .content-block + .section--shade
+            background: transparent
+            padding-top: 0
+            position: relative
+            z-index: 1
+
+  +breakpoint(1600px)
+    .page
+      max-width: 94vw
+
+  +breakpoint(largePlus)
+    .page
+      max-width: 100vw
+
+  +breakpoint(medium)
+
+    main
+      @each $genre, $color in $genre-colors
+
+        &.#{$genre}
+          .banner__content:before
+            height: 42px
+
+    .menu-open .page__wrapper
+      pointer-events: none
+
+  +breakpoint(small)
+
+    main
+      @each $genre, $color in $genre-colors
+
+        &.#{$genre}
+          .banner__content:before
+            height: 32px
+            top: 4px
+
+  
+#app .custom,
+.mock-page
+  color: $white
+
+.account-cards
+  > div:first-child,
+    width: calc(66.666% - 26px)
+
++breakpoint(medium)
+  .account-cards
+    > div:first-child,
+      width: calc(100% - 26px)
+
++breakpoint(small)
+  .account-cards
+    > div:first-child,
+      width: 100%
+
+  

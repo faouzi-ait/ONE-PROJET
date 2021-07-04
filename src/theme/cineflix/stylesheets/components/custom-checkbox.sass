@@ -1,0 +1,47 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$checkbox-size: 20px
+$checkbox-border: 2px solid $orient
+$checkbox-radius: 50%
+$checkbox-bg: $white
+$checkbox-bgsz: 12px 9px
+
+//***********************************
+
+$checkbox-border-color-selected: $orient
+$checkbox-bg-selected: $white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9'%3E%3Cpath fill='%23005681' d='M1.9,3.7L1.9,3.7c-0.4-0.5-1.1-0.5-1.5,0c-0.4,0.4-0.4,1.1,0,1.6l3.2,3.3l0.1,0.1c0.4,0.4,1.1,0.4,1.5,0l6.6-6.8c0.4-0.4,0.4-1.1,0-1.6c-0.4-0.4-1.1-0.4-1.5,0l-5.8,6L1.9,3.7z'/%3E%3C/svg%3E") center center no-repeat
+
+//***********************************
+
+$checkbox-toggle-border: 2px solid $orient
+$checkbox-toggle-bgc: $white
+$checkbox-toggle-radius: 22px
+$checkbox-toggle-padding: 4px 18px
+
+//***********************************
+
+$checkbox-toggle-bgc-selected: $orient
+$checkbox-toggle-color-selected: $white
+
+//***********************************
+
+$checkbox-label-disabled-color: grey
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .custom-checkbox
+    &__label
+        color: $mako
+        font-size: (15/16)+rem
+        font-weight: 300
+        text-transform: none
+

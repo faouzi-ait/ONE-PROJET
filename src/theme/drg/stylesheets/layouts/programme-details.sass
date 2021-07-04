@@ -1,0 +1,35 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 50px
+$programme-details-border: 0
+$programme-details-side-width: 300px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  .modal__content
+    input
+      border: 1px solid $iron
+
+  &__heading
+    border-bottom: 1px solid $iron
+    padding-bottom: 15px
+
+  +breakpoint(xlarge)
+    &__main
+      margin-right: 40px
+      padding-right: 40px
+
+  +breakpoint(large)
+    &__main
+      border: 0
+      border-bottom: $programme-details-border
+      margin: 0
+      margin-bottom: 30px
+      padding: 0
+      padding-bottom: 30px

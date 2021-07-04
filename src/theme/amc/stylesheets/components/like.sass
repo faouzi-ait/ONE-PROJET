@@ -1,0 +1,44 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card .like
+  top: 22px
+  right: auto
+  left: 50px
+
+  &:first-child
+    left: 10px
+
+.custom .like
+  color: $base-color
+  
+  &__menu
+    right: auto
+    left: -35px
+
+    &::before
+      left: 41px
+
+    &::after
+      left: 39px
+      width: 21px
+
+  &__trigger
+    &--its_ok
+      background-color: $brand-color
+
+  &__button
+    &--ok
+      &::before
+        background-color: $brand-color

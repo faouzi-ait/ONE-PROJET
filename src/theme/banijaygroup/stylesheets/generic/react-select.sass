@@ -1,0 +1,79 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$react-select-bgc: $white
+$react-select-color: $base-color
+$react-select-border: 2px solid $brand-color
+$react-select-radius: 4px
+$react-select-focused-border: $brand-color
+$react-select-padding: 8px 0 3px 10px
+$react-select-height: 50px
+$react-select-width: 190px
+
+$react-select-single-padding: 5px 0 5px 20px
+$react-select-single-border: 2px solid $brand-color
+
+//***********************************
+
+$react-select-placeholder-color: $base-color-light
+
+//***********************************
+
+$react-select-value-bgc: $brand-color
+$react-select-value-radius: 4px
+$react-select-value-color: $white
+
+//***********************************
+
+$react-select-menu-border: 2px solid $brand-color
+$react-select-menu-radius: 4px
+
+//***********************************
+
+$react-select-option-border: 1px solid $brand-color
+$react-select-option-padding: 10px
+$react-select-option-color: $base-color
+$react-select-option-focus-bgc: $brand-color
+$react-select-option-focus-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .Select
+
+    &.Select--single
+        .Select-placeholder,
+        .Select-value
+            font-size: 14px
+
+        .Select-arrow-zone
+            background: $brand-color url(../../images/theme/select-arrow-white.svg) 13px no-repeat
+            border-radius: 0 4px 4px 0
+            height: 50px
+            margin: -7px -1px -7px 10px
+            padding-left: 40px
+
+        .Select-multi-value-wrapper
+            max-width: none
+
+        .Select-clear-zone
+            padding-right: 10px
+
+    &-value-icon
+        color: $white
+
+    &-menu-outer
+        left: 0
+        width: 100%
+
+.custom
+    .react-datepicker__input-container 
+        input
+            font-size: 14px
+            font-family: $sub-font-family

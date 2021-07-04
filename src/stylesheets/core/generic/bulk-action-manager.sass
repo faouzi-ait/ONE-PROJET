@@ -1,0 +1,60 @@
+@import '../../_theme/components/bulk-action-manager'
+
+.bulk-manager
+  position: relative
+  background-color: transparent
+  min-width: 510px
+  height: $contols-height
+  display: flex
+  justify-content: flex-end
+
+  &__actions
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 120px
+    height: $contols-height
+
+  &__select-all
+    margin-left: 10px
+    display: flex
+    text-align: right
+    align-items: center
+    height: $contols-height
+    min-width: 145px
+
+  &__select-all-label
+    font-size: 16px
+    font-weight: normal
+    padding-right: 8px
+
+  &__basket
+    display: flex
+    align-items: center
+    justify-content: center
+    height: $contols-height
+    padding-right: 14px
+
+  +breakpoint(large)
+    justify-content: center
+    margin-bottom: 0px
+    margin-top: 10px
+
+  +breakpoint(small)
+    height: 135px
+    width: 375px
+    min-width: 375px
+    flex-wrap: wrap-reverse
+    flex-direction: row-reverse
+    align-items: flex-end
+    margin-bottom: 20px
+
+    &__basket
+      height: 40px
+      min-width: 330px
+      align-items: flex-end
+      .button
+        margin-right: auto
+
+
+

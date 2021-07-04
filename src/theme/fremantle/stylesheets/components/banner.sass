@@ -1,0 +1,154 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 770px
+$banner-tablet-min-height: 400px
+$banner-mobile-min-height: 244px
+$banner-short-min-height: 350px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 0
+$banner-tablet-content-padding: 0
+$banner-content-width: 100%
+
+//***********************************
+
+$banner-intro-min-height: 350px
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 100px 0 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 10px
+
+//***********************************
+
+$banner-copy-margin: 0 0 25px
+$banner-copy-size: 18px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  align-items: flex-end
+  background-color: $base-color
+
+  &:after
+    background: linear-gradient(180deg, rgba($shark,0) 0%, $shark calc(100% - 40px))
+    bottom: 0
+    height: 200px
+    top: auto
+    z-index: 2
+  
+  &__content
+    position: relative
+
+  &__copy
+    font-family: $secondary-font-family
+    letter-spacing: 0.5px
+    line-height: 1.6
+    max-width: 66.666%
+
+  .button:last-child,
+  &__actions
+    bottom: 0
+    right: 0
+    position: absolute
+
+  &--center
+    .banner__copy
+      margin-left: auto
+      margin-right: auto
+
+  &--programme
+    &:after
+      background: linear-gradient(180deg, rgba($base-color,0) 0%, $base-color calc(100% - 40px))
+
+    .banner__copy
+      max-width: calc(100% - 240px)
+
+    .banner__title
+      padding-right: 180px
+
+  +breakpoint(1025px)
+    &:not(.banner--short):not(.banner--intro)
+      min-height: 600px
+
+  +breakpoint(large)
+    &__copy
+      line-height: 1.4
+
+  +breakpoint(medium)
+    flex-direction: column
+    &--short,
+    &--intro
+      min-height: $banner-tablet-min-height
+      
+    &:not(.banner--short):not(.banner--intro)
+      min-height: 0
+
+    &__copy
+      font-size: 16px
+      max-width: none
+
+    .container
+      order: 2
+      margin-top: -50px
+      min-height: 50px
+
+    &__image
+      height: $banner-tablet-min-height
+      position: relative
+      order: 1
+
+      &:after
+        background: linear-gradient(180deg, rgba($base-color,0) 0%, $base-color 100%)
+        bottom: 0
+        content: ''
+        height: 60px
+        position: absolute
+        width: 100%
+
+    &__media
+      max-height: $banner-tablet-min-height
+      position: relative
+      transform: translateX(-50%)
+      top: 0
+
+    .button:last-child,
+    &__actions
+      position: static
+
+    &--programme
+      &:after 
+        display: none
+
+      .banner__copy
+        max-width: none
+
+      .banner__title
+        padding-right: 0
+
+    +breakpoint(small)
+      &--short,
+      &--intro
+        min-height: $banner-mobile-min-height
+
+      &__image
+        height: $banner-mobile-min-height
+
+      &__media
+        max-height: $banner-mobile-min-height
+
+
+
+    

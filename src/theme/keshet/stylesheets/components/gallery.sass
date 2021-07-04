@@ -1,0 +1,51 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$gallery-display: flex
+$gallery-overflow: auto
+
+//***********************************
+
+$gallery-modal-content-padding: 20px
+$gallery-modal-content-position: absolute
+$gallery-modal-content-bottom: 0px
+$gallery-modal-content-background: linear-gradient(180deg, rgba($black,0), rgba($black,0.7))
+
+//***********************************
+
+$gallery-modal-caption-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .gallery
+    &-modal
+        &__arrow
+            background: url('../../../images/theme/btn-pebble-white.svg') no-repeat
+            background-size: 100%
+            border-radius: 0
+            height: 42px
+            width: 40px
+            bottom: 15px
+            position: absolute
+            right: 20px
+
+            &--prev
+                right: 70px
+
+            &::after
+                border-color: $base-color
+                height: 8px
+                width: 8px
+
+    &--static
+        .gallery__item
+            margin-right: 20px
+            max-width: none
+            width: calc(33.333% - 20px)

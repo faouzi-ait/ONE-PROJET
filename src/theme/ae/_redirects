@@ -1,0 +1,28 @@
+https://aenetworks.rawnet.one/   https://catalogue.aenetworks.com   301!
+https://aenetworks.rawnet.one/*   https://catalogue.aenetworks.com/:splat   301
+
+/biopics /catalogue?filter[genre]=423&filter[catalogue]=3  301!
+/thrillers /catalogue?filter[genre]=433&filter[catalogue]=3  301!
+/true-crime /catalogue?filter[genre]=432&filter[catalogue]=3  301!
+/holidays /catalogue?filter[genre]=435&filter[catalogue]=3  301!
+/rom-com /catalogue?filter[genre]=438&filter[catalogue]=3  301!
+/teen /catalogue?filter[genre]=434&filter[catalogue]=3  301!
+/best-seller-adaptations /catalogue?filter[genre]=436&filter[catalogue]=3  301!
+
+/drama /catalogue?filter[genre]=419&filter[catalogue]=2  301!
+/young-adult /catalogue?filter[genre]=428&filter[catalogue]=2  301!
+/action-adventure /catalogue?filter[genre]=424&filter[catalogue]=2  301!
+/comedy /catalogue?filter[genre]=427&filter[catalogue]=2  301!
+/thriller-and-horror /catalogue?filter[genre]=427&filter[catalogue]=2  301!
+
+/lifestyle-formats /catalogue?filter[genre]=364&filter[catalogue]=4  301!
+/scripted-formats /catalogue?filter[genre]=219&filter[catalogue]=4  301!
+/factual-formats /catalogue?filter[genre]=366&filter[catalogue]=4  301!
+/entertainment /catalogue?filter[genre]=368&filter[catalogue]=4  301!
+/reality /catalogue?filter[genre]=365&filter[catalogue]=4  301!
+/competition /catalogue?filter[genre]=216&filter[catalogue]=4  301!
+/game-quiz /catalogue?filter[genre]=367&filter[catalogue]=4  301!
+/relationships /catalogue?filter[genre]=94&filter[catalogue]=4  301!
+/factual-entertainment /catalogue?filter[genre]=363&filter[catalogue]=4  301!
+
+/*   /index.html   200

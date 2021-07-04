@@ -1,0 +1,180 @@
+button
+  border-radius: 0
+
+.cms-button,
+.custom .cms-button
+  background-color: transparent
+  border: 2px solid $brand-color
+  border-radius: 100px
+  color: $base-color
+  cursor: pointer
+  display: inline-block
+  font-family: $droid
+  font-size: 16px
+  font-weight: bold
+  letter-spacing: 0
+  line-height: 1.5
+  padding: 9px 30px
+  text-align: center
+  text-decoration: none
+  text-transform: none
+  transition: background-color .3s, color .3s, border-color .3s
+  white-space: nowrap
+
+  &[disabled]
+    opacity: .25
+    cursor: default
+    pointer-events: none
+
+  &--small
+    font-size: 14px
+    padding: 5px 20px
+
+  &--smallest
+    font-size: 12px
+    padding: 0 12px  
+
+  &--loading
+    font-size: 0
+    pointer-events: none
+    position: relative
+
+    &::before
+      animation: rotate-alt 1s infinite linear
+      border: 2px solid tint($brand-color, 40%)
+      border-bottom-color: transparent
+      border-radius: 50%
+      content: ''
+      display: block
+      height: 20px
+      margin: 0 auto
+      position: static
+      width: 20px
+
+    &::after
+      animation: rotate 1s infinite linear
+      border: 2px solid $brand-color
+      border-left-color: transparent
+      border-radius: 50%
+      content: ''
+      height: 14px
+      left: 50%
+      margin: -9px 0 0 -9px
+      position: absolute
+      top: 50%
+      width: 14px
+
+  &__icon
+    display: inline-block
+    fill: $base-color
+    margin-right: 10px
+    transform: translateY(-1px)
+    transition: fill .3s
+    vertical-align: middle
+
+  +hover
+    background-color: $brand-color
+    color: $white
+
+    .cms-button__icon
+      fill: $white
+
+  &--null
+    background-color: $base-color
+    border: none
+    color: $white
+
+    +hover
+      background-color: tint($base-color, 10%)
+
+  &--error
+    background-color: $brick-red
+    border: none
+    color: $white
+
+    &.cms-button--loading
+      &::before
+        border-color: rgba($white, .4)
+        border-bottom-color: transparent
+
+      &::after
+        border-color: $white
+        border-left-color: transparent
+
+    +hover
+      background-color: shade($brick-red, 10%)
+
+  &--block
+    box-sizing: border-box
+    display: block
+    width: 100%
+
+  &--filled
+    background-color: $brand-color
+    color: $white
+    border: none
+
+    &.cms-button--danger
+      background-color: $brick-red
+      border-color: transparent !important
+
+      +hover
+        background-color: shade($brick-red, 10%)
+
+    &.cms-button--loading
+      background-color: tint($brand-color, 80%) !important
+      border-color: transparent !important
+
+    &.cms-button--reversed
+      background-color: $white
+      color: $base-color
+
+      &.cms-button--loading
+        background-color: rgba($white, .2) !important
+        border-color: transparent !important
+
+        &::before
+          border-color: rgba($white, .5)
+          border-bottom-color: transparent
+
+        &::after
+          border-color: $white
+          border-left-color: transparent
+
+      +hover
+        background-color: rgba($white, .8)
+
+    .cms-button__icon
+      fill: $white
+
+    +hover
+      background-color: shade($brand-color, 10%)
+      border-color: shade($brand-color, 10%)
+
+  &--reversed
+    border-color: $white
+    color: $white
+
+    +hover
+      background-color: $white
+      border-color: $white
+      color: $base-color
+
+  &--icon
+    padding: 0 10px
+
+    .cms-button__icon
+      margin-right: 0
+
+
+@keyframes rotate
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+@keyframes rotate-alt
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(-360deg)

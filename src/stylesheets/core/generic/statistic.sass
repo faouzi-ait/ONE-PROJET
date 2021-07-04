@@ -1,0 +1,63 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/statistic'
+
+//***********************************
+
+.statistic
+  text-align: center
+
+  &--inline
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    padding-right: 20px
+    text-align: left
+
+    &:after
+      border-right: $stat-border
+      content: ''
+      height: 100%
+      margin-left: 30px
+      min-height: 20px
+
+    &:last-child
+      padding-right: 0
+
+      &:after
+        display: none
+
+    .statistic__detail
+      margin-right: 10px
+
+  &__box
+    border: $stat-border
+    border-radius: $stat-radius
+
+  &__title
+    background-color: $brand-color
+    color: $white
+    font-size: $stat-title-size
+    font-weight: bold
+    margin: 0
+    padding: $stat-title-padding
+    text-transform: uppercase
+
+  &__detail
+    font-size: $stat-detail-size
+    font-weight: bold
+
+  &__label
+    font-size: calc(#{$stat-detail-size} - 10px)
+
+  &__additional
+    font-size: $stat-add-size
+    margin: 10px 0 0
+
+  +breakpoint(medium)
+    &--inline
+
+      &:after
+        display: none

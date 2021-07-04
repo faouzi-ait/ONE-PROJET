@@ -1,0 +1,60 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$footer-bgc: $brand-color
+$footer-padding: 30px 0
+
+//***********************************
+
+$footer-brand-margin: 0 auto
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .footer
+  border-top: solid 6px $base-color-light
+
+  > *
+    flex: 0 0 auto
+    
+  .brand
+    max-width: 250px
+    margin-bottom: 30px
+
+  &__nav
+    border-top: solid 1px $base-color
+    margin-top: 0
+    padding-top: 40px
+    width: 100%
+
+  &__link
+    font-size: 13px
+    line-height: 1
+
+  &__list
+    justify-content: center
+
+  &__copy
+    color: $white
+    font-size: 13px
+    margin: 15px 0
+    text-align: center
+
+  +breakpoint(small)
+    padding-top: 20px
+    padding-bottom: 20px
+    
+    .brand
+      max-width: 160px
+      margin-bottom: 10px
+
+    &__nav
+      margin-top: 20px
+
+      

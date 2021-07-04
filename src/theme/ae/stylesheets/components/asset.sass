@@ -1,0 +1,37 @@
+//***********************************
+
+@import '../../core/imports'
+
+//********************************\***
+// Theme Variables
+//***********************************
+
+$asset-border-color: transparent
+$asset-selected-bg: rgba($emperor, .5)
+$asset-padding: 17px
+$asset-font-size: 14px
+$asset-font-family: $base-font-family
+$asset-media-bg: $athens-gray
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .asset
+  color: $wildsand
+
+  &__file,
+  &__size
+    font-size: 14px
+
+  &__size
+    color: $wildsand
+
+  &__media
+    min-width: 75px
+
+  &--display
+    .asset__media
+      height: 50px
+      min-width: 0
+      width: 35px

@@ -1,0 +1,120 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 900px
+$banner-tablet-min-height: 780px
+$banner-mobile-min-height: 540px
+$banner-short-min-height: 450px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 20px 0 80px
+$banner-tablet-content-padding: 20px 0 50px
+$banner-content-width: 680px
+
+//***********************************
+
+$banner-intro-min-height: 450px
+$banner-intro-align-items: center
+$banner-intro-content-padding: 20px 0 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 5px 0 20px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: 20px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  background: $base-color
+  align-items: flex-end
+  border-bottom-right-radius: 450px
+  overflow: hidden
+
+  &:after
+    background: linear-gradient(90deg, rgba($black,0.85) 0%, rgba($black,0) 100%)
+    width: 50%
+
+  &__logo
+    max-width: 100%
+
+  &__title
+    font-size: 70px
+    line-height: 1
+    text-transform: uppercase
+
+    &:after
+      background-color: $white
+      content: ''
+      display: block
+      height: 8px
+      margin-top: 10px
+      width: 86px
+
+    &:last-child
+      margin-top: 0
+      margin-bottom: 0
+  
+  &__copy
+    font-weight: 600
+
+  .button
+    background-color: $base-color
+    border-color: $white
+    color: $white
+
+    +hover
+      background-color: $white
+      color: $base-color
+
+  &--intro,
+  &--short
+    align-items: center
+
+    .banner__content
+      padding-bottom: 0
+
+    .banner__title
+      &:after
+        display: none
+
+    &.banner--medium-media
+      min-height: 240px
+
+  +breakpoint(large)
+    border-bottom-right-radius: 280px
+
+    .banner__title
+      font-size: 50px
+
+  +breakpoint(medium, min)
+    .icon-button
+      height: 50px
+      width: 50px
+
+  +breakpoint(medium)
+    border-bottom-right-radius: 120px
+
+    .banner__title
+      font-size: 36px
+
+      &:after
+        height: 4px
+        width: 60px
+
+    &--intro,
+    &--short
+      min-height: 240px

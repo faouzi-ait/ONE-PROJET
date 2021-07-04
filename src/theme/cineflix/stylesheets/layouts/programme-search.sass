@@ -1,0 +1,108 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: $white
+$psearch-padding: 0 0 20px
+
+//***********************************
+
+$psearch-input-border: 0
+$psearch-input-focus-border: $brand-color
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: (18/16)+rem
+$psearch-input-padding: 8px 20px 8px 33px
+$psearch-input-radius: 0
+$psearch-input-radius-open: 0
+
+//***********************************
+
+$psearch-button-radius: 0 22px 22px 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: $base-color-light
+$psearch-clear-hover-fill: $brand-color
+
+//***********************************
+
+$psearch-input-radius-bp-small: 22px
+$psearch-button-radius-bp-small: 22px
+$psearch-input-radius-open-bp-small: 22px 22px 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-search
+
+    .button
+        display: none
+
+    &__input
+        background: url(../../images/theme/mag-glass.svg) -11px center / 50px  transparent no-repeat
+        border-right: 0
+        color: $mako
+        font-weight: 600
+
+        &::-webkit-input-placeholder  /* Chrome/Opera/Safari */
+            color: rgba($mako, .5)
+
+        &::-moz-placeholder  /* Firefox 19+ */
+            color: rgba($mako, .5)
+
+        &:-ms-input-placeholder  /* IE 10+ */
+            color: rgba($mako, .5)
+
+    &--global
+        .programme-search__input
+            border-bottom: 2px solid  $white
+
+    &--space-above
+        padding-top: 20px
+
+    +breakpoint(medium)
+        padding-top: 20px
+
+        &__input
+            font-size: $base-font-size
+
+        .button
+            font-size: $base-font-size
+
+        &--global
+            left: 0
+            margin: 0
+            padding: 10px 20px 0
+            right: 0
+
+            .programme-search__input
+                border-bottom: 0
+
+    +breakpoint(small)
+
+        &__input
+            border-radius: $psearch-input-radius-bp-small
+            border-right: $psearch-input-border
+            box-sizing: border-box
+            font-size: 14px
+            height: 40px
+            margin-bottom: 10px
+            width: 100%
+
+        &__clear
+            display: none
+
+        .container
+            display: block
+
+        .button
+            border-radius: $psearch-button-radius-bp-small
+            display: block
+            width: 100%

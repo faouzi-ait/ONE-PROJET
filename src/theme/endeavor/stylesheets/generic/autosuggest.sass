@@ -1,0 +1,42 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$as-radius: 3px
+$as-border: 2px solid $iron
+
+//***********************************
+
+$as-title-bg: $brand-color
+$as-title-weight: 500
+$as-title-size: 14px
+$as-title-padding: 11px 20px
+$as-title-border: none
+
+//***********************************
+
+$as-suggestion-size: 17px
+$as-suggestion-padding: $as-title-padding
+$as-suggestion-border: none
+$as-suggestion-hover-bg: $white
+$as-description-color: $downy
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .react-autosuggest
+    &__section-title
+        border-radius: 3px 3px 0 0
+        color: $white
+
+    &__suggestion
+        color: $base-color
+
+        &--highlighted
+            color: $downy
+

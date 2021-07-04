@@ -1,0 +1,29 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$info-size: 14px
+$info-color: $base-color-light
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+
+  +breakpoint(large)
+
+    .heading
+      &--two
+        font-size: 26px
+
+  +breakpoint(small)
+
+    .heading
+      &--two
+        font-size: 20px

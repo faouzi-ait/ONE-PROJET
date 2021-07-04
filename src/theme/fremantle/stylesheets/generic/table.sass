@@ -1,0 +1,65 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$th-bgc: $shark
+$th-border-color: $mine-shaft
+$th-font-size: 15px
+$th-font-weight: 600
+$th-padding: 20px 15px
+
+$td-bgc: $shark
+$td-border-color: $mine-shaft
+$td-font-size: 14px
+$td-padding: 15px
+$table-radius: 0
+
+.custom .table
+  color: $white
+  font-family: $secondary-font-family
+
+  td
+    small
+      color: $abbey
+      font-weight: 700
+      opacity: 1
+      text-transform: uppercase
+
+  th
+    border-left: none
+    color: $abbey
+    letter-spacing: 0.5px
+    text-transform: uppercase
+
+  &__actions
+    .button
+      white-space: nowrap
+
+  &__sort
+    color: $abbey
+    font-family: $secondary-font-family
+    font-size: 15px
+    letter-spacing: 0.5px
+    text-transform: uppercase
+
+    &::after
+      border-color: $white
+
+  tr.with-action
+    +hover
+      td,
+      th
+        background-color: $base-color 
+
+  &--hover
+    tbody tr:hover td
+      background-color: $base-color 
+
+  &--report
+
+    tbody tr:nth-child(even) td
+      background-color: $base-color 

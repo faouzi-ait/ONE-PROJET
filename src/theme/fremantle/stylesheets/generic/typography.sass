@@ -1,0 +1,56 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$info-size: 14px
+$info-color: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom
+
+  .heading
+    &--one,
+    &--two,
+    &--three
+      color: $white
+      margin: 0 0 13px
+      
+    &--two
+      font-size: 26px
+
+    &--three
+      font-size: 20px
+
+    &--four
+      font-family: $secondary-font-family
+      letter-spacing: 0.5px
+      font-size: 12px
+      text-transform: uppercase
+
+  blockquote
+    color: $white
+    h2
+      font-size: 24px
+      line-height: 1.4
+      font-weight: 100
+
+    cite
+      font-style: normal
+      font-family: $secondary-font-family
+      letter-spacing: 0.5px
+      font-size: 14px
+
+  +breakpoint(medium)
+    &--two
+      font-size: 22px
+
+    &--three
+      font-size: 18px
+      

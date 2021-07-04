@@ -1,0 +1,370 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/generic/modal'
+
+//***********************************
+
+.modal
+  align-items: center
+  animation: modal-overlay-animation .5s forwards $easing
+  background-color: $modal-overlay-bgc
+  bottom: 0
+  display: flex
+  justify-content: center
+  left: 0
+  overflow: hidden
+  padding: $modal-overlay-padding
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 30
+
+  .container
+    padding: 0
+
+  &--stretch-select
+    .Select-menu-outer
+      position: relative
+
+  &:fullscreen-ancestor
+    animation: none
+
+  iframe
+    display: block
+
+  .video
+    width: 80vw
+
+  &--image &
+    &__wrapper
+      background-color: transparent
+      min-width: 0
+      overflow: visible
+      padding-top: 50px
+      position: relative
+
+    &__gallery
+      display: flex
+      flex-direction: column
+
+    &__close
+      right: 5px
+      top: 5px
+
+  &--custom-content
+    align-items: flex-end
+    padding: 0
+
+    > *
+      width: 100%
+      overflow: visible !important
+
+  &--full-width
+    .modal
+      &__wrapper
+        height: 100%
+        width: 100%
+
+  &--carousel
+    .modal
+      &__wrapper
+        max-width: 1180px
+
+  &--is-hiding
+    animation: modal-overlay-animation-out .5s forwards $easing
+
+    .modal
+      &__wrapper
+        animation: modal-animation-out .5s forwards $easing
+
+  &--notes &
+    &__wrapper
+      width: 500px
+      max-width: 100%
+
+  &--small &
+    &__wrapper
+      max-width: 480px
+
+  &--warning &
+    &__wrapper
+      background-color: $modal-warning-bgc
+      color: $modal-warning-color
+      max-width: 480px
+
+      a:not([class]),
+      a.active
+        color: $modal-warning-color
+        font-weight: bold
+        text-decoration: underline
+        transition: color .3s
+
+    &__header
+      background-color: shade($modal-warning-bgc, 15%)
+
+    &__close
+      svg
+        fill: $modal-warning-color
+
+      +hover
+        svg
+          fill: rgba($modal-warning-color, .8)
+
+    &__title-icon
+      fill: $modal-warning-color
+
+  &--video &
+    &__wrapper
+      background-color: transparent
+      max-width: none
+
+    &__title
+      color: $white
+      margin-bottom: 10px
+
+    &__close
+      background: $brand-color
+      border-radius: 300px
+      right: 5px
+      top: 5px
+
+      & + .modal__title
+        padding-right: 50px
+
+      svg
+        fill: $white
+
+      +hover
+        svg
+          fill: $white
+
+  &--warning
+    .button--reversed
+      +hover
+        color: $modal-warning-bgc
+
+    .button--filled
+      color: $modal-warning-bgc
+      +hover
+        color: $modal-warning-bgc
+
+  &__wrapper
+    animation: modal-animation .5s forwards $easing
+    background-color: $modal-wrapper-bgc
+    border-radius: $modal-wrapper-radius
+    max-height: 100%
+    max-width: $modal-max-width
+    min-width: $modal-min-width
+    overflow: auto
+    position: relative
+
+    &:fullscreen-ancestor
+      animation: none
+
+  &__header
+    background-color: $modal-header-bgc
+    border-radius: $modal-wrapper-radius $modal-wrapper-radius 0 0
+    padding: $modal-header-padding
+    position: relative
+
+    &--with-action
+      display: flex
+      align-items: center
+
+      .button
+        margin-left: auto
+
+      .modal__title
+        margin-right: 20px
+
+  &__actions
+    align-items: center
+    border-top: 1px solid $athens-gray
+    display: flex
+    justify-content: center
+    margin-top: 20px
+    padding-top: 20px
+
+    .button
+      margin: 0 5px
+
+  &__title
+    margin: 0
+
+  &__title-icon
+    fill: $brand-color
+    margin-right: 10px
+    transform: translateY(2px)
+
+  &__content
+    background-color: $modal-content-bgc
+    min-height: 130px
+    padding: $modal-content-padding
+    position: relative
+
+    &--wide
+      width: 1180px
+      max-width: 100%
+      box-sizing: border-box
+
+    a
+      &:not([class]),
+      &.active
+        color: $modal-link-color
+        font-weight: $modal-link-weight
+
+  &__close
+    background-color: transparent
+    border: 0
+    cursor: pointer
+    font-size: 0
+    padding: 15px
+    position: absolute
+    right: 5px
+    top: 5px
+    z-index: 3
+
+    svg
+      fill: $modal-close-color
+      transition: fill .3s
+
+    +hover
+      svg
+        fill: $modal-close-hover-color
+
+  &--filters &
+
+    &__header
+      left: 0
+      padding: $modal-header-padding-filters
+      text-align: center
+
+    &__title
+      font-size: 20px
+
+    &__content
+      padding: 2px 0 0
+
+  &--meeting &
+    &__wrapper
+      width: 100%
+      max-width: 1180px
+
+    &__header
+      text-align: center
+
+  &__copy
+    margin: 0 0 20px
+    max-width: 100%
+
+    p
+      margin: 0 0 10px
+
+  &__search
+    position: relative
+
+    input
+      font-family: $base-font-family
+      border: none
+      border-bottom: 1px solid $base-color-light
+      font-size: 15px
+      padding: 15px 200px 15px 20px
+      display: block
+      width: 100%
+      box-sizing: border-box
+      outline: none
+
+    p
+      font-size: 14px
+      color: $base-color-light
+      margin: 0
+      position: absolute
+      top: 50%
+      right: 50px
+      margin-top: -12px
+
+    button
+      top: 9px
+
+    &--loading
+
+      &::before
+        content: ""
+        width: 100px
+        height: 0
+        border-top: 2px solid $brand-color
+        position: absolute
+        top: 0
+        right: 100%
+        animation: snake 1s ease-in-out infinite
+
+  > div:not(.modal__wrapper)
+    max-height: 100%
+    overflow: auto
+
+  .grecaptcha-badge
+    bottom: 6px !important
+
+  +breakpoint(large)
+    &__header
+      padding: $modal-header-padding-bp-large
+
+    &__content
+      padding: $modal-content-padding-bp-large
+
+  +breakpoint(medium)
+    &__header
+      padding: $modal-header-padding-bp-medium
+
+    &__content
+      padding: $modal-content-padding-bp-medium
+
+  +breakpoint(small)
+    padding: $modal-overlay-padding-bp-small
+
+    &__header
+      padding: $modal-header-padding-bp-small
+
+    &__content
+      padding: $modal-content-padding-bp-small
+
+@keyframes modal-overlay-animation
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@keyframes modal-animation
+  from
+    transform: scale(1.2)
+
+  to
+    transform: scale(1)
+
+@keyframes modal-overlay-animation-out
+  from
+    opacity: 1
+
+  to
+    opacity: 0
+
+@keyframes modal-animation-out
+  from
+    transform: scale(1)
+
+  to
+    transform: scale(1.2)
+
+@keyframes snake
+  0%
+    right: 100%
+    width: 0
+  50%
+    right: 0
+    width: 100%
+  100%
+    right: 0
+    width: 0

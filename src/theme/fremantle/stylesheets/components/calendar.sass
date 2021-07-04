@@ -1,0 +1,45 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$calendar-row-height: 130px
+$calendar-row-border: 1px solid $iron
+$calendar-column-width: 380px
+
+//***********************************
+
+$calendar-time-width: 85px
+$calendar-days-height: 50px
+
+//***********************************
+
+$calendar-slot-bg: $white
+$calendar-slot-bg-disabled: $athens-gray
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .calendar
+    &__day
+        background: $shark
+    
+    &__day,
+    &__time
+        font-family: $secondary-font-family
+        font-size: 18px
+        font-weight: 600
+        letter-spacing: 0.5px
+
+    &__time
+        border-color: $shark
+
+    &__add-meeting
+        background-color: $abbey
+
+        +hover
+            background-color: $outer-space

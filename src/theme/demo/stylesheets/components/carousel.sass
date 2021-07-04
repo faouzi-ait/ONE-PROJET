@@ -1,0 +1,122 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 20px
+
+//***********************************
+
+$carousel-group-background: rgba(255,255,255,0.25);
+$carousel-group-border-radius: 100px
+$carousel-group-color: $white
+$carousel-group-font-size: 14px
+$carousel-group-margin: 0 $carousel-spacing $carousel-spacing 0
+$carousel-group-padding: 2px 15px
+
+//***********************************
+
+$carousel-arrow-background-color: $brand-color
+$carousel-arrow-background-size: 40px
+$carousel-arrow-color: $white
+$carousel-arrow-size: 9px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: 0 10px 15px rgba($black, .15)
+$carousel-arrow-hover-background-color: shade($brand-color, 10%)
+$carousel-arrow-border-radius: 50%
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 4px
+
+//***********************************
+
+$carousel-arrow-small-background-size: 20px
+$carousel-arrow-small-size: 5px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 20px 0 0 0
+$carousel-dots-radius: 100%
+$carousel-dots-border: 2px solid $brand-color
+$carousel-dots-size: 8px
+$carousel-dots-active-background: $brand-color
+
+//***********************************
+
+$carousel-scroll-spacing: 4px
+$carousel-scroll-height: 6px
+$carousel-scroll-background: rgba(255,255,255,0.1)
+$carousel-scroll-handle-background: rgba(152,164,165,0.3)
+$carousel-scroll-handle-radius: $carousel-scroll-height * 2
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 5px
+$carousel-pager-padding: 20px 0 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+    color: $white
+
+    &__arrow
+        top: 40%
+        border-radius: 10px
+        &--prev
+            left: 0
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+        &--next
+            right: 0
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+
+    .banner
+        margin-bottom: 0
+        padding-bottom: 0
+        min-height: 400px
+        &:after
+            background: linear-gradient(to bottom, rgba(30,30,30,1) 0%, rgba(0,0,0,0) 20%)
+        .button--filled
+            background-color: $brand-color
+            padding: 15px 32px
+        &__content
+            padding: 0
+
+        .container
+            bottom: 60px
+
+    .card
+        &__actions
+            display: none
+        &__copy
+            font-weight: 600
+
+    .programme
+        &__title
+            font-size: 18px
+            font-weight: 800
+            letter-spacing: -1px
+            line-height: 22px
+
+    +breakpoint(small)
+        .banner
+            padding-bottom: 60px
+
+.custom .recently-viewed .carousel
+    .card
+        &__actions
+            display: block

@@ -1,0 +1,60 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 40px 0
+$section-bgc: $background-color
+$section-shade-bgc: $background-color
+
+//***********************************
+
+$section-copy-color: $wildsand
+$section-copy-hover-color: $brand-color
+$section-copy-margin: 0 0 20px
+$section-copy-size: $base-font-size
+$section-copy-weight: normal
+
+//***********************************
+
+$section-header-text-align: left
+
+//***********************************
+
+$section-actions-align: center
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+  &--shade + .section--shade,
+  &--brand + .section--brand,
+  &:not(.section--shade):not(.section--brand) + .section:not(.section--shade):not(.section--brand)
+      padding-top: 10px
+
+  &__header
+    font-size: 24px
+    line-height: 1.1
+    margin: 0 0 30px
+    text-transform: uppercase
+
+  &--shade + .content-block--light
+    padding-top: 20px
+
+  +breakpoint(medium)
+    &__header
+      font-size: 20px
+      margin-bottom: 20px
+
+  +breakpoint(small)
+    padding: 40px 0
+    &--shade + .section--shade,
+    &--brand + .section--brand,
+    &:not(.section--shade):not(.section--brand) + .section:not(.section--shade):not(.section--brand)
+      padding-top: 10px
+
+    &__header
+      font-size: 18px
+
+    &__copy
+      font-size: 14px

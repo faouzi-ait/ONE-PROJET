@@ -1,0 +1,31 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$filters-width: 940px
+$filters-row-padding: 0 40px
+$filters-column-padding: 20px 0
+
+//***********************************
+
+$filters-column-margin: 40px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom.admin .programme-filters
+  &__selection
+    &:before,
+    &:after
+      background: none
+      border-top: 1px solid black
+
+.custom .programme-filters
+  &__selection
+    padding: 0 40px 30px
+    
+  +breakpoint(large)
+    &__selection
+      padding-left: 20px
+      padding-right: 20px

@@ -1,0 +1,607 @@
+@import '../imports'
+
+
+.ReactVirtualized
+  &__Collection
+    &__innerScrollContainer
+
+  &__Grid
+    &__innerScrollContainer
+
+
+
+  &__Table
+    &__Grid
+
+    &__headerRow
+      font-weight: 700
+      text-transform: uppercase
+      display: flex
+      flex-direction: row
+      align-items: center
+
+    &__row
+      display: flex
+      flex-direction: row
+      align-items: center
+
+    &__headerTruncatedText
+      display: inline-block
+      max-width: 100%
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+
+    &__headerColumn,
+    &__rowColumn
+      margin-right: 10px
+      min-width: 0px
+
+    &__rowColumn
+      text-overflow: ellipsis
+      white-space: nowrap
+
+
+    &__headerColumn:first-of-type,
+    &__rowColumn:first-of-type
+      margin-left: 10px
+
+    &__sortableHeaderColumn
+      cursor: pointer
+
+
+    &__sortableHeaderIconContainer
+      display: flex
+      align-items: center
+
+    &__sortableHeaderIcon
+      flex: 0 0 24px
+      height: 1em
+      width: 1em
+      fill: currentColor
+
+  &__List
+
+.rstcustom
+  &__rowLandingPad
+    &::before
+      background-color: $brand-color
+
+  &__rowLabel
+    width: 100%
+    padding-right: 0px
+
+  &__node-content
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.rst
+  &__rowWrapper
+    padding: 10px 10px 10px 0
+    height: 100%
+    box-sizing: border-box
+
+  &__rtl.rst__rowWrapper
+    padding: 10px 0 10px 10px
+
+
+  &__row
+    height: 100%
+    white-space: nowrap
+    display: flex
+
+    > *
+      box-sizing: border-box
+
+  &__rowLandingPad,
+  &__rowCancelPad
+    border: none !important
+    box-shadow: none !important
+    outline: none !important
+
+    > *
+      opacity: 0 !important
+
+    &::before
+      background-color: lightblue
+      border: 3px dashed white
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: -1
+
+  &__rowCancelPad
+    &::before
+      background-color: #e6a8ad
+
+  &__rowSearchMatch
+    outline: solid 3px #0080ff
+
+  &__rowSearchFocus
+    outline: solid 3px #fc6421
+
+  &__rowContents,
+  &__rowLabel,
+  &__rowToolbar,
+  &__moveHandle,
+  &__toolbarButton
+    display: inline-block
+    vertical-align: middle
+
+
+  &__rowContents
+    position: relative
+    height: 100%
+    border: solid #bbb 1px
+    border-left: none
+    box-shadow: 0 2px 2px -2px
+    padding: 0 5px 0 10px
+    border-radius: 2px
+    min-width: 230px
+    flex: 1 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: white
+
+  &__rtl.rst__rowContents
+    border-right: none
+    border-left: solid #bbb 1px
+    padding: 0 10px 0 5px
+
+
+  &__rowContentsDragDisabled
+    border-left: solid #bbb 1px
+
+  &__rtl.rst__rowContentsDragDisabled
+    border-right: solid #bbb 1px
+    border-left: solid #bbb 1px
+
+  &__rowLabel
+    flex: 0 1 auto
+    padding-right: 20px
+
+  &__rtl.rst__rowLabel
+    padding-left: 20px
+    padding-right: inherit
+
+  &__rowToolbar
+    flex: 0 1 auto
+    display: flex
+
+  &__moveHandle,
+  &__loadingHandle
+    height: 100%
+    width: 44px
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiI+PGcgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjIuOSIgPjxwYXRoIGQ9Ik0xNCAxNS43aDE0LjQiLz48cGF0aCBkPSJNMTQgMjEuNGgxNC40Ii8+PHBhdGggZD0iTTE0IDI3LjFoMTQuNCIvPjwvZz4KPC9zdmc+') #d9d9d9 no-repeat center
+    border: solid #aaa 1px
+    box-shadow: 0 2px 2px -2px
+    cursor: move
+    border-radius: 1px
+    z-index: 1
+
+  &__loadingHandle
+    cursor: default
+    background: #d9d9d9
+
+  @keyframes pointFade
+    0%,
+    19.999%,
+    100%
+      opacity: 0
+    20%
+      opacity: 1
+
+  &__loadingCircle
+    width: 80%
+    height: 80%
+    margin: 10%
+    position: relative
+
+  &__loadingCirclePoint
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+
+  &__rtl.rst__loadingCirclePoint
+    right: 0
+    left: initial
+
+  &__loadingCirclePoint
+    &::before
+      content: ''
+      display: block
+      margin: 0 auto
+      width: 11%
+      height: 30%
+      background-color: #fff
+      border-radius: 30%
+      animation: pointFade 800ms infinite ease-in-out both
+
+  &__loadingCirclePoint:nth-of-type(1)
+    transform: rotate(0deg)
+
+  &__loadingCirclePoint:nth-of-type(7)
+    transform: rotate(180deg)
+
+  &__loadingCirclePoint:nth-of-type(1)::before,
+  &__loadingCirclePoint:nth-of-type(7)::before
+    animation-delay: -800ms
+
+  &__loadingCirclePoint:nth-of-type(2)
+    transform: rotate(30deg)
+
+  &__loadingCirclePoint:nth-of-type(8)
+    transform: rotate(210deg)
+
+  &__loadingCirclePoint:nth-of-type(2)::before,
+  &__loadingCirclePoint:nth-of-type(8)::before
+    animation-delay: -666ms
+
+  &__loadingCirclePoint:nth-of-type(3)
+    transform: rotate(60deg)
+
+  &__loadingCirclePoint:nth-of-type(9)
+    transform: rotate(240deg)
+
+  &__loadingCirclePoint:nth-of-type(3)::before,
+  &__loadingCirclePoint:nth-of-type(9)::before
+    animation-delay: -533ms
+
+  &__loadingCirclePoint:nth-of-type(4)
+    transform: rotate(90deg)
+
+
+  &__loadingCirclePoint:nth-of-type(10)
+    transform: rotate(270deg)
+
+  &__loadingCirclePoint:nth-of-type(4)::before,
+  &__loadingCirclePoint:nth-of-type(10)::before
+    animation-delay: -400ms
+
+  &__loadingCirclePoint:nth-of-type(5)
+    transform: rotate(120deg)
+
+  &__loadingCirclePoint:nth-of-type(11)
+    transform: rotate(300deg)
+
+  &__loadingCirclePoint:nth-of-type(5)::before,
+  &__loadingCirclePoint:nth-of-type(11)::before
+    animation-delay: -266ms
+
+  &__loadingCirclePoint:nth-of-type(6)
+    transform: rotate(150deg)
+
+  &__loadingCirclePoint:nth-of-type(12)
+    transform: rotate(330deg)
+
+  &__loadingCirclePoint:nth-of-type(6)::before,
+  &__loadingCirclePoint:nth-of-type(12)::before
+    animation-delay: -133ms
+
+  &__loadingCirclePoint:nth-of-type(7)
+    transform: rotate(180deg)
+
+  &__loadingCirclePoint:nth-of-type(13)
+    transform: rotate(360deg)
+
+  &__loadingCirclePoint:nth-of-type(7)::before,
+  &__loadingCirclePoint:nth-of-type(13)::before
+    animation-delay: 0ms
+
+
+  &__rowTitle
+    font-weight: bold
+
+  &__rowTitleWithSubtitle
+    font-size: 85%
+    display: block
+    height: 0.8rem
+
+  &__rowSubtitle
+    font-size: 70%
+    line-height: 1
+
+  &__collapseButton,
+  &__expandButton
+    appearance: none
+    border: none
+    position: absolute
+    border-radius: 100%
+    box-shadow: 0 0 0 1px #000
+    width: 16px
+    height: 16px
+    padding: 0
+    top: 50%
+    transform: translate(-50%, -50%)
+    cursor: pointer
+
+  &__rtl.rst__collapseButton,
+  &__rtl.rst__expandButton
+    transform: translate(50%, -50%)
+
+  &__collapseButton:focus,
+  &__expandButton:focus
+    outline: none
+    box-shadow: 0 0 0 1px #000, 0 0 1px 3px #83bef9
+
+  &__collapseButton:hover:not(:active),
+  &__expandButton:hover:not(:active)
+    background-size: 24px
+    height: 20px
+    width: 20px
+
+
+  &__collapseButton
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGNpcmNsZSBjeD0iOSIgY3k9IjkiIHI9IjgiIGZpbGw9IiNGRkYiLz48ZyBzdHJva2U9IiM5ODk4OTgiIHN0cm9rZS13aWR0aD0iMS45IiA+PHBhdGggZD0iTTQuNSA5aDkiLz48L2c+Cjwvc3ZnPg==') no-repeat center #fff
+
+
+  &__expandButton
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGNpcmNsZSBjeD0iOSIgY3k9IjkiIHI9IjgiIGZpbGw9IiNGRkYiLz48ZyBzdHJva2U9IiM5ODk4OTgiIHN0cm9rZS13aWR0aD0iMS45IiA+PHBhdGggZD0iTTQuNSA5aDkiLz48cGF0aCBkPSJNOSA0LjV2OSIvPjwvZz4KPC9zdmc+') #fff no-repeat center
+
+  &__lineChildren
+    height: 100%
+    display: inline-block
+    position: absolute
+
+  &__lineChildren::after
+    content: ''
+    position: absolute
+    background-color: black
+    width: 1px
+    left: 50%
+    bottom: 0
+    height: 10px
+
+
+  &__rtl.rst__lineChildren::after
+    right: 50%
+    left: initial
+
+
+  &__placeholder
+    position: relative
+    height: 68px
+    max-width: 300px
+    padding: 10px
+
+  &__placeholder,
+  &__placeholder > *
+    box-sizing: border-box
+
+  &__placeholder::before
+    border: 3px dashed #d9d9d9
+    content: ''
+    position: absolute
+    top: 5px
+    right: 5px
+    bottom: 5px
+    left: 5px
+    z-index: -1
+
+  &__placeholderLandingPad,
+  &__placeholderCancelPad
+    border: none !important
+    box-shadow: none !important
+    outline: none !important
+
+  &__placeholderLandingPad *,
+  &__placeholderCancelPad *
+    opacity: 0 !important
+
+  &__placeholderLandingPad::before,
+  &__placeholderCancelPad::before
+    background-color: lightblue
+    border-color: white
+
+  &__placeholderCancelPad::before
+    background-color: #e6a8ad
+
+  &__virtualScrollOverride
+    // overflow: auto !important
+
+  &__virtualScrollOverride *
+    box-sizing: border-box
+
+
+
+
+
+  &__rtl .ReactVirtualized__Grid__innerScrollContainer
+    direction: rtl
+
+
+  .ReactVirtualized__Grid
+    outline: none
+
+  &__node
+    min-width: 100%
+    white-space: nowrap
+    position: relative
+    text-align: left
+
+  &__node.rst__rtl
+    text-align: right
+
+  &__nodeContent
+    position: absolute
+    top: 0
+    bottom: 0
+
+  &__lineBlock,
+  &__absoluteLineBlock
+    height: 100%
+    position: relative
+    display: inline-block
+
+
+  &__absoluteLineBlock
+    position: absolute
+    top: 0
+
+  &__lineHalfHorizontalRight::before,
+  &__lineFullVertical::after,
+  &__lineHalfVerticalTop::after,
+  &__lineHalfVerticalBottom::after
+    position: absolute
+    content: ''
+    background-color: black
+
+  &__lineHalfHorizontalRight::before
+    height: 1px
+    top: 50%
+    right: 0
+    width: 50%
+
+  &__rtl.rst__lineHalfHorizontalRight::before
+    left: 0
+    right: initial
+
+  &__lineFullVertical::after,
+  &__lineHalfVerticalTop::after,
+  &__lineHalfVerticalBottom::after
+    width: 1px
+    left: 50%
+    top: 0
+    height: 100%
+
+  &__rtl.rst__lineFullVertical::after,
+  &__rtl.rst__lineHalfVerticalTop::after,
+  &__rtl.rst__lineHalfVerticalBottom::after
+    right: 50%
+    left: initial
+
+  &__lineHalfVerticalTop::after
+    height: 50%
+
+  &__lineHalfVerticalBottom::after
+    top: auto
+    bottom: 0
+    height: 50%
+
+  &__highlightLineVertical
+    z-index: 3
+
+  &__highlightLineVertical::before
+    position: absolute
+    content: ''
+    background-color: $brand-color
+    width: 8px
+    margin-left: -4px
+    left: 50%
+    top: 0
+    height: 100%
+
+  &__rtl.rst__highlightLineVertical::before
+    margin-left: initial
+    margin-right: -4px
+    left: initial
+    right: 50%
+
+
+  @keyframes arrow-pulse
+    0%
+      transform: translate(0, 0)
+      opacity: 0
+
+    30%
+      transform: translate(0, 300%)
+      opacity: 1
+
+    70%
+      transform: translate(0, 700%)
+      opacity: 1
+
+    100%
+      transform: translate(0, 1000%)
+      opacity: 0
+
+
+  &__highlightLineVertical::after
+    content: ''
+    position: absolute
+    height: 0
+    margin-left: -4px
+    left: 50%
+    top: 0
+    border-left: 4px solid transparent
+    border-right: 4px solid transparent
+    border-top: 4px solid white
+    animation: arrow-pulse 1s infinite linear both
+
+
+  &__rtl.rst__highlightLineVertical::after
+    margin-left: initial
+    margin-right: -4px
+    right: 50%
+    left: initial
+
+  &__highlightTopLeftCorner::before
+    z-index: 3
+    content: ''
+    position: absolute
+    border-top: solid 8px $brand-color
+    border-left: solid 8px $brand-color
+    box-sizing: border-box
+    height: calc(50% + 4px)
+    top: 50%
+    margin-top: -4px
+    right: 0
+    width: calc(50% + 4px)
+
+
+  &__rtl.rst__highlightTopLeftCorner::before
+    border-right: solid 8px $brand-color
+    border-left: none
+    left: 0
+    right: initial
+
+  &__highlightBottomLeftCorner
+    z-index: 3
+
+  &__highlightBottomLeftCorner::before
+    content: ''
+    position: absolute
+    border-bottom: solid 8px $brand-color
+    border-left: solid 8px $brand-color
+    box-sizing: border-box
+    height: calc(100% + 4px)
+    top: 0
+    right: 12px
+    width: calc(50% - 8px)
+
+
+  &__rtl.rst__highlightBottomLeftCorner::before
+    border-right: solid 8px $brand-color
+    border-left: none
+    left: 12px
+    right: initial
+
+
+  &__highlightBottomLeftCorner::after
+    content: ''
+    position: absolute
+    height: 0
+    right: 0
+    top: 100%
+    margin-top: -12px
+    border-top: 12px solid transparent
+    border-bottom: 12px solid transparent
+    border-left: 12px solid $brand-color
+
+
+  &__rtl.rst__highlightBottomLeftCorner::after
+    left: 0
+    right: initial
+    border-right: 12px solid $brand-color
+    border-left: none
+
+
+.ReactVirtualized__Grid__innerScrollContainer
+  overflow: visible !important

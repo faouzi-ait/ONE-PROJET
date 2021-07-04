@@ -1,0 +1,77 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$nav-bgc: $base-color-dark
+$nav-divide-color: none
+$nav-width: 410px
+$nav-width-bp-large: 320px
+
+//***********************************
+
+$nav-close-left: auto
+$nav-close-right: 40px
+$nav-close-top: 30px
+
+//***********************************
+
+$nav-item-divide-margin: 0
+$nav-item-divide-padding: 0 0 10px
+
+//***********************************
+
+$nav-list-padding: 80px 50px
+$nav-list-padding-bp-large: 80px 50px 50px 50px
+
+//***********************************
+
+$nav-link-active-color: $brand-color
+$nav-link-color: $white
+$nav-link-hover-color: $brand-color
+$nav-link-padding: 10px 0
+
+//***********************************
+
+$sub-nav-margin: 0
+$sub-nav-padding: 0 0 0 40px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .navigation
+  box-shadow: 0 2px 14px 0 rgba($black, .5)
+
+  &__item
+    &--divide
+      &:after
+        background: linear-gradient(0.25turn, $nav-bgc, rgba($mystic, .25), $nav-bgc)
+        content: ''
+        display: block
+        height: 1px
+        margin-top: 10px
+        width: 100%
+
+  &__link
+    position: relative
+    font-weight: bold
+
+  &__sub-nav
+    list-style: none
+
+    .navigation__link
+      font-weight: normal
+      font-size: 15px
+
+  .button
+    border: none
+
+    &__icon
+      fill: $brand-color
+
+    &:hover
+      background-color: transparent

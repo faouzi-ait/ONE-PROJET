@@ -1,0 +1,77 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: transparent
+$header-max-width: 1580px
+$header-padding: 15px 30px
+$header-welcome-color: $white
+$header-user-color: $white
+$header-user-hover-color: $downy
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+  .container
+    align-items: flex-start
+
+  &__controls
+    margin-top: 35px
+
+    > *
+      margin-left: 30px
+
+  .text-button
+    color: $white
+    text-transform: none
+    margin-right: 0
+
+    &:first-child
+      margin-right: 10px
+
+    +hover
+      color: $downy
+      text-decoration: none
+
+  .button
+
+    +hover
+      background: transparent
+
+  &--meetings
+    .container
+      align-items: center
+
+    .brand
+      max-width: 150px
+
+    .header__controls
+      margin-top: 0
+
+  &--searching
+    .header__controls
+      justify-content: flex-end
+
+  +breakpoint(large)
+    .brand
+      max-width: 200px
+
+    &__welcome
+      font-size: 14px
+      margin-right: 0
+
+  +breakpoint(medium)
+    &--searching
+      background: $brand-color
+
+    &__controls
+      margin-top: 15px
+
+    .brand
+      max-width: 120px

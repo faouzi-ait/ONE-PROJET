@@ -1,0 +1,175 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$filters-width: 940px
+$filters-row-padding: 0 55px
+$filters-column-padding: 40px 0
+
+//***********************************
+
+$filters-column-margin: 20px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-filters
+  box-sizing: border-box
+  max-height: calc(100vh - 140px)
+
+  > .form
+    max-height: calc(100vh - 140px)
+
+  &__form
+    max-height: calc(100vh - 280px)
+    overflow: auto
+
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    width: 100%
+  
+  &__label
+    color: $oslo
+    font-size: 24px
+    margin-bottom: 20px
+
+    & + .programme-filters__copy
+      margin-left: auto
+
+  &__copy
+    color: $oslo
+    font-size: 14px
+
+  &__actions
+    border-top: solid 1px $oslo
+    flex-direction: row-reverse
+    justify-content: space-between
+    padding: 35px 55px
+    
+  &-trigger
+    .container
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      
+    .button
+      margin-left: 18px
+
+    .text-button
+      color: $wildsand
+      font-size: 18px
+
+  .tabs--radio,
+  .checkbox-filters:last-child
+    border-bottom: solid 1px $oslo
+    margin-bottom: 0
+    padding-bottom: 50px
+
+  .tabs--radio
+    padding-bottom: 30px
+    margin-bottom: 20px
+
+  +breakpoint(medium, min)
+    &-trigger
+      margin-top: -60px
+      .container
+        height: 60px
+
+      .button,
+      .text-button
+        position: relative
+        z-index: 6
+
+  +breakpoint(medium)
+
+    &-trigger
+      margin-top: 20px
+
+    &__label
+      font-size: 20px
+      margin-bottom: 10px
+
+    &__column
+      padding-bottom: 30px
+      padding-top: 20px
+
+    .checkbox-filters:last-child
+      padding-bottom: 30px
+
+    .tabs--radio
+      padding-bottom: 20px
+
+  +breakpoint(small)
+    &__label
+      font-size: 16px
+
+.custom:not(.admin) .programme-filters
+
+  +breakpoint(medium, min)
+
+    &__row
+      margin-right: -28px
+      padding-right: 0
+      position: relative
+
+      &:after
+        background: $background-color
+        content: ''
+        height: 100%
+        position: absolute
+        right: 26px
+        width: 5px
+
+    &__column
+      flex: none
+      min-width: 0
+      max-width: none
+      margin-right: 28px
+      padding-right: 28px
+      width: calc(50% - 28px)
+
+      &:after
+        background-color: $oslo
+        content: ''
+        display: block
+        height: calc(100% - 80px)
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        width: 1px
+        
+      &--language,
+      &--number-of-series,
+      &--number-of-episodes,
+      &--production-year
+        border-bottom: solid 1px $oslo
+        max-width: none
+        min-width: calc(100% - 56px)
+        margin-right: 0
+        padding-right: 0        
+
+        &:after
+          display: none
+
+    &__row--compact
+      .programme-filters
+        &__column
+          width: 100%
+
+    .tabs--radio
+      margin-right: 45px
+
+    &__label + .programme-filters__copy
+      margin-right: 55px
+
+  +breakpoint(medium)
+    &__column
+      max-width: 100%
+
+  +breakpoint(small)
+    &__label + .programme-filters__copy
+      display: none

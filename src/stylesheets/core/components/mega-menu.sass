@@ -1,0 +1,103 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/mega-menu'
+
+//***********************************
+
+.mega-menu
+
+  &__close
+    position: absolute
+    top: $menu-close-spacing
+    right: $menu-close-spacing
+
+    .button__icon
+      fill: $menu-close-icon-fill
+
+  &__popout
+    background-color: $menu-bgc
+    box-sizing: border-box
+    border-radius: $menu-radius
+    position: absolute
+    top: 0
+    left: 5vw
+    padding: $menu-padding
+    opacity: 0
+    top: 0
+    width: $menu-width
+    transition: top .4s ease-in-out, opacity .8s ease-in-out
+    pointer-events: none
+    max-width: 90vw
+    z-index: 20
+  .menu-open &
+    &__popout
+      opacity: 1
+      top: $menu-top
+      pointer-events: auto
+
+  &__list
+    display: flex
+    list-style: none
+    margin: 0
+    padding: $menu-list-padding
+
+  &__item
+    padding-right: $menu-item-spacing
+    position: relative
+    width: $menu-item-width
+
+    &:last-child
+      padding-right: 0
+
+    &:before
+      background: $brand-color
+      content: ''
+      display: block
+      height: 18px
+      position: absolute
+      width: 5px
+      left: -20px
+      top: 2px
+
+  &__link
+    color: $menu-link-color
+    display: block
+    font-size: $menu-link-font-size
+    font-weight: bold
+    text-decoration: none
+    transition: color .2s
+
+    +hover
+      color: $menu-link-hover-color
+
+  &__sub-list
+    list-style: none
+    margin: 0
+    padding: $menu-sub-list-padding
+
+  &__sub-item
+    padding: $menu-sub-item-padding
+
+    .mega-menu__link
+      font-weight: $menu-link-font-weight
+
+  +breakpoint(medium)
+    &__popout
+      max-width: none
+      left: 0
+      right: 0
+      width: 100%
+
+    &__list
+      display: block
+
+    &__item
+      margin-bottom: 20px
+      width: 100%
+
+    .menu-open &
+      &__popout
+        top: 0
+        min-height: 100vh

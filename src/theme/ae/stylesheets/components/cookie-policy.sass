@@ -1,0 +1,32 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$cookie-page-heading-bg-color: $base-color-dark
+$cookie-page-heading-color: $white
+
+$cookie-banner-bg-color: white
+$cookie-banner-color: black
+
+$cookie-banner-border-width: 3px
+$cookie-banner-border-color: $brand-color
+$cookie-banner-border-style: solid
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .cookie-policy
+  &__banner
+    .button
+      margin-right: 10px
+      
+      &:not(.button--filled)
+        color: $brand-color
+        border-color: $brand-color
+        margin-top: 10px
+

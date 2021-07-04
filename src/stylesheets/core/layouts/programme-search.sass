@@ -1,0 +1,106 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/programme-search'
+@import '../../_theme/generic/button'
+
+//***********************************
+
+.programme-search
+  background-color: $psearch-bgc
+  padding: $psearch-padding
+
+  .container
+    display: flex
+
+  .react-autosuggest__container
+    flex: 1
+
+  &--global
+    background-color: transparent
+    margin: 0
+    padding: 0
+
+  &--compact
+    .programme-search__input
+      font-size: 18px
+
+    .container
+      max-width: 100% !important
+      margin-left: 0px !important
+
+      button
+        display: none !important
+
+  &__input
+    border: $psearch-input-border
+    border-radius: $psearch-input-radius
+    box-sizing: border-box
+    display: block
+    font-family: $psearch-input-font-family
+    font-size: $psearch-input-font-size
+    height: 100%
+    margin: 0
+    outline: none
+    padding: $psearch-input-padding
+    transition: border-color .3s
+    width: 100%
+
+    .react-autosuggest__container--open &
+      border-radius: $psearch-input-radius-open
+
+    &:focus
+      border-color: $psearch-input-focus-border
+
+  &__clear
+    background-color: $white
+    border: $psearch-input-border
+    border-left: 0
+    border-right: 0
+    cursor: pointer
+    font-size: 0
+    padding: 0 20px
+    transition: border-color .3s
+
+    &--focused
+      border-color: $psearch-input-focus-border
+
+    +hover
+      svg
+        fill: $psearch-clear-hover-fill
+
+    svg
+      fill: $psearch-clear-fill
+      transition: fill .3s
+
+  .button
+    border-radius: $psearch-button-radius
+    font-size: $psearch-button-font-size
+    margin: 0
+    padding: $psearch-button-padding
+
+  &--reporting
+    margin-bottom: 40px
+
+  +breakpoint(large)
+    &--global
+      left: 20px
+      position: absolute
+      right: 20px
+      top: 100%
+
+  +breakpoint(small)
+
+    &--global
+      left: 10px
+      right: 10px
+
+    .button
+      font-size: $button-small-font-size
+      padding: $button-small-padding
+
+    &__input
+
+      .react-autosuggest__container--open &
+        border-radius: $psearch-input-radius-open-bp-small

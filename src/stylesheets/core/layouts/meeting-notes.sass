@@ -1,0 +1,48 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/layouts/meeting-notes'
+
+//***********************************
+
+.meeting-notes
+
+  &__form
+    align-items: flex-start
+    display: flex
+    margin-bottom: 30px
+
+    .form__input
+      flex: 1
+      max-width: none
+      margin-right: 20px
+
+  &__table
+    width: 100%
+    border-collapse: collapse
+
+    th, td
+      padding: 10px
+      text-align: left
+
+      &:first-child
+        width: 100px
+
+    th
+      color: $base-color-light
+      font-weight: normal
+
+    tbody
+      td
+        border-bottom: 1px solid $base-color-light
+
+        &:last-child
+          text-align: right
+
+      tr:last-child td
+        border-bottom: none
+
+    .note__text
+      white-space: normal
+

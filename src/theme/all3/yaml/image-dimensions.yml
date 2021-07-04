@@ -1,0 +1,17 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 2000x956
+      Thumbnail: 820x480
+
+  - name: Programme
+    components:
+      Banner: 2000x956
+      Thumbnail: 820x480
+      Logo: 400x60
+
+  - name: News Article
+    components:
+      Banner: 2000x956
+      Thumbnail: 1120x1000
+

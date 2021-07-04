@@ -1,0 +1,52 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../core/imports'
+
+.permissions-tab
+  background-color: tint($casper, 70%)
+  padding: 20px 0
+
+  .container
+    display: flex
+
+  .react-autosuggest__container
+    flex: 1
+
+  &--global
+    background-color: transparent
+    margin: 0
+    padding: 0
+
+  &__input
+    border: 2px solid tint($casper, 40%)
+    border-radius: 22px 0px 0px 22px
+    box-sizing: border-box
+    display: block
+    font-family: $base-font-family
+    font-size: 18px
+    height: 100%
+    margin: 0
+    outline: none
+    padding: 8px 20px
+    transition: border-color .3s
+    width: 100%
+
+    .react-autosuggest__container--open &
+      border-radius: 22px 0 0 0
+
+    &:focus
+      border-color: $brand-color
+
+  &__clear
+    background-color: $white
+    border-left: 0
+    border-right: 0
+    cursor: pointer
+    font-size: 0
+    padding: 0 20px
+    transition: border-color .3s
+
+    &--focused
+      border-color: $brand-color

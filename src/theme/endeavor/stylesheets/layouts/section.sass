@@ -1,0 +1,48 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 100px 0
+$section-bgc: $white
+$section-shade-bgc: $athens-gray
+
+//***********************************
+
+$section-copy-color: $base-color
+$section-copy-hover-color: $base-color
+$section-copy-margin: 0 0 40px
+$section-copy-size: $base-font-size
+$section-copy-weight: normal
+
+//***********************************
+
+$section-header-text-align: left
+
+//***********************************
+
+$section-actions-align: right
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+  &__header
+    margin: 0 0 20px
+    font-size: 24px
+    text-transform: uppercase
+
+  &--thin
+    padding: 20px 0
+
+  &:not(.section--shade) + .section:not(.section--shade)
+    padding-top: 0
+
+  +breakpoint(large)
+    padding-top: 40px
+    padding-bottom: 40px
+
+  +breakpoint(medium)
+    &__header
+      margin: 0 0 10px
+      font-size: 18px

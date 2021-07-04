@@ -1,0 +1,16 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x800
+      Thumbnail: 1120x700
+
+  - name: Programme
+    url: https://itv.rawnet.one/catalogue/2
+    components:
+      Banner: 3200x1200
+      Thumbnail: 1120x630
+
+  - name: News Article
+    components:
+      Banner: 3200x800
+      Thumbnail: 560x350

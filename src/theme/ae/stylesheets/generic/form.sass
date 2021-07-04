@@ -1,0 +1,76 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$form-width: 980px
+$form-skinny-width: 400px
+
+//***********************************
+
+$form-input-padding: 6px 13px 5px
+$form-input-radius: 3px
+$form-textarea-radius: 3px
+$form-input-border: 1px solid $iron
+$form-input-focus-border: $wedgewood
+$form-textarea-height: 120px
+$form-input-phone-padding: 3px 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .form
+  &__label
+    color: $oslo
+    font-weight: normal
+    margin-bottom: 5px
+
+  &__input
+    background: transparent
+    color: $oslo
+    font-size: 16px
+
+  &__info
+    color: $river-bed
+    margin-left: 0
+
+  &__group
+    flex-wrap: wrap
+
+    .form__control
+      flex: 1 0 auto
+      min-width: 30%
+
+    .delete
+      margin-top: 35px
+
+  &__control
+    &--actions
+      justify-content: flex-end
+      max-width: none
+
+      .button
+        flex: none
+
+      &:first-child
+        justify-content: center
+
+        & + .u-center-content
+          flex-direction: column-reverse
+
+          > *
+            padding-bottom: 10px
+
+    &--error
+      .form__input
+        border-color: $error-color
+
+  +breakpoint(400px)
+    &__group
+      display: block
+      .form__control
+        margin-right: 0

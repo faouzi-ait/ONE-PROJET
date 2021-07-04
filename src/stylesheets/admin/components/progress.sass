@@ -1,0 +1,50 @@
+@import '../imports'
+
+$progress-background: $white
+$progress-border: solid 1px $brand-color
+$progress-height: 10px
+$progress-width: 200px
+
+$progress-font-size: 12px
+$progress-text-color: $brand-color
+
+.progress
+    align-items: center
+    display: flex
+    width: $progress-width
+
+    &::before,
+    &::after
+        color: $progress-text-color
+        font-size: $progress-font-size
+        font-weight: bold
+
+    &::before
+        content: '0%'
+
+    &::after
+        content: '100%'
+
+    &__bar
+        background: $progress-background
+        border: $progress-border
+        border-radius: 100px
+        flex-grow: 2
+        height: $progress-height
+        margin-left: 5px
+        margin-right: 5px
+        overflow: hidden
+        position: relative
+
+    &__loaded
+        background: $brand-color
+        display: block
+        height: 100%
+        position: absolute
+        width: 0
+        transition: width .5s
+
+    &--complete &
+        &__bar
+            &::before
+                width: 100%

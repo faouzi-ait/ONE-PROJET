@@ -1,0 +1,233 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$button-bgc: transparent
+$button-border-radius: 4px
+$button-border: 1px solid $white
+$button-hover-bgc: transparent
+
+//***********************************
+
+$button-filled-bgc: $brand-color
+$button-filled-color: $white
+$button-filled-hover-bgc: shade($brand-color, 10%)
+$button-filled-icon-color: $white
+
+//***********************************
+
+$button-small-padding: 7px 15px
+$button-with-icon-padding: 10px 15px
+$button-small-font-size: 14px
+
+//***********************************
+
+$button-error-background: $error-color
+$button-error-color: $white
+$button-error-border: none
+
+$button-error-hover-background: shade($error-color, 10%)
+
+$button-success-background: $success-color
+$button-success-color: $white
+$button-success-border: 2px solid $success-color
+
+$button-success-hover-background: shade($success-color, 10%)
+
+//***********************************
+
+$button-null-background: $base-color-dark
+$button-null-color: $white
+$button-null-border: 2px solid $base-color-dark
+
+$button-null-hover-background: $base-color-dark
+
+//***********************************
+
+$button-color: $white
+$button-font-family: $base-font-family
+$button-font-size: 14px
+$button-font-weight: bold
+
+//***********************************
+
+$button-padding: 10px 25px
+
+//***********************************
+
+$button-transition: all .6s $easing
+
+//***********************************
+
+$button-alert-color: $error-color
+$button-alert-size: 14px
+$button-alert-right: 10px
+
+//***********************************
+
+$button-icon-padding: 9px
+$button-icon-size: 40px
+$button-icon-margin: 0
+$button-icon-margin-right: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .button,
+.custom .mock-page .content-block .button
+  height: 40px
+  box-sizing: border-box
+  line-height: 1.4
+  position: relative
+  outline: none
+  z-index: 1
+
+  &:after
+    background: linear-gradient($wedgewood 0.15%, $steel-blue)
+    border-radius: $button-border-radius
+    bottom: 0
+    content: ''
+    position: absolute
+    height: 0
+    left: 0
+    opacity: 0
+    transition: all .3s $easing
+    width: 100%
+    z-index: -1
+
+  +hover
+    border-color: transparent
+
+    &:after
+      height: 100%
+      opacity: 1
+
+  &__count
+    align-items: center
+    background-color: rgba($chambray, .4)
+    box-sizing: border-box
+    border-radius: 50%
+    color: $white
+    display: inline-flex
+    font-size: 17px
+    height: 40px
+    justify-content: center
+    text-transform: uppercase
+    width: 40px
+
+  &__icon
+    transition: $button-transition
+
+  &--with-icon
+    .button__icon
+      margin-left: 7px
+      margin-right: 0
+      transition: margin 0.3s $easing
+
+      &:first-child
+        margin-left: 0
+        margin-right: 7px
+
+  &--small
+    height: 35px
+
+  &--filled,
+  &--secondary,
+  &--null,
+  &--success
+    border: none
+
+  &--filled
+    background: linear-gradient($wedgewood 0.15%, $steel-blue)
+    border: none
+
+    &:after  
+      background: $wildsand
+
+    +hover
+      color: $base-color
+
+      .button__icon
+        fill: $base-color
+
+  &--secondary
+    background: $white
+    color: $base-color
+    text-transform: uppercase
+
+    .button__icon
+      fill: $base-color
+
+    +hover
+      color: $white
+
+      .button__icon
+        fill: $white
+
+  &--success
+    background: linear-gradient(map-get($factual, 'light'), map-get($factual, 'dark'))
+
+  &--null
+    background: linear-gradient($emperor, $ebony-clay)
+
+    &.button--with-icon
+      .button__icon
+        stroke: $white
+
+  &--loading
+    &:after
+      display: none
+      
+  &--large  
+    font-size: 18px
+    padding-bottom: 12px
+    padding-top: 12px
+    height: auto
+
+  &--xlarge
+    border-radius: 100px
+    font-size: 18px
+    padding-bottom: 16px
+    padding-top: 16px
+    overflow: hidden
+    height: auto
+
+    &:after
+      border-radius: 100px
+
+  @each $genre, $color in $genre-colors
+    &--#{$genre}
+      background: map-get($color, 'light')
+
+      &:after
+        background: $ghost
+
+  +breakpoint(small)
+    &--large  
+      font-size: 16px
+      padding-bottom: 10px
+      padding-top: 10px
+
+    &--xlarge
+      font-size: 16px
+      padding-bottom: 15px
+      padding-top: 15px
+
+    &--small
+      font-size: 13px
+      padding-left: 10px
+      padding-right: 10px
+
+.custom.admin .button
+  &:after
+    display: none
+
+.custom .file-input
+  .button
+    position: initial
+    z-index: auto

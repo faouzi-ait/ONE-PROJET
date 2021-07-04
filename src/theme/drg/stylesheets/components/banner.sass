@@ -1,0 +1,233 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 900px
+$banner-tablet-min-height: 540px
+$banner-mobile-min-height: 480px
+$banner-short-min-height: 285px
+$banner-medium-min-height: 700px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 80px 100px
+$banner-tablet-content-padding: 30px 0
+$banner-content-width: 630px
+
+//***********************************
+
+$banner-intro-min-height: 280px
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 100px 0 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 60px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: 20px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  background: $black
+  position: relative
+
+  &:after
+    background: linear-gradient(to bottom, rgba($black, 1) 0% ,rgba($black, 0) 90%)
+    height: 15%
+
+  &__iefix
+    position: relative
+    z-index: 3
+
+  &__image
+    &:after
+      background: rgba($black, .2)
+      content: ''
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+
+  &__programme
+    bottom: 70px
+    right: 50px
+
+    .tag
+      font-size: (16/16)+rem
+      margin-bottom: 8px
+
+  &__programme-title
+    font-size: (42/16)+rem
+    font-weight: 900
+    line-height: .9
+    
+
+  .button
+    border-color: $white
+
+  .container
+    align-items: flex-end
+    box-sizing: border-box
+    display: flex
+    height: 100%
+    max-width: 100%
+    padding: 0 50px
+
+  &__title
+    font-size: (60/16)+rem
+    font-weight: 900
+    line-height: .9
+    
+
+  &--medium
+    .banner__title
+      margin-bottom: 20px
+
+    .banner__content
+      padding: 50px 0
+
+  &--medium,
+  &--intro,
+  &--short
+    .container
+      $container-width: 1180px
+      $container-padding: 50px
+      max-width: $container-width + ($container-padding * 2)
+
+  &--intro,
+  &--short
+    .banner__title
+      margin-bottom: 20px
+      min-height: 0
+
+    .banner__content
+      padding: 20px 0
+
+  &--long
+    .banner__content
+      padding-top: 140px
+
+  &__circle
+    bottom: 0
+    left: 0
+    overflow: hidden
+    pointer-events: none
+    position: absolute
+    right: 0
+    top: 0
+
+    .container
+      &:before
+        $circle-size: 840px
+        border-radius: 50%
+        bottom: 350 - $circle-size
+        content: ''
+        height: $circle-size
+        left: 635 - $circle-size - 120
+        opacity: .9
+        pointer-events: none
+        position: absolute
+        width: $circle-size
+        z-index: -1
+
+  &--intro
+    .banner__circle
+      .container
+        &:before
+          $circle-size: 700px
+          bottom: 230 - $circle-size
+          height: $circle-size
+          left: 635 - $circle-size - 200
+          width: $circle-size
+
+  &--tall
+    min-height: 90vh
+
+  &__tag
+    margin-bottom: 20px
+
+  &--medium-media
+    min-height: $banner-min-height !important
+
+  &--large-media
+    min-height: $banner-min-height !important
+
+  +breakpoint(large)
+    flex-direction: column
+
+    .container
+      padding: 0 20px
+
+      .banner__content
+        padding-left: 0
+        padding-right: 0
+
+    &__title
+      margin: 0 0 20px
+
+    &__programme
+      bottom: auto
+      left: auto
+      padding: 0 0 50px
+      position: relative
+      right: auto
+
+    &__title
+      font-size: (36/16)+rem
+
+  +breakpoint(small)
+    .container
+      padding-top: 90px
+
+  +breakpoint(medium)
+    &__programme
+      padding: 0 20px 50px
+
+  +breakpoint(medium, min)
+    &--medium
+      min-height: $banner-medium-min-height
+
+    &--tall
+      min-height: 90vh
+      .banner__media
+        top: 0
+        transform: translate(-50%, 0)
+
+
+.custom
+  @each $genre, $color in $genre-colors
+    .#{$genre}
+      .banner--circle
+        .banner__circle
+          .container
+            &::before
+              background: darken(map-get($genre-colors, $genre), 10%)
+
+    .banner--#{$genre}
+      .tag
+        background-color: map-get($genre-colors, $genre)
+
+      .banner__circle
+        .container
+          &::before
+            $circle-size: 1284px
+            background: darken(map-get($genre-colors, $genre), 10%)
+            bottom: 544 - $circle-size
+            height: $circle-size
+            left: 640 - $circle-size
+            width: $circle-size
+
+

@@ -1,0 +1,45 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 75px
+$programme-details-border: none
+$programme-details-side-width: 450px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  .heading--two
+    font-size: 40px
+    margin: 30px 0
+    text-transform: uppercase
+
+  &__main
+    .heading--three
+      font-size: 24px
+      text-transform: uppercase
+
+  &__side
+    .heading--three
+      font-size: 15px
+
+  +breakpoint(large)
+    padding-bottom: 0
+
+    &__main
+      margin-right: 0
+      margin-bottom: 30px
+      padding: 0
+      
+      .heading--three
+        font-size: 20px
+
+    &__side
+      width: auto
+
+    .heading--two
+      font-size: 28px
+      margin-top: 0

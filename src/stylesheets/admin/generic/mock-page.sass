@@ -1,0 +1,108 @@
+.mock-page
+  background-color: $background-color
+  margin: 40px 20px
+
+  &:empty
+    padding: 0
+
+  &__block
+    position: relative
+    overflow: hidden
+    background-color: $background-color
+
+    .card__content
+      z-index: 0
+
+    &::after
+      background: rgba($brand-color, .25)
+      border: 1px dashed transparent
+      box-sizing: border-box
+      content: ''
+      height: 100%
+      left: 0
+      opacity: 0
+      position: absolute
+      top: 0
+      width: 100%
+
+    &:hover
+      .mock-page__actions,
+      &::after
+        opacity: 1
+
+      &::after
+        border-color: $brand-color
+
+    &--expanded
+      height: auto !important
+      padding-top: 25px
+
+  &__label
+    color: $black
+    font-size: 13px
+    margin-right: auto
+
+  &__actions
+    background: rgba($white, .8)
+    align-items: center
+    display: flex
+    left: 1px
+    opacity: 0
+    position: absolute
+    padding: 15px
+    right: 1px
+    top: 1px
+    z-index: 12
+
+    .cms-button
+      margin-left: 5px
+
+  &__expand
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    position: relative
+    right: 1px
+    height: 0px
+    z-index: 12
+
+    .cms-button
+      position: relative
+      bottom: 24px
+      padding-top: 4px
+      right: 10px
+      z-index: 25
+      cursor: pointer
+
+      svg
+        fill: $white
+
+  &__warning
+    text-align: center
+
+  &--dragging
+    .mock-page
+      &__block
+        height: 50px
+        overflow: hidden
+
+        &::after
+          background-color: transparent
+          border-color: $brand-color
+          opacity: 1
+
+      &__wrapper
+        pointer-events: none
+
+      &__actions
+        opacity: 1
+
+        .cms-button,
+        .cms-custom-checkbox
+          display: none
+
+  .slide-toggle
+    color: $black
+
+  .cms-custom-checkbox
+    color: $black

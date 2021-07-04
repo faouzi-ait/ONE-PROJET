@@ -1,0 +1,37 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$th-bgc: transparent
+$th-border-color: $iron
+$th-font-size: 18px
+$th-font-weight: normal
+$th-padding: 10px 20px
+
+$td-bgc: transparent
+$td-border-color: $iron
+$td-font-size: 18px
+$td-padding: 8px 20px
+$table-radius: 0
+
+.custom .table
+
+  th
+    border-left: none
+    font-weight: bold
+
+  &--report
+    th
+      button
+        color: $white
+
+    tbody tr:nth-child(even) td
+      background-color: transparent
+
+  &--hover
+    tbody tr:nth-child(even):hover td
+      background-color: $brand-color

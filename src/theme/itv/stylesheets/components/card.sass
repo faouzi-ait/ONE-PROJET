@@ -1,0 +1,320 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$card-base-color: $base-color
+$card-bgc: $gallery
+$card-border-radius: 0
+$card-padding: 18px 20px
+
+//***********************************
+
+$card-title-color: $bright-gray
+$card-title-hover-color: $brand-color
+$card-title-margin: 0 0 10px
+$card-title-size: 18px
+$card-title-weight: bold
+
+//***********************************
+
+$card-date-color: $abbey
+$card-date-font-size: 15px
+$card-date-margin: -5px 0 10px
+
+//***********************************
+
+$card-copy-color: $bright-gray
+$card-copy-hover-color: $bright-gray
+$card-copy-margin: 0 0 10px
+$card-copy-size: 15px
+$card-copy-weight: normal
+
+//***********************************
+
+$card-count-color: $white
+$card-count-background: transparent
+$card-count-padding: 0
+$card-count-weight: bold
+$card-count-border-radius: 0
+$card-count-spacing: 5px
+$card-count-offset: 0
+
+//***********************************
+
+$card-toggle-position: absolute
+$card-toggle-right: 10px
+$card-toggle-top: 0px
+$card-toggle-transform: translateY(-70%)
+
+//***********************************
+
+$card-tags-margin: 0 -5px 5px 0
+$card-tag-margin: 0 5px 0 0
+$card-tag-font-size: 10px
+$card-tag-color: $white
+$card-tag-border: solid 1px $brand-color
+$card-tag-padding: 3px 8px
+$card-tag-radius: 50px
+
+//***********************************
+
+$card-active-shadow: none
+
+//***********************************
+
+$card-small-content-padding: 10px
+
+//***********************************
+
+$card-small-title-size: 14px
+
+//***********************************
+
+$card-icon-fill: $brand-color
+
+//***********************************
+
+$card-strip-bgc: $error-color
+$card-strip-color: $white
+$card-strip-font-size: 8px
+$card-strip-padding: 3px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card
+  display: flex
+  flex-direction: column
+  position: relative
+
+  > div:not(.card__content)
+    flex: 0 0 auto
+
+  &__content
+    align-items: flex-start
+    flex: 1 0 auto
+    display: flex
+    flex-direction: column
+
+    > div
+      max-width: 100%
+
+  &__date
+    margin-top: auto
+
+  &__strip
+    border-radius: 0 4px 0 0
+
+  &__count
+    align-self: flex-start
+    margin-bottom: 0
+    height: 31px
+    position: relative
+    vertical-align: middle
+
+    svg
+      fill: $brand-color
+
+    span
+      align-items: flex-end
+      bottom: 0
+      color: $white
+      display: flex
+      font-size: 14px
+      font-weight: bold
+      justify-content: center
+      left: 0
+      padding-bottom: 5px
+      position: absolute
+      right: 0
+      top: 0
+
+    + .card__copy
+      color: rgba($bright-gray, .6)
+      display: inline-block
+      font-size: 12px
+      vertical-align: middle
+
+  &__media-link
+    position: static
+
+    &::after
+      background-color: $brand-color
+      bottom: 0
+      height: 8px
+      left: 0
+      position: absolute
+      opacity: 0
+      transition: background-color .3s
+      width: 100%
+
+  &:hover
+    .card__media-link
+      &::after
+        opacity: 1
+
+  &__tag
+    font-weight: bold
+    text-transform: uppercase
+
+  &__title
+    max-width: 100%
+
+  &__job
+    margin-top: -10px
+
+  &__copy
+    max-width: 100%
+
+  .like
+    transform: translateY(-70%)
+
+  &--featured
+    flex-direction: row
+
+    .card__media-link
+      width: 55%
+
+    .card__title
+      font-size: 30px
+
+    .card__content
+      padding-top: 80px
+      flex-basis: 45%
+
+  &--cast
+    background: $bright-gray
+    position: relative
+    height: 250px
+    display: flex
+    flex-direction: column
+
+    &::after
+      background: linear-gradient(180deg, rgba($black,0) 0%, rgba($black,.01) 31.5%, $black 100%)
+      content: ''
+      display: block
+      left: 0
+      height: 100%
+      position: absolute
+      top: 0
+      width: 100%
+
+    .card__content
+      margin-top: auto
+      padding: 15px
+      flex: none
+      position: relative
+      z-index: 1
+
+    .card__media
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    .card__title,
+    .card__copy
+      color: $white
+      margin: 0
+
+    .card__copy
+      font-size: 14px
+
+  &--active
+    .card__media-link
+      &::before
+        display: block
+        background: $bright-gray
+        content: ''
+        opacity: .8
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+
+  &--team
+    cursor: pointer
+    position: relative
+
+    .card__content
+      &::after
+        background-color: $brand-color
+        content: ''
+        bottom: 100%
+        height: 8px
+        left: 0
+        position: absolute
+        opacity: 0
+        width: 100%
+
+    &:hover
+      .card__content
+        &::after
+          opacity: 1
+
+  &--poster
+    background-color: $black
+    .card__media
+      opacity: 0.75
+
+  &--catalogue
+    background-color: transparent
+
+    .card
+      &__content
+        padding: 12px 0
+
+      &__title,
+      &__copy
+        color: $gallery
+
+  &--large
+    .card__title
+      font-size: 26px
+
+
+  +breakpoint(large)
+    &--featured
+      flex-direction: column
+
+      .card__media-link
+        width: 100%
+
+      .card__title
+        font-size: 20px
+
+      .card__content
+        padding-top: 26px
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    &--cast
+      .card__media
+        height: auto
+        position: relative
+
+.no-touch .custom .card
+  &--poster
+    &:hover
+      .card__media
+        opacity: .75
+
+      .card__media-link + .card__content
+        .card__title
+          color: white
+
+.custom .list-modal .card
+  &__title
+    padding-top: 0.3em
+
+.custom.admin .card-group .card
+  background: $bright-gray
+
+  .card__content
+    padding-left: 10px
+    padding-right: 10px

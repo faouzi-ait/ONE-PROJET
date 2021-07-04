@@ -1,0 +1,93 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: transparent
+$psearch-padding: 40px 0
+
+//***********************************
+
+$psearch-input-border: none
+$psearch-input-focus-border: none
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: 26px
+$psearch-input-padding: 8px 20px
+$psearch-input-radius: 0
+$psearch-input-radius-open: 22px 0 0 0
+
+//***********************************
+
+$psearch-button-radius: 0 22px 22px 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: $gallery
+$psearch-clear-hover-fill: $spun-pearl
+
+//***********************************
+
+$psearch-input-radius-bp-small: 22px
+$psearch-button-radius-bp-small: 22px
+$psearch-input-radius-open-bp-small: 22px 22px 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .team-search
+  border-bottom: 1px solid $geyser
+
+  &--global
+    border-bottom: none
+
+  &__input
+    background:  url(../../../images/theme/search-icon.svg) no-repeat left
+    background-size: 24px
+    border-right: 0
+    color: $spun-pearl
+    font-weight: 700
+    padding-left: 40px
+
+  .button
+    display: none
+
+  &__clear
+    background: transparent
+    transform: scale(1.5)
+
+  +breakpoint(medium)
+    padding: 20px 0
+
+    &__input
+      font-size: $base-font-size
+
+    .button
+      font-size: $base-font-size
+
+  +breakpoint(small)
+
+    .container
+      display: block
+
+    &__input
+      border-radius: $psearch-input-radius-bp-small
+      border-right: $psearch-input-border
+      box-sizing: border-box
+      font-size: 14px
+      height: 40px
+      margin-bottom: 10px
+      width: 100%
+
+    &__clear
+      display: none
+
+    .button
+      border-radius: $psearch-button-radius-bp-small
+      display: block
+      width: 100%

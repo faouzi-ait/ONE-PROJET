@@ -1,0 +1,36 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$sharer-bg: transparent
+$sharer-padding: 0
+$sharer-color: $white
+$sharer-font-size: 18px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .sharer
+    margin: 1rem 0
+    
+    &--header
+        .sharer__icon
+            fill: rgba($base-color, .8)
+        
+        .sharer__link
+            background: transparent
+
+            &:hover
+                .sharer__icon
+                    fill: $brand-color
+
+    &--footer
+        margin-top: 40px
+
+    &__item
+        color: $black

@@ -1,0 +1,51 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/account-manager'
+
+//***********************************
+
+.custom .account-manager
+  display: inline-block
+
+  &__image-section
+    width: $account-manager-image-section-width
+    text-align: $account-manager-image-text-align
+
+  &__image
+    max-width: $account-manager-image-max-width
+    border-radius: $account-manager-image-radius
+    margin-bottom: $account-manager-image-spacing
+    overflow: hidden
+    position: relative
+
+  &__text-section
+    box-sizing: border-box
+    padding: $account-manager-text-section-margin
+    width: calc(100% - #{$account-manager-image-section-width})
+
+  &__title
+    color: $account-manager-title-color
+    font-size: $account-manager-title-font-size
+    font-weight: $account-manager-title-font-weight
+    margin: $account-manager-title-margin
+    word-wrap: break-word
+
+  &__text
+    color: $account-manager-text-color
+    font-size: $account-manager-text-font-size
+    font-weight: $account-manager-text-font-weight
+    word-wrap: break-word
+
+    > *
+      margin: $account-manager-text-margin
+
+  +breakpoint(small)
+    &__image-section
+      text-align: center
+      width: 100%
+
+    &__text-section
+      margin: 20px 0
+      width: 100%

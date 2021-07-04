@@ -1,0 +1,46 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/promo'
+
+//***********************************
+
+.promo
+    align-items: flex-end
+    background-size: cover
+    color: $promo-color
+    display: flex
+    padding: $promo-padding
+
+    &__content
+      max-width: $promo-content-width
+      flex: 0 0 auto
+
+    &__media
+      display: block
+      max-width: $promo-media-width
+      flex: 0 0 auto
+
+    &__title
+      font-size: $promo-title-font-size
+      line-height: $promo-title-line-height
+      margin: $promo-title-margin
+
+      .heading--one
+        font-size: inherit
+        margin: 0
+
+    &__contents
+      margin: $promo-copy-margin
+
+    +breakpoint(large)
+      display: block
+
+      &__content
+        max-width: 500px
+        margin-top: -15px
+        margin-bottom: 30px
+
+      &__media
+        max-width: 100%

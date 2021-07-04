@@ -1,0 +1,236 @@
+.cms-table
+  border-collapse: collapse
+  width: 100%
+
+  &.dragging
+    tbody
+      display: none
+
+  &.draggable
+    cursor: move
+
+    &.hidden
+      background-color: tint($brand-color, 80%)
+      opacity: 0
+
+  a:not([class]),
+  a.active
+    color: $brand-color
+
+  a.wrap
+    word-break: break-all
+
+  &__row
+
+    &--hidden
+      background-color: tint($brand-color, 80%)
+      opacity: 0
+
+    &--draggable
+      cursor: move
+
+    &--bold
+      font-weight: bold
+
+    &--dragging
+
+      td:first-child
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        max-width: 300px
+
+  &--approvals
+    td,
+    th
+      width: 30%
+
+  &__toggle
+    padding: 10px 15px !important
+    width: 30px
+
+  &__trigger
+    appearance: none
+    background: transparent
+    border: 0
+    outline: none
+    padding: 0
+    display: block
+    margin: 0 auto
+    width: 26px
+    height: 26px
+    position: relative
+    border: 2px solid $brand-color
+    border-radius: 100px
+
+    &:before
+      border-color: $brand-color
+      border-style: solid
+      border-width: 0 2px 2px 0
+      box-sizing: border-box
+      content: ''
+      display: block
+      height: 8px
+      transform: translate(-50%, -50%) rotate(45deg)
+      width: 8px
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -1px
+
+    &--open:before
+      transform: translate(-50%, -50%) rotate(-135deg)
+      margin-top: 1px
+
+  &--programme
+
+    td
+      &:first-child
+        border-right: 1px solid shade($athens-gray, 5%)
+        padding-left: 30px !important
+        text-align: right
+        vertical-align: top
+        width: 25%
+
+    img
+      width: 300px
+
+  &--fixed
+    min-width: 1140px
+    table-layout: fixed
+
+    td
+      word-wrap: break-word
+
+  + .cms-table
+    margin-top: 20px
+
+  .cms-table__actions
+    border-left: 0
+    text-align: right
+    width: 110px
+
+  th
+    background-color: $white
+    border-bottom: 1px solid shade($athens-gray, 5%)
+    border-left: 1px solid shade($athens-gray, 5%)
+    font-size: 20px
+    text-align: left
+
+    &.label
+      border-left: none
+      text-align: center
+      width: 100px
+
+    &:first-child
+      border-left: 0
+      border-radius: 4px 0 0
+
+    &:last-child
+      border-radius: 0 4px 0 0
+
+      &:first-child
+        border-radius: 4px 4px 0 0
+
+    small
+      font-weight: normal
+      font-size: 14px
+
+    .icon-button--small
+      transform: translate(5px, -3px)
+
+  thead:last-child
+    th
+      border-bottom: none
+
+      &:first-child
+        border-radius: 4px 0 0 4px
+
+      &:last-child
+        border-radius: 0 4px 4px 0
+
+  th,
+  td
+    padding: 10px 30px
+
+    .count
+      border-radius: 3px
+      white-space: nowrap
+
+  td
+    background-color: $white
+    border-bottom: 1px solid shade($athens-gray, 5%)
+    padding: 15px 30px
+    transition: background-color .2s
+
+    &.parent
+      padding: 0
+
+      tr:not(:first-child)
+        td
+          background-color: rgba($athens-gray, .5)
+          padding-top: 8px
+          padding-bottom: 8px
+
+    &.cms-table__image
+      padding: 10px 0 10px 30px
+      width: 50px
+
+      img
+        display: block
+        width: 50px
+
+    &:first-child:not(.cms-table__image)
+      padding-left: 50px
+      word-break: break-word
+      
+      &.parent
+        padding-left: 0
+
+    ul:not([class])
+      margin-top: 0
+      margin-bottom: 0
+      padding-left: 17px
+
+  tr
+
+    &:last-child
+      td
+        border-bottom: 0
+
+        &:first-child
+          border-radius: 0 0 0 4px
+
+        &:last-child
+          border-radius: 0 0 4px
+
+    &.with-action
+      +hover
+        td,
+        th
+          background-color: tint($brand-color, 80%)
+
+    &.sub
+      td
+        background-color: shade($athens-gray, 5%)
+        border-color: $white
+        padding-top: 5px
+        padding-bottom: 5px
+
+        &:first-child:not(.cms-table__image)
+          padding-left: 100px
+
+    &.cms-table__row--disabled
+      td
+        background-color: shade($white, 3%)
+
+        &:first-child:not(.cms-table__image)
+          padding-left: 30px
+
+  &--multi
+    > tbody > tr > td
+      border-bottom: none
+      padding: 0
+      
+      &:first-child
+        padding-left: 0

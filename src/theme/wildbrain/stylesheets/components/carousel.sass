@@ -1,0 +1,88 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 20px
+
+//***********************************
+
+$carousel-group-background: $brand-color-dark
+$carousel-group-border-radius: 3px
+$carousel-group-color: $white
+$carousel-group-font-size: 12px
+$carousel-group-margin: 0 $carousel-spacing 10px 0
+$carousel-group-padding: 2px 15px
+
+//***********************************
+
+$carousel-arrow-background-color: $brand-color
+$carousel-arrow-background-size: 72px
+$carousel-arrow-color: white
+$carousel-arrow-size: 16px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: none
+$carousel-arrow-hover-background-color: $brand-color-dark
+$carousel-arrow-border-radius: 50%
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 0
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 25px 0 0 0
+$carousel-dots-radius: 50%
+$carousel-dots-border: 2px solid $brand-color
+$carousel-dots-size: 8px
+$carousel-dots-active-background: $brand-color
+
+//***********************************
+
+$carousel-scroll-spacing: 20px
+$carousel-scroll-height: 6px
+$carousel-scroll-background: $iron
+$carousel-scroll-handle-background: $brand-color
+$carousel-scroll-handle-radius: 4px
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 5px
+$carousel-pager-padding: 20px 0 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+
+    .banner__content
+        padding-left: 0
+        padding-right: 0
+
+    &__item
+        display: flex
+        flex-direction: column
+        .card--pages
+            min-height: calc(100% - 80px)
+
+    &--2-items,
+    &--3-items
+        .carousel__arrow
+            top: 80%
+        

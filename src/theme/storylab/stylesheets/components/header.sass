@@ -1,0 +1,77 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: transparent
+$header-max-width: 1520px
+$header-padding: 24px 20px
+$header-welcome-color: $white
+$header-user-color: $white
+$header-user-hover-color: $brand-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+    position: fixed
+    z-index: 20
+
+    &--impersonating
+        top: 75px
+
+    .text-button,
+    .programme-search
+        margin-left: 40px
+        margin-right: 0
+
+    &__controls
+        > *
+            margin-left: 40px
+
+    &__welcome
+        font-weight: bold
+        margin-right: 0
+
+    .programme-search__input
+        color: $white
+
+    .header__logo
+        fill: $white
+
+    &--sticky,
+    &--searching
+        background: $white
+        box-shadow: 0 15px 15px 0 rgba($black,0.15)
+
+        .header__welcome,
+        .header__user,
+        .text-button,
+        .button,
+        .programme-search__input
+            color: $cod-gray
+
+        .button__icon,
+        .header__logo
+            fill: $cod-gray
+
+    &--searching
+        transition: none
+
+    &--meetings
+        background-color: $brand-color
+
+    .no-scroll &
+        pointer-events: none
+
+    +breakpoint(medium)
+        .text-button,
+        &__controls > *
+            margin-left: 20px
+
+        .programme-search
+            margin-left: 0

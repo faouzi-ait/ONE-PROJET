@@ -1,0 +1,55 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$user-padding: 0 0 20px 0
+$user-border: 2px solid $black
+$user-detail-size: 18px
+$user-detail-margin: 0 0 0 40px
+$user-detail-label-size: 14px
+$user-detail-label-color: $brand-color
+
+//***********************************
+
+$user-tag-margin: 0 5px 0 0
+$user-tag-font-size: 14px
+$user-tag-color: $white
+$user-tag-border: 1px solid $base-color-light
+$user-tag-padding: 2px 10px
+$user-tag-radius: 22px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .user
+
+    + .heading--three
+        font-size: 30px
+
+    &__name
+        margin-right: 15rem
+    &__label
+        color: $edward
+        font-size: 14px
+        font-weight: 600
+        + span
+            color: $brand-color
+            font-size: 22px
+            font-weight: 800
+    &__name
+        > p
+            display: none
+
+    + .grid:after
+        display: block
+        content: ""
+        max-width: 1290px
+        width: 100%
+        margin: 0 auto
+        border-bottom: 2px solid black
+        margin-top: 40px

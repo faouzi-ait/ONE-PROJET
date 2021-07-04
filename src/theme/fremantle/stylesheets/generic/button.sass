@@ -1,0 +1,135 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$button-bgc: transparent
+$button-border-radius: 0
+$button-border: 2px solid $white
+$button-hover-bgc: $white
+
+//***********************************
+
+$button-filled-bgc: $white
+$button-filled-color: $shark
+$button-filled-hover-bgc: transparent
+$button-filled-icon-color: $cod-gray
+
+//***********************************
+
+$button-small-padding: 5px 8px 4px
+$button-with-icon-padding: 13px 20px 10px 15px
+$button-small-font-size: 12px
+
+//***********************************
+
+$button-error-background: $error-color
+$button-error-color: $white
+$button-error-border: 2px solid $error-color
+$button-error-hover-background: transparent
+
+$button-success-background: $success-color
+$button-success-color: $white
+$button-success-border: 2px solid $success-color
+
+$button-success-hover-background: shade($success-color, 10%)
+
+//***********************************
+
+$button-null-background: $base-color
+$button-null-color: $white
+$button-null-border: 2px solid $base-color
+$button-null-hover-background: transparent
+
+//***********************************
+
+$button-color: $white
+$button-font-family: $secondary-font-family
+$button-font-size: 15px
+$button-font-weight: 800
+
+//***********************************
+
+$button-padding: 15px 35px 16px
+
+//***********************************
+
+$button-transition: background-color .3s, border-color .3s
+
+//***********************************
+
+$button-alert-color: $error-color
+$button-alert-size: 14px
+$button-alert-right: 10px
+
+//***********************************
+
+$button-icon-padding: 0
+$button-icon-size: 20px
+$button-icon-margin: -4px 10px -4px 0
+$button-icon-margin-right: 0 0 0 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .button,
+.custom .mock-page .content-block .button
+    letter-spacing: 0.5px
+    text-transform: uppercase
+
+    +hover
+        color: $shark
+
+        .button__icon
+            fill: $shark
+
+    &--filled
+        border: 2px solid $button-filled-bgc
+        
+        +hover
+            border-color: $white
+
+            .button__icon
+                fill: $white
+
+    &--ghost
+        background-color: $abbey
+        border-color: $abbey
+
+        +hover
+            border-color: $abbey
+
+    &--error,
+    &--success,
+    &--null,
+    &--ghost,
+    &--filled
+        +hover
+            background: transparent
+            color: $white
+
+    &--icon
+        +hover
+            background: transparent
+            .button__icon
+                fill: $white
+
+    &__count
+        align-items: center
+        background: $abbey
+        border-radius: 50%
+        color: $white
+        display: inline-flex
+        justify-content: center
+        font-size: 15px
+        padding: 0
+        height: 32px
+        width: 32px
+
+    +breakpoint(small)
+        font-size: $button-font-size
+        padding: $button-padding

@@ -1,0 +1,94 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: $base-color-dark
+$header-max-width: 1290px
+$header-padding: 20px 30px
+$header-welcome-color: $white
+$header-user-color: $white
+$header-user-hover-color: $brand-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+  position: relative
+
+  .button
+    border: none
+    &__icon
+      fill: $brand-color
+
+    +hover
+      background-color: transparent
+      &__icon
+        fill: $white
+
+  .text-button
+    margin-right: 30px
+    +hover
+      text-decoration: none
+
+  .programme-search
+    .container
+      margin-right: 0
+
+  &__user
+    color: $white
+
+  &__welcome,
+  &__user
+    font-weight: bold
+
+  &__controls
+    > *
+      margin-left: 0
+
+  .burger
+    margin-left: 30px
+
+    &__line
+      border-radius: 1px
+      margin-bottom: 4px
+      width: 31px
+
+      &:nth-child(2)
+        width: 22px
+
+      &:nth-child(3)
+        margin-bottom: 0
+        width: 13px
+
+    +hover
+      .burger__line
+        background-color: $white
+
+  +breakpoint(large, min)
+    &--searching
+      .header__controls
+        margin-left: 80px
+
+  +breakpoint(large)
+    &__welcome
+      display: none
+
+  +breakpoint(720)
+    &__welcome,
+    &__welcome + .text-button
+      display: none
+
+
+  +breakpoint(small)
+    padding-right: 20px
+
+    .burger
+      margin-left: 20px
+
+    .text-button
+      margin-right: 20px

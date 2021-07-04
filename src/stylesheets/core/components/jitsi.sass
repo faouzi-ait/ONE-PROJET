@@ -1,0 +1,335 @@
+@import '../../_theme/generic/button'
+@import '../../_theme/components/jitsi'
+@import '../../_theme/components/virtual'
+
+//***********************************
+
+.jitsi
+  &__host-wrapper
+    min-width: 25vw
+
+    &--side-panel
+      margin-top: 90px
+      margin-left: 10px
+      min-width: 25vw
+      max-width: 220px
+
+    &--conference,
+    &--cinema
+      display: flex
+      justify-content: center
+      max-width: calc(95vh * 1.77)
+      width: 100%
+      min-width: 95vw
+
+  &__side-panel
+    border-left: 1px solid rgba(255, 255, 255, 0.25)
+    min-width: 260px
+    width: 25vw
+    max-width: 352px
+    margin-top: 90px
+    padding-left: 25px
+
+    .jitsi__local-track--solo
+      height: auto
+
+      video
+        max-height: 200px
+        height: auto
+
+  &__cinema
+    .virtual__client-video-wrapper
+      background-color: black
+      position: relative
+      z-index: 5
+
+  &__conference,
+  &__cinema
+    max-height: 70vh
+    position: relative
+    padding-top: 90px
+    width: $virtual-presentation-width
+    max-width: calc(#{$virtual-presentation-max-height} * 1.77)
+
+  &__main-track
+    position: relative
+    width: 100%
+    min-height: $main-track-min-height
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &--side-panel
+      max-height: 200px
+      max-width: calc(200px * 1.77)
+
+      video
+        max-height: 200px
+
+    &--conference,
+    &--cinema
+      height: calc(#{$virtual-presentation-width} / 1.77)
+      max-height: $virtual-presentation-max-height
+      width: $virtual-presentation-width
+      max-width: calc(#{$virtual-presentation-max-height} * 1.77)
+
+      .jitsi__remote-track--main
+        .jitsi__video-tag
+          top: 10px
+          bottom: unset
+
+  &__local-track
+    position: absolute
+    border-radius: $jitsi-video-border-radius
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &--solo
+      width: 100%
+      height: 100%
+      position: relative
+
+      .jitsi__video-tag
+        bottom: 15px
+
+    &--side-panel
+      right: 0
+      bottom: 10px
+      height: 50px
+      width: 89px
+
+      .jitsi__video-tag
+        padding-right: 0
+        bottom: 3px
+
+    &--conference,
+    &--cinema
+      right: 0px
+      top: -85px
+      height: 75px
+      width: calc(75px * 1.77)
+      z-index: 3
+
+      .jitsi__video-tag
+        padding-right: 0
+        bottom: 3px
+
+      .jitsi__video-tag-icon
+        width: 12px
+        height: 12px
+
+    &--cinema .jitsi__no-video-feed
+      height: 80px
+      width: 220px
+      font-size: 12px
+
+    video
+      border-radius: $jitsi-video-border-radius
+      border: $jitsi-video-border
+      background-color: black
+      width: 100%
+      height: 100%
+
+  &__remote-wrapper-scroll
+    &--side-panel
+      overflow-y: auto
+      max-height: 60vh
+      min-height: 40vh
+
+    &--conference,
+    &--cinema
+      position: relative
+      top: -100px
+      overflow-x: auto
+      width: $virtual-presentation-width
+      max-width: calc((100vh - 200px) * 1.77)
+      padding-bottom: 11px
+
+    &--cinema
+      opacity: 0
+
+  &__remote-wrapper
+    &--side-panel
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      height: max-content
+      margin-bottom: 100px
+
+    &--conference,
+    &--cinema
+      display: flex
+      justify-content: flex-start
+      flex-wrap: nowrap
+      width: max-content
+
+  &__remote
+    &--side-panel
+      margin-top: 4px
+      width: 49%
+      height: 100px
+      display: flex
+      justify-content: flex-end
+      align-items: center
+
+      &:nth-child(odd)
+        justify-content: flex-start
+
+    &--conference,
+    &--cinema
+      height: 75px
+      width: 126px
+      margin: 0 5px
+
+  &__remote-track
+    position: relative
+    background-color: black
+    border-radius: $jitsi-video-border-radius
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 175px
+    height: 100px
+
+    &--main
+      width: 100%
+      height: 100%
+
+    &--cinema
+      height: 100%
+      width: 100%
+
+      .jitsi__video-tag,
+      .jitsi__video-tag-icon
+        display: none
+
+    &--conference
+      height: 100%
+      width: 100%
+
+      .jitsi__video-tag
+        font-size: 10px
+
+      .jitsi__video-tag-icon
+        width: 12px
+        height: 12px
+
+    video
+      width: 100%
+      height: 100%
+      border-radius: $jitsi-video-border-radius
+      border: $jitsi-video-border
+
+  &__main-remote-track
+    background-color: black
+    border: $jitsi-video-border
+    border-radius: $jitsi-video-border-radius
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+
+    video
+      width: 100%
+      height: 100%
+      border-radius: $jitsi-video-border-radius
+      border: $jitsi-video-border
+
+  &__no-video-feed
+    border: $jitsi-video-border
+    border-radius: $jitsi-video-border-radius
+    height: $main-track-min-height
+    width: 100%
+    background-color: black
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-end
+    position: relative
+    max-width: 700px
+
+    svg
+      fill: white
+
+    &--centered
+      justify-content: center
+      align-items: center
+
+    &--local-thumbnail
+      height: 75px
+
+    &--main
+      justify-content: center
+      align-items: center
+
+      .jitsi__video-tag
+        position: static
+
+  &__reload-button
+    border: 2px solid white
+    border-radius: 20px
+    background-color: black
+    min-width: 130px
+    height: 32px
+    margin-top: 8px
+    appearance: none
+    outline: none
+    color: white
+    font-family: $button-font-family
+    font-size: $button-font-size
+    font-weight: $button-font-weight
+
+    &:hover
+      background-color: white
+      color: black
+      cursor: pointer
+
+  &__video-tag
+    position: absolute
+    bottom: 5px
+    left: 5px
+    padding: 0px 5px
+    border-radius: 18px
+    background-color: rgba(0, 0, 0, 0.5)
+    display: flex
+    align-items: center
+    color: white
+
+  &__video-tag-icon
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    width: 20px
+    height: 20px
+    margin-right: 5px
+    background-color: red
+
+    svg
+      width: 16px
+
+  &__video-muted
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    border: $jitsi-video-border
+    border-radius: $jitsi-video-border-radius
+    background-color: black
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+  &__attendees-heading
+    font-size: 22px
+    font-weight: bold
+    line-height: 44px
+    height: 60px
+
+    +breakpoint(xlarge)
+    &__side-panel
+      padding-left: 5px

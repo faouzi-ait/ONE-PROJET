@@ -1,0 +1,234 @@
+//***********************************
+
+@import '../../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$content-block-bg-light: $white
+$content-block-bg-shade: $gallery
+$content-block-padding: 40px 0
+$content-block-container-padding: 0 20px
+$content-block-bg-brand: rgba($brand-color, .3)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .content-block
+
+    >.container
+        max-width: 1180px
+        padding: 0 20px
+
+    &__actions
+        text-align: center
+
+    &__heading
+        flex-wrap: wrap
+        font-family: $heading-font-family
+        font-size: 28px
+        font-weight: bold
+        margin: 0 0 40px
+        justify-content: space-between
+        text-transform: uppercase
+
+        > *
+            flex: 0 1 auto
+
+        .content-block__actions
+            margin-top: 0
+
+    &--banner-carousel
+        .carousel
+            overflow: visible
+
+        & + .content-block
+            position: relative
+            z-index: 2
+
+            &.content-block--light
+                background: transparent
+
+        >.container
+            max-width: none
+            padding: 0
+
+    &--related-pages.content-block--shade,
+    &--related-pages.content-block--image,
+    &--promo-carousel.content-block--shade,
+        background-color: transparent
+        box-sizing: border-box
+        position: relative
+
+        &:before
+            content: url('../../../../images/theme/section-curve-over.svg')
+            height: 33.7vw
+            position: absolute
+            top: 70px
+            width: 100%
+            z-index: -1
+
+        &:after
+            background: $gallery
+            bottom: 0
+            content: ''
+            top: 33.7vw
+            position: absolute
+            width: 100%
+            z-index: -1
+
+        &.content-block--image
+            &:before
+                transform: scaleX(-1)
+
+        &.content-block--image + .content-block--related-pages.content-block--image
+            &:before
+                bottom: 40px
+                transform: scale(-1, -1)
+                top: auto
+
+            &:after
+                top: 0
+                bottom: 33.7vw
+
+    &--text
+        .wysiwyg
+            margin: 0 auto
+            max-width: 780px
+
+        .content-block__media.content-block__media--left
+            & + .wysiwyg
+                max-width: none
+
+    &--people
+        .content-block__heading
+            display: block
+
+            &::after
+              background: $brand-color
+              content: ''
+              display: block
+              height: 4px
+              margin-top: 12px
+              width: 60px
+
+    &--quote
+        blockquote
+            background: $white
+            margin: 0 auto
+            max-width: 780px
+            padding: 15px 40px
+            position: relative
+
+            &::after
+                background: linear-gradient(to bottom, $brand-color 4.5%, $drama 4.5%, $drama 16.6%, $comedy 16.6%, $comedy 27.3%, $kids 27.3%, $kids 40.9%, $digital 40.9%, $digital 44.1%, $game 44.1%, $game 69.5%, $reality 69.5%, $reality 72.6%, $entertainment 72.6%, $entertainment 86.3%, $factual 86.3%)
+                content: ''
+                display: block
+                left: 0
+                height: 100% 
+                position: absolute
+                top: 0
+                width: 6px
+
+        h2 
+            font-size: $base-font-size
+            font-weight: $base-font-weight
+
+        cite
+            font-style: normal
+
+    &--related-pages,
+    &--promo-carousel
+        .carousel
+            overflow: visible
+
+    @media all and (min-width: 1024px)
+        &--related-pages.content-block--image
+            background-size: auto 600px
+            background-repeat: no-repeat
+            background-position: center
+            padding-top: 50px
+            padding-bottom: 50px
+            min-height: 600px
+
+            .container
+                position: relative
+
+            .card
+                text-align: center
+
+                &__media
+                    height: 220px
+                    left: 50%
+                    position: relative
+                    transform: translateX(-50%)
+                    width: auto !important
+
+                &__title
+                    font-size: 24px
+
+                &__tags
+                    justify-content: center
+
+            .content-block__heading
+                justify-content: center
+
+            .content-block__intro
+                color: $white
+                display: block
+                position: absolute
+                top: 50%
+                transform: translate(0, -50%)
+                width: calc(25% - 40px)
+                margin: 0
+
+            &:nth-child(even)
+                .grid,
+                .carousel
+                    margin-left: 25%
+
+                .content-block__intro
+                    left: 20px
+
+            &:nth-child(odd)
+                .grid,
+                .carousel
+                    margin-right: 25%
+
+                .content-block__intro
+                    right: 20px
+
+
+    +breakpoint(large)
+        &--related-pages.content-block--image
+            background-image: none !important
+
+        &--related-pages.content-block--shade,
+        &--related-pages.content-block--image,
+        &--promo-carousel.content-block--shade,
+
+            &:before
+                top: 0
+
+            &.content-block--image + .content-block--related-pages.content-block--image
+                padding-top: 0
+
+                &:before
+                    bottom: 0
+
+    +breakpoint(small)
+        &__heading
+            margin-bottom: 20px
+            font-size: 24px
+            
+        &--text,
+        &--stats
+            .grid
+                  display: block
+                  margin-right: 0
+
+                  > *
+                    margin-right: 0
+                    width: 100%

@@ -1,0 +1,82 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/create-form'
+
+//***********************************
+
+.create-form
+
+  &__inner
+    display: $create-form-display
+
+    > *
+      flex-shrink: 1
+
+  &__button
+    background: $create-form-button-background
+    font-size: $create-form-button-font-size
+    font-family: $create-form-button-font-family
+    font-weight: $create-form-button-font-weight
+    color: $create-form-button-color
+    padding: $create-form-button-padding
+    margin-left: 0
+    margin-right: 0
+    border-radius: $create-form-button-radius
+    border: 0
+    outline: none
+    cursor: pointer
+    appearance: none
+    display: block
+    white-space: nowrap
+
+    +hover
+        background: $create-form-button-hover-background
+        color: $create-form-button-hover-color
+
+
+    &--loading
+      background-color: $create-form-button-background !important
+      pointer-events: none
+      position: relative
+
+      &::before
+        animation: rotate-alt 1s infinite linear
+        border: 2px solid tint($brand-color, 40%)
+        border-bottom-color: transparent
+        border-radius: 50%
+        content: ''
+        display: block
+        height: 20px
+        left: 50%
+        margin: -12px 0 0 -12px
+        position: absolute
+        top: 50%
+        width: 20px
+
+      &::after
+        animation: rotate 1s infinite linear
+        border: 2px solid $brand-color
+        border-left-color: transparent
+        border-radius: 50%
+        content: ''
+        height: 14px
+        left: 50%
+        margin: -9px 0 0 -9px
+        position: absolute
+        top: 50%
+        width: 14px
+
+  &__input
+    padding: $create-form-input-padding
+    border: $create-form-input-border
+    border-radius: $create-form-input-radius
+    font-size: $create-form-input-font-size
+    font-family: $create-form-input-font-family
+    outline: none
+    width: 100%
+    max-width: 250px
+    min-width: 0px
+    box-sizing: border-box
+    display: block

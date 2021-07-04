@@ -1,0 +1,46 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$programme-details-gutter: 70px
+$programme-details-border: none
+$programme-details-side-width: 290px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-details
+
+  &__main
+    .heading--two
+      margin-bottom: 40px
+
+    .heading--three
+      font-size: 16px
+      margin-bottom: 20px
+
+  &__side
+    .heading--three
+      margin-bottom: 2px
+
+  &__series
+    .wysiwyg
+      > *:not(&:last-child)
+        border-bottom: 1px solid $nobel
+
+  +breakpoint(xlarge)
+    &__main
+      margin-right: 40px
+      padding-right: 40px
+
+  +breakpoint(large)
+    padding-bottom: 0
+
+    &__main
+      margin: 0 0 30px
+      padding: 0
+
+  +breakpoint(xsmall)
+    &__side
+      width: 100%

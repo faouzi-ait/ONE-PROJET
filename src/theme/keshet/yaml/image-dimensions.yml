@@ -1,0 +1,17 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x1200
+      Thumbnail: 1120x700
+
+  - name: Programme
+    url: https://keshet.rawnet.one/catalogue/8875
+    components:
+      Banner: 3200x1200
+      Thumbnail: 1120x700
+      Logo: 400x60
+
+  - name: News Article
+    components:
+      Banner: 3200x1200
+      Thumbnail: 560x350

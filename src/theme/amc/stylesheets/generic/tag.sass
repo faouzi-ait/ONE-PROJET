@@ -1,0 +1,37 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tag-bgc: $brand-color
+$tag-hover-bgc: $tradewind
+$tag-margin: 0 5px 5px 0
+$tag-padding: 6px 10px
+$tag-radius: 0
+
+//***********************************
+
+$tag-font-size: (14/16)+rem
+$tag-font-weight: 600
+$tag-color: $black
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tag
+  display: inline-flex
+  flex-direction: row-reverse
+
+  &__icon
+    fill: $white
+    margin: -1px 15px 0 0
+    width: 10px
+
+  &--unregistered
+    color: $white
+    font-size: 12px
+    font-weight: 400

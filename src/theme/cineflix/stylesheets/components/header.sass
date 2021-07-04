@@ -1,0 +1,138 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$header-bgc: transparent
+$header-max-width: 1520px
+$header-padding: 15px 20px
+$header-welcome-color: $white
+$header-user-color: $brand-color
+$header-user-hover-color: $brand-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .header
+    position: fixed
+    z-index: 900
+    transition: transform 1s ease .2s, background-color .5s ease .2s
+
+    &--impersonating
+        top: 75px
+
+    &__logo
+        path,
+        polygon
+            transition: fill .2s
+
+    &__controls
+        flex-shrink: 0
+        padding-left: 20px
+
+    &:not(.header--sticky)
+        .header__logo
+            path,
+            polygon
+                fill: $white
+
+    .text-button
+        margin-left: 20px
+        margin-right: 0
+        text-transform: uppercase
+
+    .button
+        text-transform: uppercase
+
+    .button--ghost + .button--ghost
+        margin-left: 10px
+
+    .programme-search__input
+        color: $white
+
+        &::-webkit-input-placeholder  /* Chrome/Opera/Safari */
+            color: rgba($white, .5)
+
+        &::-moz-placeholder  /* Firefox 19+ */
+            color: rgba($white, .5)
+
+        &:-ms-input-placeholder  /* IE 10+ */
+            color: rgba($white, .5)
+
+    &--sticky
+        background: $white
+        box-shadow: $base-box-shadow
+
+        .header__welcome
+            color: $mako
+
+        .top-navigation__link
+            color: $mako
+
+            &:hover,
+            &:focus
+                color: $black
+
+        .button
+            border-color: $mako
+            color: $mako
+
+            &:hover,
+            &:focus
+                background: lighten($delta, 20%)
+
+        .text-button
+            color: $mako
+
+        .button__icon
+            fill: $mako
+
+        .programme-search--global
+            background-color: transparent
+
+        .programme-search__input
+            color: $mako
+
+            &::-webkit-input-placeholder  /* Chrome/Opera/Safari */
+                color: rgba($mako, .5)
+
+            &::-moz-placeholder  /* Firefox 19+ */
+                color: rgba($mako, .5)
+
+            &:-ms-input-placeholder  /* IE 10+ */
+                color: rgba($mako, .5)
+
+    &--hide
+        transform: translateY(-100%)
+
+    &--searching
+        .top-navigation,
+        .button--ghost
+            display: none
+
+    +breakpoint(medium)
+        &--searching
+            background: rgba($black, .2)
+
+            .programme-search--global
+                background-color: rgba($black, .2)
+
+        &.header--sticky
+            background: $white
+
+            .programme-search--global
+                background-color: $white
+
+
+    +breakpoint(small)
+        &__controls
+            padding-left: 10px
+
+        .button
+            margin-left: 0
+            margin-right: 0
+            padding: 10px

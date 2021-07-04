@@ -1,0 +1,53 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$section-padding: 40px 0
+$section-bgc: $shark
+$section-shade-bgc: $shark
+
+//***********************************
+
+$section-copy-color: $white
+$section-copy-hover-color: $white
+$section-copy-margin: 0 0 20px
+$section-copy-size: 18px
+$section-copy-weight: 600
+
+//***********************************
+
+$section-header-text-align: left
+
+//***********************************
+
+$section-actions-align: right
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .section
+    &--curved
+        background: url(../../images/theme/section-bg-alternative.svg) center no-repeat
+        background-size: 200%
+        padding: 0
+
+    &__header
+        color: $white
+        font-size: 35px
+        font-weight: normal
+        margin-top: 0
+        margin-bottom: 30px
+        
+    &__copy
+        border-bottom: solid 1px $mine-shaft
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+        padding-bottom: 20px
+
+    +breakpoint(medium)
+        padding: 20px 0
+        &__header
+            font-size: 28px
+
+        

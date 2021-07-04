@@ -1,0 +1,76 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 20px
+
+//***********************************
+
+$carousel-group-background: $casper
+$carousel-group-border-radius: 100px
+$carousel-group-color: $white
+$carousel-group-font-size: 14px
+$carousel-group-margin: 0 $carousel-spacing 20px 0
+$carousel-group-padding: 2px 15px
+
+//***********************************
+
+$carousel-arrow-background-color: $brand-color
+$carousel-arrow-background-size: 72px
+$carousel-arrow-color: $white
+$carousel-arrow-size: 16px
+$carousel-arrow-width: 3px
+$carousel-arrow-shadow: 0 10px 15px rgba($black, .15)
+$carousel-arrow-hover-background-color: shade($brand-color, 10%)
+$carousel-arrow-border-radius: 50%
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 4px
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 20px 0 0 0
+$carousel-dots-radius: 100%
+$carousel-dots-border: 2px solid $brand-color
+$carousel-dots-size: 8px
+$carousel-dots-active-background: $brand-color
+
+//***********************************
+
+$carousel-scroll-spacing: 20px
+$carousel-scroll-height: 6px
+$carousel-scroll-background: $white
+$carousel-scroll-handle-background: $brand-color
+$carousel-scroll-handle-radius: $carousel-scroll-height * 2
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 5px
+$carousel-pager-padding: 20px 0 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+  &--2-items,
+  &--3-items
+      .carousel__arrow
+          top: 80%

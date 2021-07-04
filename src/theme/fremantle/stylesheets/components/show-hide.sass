@@ -1,0 +1,105 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$show-hide-border: 1px solid $mine-shaft
+
+//***********************************
+
+$show-hide-wrap-align: center
+$show-hide-wrap-display: flex
+
+//***********************************
+
+$show-hide-title-flex: 1
+$show-hide-title-font-family: $base-font-family
+
+//***********************************
+
+$show-hide-trigger-background: $white
+$show-hide-trigger-border-radius: 0
+$show-hide-trigger-width: 2px
+$show-hide-trigger-flex: none
+$show-hide-trigger-size: 50px
+$show-hide-trigger-spacing: 10px
+
+//***********************************
+
+$show-hide-arrow-width: 2px
+$show-hide-arrow-color: $cod-gray
+$show-hide-arrow-size: 10px
+
+//***********************************
+
+$show-hide-wrap-icon-button-margin: 17px
+$show-hide-gap: 67px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .show-hide
+    padding-top: 20px
+    > *
+        padding-bottom: 20px
+
+    &__title
+        color: $white
+        font-size: 24px
+        font-weight: normal
+
+    &--active
+        .show-hide__trigger
+            background: transparent
+
+            &:before
+                border-color: $white
+
+    &__trigger
+        border-color: $white
+
+    &:last-child
+        border-bottom: none
+
+    &__title-wrap
+
+        .tags
+            display: inline-flex
+
+        .show-hide__title
+            margin-right: 20px
+
+        .tags,
+        .show-hide__title + .tag
+            margin-right: 10px
+
+        .tag
+            border-right: solid 1px rgba($white, .5)
+            font-size: 12px
+            font-weight: 800
+            letter-spacing: 0
+            margin: 5px 5px 5px 0
+            padding-right: 5px
+            text-transform: uppercase
+
+            +hover
+                color: $white
+
+            &:last-child
+                border: none
+
+    +breakpoint(medium)
+
+        > *:not(.show-hide__wrap)
+            padding-left: 20px
+
+    +breakpoint(small)
+        &__title-wrap
+            display: block
+
+            .tags
+                margin-left: 0

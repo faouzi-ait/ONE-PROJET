@@ -1,0 +1,54 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$footer-bgc: $shark
+$footer-padding: 70px 0
+
+//***********************************
+
+$footer-brand-margin: 0 auto
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .footer
+    &__nav
+        margin-top: 0
+
+    &__item
+        border-color: $abbey
+        color: $abbey
+
+    &__link
+        display: block
+
+    &__link,
+    &__copy
+        color: $abbey
+        font-family: $secondary-font-family
+        letter-spacing: 0.5px
+        font-weight: 800
+        font-size: 12px
+        text-transform: uppercase
+    
+    &__copy
+        border-right: solid 1px $abbey
+        margin: 0
+        padding-right: 10px
+        margin-bottom: 10px
+
+    &__bottom
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        margin-top: 27px
+
+    .sharer
+        background: none
+        padding: 25px 0 0

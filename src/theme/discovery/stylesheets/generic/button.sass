@@ -1,0 +1,104 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$button-bgc: $white
+$button-border-radius: 25px
+$button-border: 2px solid $base-color
+$button-hover-bgc: $base-color
+
+//***********************************
+
+$button-filled-bgc: $white
+$button-filled-color: $base-color
+$button-filled-hover-bgc: $base-color
+$button-filled-icon-color: $base-color
+
+//***********************************
+
+$button-small-padding: 6px 20px 5px
+$button-with-icon-padding: 11px 20px
+$button-small-font-size: 14px
+
+//***********************************
+
+$button-error-background: $error-color
+$button-error-color: $white
+$button-error-border: 2px solid $error-color
+
+$button-error-hover-background: shade($error-color, 10%)
+
+$button-success-background: $success-color
+$button-success-color: $white
+$button-success-border: 2px solid $success-color
+
+$button-success-hover-background: shade($success-color, 10%)
+
+//***********************************
+
+$button-null-background: $base-color-dark
+$button-null-color: $white
+$button-null-border: 2px solid $base-color-dark
+
+$button-null-hover-background: $base-color-dark
+
+//***********************************
+
+$button-color: $base-color-dark
+$button-font-family: $base-font-family
+$button-font-size: 18px
+$button-font-weight: 600
+
+//***********************************
+
+$button-padding: 14px 40px
+
+//***********************************
+
+$button-transition: background-color .3s, border-color .3s
+
+//***********************************
+
+$button-alert-color: $error-color
+$button-alert-size: 14px
+$button-alert-right: 10px
+
+//***********************************
+
+$button-icon-padding: 0
+$button-icon-size: 25px
+$button-icon-margin: 0 10px 0 0
+$button-icon-margin-right: 0 0 0 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .button,
+.custom .mock-page .content-block .button
+    +hover
+        color: $white
+
+    &--reversed
+        background: transparent
+
+        +hover
+            color: $button-color
+
+    &--filled
+
+        &.button--reversed
+            background-color: $white
+
+    &--icon
+        border: none
+
+        +hover
+            background-color: transparent
+
+            .button__icon
+                fill: $brand-color

@@ -1,0 +1,4 @@
+https://wildbrain.thisisone.tv   http://distribution.wildbrain.com   301!
+https://wildbrain.thisisone.tv/*   http://distribution.wildbrain.com/:splat   301
+
+/*   /index.html   200

@@ -1,0 +1,50 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$actions-padding: 20px 0
+$actions-background: $white
+
+//***********************************
+
+$actions-inner-display: flex
+$actions-inner-flex-wrap: wrap
+$actions-inner-align: center
+$actions-inner-justify: flex-end
+$actions-inner-margin: -10px -5px 0px 0px
+
+//***********************************
+
+$actions-item-margin: 10px 5px 0px 0px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .meetings
+    background-color: $tyrian
+    padding-top: 110px
+
+    &__wrapper
+        background-color: $azalea
+
+    &__range
+        > *
+            margin-right: 0
+            
+        .button--icon
+            height: 42px
+            width: 42px
+            &:first-child
+                border-radius: 3px 0 0 3px
+
+            &:last-child
+                border-radius: 0 3px 3px 0
+
+        .react-datepicker__input-container input
+            border-radius: 0
+
+    &__filters
+        .meetings__container
+            padding-top: 15px
+            padding-bottom: 20px

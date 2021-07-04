@@ -1,0 +1,11 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x480
+      Thumbnail: 1120x1000
+
+  - name: Programme
+    url: https://onetv.rawnet.one/catalogue/2
+    components:
+      Banner: 3200x1200
+      Thumbnail: 1120x700

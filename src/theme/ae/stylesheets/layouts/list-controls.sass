@@ -1,0 +1,28 @@
+//***********************************
+// Theme Variables
+//***********************************
+
+$list-controls-padding: 10px 0px 20px
+$list-controls-sticky-width: 1220px
+$list-controls-sticky-padding: 10px 20px 20px
+$list-controls-sticky-padding-bp-small: 10px 10px 20px
+$list-controls-border: 1px solid rgba($base-color-dark, 0.2)
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .list-controls
+  &:not(.list-controls--plain)
+    display: block
+
+  &__count
+    font-size: 14px
+
+  &__list
+    .button:nth-child(3)
+      margin-right: auto
+
+  .text-button
+    color: $white
+    font-size: 14px

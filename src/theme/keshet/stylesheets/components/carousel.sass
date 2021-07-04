@@ -1,0 +1,147 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$carousel-spacing: 20px
+
+//***********************************
+
+$carousel-group-background: $gull-gray
+$carousel-group-border-radius: 3px
+$carousel-group-color: $white
+$carousel-group-font-size: 12px
+$carousel-group-margin: 0 $carousel-spacing 10px 0
+$carousel-group-padding: 2px 10px
+
+//***********************************
+
+$carousel-arrow-background-color: url('../../../images/theme/btn-pebble.svg') no-repeat
+$carousel-arrow-background-size: 67px
+$carousel-arrow-color: $white
+$carousel-arrow-size: 20px
+$carousel-arrow-width: 5px
+$carousel-arrow-shadow: none
+$carousel-arrow-hover-background-color: none
+$carousel-arrow-border-radius: 50%
+
+//***********************************
+$carousel-arrows-under-breakpoint: 1360
+$carousel-arrows-under-size: 50px
+$carousel-arrows-under-border-radius: 4px
+
+//***********************************
+
+$carousel-arrow-small-background-size: 30px
+$carousel-arrow-small-size: 8px
+
+//***********************************
+
+$carousel-dots-display: flex
+$carousel-dots-justify: center
+$carousel-dots-spacing: 8px
+$carousel-dots-margin: 20px 0 0 0
+$carousel-dots-radius: 100%
+$carousel-dots-border: 2px solid $brand-color
+$carousel-dots-size: 8px
+$carousel-dots-active-background: $brand-color
+
+//***********************************
+
+$carousel-scroll-spacing: 30px
+$carousel-scroll-height: 6px
+$carousel-scroll-background: $iron
+$carousel-scroll-handle-background: $tuna
+$carousel-scroll-handle-radius: $carousel-scroll-height * 2
+
+//***********************************
+
+$carousel-pager-display: flex
+$carousel-pager-justify: flex-end
+$carousel-pager-align: center
+$carousel-pager-spacing: 5px
+$carousel-pager-padding: 20px 0 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .carousel
+  &__arrow
+    background-size: auto 100%
+    border-radius: 0
+
+    &--small
+      &:after
+        border-bottom: 2px solid $carousel-arrow-color
+        border-right: 2px solid $carousel-arrow-color
+
+  .banner
+    min-height: 750px
+    margin-bottom: -120px
+
+    &__image
+      width: 100%
+
+    &__content
+      &:before
+        opacity: .9
+
+    .banner__title:after
+      display: none
+
+    &:before
+      background: linear-gradient(to bottom, rgba($black, 0), rgba($athens-gray, 1) 100%)
+      bottom: -1px
+      content: ''
+      height: 15.8228vw
+
+    &::after
+      top: 100%
+
+  &--2-items,
+  &--3-items 
+    .banner
+      &__image
+        opacity: .5
+
+      &:after,
+      &__content:before
+        display: none
+
+    &::after
+      background: none
+      content: url('../../../images/theme/banner-curve-grey-bottom.svg')
+      position: absolute
+      right: 0
+      pointer-events: none
+      top: calc(100% + 2.425vw)
+      width: 100%
+      z-index: -1
+
+  @media all and (min-width: 1540px)
+    .banner
+      &__image
+        width: 100%
+
+  +breakpoint(large)
+    .banner
+      min-height: 0
+      margin-bottom: 0
+
+    .banner
+      &:before
+        display: none
+
+    &__dots
+      padding-top: 30px
+
+  +breakpoint(medium)
+    &--2-items,
+    &--3-items 
+      .banner
+        &__image
+          opacity: 1

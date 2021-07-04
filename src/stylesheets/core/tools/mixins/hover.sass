@@ -1,0 +1,10 @@
+//***********************************
+// Hover mixin
+//***********************************
+
+=hover
+  .no-touch &:hover,
+  .touch &:active,
+  &:focus
+    @content
+    outline: none

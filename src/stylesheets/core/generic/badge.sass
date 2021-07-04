@@ -1,0 +1,20 @@
+@import '../../_theme/generic/badge'
+
+.badge
+  position: relative
+
+  &::before
+    content: attr(data-badge-content)
+    position: absolute
+    background-color: $badge-bg-color
+    height: $badge-size
+    top: -$badge-size
+    right: -$badge-size
+    width: calc(#{$badge-size} + 2px)
+    color: $badge-color
+    border: $badge-border
+    text-align: center
+    line-height: $badge-size
+    padding: $badge-padding
+    font-size: 0.7rem
+    border-radius: 50%

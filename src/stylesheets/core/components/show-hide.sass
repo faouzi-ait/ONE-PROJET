@@ -1,0 +1,94 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/show-hide'
+
+//***********************************
+
+.show-hide
+  padding-top: 10px
+  border-top: $show-hide-border
+
+  > *
+    padding-bottom: 10px
+    padding-left: $show-hide-gap
+
+  &:last-child
+    border-bottom: $show-hide-border
+
+  &__wrap
+    align-items: $show-hide-wrap-align
+    display: $show-hide-wrap-display
+    padding-left: 0
+
+    .icon-button
+      margin-right: $show-hide-wrap-icon-button-margin
+
+  &__title
+    font-family: $show-hide-title-font-family
+    margin: 0
+    cursor: pointer
+    &--empty
+      cursor: auto
+
+  &__title-wrap
+    align-items: $show-hide-wrap-align
+    display: $show-hide-wrap-display
+    flex: $show-hide-title-flex
+    flex-wrap: wrap
+
+    .tag
+      margin: 0 0 0 10px
+
+  &__sub-title
+    margin-left: 10px
+
+  &__trigger
+    appearance: none
+    background: $show-hide-trigger-background
+    border-radius: $show-hide-trigger-border-radius
+    border: $show-hide-trigger-width solid $show-hide-arrow-color
+    box-sizing: border-box
+    content: ''
+    cursor: pointer
+    display: block
+    flex: $show-hide-trigger-flex
+    height: $show-hide-trigger-size
+    margin: 0 $show-hide-trigger-spacing
+    outline: none
+    padding: 0
+    position: relative
+    width: $show-hide-trigger-size
+
+    &:before
+      border-color: $show-hide-arrow-color
+      border-style: solid
+      border-width: 0 $show-hide-arrow-width $show-hide-arrow-width 0
+      box-sizing: border-box
+      content: ''
+      display: block
+      height: $show-hide-arrow-size
+      left: 50%
+      margin-top: -#{$show-hide-arrow-width / 2}
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%) rotate(45deg)
+      width: $show-hide-arrow-size
+
+  &--active &
+    &__trigger
+      background: $brand-color
+
+      &:before
+        border-color: $white
+        margin-top: $show-hide-arrow-width
+        transform: translate(-50%, -50%) rotate(-135deg)
+
+  &__content
+    border-bottom: $show-hide-border
+    padding: 10px 0 10px $show-hide-gap
+    margin-left: -#{$show-hide-gap}
+    
+    &:last-child
+      border-bottom: 0

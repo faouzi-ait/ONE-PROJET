@@ -1,0 +1,126 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: transparent
+$psearch-padding: 0
+
+//***********************************
+
+$psearch-input-border: 1px solid $oslo
+$psearch-input-focus-border: $brand-color
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: 20px
+$psearch-input-padding: 19px 30px 19px 45px
+$psearch-input-radius: 0
+$psearch-input-radius-open: 0
+
+//***********************************
+
+$psearch-button-radius: 0 22px 22px 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: $oslo
+$psearch-clear-hover-fill: $ghost
+
+//***********************************
+
+$psearch-input-radius-bp-small: 22px
+$psearch-button-radius-bp-small: 22px
+$psearch-input-radius-open-bp-small: 22px 22px 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-search
+  &:not(.programme-search--global)
+    position: relative
+    z-index: 5
+
+  &__input
+    background: url(../../images/theme/search.svg) 0 center / 28px  no-repeat
+    border-width: 0 0 1px
+    color: $oslo
+
+  .button
+    display: none
+
+  &__clear
+    background: transparent
+    border: none
+    padding: 0
+    transform: translateX(-100%)
+    margin-right: -25px
+
+    svg
+      stroke: $oslo
+
+    +hover
+      svg
+        stroke: $ziggurat
+
+  &--global
+
+    .programme-search__input
+      border-width: 0
+      color: $wildsand
+      padding-top: 10px
+      padding-bottom: 10px
+
+      &::placeholder
+        color: $wildsand
+
+  +breakpoint(medium, min)
+    .container
+      max-width: calc(100% - 340px)
+      margin-left: 0
+
+    &--global
+      .container
+        max-width: none
+
+  +breakpoint(1410, min)
+    .container
+      max-width: 1044px
+      margin-left: calc(50vw - 705px)
+
+    &--global
+      .container
+        margin-left: 0
+
+  +breakpoint(1600, min)
+    .container
+      margin-left: 85px
+
+    &--global
+      .container
+        margin-left: 0
+
+  +breakpoint(large, min)
+    &--global
+      margin-top: -12px
+      margin-bottom: -12px 
+
+  +breakpoint(large)
+    &--global
+      border: solid 1px $oslo
+      background: $shark
+      left: 0
+      right: 0
+      padding: 0 20px
+      max-width: none
+      .programme-search__input
+        border-color: $wildsand
+        background-size: 22px
+        background-position: 10px center
+        padding-right: 10px
+
+  

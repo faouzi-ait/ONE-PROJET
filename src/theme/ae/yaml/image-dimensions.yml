@@ -1,0 +1,27 @@
+dimensions:
+  - name: Page
+    components:
+      Banner: 3200x1760
+      Thumbnail: 1120x1494
+
+  - name: Static Page
+    components:
+      Banner: 3200x600
+      Thumbnail: 1120x1494
+
+  - name: Catalogue
+    components:
+      Banner: 3200x1180
+      Thumbnail: 1120x1494
+
+  - name: Programme
+    url: https://ae.rawnet.one/catalog/2
+    components:
+      Banner: 1600x660
+      Thumbnail: 1120x630
+      Logo: 400x60
+
+  - name: News Article
+    components:
+      Banner: 3200x600
+      Thumbnail: 1120x1494

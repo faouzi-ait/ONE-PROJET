@@ -1,0 +1,203 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/calendar'
+@import '../../_theme/components/add-meeting'
+
+//***********************************
+
+.calendar
+  bottom: 0
+  left: 0
+  overflow: hidden
+  position: absolute
+  right: 0
+  top: 0
+
+  &__bar
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 2px
+    background-color: $error-color
+    z-index: 1
+    transition: top .3s
+
+  &__times
+    background-color: $base-color-dark
+    bottom: 0
+    left: 0
+    padding-top: $calendar-days-height
+    pointer-events: none
+    position: absolute
+    top: 0
+    width: $calendar-time-width
+    z-index: 1
+
+  &__time
+    color: $white
+    font-size: 14px
+    font-weight: bold
+    height: $calendar-row-height
+    line-height: 1
+    padding: 0 10px
+    text-align: right
+
+    span
+      display: block
+      transform: translateY(-50%)
+
+  &__days
+    left: $calendar-time-width
+    overflow: hidden
+    pointer-events: none
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+
+    button
+      pointer-events: auto
+
+  &__day
+    background-color: $brand-color
+    color: $white
+    font-size: 14px
+    font-weight: bold
+    line-height: $calendar-days-height
+    text-align: center
+
+    button
+      padding: 0
+      border: none
+      background-color: transparent
+      vertical-align: middle
+      margin-left: 10px
+      outline: none
+      cursor: pointer
+
+      svg
+        fill: $white
+
+  &__view
+    -webkit-overflow-scrolling: touch
+    bottom: 0
+    left: 0
+    overflow: auto
+    padding: $calendar-days-height 0 0 $calendar-time-width
+    position: absolute
+    right: 0
+    top: 0
+    background-color: $white
+
+  &__columns
+    display: flex
+
+  &__column
+    min-width: $calendar-column-width
+    position: relative
+
+    // &:last-child
+    //   .calendar__row
+    //     border-right: none
+
+  &__row
+    border: $calendar-row-border
+    border-left: none
+    border-top: none
+    box-sizing: border-box
+    border-bottom-color: transparent
+    height: $calendar-row-height
+
+  &__add-meeting
+    bottom: 20px
+    height: 50px
+    position: absolute
+    right: 20px
+    width: 50px
+    z-index: 1
+    border-radius: 50%
+    background-color: $brand-color
+    transition: background-color .2s
+
+    &::before,
+    &::after
+      background-color: $white
+      content: ""
+      height: 25px
+      left: 50%
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 4px
+
+    &::after
+      transform: translate(-50%, -50%) rotate(-90deg)
+
+    +hover
+      background-color: shade($brand-color, 10%)
+
+    &--icon
+      background-color: transparent
+      +hover
+        background-color: transparent
+
+  &__slot
+    background-color: $calendar-slot-bg
+    padding: 5px
+    display: flex
+    align-items: center
+    position: relative
+
+    &::after
+      background-color: rgba($base-color-dark, 0.2)
+      bottom: -1px
+      content: ""
+      height: 1px
+      left: 0
+      position: absolute
+      right: 0
+      z-index: 1
+
+    &:last-child
+      &::after
+        display: none
+
+    &--offsite,
+    &--passed
+      background-color: $calendar-slot-bg-disabled
+
+      &::before
+        background-color: shade($calendar-slot-bg-disabled, 10%) !important
+
+      &.calendar__slot--filled + .calendar__slot--filled::before
+        border-top: 14px solid shade($calendar-slot-bg-disabled, 10%)
+
+
+    &--filled
+
+      + .calendar__slot--filled::before
+        margin-top: -20px
+        border-radius: 0 0 5px 5px
+
+      &::before
+        background-color: tint($brand-color, 80%)
+        content: ""
+        border-radius: 5px
+        display: block
+        width: 322px
+        align-self: stretch
+
+    .add-meeting
+      margin-left: auto
+      margin-right: 5px
+      flex: none
+
+    .meeting
+      width: 302px
+
+  &--flexible
+    position: relative
+    height: 600px

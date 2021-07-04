@@ -1,0 +1,83 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$nav-bgc: $shark
+$nav-divide-color: $abbey
+$nav-width: 400px
+$nav-width-bp-large: 320px
+
+//***********************************
+
+$nav-close-left: auto
+$nav-close-right: 35px
+$nav-close-top: 35px
+
+//***********************************
+
+$nav-item-divide-margin: 0 0 10px 0
+$nav-item-divide-padding: 0 0 10px 0
+
+//***********************************
+
+$nav-list-padding: 100px 50px
+$nav-list-padding-bp-large: 80px 50px 50px 50px
+
+//***********************************
+
+$nav-link-active-color: $abbey
+$nav-link-color: $white
+$nav-link-hover-color: $abbey
+$nav-link-padding: 10px 0
+
+//***********************************
+
+$sub-nav-margin: 0
+$sub-nav-padding: 0 0 0 25px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .navigation
+  z-index: 35
+  &__list
+    list-style: none
+
+  &__link
+    font-size: 24px
+    position: relative
+
+    &--is-active
+      &::before
+        background: $white
+        content: ''
+        height: 9px
+        left: -18px
+        position: absolute
+        top: 50%
+        width: 9px
+        transform: translateY(-50%)
+
+  &__sub-nav
+    list-style: none
+
+    .navigation__link
+      padding: 3px 0
+
+  .button
+    border: none
+    &--icon
+      &:hover
+        background-color: transparent
+
+        .button__icon
+          fill: $brand-color
+
+  +breakpoint(medium)
+    &__link
+      font-size: 20px

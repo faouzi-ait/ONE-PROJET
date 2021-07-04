@@ -1,0 +1,68 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: $white
+$psearch-padding: 20px 0
+
+//***********************************
+
+$psearch-input-border: none
+$psearch-input-focus-border: $brand-color
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: 40px
+$psearch-input-padding: 8px 0 8px 57px
+$psearch-input-radius: 0
+$psearch-input-radius-open: 0
+
+//***********************************
+
+$psearch-button-radius: 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: rgba($base-color, .25)
+$psearch-clear-hover-fill: $brand-color
+
+//***********************************
+
+$psearch-input-radius-bp-small: 22px
+$psearch-button-radius-bp-small: 22px
+$psearch-input-radius-open-bp-small: 22px 22px 0 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-search
+
+  .button
+    display: none
+
+  &__input
+    background: url(../../images/theme/mag-glass.svg) -11px center / 66px  transparent no-repeat
+    color: $base-color
+    font-weight: 700
+
+    &::placeholder
+      color: rgba($shark, .25)
+
+  +breakpoint(large)
+    &--global
+      border-top: solid 4px $gallery
+      background: $white
+      padding-left: 20px
+      left: 0
+      right: 0
+
+  +breakpoint(medium)
+    &__input
+      background-size: 45px
+      font-size: 22px
+      padding-left: 37px

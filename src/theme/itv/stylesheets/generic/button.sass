@@ -1,0 +1,124 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$button-bgc: transparent
+$button-border-radius: 100px
+$button-border: solid 2px $brand-color
+$button-hover-bgc: $brand-color
+
+//***********************************
+
+$button-filled-bgc: $brand-color
+$button-filled-color: $white
+$button-filled-hover-bgc: $bright-gray
+$button-filled-icon-color: $white
+
+//***********************************
+
+$button-small-padding: 8px 12px 6px
+$button-with-icon-padding: 9px 10px 7px 13px
+$button-small-font-size: 12px
+
+//***********************************
+
+$button-error-background: $error-color
+$button-error-color: $white
+$button-error-border: 2px solid $error-color
+
+$button-error-hover-background: shade($error-color, 10%)
+
+$button-success-background: $success-color
+$button-success-color: $white
+$button-success-border: 2px solid $success-color
+
+$button-success-hover-background: shade($success-color, 10%)
+
+//***********************************
+
+$button-null-background: $base-color-dark
+$button-null-color: $white
+$button-null-border: 2px solid $base-color-dark
+
+$button-null-hover-background: $base-color-dark
+
+//***********************************
+
+$button-color: $gallery
+$button-font-family: $base-font-family
+$button-font-size: 14px
+$button-font-weight: bold
+
+//***********************************
+
+$button-padding: 11px 30px
+
+//***********************************
+
+$button-transition: background-color .2s, color .2s, border-color .2s
+
+//***********************************
+
+$button-alert-color: $error-color
+$button-alert-size: 14px
+$button-alert-right: 10px
+
+//***********************************
+
+$button-icon-padding: 0
+$button-icon-size: 44px
+$button-icon-margin: 0 10px 0 0
+$button-icon-margin-right: 0 0 0 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .button,
+.custom .mock-page .content-block .button
+  text-transform: uppercase
+
+  +hover
+    color: $white
+
+  &--filled
+    +hover
+      border-color: $brand-color
+
+  &--with-icon
+    height: 40px
+
+  &--reversed
+    border: 2px solid $white
+
+    +hover
+      background-color: $white
+      color: $background-color
+
+    &.button--filled
+      background-color: $button-filled-bgc
+      border-color: transparent
+      color: $background-color
+
+      &:hover
+        background-color: rgba($white, .8)
+        
+  &--icon
+    border: none
+
+    +hover
+      background-color: transparent
+
+  &--underline
+    border-radius: 0
+    border: none
+    border-bottom: 2px solid $white
+    &:hover
+      border-bottom-color: $brand-color
+
+.custom.mock-page .button
+  color: $button-color

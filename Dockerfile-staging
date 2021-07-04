@@ -1,0 +1,13 @@
+# ubuntu 16.04 with node 12.16.1 | bash | cypress
+FROM rawnetone/base-img
+
+# Working directory for application
+WORKDIR /usr/src/app
+
+# npm install into WORKDIR
+COPY package.json ./
+RUN npm install
+
+# copy webapp files to container
+COPY . .
+

@@ -1,0 +1,62 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$form-width: 980px
+$form-skinny-width: 400px
+
+//***********************************
+
+$form-input-padding: 14px 17px
+$form-input-radius: 0
+$form-textarea-radius: 0
+$form-input-border: 1px solid $mine-shaft
+$form-input-focus-border: $brand-color
+$form-textarea-height: 120px
+$form-input-phone-padding: 3px 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .form
+
+  &__label
+    color: $siroco
+    font-size: 12px
+    margin-bottom: 8px
+    text-transform: uppercase
+
+  &__input
+    background-color: $base-color 
+    color: $white
+    font-size: 15px
+    font-weight: 800
+
+  &__error,
+  &__input,
+  &__label
+    font-family: $secondary-font-family
+    letter-spacing: 0.5px
+
+  &__errors
+    margin: 20px 0
+
+  &__control
+    color: $white
+
+    &--bordered
+      border-color: $mine-shaft
+      > p
+        margin: 0
+
+    &--large
+      .form__input
+        font-family: $base-font-family
+        font-size: 24px
+        font-weight: normal
+        letter-spacing: 0

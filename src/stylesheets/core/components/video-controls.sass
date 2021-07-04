@@ -1,0 +1,101 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+@import '../../_theme/components/video-controls'
+
+//***********************************
+
+.video-controls
+  position: absolute
+  bottom: 0px
+  background-color: transparent
+  width: 100%
+  height: 92%
+  z-index: 10
+  box-sizing: border-box
+  overflow: hidden
+
+  &__panel-wrapper
+    position: absolute
+    bottom: 0px
+    width: 100%
+    height: $video-control-height
+    background-color: transparent
+
+  &__panel
+    background-image: $video-control-bg-img
+    border-top: 2px solid $video-control-color
+    width: 100%
+    height: 100%
+    visibility: visible
+    opacity: 1
+    transition: visibility 0.5s linear, opacity 0.5s linear
+
+    &--hidden
+      visibility: hidden
+      opacity: 0
+
+    svg
+      fill: $video-control-color
+
+  &__volume
+    position: absolute
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 150px
+    height: $video-control-height
+
+  &__volume-icon
+    height: 22px
+    padding-left: 20px
+    width: 25px
+
+  &__volume-slider-container
+    height: 22px
+    line-height: 20px
+
+  &__volume-slider
+    -webkit-appearance: none
+    appearance: none
+    width: 85px
+    height: 5px
+    background: tint($video-control-color, 20%)
+    outline: none
+
+    &:hover
+      background: tint($video-control-color, 10%)
+
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      appearance: none
+      width: $video-control-volume-slider-thumb-size
+      height: $video-control-volume-slider-thumb-size
+      background: $video-control-color
+      border-color: $video-control-color
+      cursor: pointer
+
+    &::-moz-range-thumb
+      width: $video-control-volume-slider-thumb-size
+      height: $video-control-volume-slider-thumb-size
+      border-color: $video-control-color
+      background: $video-control-color
+      cursor: pointer
+
+  &__fullscreen
+    position: absolute
+    right: 0
+    width: 150px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    height: $video-control-height
+
+  &__fullscreen-icon
+    height: 22px
+    padding-right: 20px
+    width: 25px
+
+

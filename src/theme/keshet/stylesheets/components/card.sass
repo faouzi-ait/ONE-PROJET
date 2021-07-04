@@ -1,0 +1,242 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$card-base-color: $base-color
+$card-bgc: $white
+$card-border-radius: 5px
+$card-padding: 10px 20px 20px
+
+//***********************************
+
+$card-title-color: $base-color
+$card-title-hover-color: $brand-color
+$card-title-margin: 0 0 8px
+$card-title-size: 18px
+$card-title-weight: bold
+
+//***********************************
+
+$card-date-color: $base-color-light
+$card-date-font-size: 12px
+$card-date-margin: 5px 0 0
+
+//***********************************
+
+$card-copy-color: $base-color
+$card-copy-hover-color: $base-color
+$card-copy-margin: 0
+$card-copy-size: $base-font-size
+$card-copy-weight: normal
+
+//***********************************
+
+$card-count-color: $white
+$card-count-background: url('../../../images/theme/btn-pebble.svg') no-repeat
+$card-count-padding: 2px 0
+$card-count-weight: 500
+$card-count-border-radius: 0
+$card-count-spacing: 5px
+$card-count-offset: -3px
+
+//***********************************
+
+$card-toggle-position: absolute
+$card-toggle-right: 10px
+$card-toggle-top: -25px
+$card-toggle-transform: translateY(-50%)
+
+//***********************************
+
+$card-tags-margin: 0px -4px 4px 0
+$card-tag-margin: 0 4px 4px 0
+$card-tag-font-size: 12px
+$card-tag-color: $white
+$card-tag-border: none
+$card-tag-padding: 3px 5px
+$card-tag-radius: 2px
+
+//***********************************
+
+$card-active-shadow: 0 12px 5px rgba($base-color-dark, 0.2)
+
+//***********************************
+
+$card-small-content-padding: 10px
+
+//***********************************
+
+$card-small-title-size: 14px
+
+//***********************************
+
+$card-icon-fill: $tuna
+
+//***********************************
+
+$card-strip-bgc: $error-color
+$card-strip-color: $white
+$card-strip-font-size: 12px
+$card-strip-padding: 6px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .card
+  box-shadow: 0 2px 5px 0 rgba($regent-gray,.6)
+  display: flex
+  flex-direction: column
+
+  &__content
+    flex: 1 0 auto
+
+  &__media-link,
+  > .card__media + .card__content
+    &::after
+      bottom: 0
+      background: url('../../../images/theme/card-curve.svg') no-repeat
+      background-size: 100%
+      content: ''
+      height: 0
+      padding-top: calc(12.5% + 3px)
+      left: -5px
+      position: absolute
+      width: calc(100% + 6px)
+
+  > .card__media + .card__content:after
+    bottom: calc(100% + 1px)
+    left: -5px
+    width: calc(100% + 10px)
+
+  &__media-link
+    margin-right: 0
+    margin-bottom: 0
+
+    .card__media
+      width: calc(50% - 2px)
+
+      &:nth-child(even)
+        margin-right: 0
+
+      &:first-of-type
+        &:last-of-type
+          width: 100%
+
+  &__actions
+    top: -25px
+
+  &__tag
+    font-weight: bold
+    line-height: 1
+    text-transform: uppercase
+
+  &__count
+    background-size: 100%
+    box-sizing: border-box
+    font-family: $heading-font-family
+    height: 28px
+    text-align: center
+    width: 27px
+
+  > .card__media
+    border-radius: $card-border-radius $card-border-radius 0 0
+
+  &__display-icon
+    right: 14px
+
+  &__title
+    font-family: $heading-font-family
+    text-transform: uppercase
+
+  &__copy
+    a
+      color: $brand-color
+
+  .like
+    right: 10px
+    top: -70px
+
+  .button--reporting
+    left: 10px
+    top: -70px
+
+  &--small
+    .toggle
+      top: -15px
+
+    &__media-link,
+    > .card__media + .card__content
+      &::after
+        padding-top: calc(12.5% + 6px)
+
+  &--poster
+    .card__media-link
+      &::after
+        display: none
+
+    .card__title
+      font-size: 24px
+
+    .card__media
+      margin-bottom: 0
+      margin-right: 0
+
+  &--person,
+  &--cast
+    background: transparent
+    box-shadow: none  
+
+    .card__content
+      padding-left: 0
+      padding-right: 0
+
+  &--cast
+
+    >.card__media
+      border-radius: 0
+      & + .card__content:after
+        display: none
+
+  &--location
+    overflow: hidden
+
+  &--person
+    display: block
+
+    .card__media
+      margin-right: 0
+      margin-bottom: 0
+
+      &:first-of-type:last-of-type
+        margin: 1px
+        width: calc(100% - 2px)
+
+    .card__copy:not(:last-child)
+      font-weight: 500
+
+    .card__content
+      padding-top: 15px
+
+    >.card__media + .card__content:after
+      background-image: url('../../../images/theme/person-shape.svg')
+      left: 0
+      padding-top: 100%
+      width: calc(100% + 2px)
+
+  +breakpoint(medium)
+    &--person
+
+      .card__media
+
+      >.card__media + .card__content:after
+        padding-top: calc(100% + 1px)
+        width: calc(100% + 2px)
+
+.custom .list-modal .card
+    &__content
+        padding-top: 1em

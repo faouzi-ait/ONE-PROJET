@@ -1,0 +1,52 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$list-nav-title-padding: 10px 20px
+$list-nav-title-size: 17px
+
+$list-nav-actions-padding: 12px 10px
+
+$list-nav-search-bg: $black
+$list-nav-search-padding: 10px
+
+$list-nav-tabs-margin: 10px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .list-navigator
+  border: 0
+  color: $black
+
+  &__column
+    border-right: 0
+
+    &:first-child
+      .list-navigator__scroller
+        border-left: 1px solid $iron
+
+  &__title
+    background: $black
+    color: $white
+    font-weight: 900
+    text-transform: uppercase
+
+  &__scroller
+    border-bottom: 1px solid $iron
+    border-right: 1px solid $iron
+
+  &__item
+    padding: 17px 20px
+
+    &:hover,
+    &:focus
+      background: $brand-color
+
+      span
+        color: $black

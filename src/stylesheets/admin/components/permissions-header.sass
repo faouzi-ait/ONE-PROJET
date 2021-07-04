@@ -1,0 +1,43 @@
+@import '../imports'
+
+.permissions-header
+  display: flex
+  margin-right: -30px
+
+  > *
+    flex: none
+    margin-right: 30px
+    width: calc(50% - 30px)
+
+  &__title, &__copy
+    margin: 0
+    padding-bottom: 5px
+    word-wrap: break-word
+
+    &--warning
+      color: $brick-red
+
+  &__images
+    position: relative
+    z-index: 1
+
+  &__image
+    width: calc(100% - 20px)
+    padding-top: 100%
+    overflow: hidden
+    background-size: cover
+    background-position: center
+
+    &:not(:first-child)
+      position: absolute
+    @for $i from 1 through 4
+      &:nth-of-type(#{$i})
+        top: ($i - 1) * 5px
+        left: ($i - 1) * 5px
+        z-index: -$i
+
+  &__media
+    max-width: 100%
+
+  .checkbox
+    margin-bottom: 15px

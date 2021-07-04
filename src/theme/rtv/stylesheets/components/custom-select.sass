@@ -1,0 +1,26 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$custom-select-min-width: 100px
+$custom-select-max-width: 400px
+$custom-select-bgc: $white
+$custom-select-border: 2px solid $base-color-light
+$custom-select-radius: 220px
+$custom-select-height: 44px
+$custom-select-padding: 0 40px 0 20px
+$custom-select-icon-fill: $base-color
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom:not(.admin) .custom-select
+
+.custom:not(.admin) .react-datepicker
+    &__input-container:after
+        background-image: url(/assets/images/select-arrow-white.svg)

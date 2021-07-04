@@ -1,0 +1,138 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$modal-overlay-bgc: rgba($base-color, .8)
+$modal-overlay-padding: 20px
+$modal-overlay-padding-bp-small: 10px
+
+//***********************************
+
+$modal-warning-bgc: $error-color
+$modal-warning-color: $white
+
+//***********************************
+
+$modal-wrapper-bgc: $thunder
+$modal-wrapper-radius: 0
+$modal-max-width: 1180px
+$modal-min-width: 300px
+
+//***********************************
+
+$modal-header-bgc: $thunder
+$modal-header-padding: 80px 30px 0
+$modal-header-padding-bp-large: 40px 30px 0
+$modal-header-padding-bp-medium: 30px 20px 0
+$modal-header-padding-bp-small: 30px 15px 0
+
+//***********************************
+
+$modal-content-bgc: transparent
+$modal-content-padding: 30px 100px 80px
+$modal-content-padding-bp-large: 30px 50px 50px
+$modal-content-padding-bp-medium: 20px 30px 30px
+$modal-content-padding-bp-small: 15px
+$modal-link-color: $downy
+$modal-link-weight: bold
+
+//***********************************
+
+$modal-close-color: $white
+$modal-close-hover-color: $downy
+
+//***********************************
+
+$modal-header-padding-filters: 15px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .modal
+    &__wrapper
+        box-shadow: 0 2px 20px 0 rgba($black,0.8)
+        
+    &__header
+        color: $white
+        text-align: center
+
+        &--with-action
+            display: block
+
+    &__title-icon
+        transform: translateY(-5px)
+
+    &__search
+        input
+            background: transparent
+
+        button
+            top: 0
+    
+    &__title
+        font-size: 36px
+        text-transform: uppercase
+
+    &__actions
+        border-color: $iron
+
+    &--login
+        .modal__title
+            font-size: 48px
+
+    &--filters
+        .modal__header
+            padding: 40px 20px
+
+    &--video
+        .modal__title
+            font-size: 18px
+
+    &--warning
+        .modal
+            &__content
+                padding-left: 40px
+                padding-right: 40px
+
+            &__header
+                background: transparent
+
+    .form
+        &__input
+            background: transparent
+
+    .modal__content 
+        a:not([class]), 
+        a.active
+            font-weight: 500
+
+    .Select-control
+        background: transparent
+        border-color: $brand-color
+
+    &__content,
+    .form__label,
+    .form__input,
+    .custom-checkbox__label,
+    .Select.Select--single .Select-value,
+    .Select.Select--single .Select-placeholder,
+    .Select.Select--single .Select-input,
+    .Select-input > input,
+    .table,
+    .form__info,
+    .modal__search input
+        color: $white
+
+    .table
+        td,
+        th
+            background-color: transparent
+
+    +breakpoint(medium)
+        &__title
+            font-size: 18px

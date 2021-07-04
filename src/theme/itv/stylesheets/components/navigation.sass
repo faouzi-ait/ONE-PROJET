@@ -1,0 +1,74 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$nav-bgc: $bright-gray
+$nav-divide-color: rgba($spun-pearl, .4)
+$nav-width: 410px
+$nav-width-bp-large: 320px
+
+//***********************************
+
+$nav-close-left: auto
+$nav-close-right: 3px
+$nav-close-top: 3px
+
+//***********************************
+
+$nav-item-divide-margin: 0 0 20px 0
+$nav-item-divide-padding: 0 0 20px 0
+
+//***********************************
+
+$nav-list-padding: 80px 40px 40px
+$nav-list-padding-bp-large: 80px 40px 40px
+
+//***********************************
+
+$nav-link-active-color: $white
+$nav-link-color: $white
+$nav-link-hover-color: $brand-color
+$nav-link-padding: 5px 30px
+
+//***********************************
+
+$sub-nav-margin: 0
+$sub-nav-padding: 0 0 0 40px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .navigation
+
+  &__sub-nav
+    list-style: none
+
+  &__link
+    border-radius: 30px
+    font-weight: bold
+
+    &--is-active
+      background-color: $brand-color
+      padding-top: 10px
+      padding-bottom: 10px
+      &:hover
+        color: $white !important
+
+      & + .navigation__sub-nav
+        margin-top: 5px
+
+  .button
+    svg
+      fill: $spun-pearl
+      width: 20px
+      height: 20px
+
+  +breakpoint(medium)
+    &__list
+      padding-left: 20px
+      padding-right: 20px

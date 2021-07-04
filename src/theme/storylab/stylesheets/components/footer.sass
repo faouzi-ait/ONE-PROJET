@@ -1,0 +1,68 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$footer-bgc: $black
+$footer-padding: 50px 0
+
+//***********************************
+
+$footer-brand-margin: 0 auto
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .footer
+    background: linear-gradient(0deg, $cod-gray 0%, $mine-shaft 100%)
+
+    &__nav
+        margin-top: 0
+        margin-left: -10px
+
+    &__item
+        line-height: 1
+        border-color: $gray
+
+    &__link
+        color: $gray
+        font-size: 15px
+
+    &__copy
+        color: $gray
+        font-size: 15px
+        margin-top: 10px
+
+    .sharer
+        background: transparent
+        padding: 0
+
+    +breakpoint(large, min)
+        .container
+            flex-direction: row
+            justify-content: space-between
+
+    +breakpoint(large)
+        &__bottom
+            margin-bottom: 20px
+
+        &__list
+            justify-content: center
+
+    +breakpoint(medium)
+        padding-top: 30px
+        padding-bottom: 30px
+
+        &__list
+            justify-content: flex-start
+
+        .sharer
+            align-self: flex-start
+
+        &__link,
+        &__copy
+            font-size: 12px

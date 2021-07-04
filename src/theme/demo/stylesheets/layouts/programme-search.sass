@@ -1,0 +1,91 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$psearch-bgc: $black
+$psearch-padding: 8px 0
+
+//***********************************
+
+$psearch-input-border: 0
+$psearch-input-focus-border: 0
+$psearch-input-font-family: $base-font-family
+$psearch-input-font-size: 30px
+$psearch-input-padding: 8px 20px
+$psearch-input-radius: 0
+$psearch-input-radius-open: 0
+
+//***********************************
+
+$psearch-button-radius: 0
+$psearch-button-font-size: 20px
+$psearch-button-padding: 8px 30px 8px 25px
+
+//***********************************
+
+$psearch-clear-fill: $base-color-light
+$psearch-clear-hover-fill: $brand-color
+
+//***********************************
+
+$psearch-input-radius-bp-small: 0
+$psearch-button-radius-bp-small: 0
+$psearch-input-radius-open-bp-small: 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .programme-search
+
+  [type='submit']
+    display: none
+
+  // border-bottom: 1px solid tint($casper, 40%)
+  &__clear
+      background-color: $black
+
+  &--global
+    border-bottom: none
+
+  &__input
+    background: left center / 50px url(../../images/theme/mag-glass.svg) $black no-repeat
+    border-right: 0
+    font-weight: 800
+    color: $white
+    padding-left: 50px
+  
+    ::placeholder
+      color: rgba($white, .5)
+
+  &__icon
+    opacity: 0.3
+
+  +breakpoint(medium)
+
+    &__input
+      font-size: $base-font-size
+
+    .button
+      font-size: $base-font-size
+
+  +breakpoint(small)
+
+    &__input
+      border-radius: $psearch-input-radius-bp-small
+      border-right: $psearch-input-border
+      box-sizing: border-box
+      font-size: 14px
+      margin-bottom: 10px
+      width: 100%
+
+    &__clear
+      display: none
+
+    .button
+      border-radius: $psearch-button-radius-bp-small
+      display: block

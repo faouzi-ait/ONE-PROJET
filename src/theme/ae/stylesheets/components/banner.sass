@@ -1,0 +1,268 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 660px
+$banner-tablet-min-height: 420px
+$banner-mobile-min-height: 280px
+$banner-short-min-height: 300px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 0 0 80px
+$banner-tablet-content-padding: 0 0 40px
+$banner-content-width: 750px
+
+//***********************************
+
+$banner-intro-min-height: 350px
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 0 0 150px
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 20px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: 18px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+  align-items: flex-end
+  min-height: 280px
+  height: $banner-min-height
+
+  &:after
+    background: linear-gradient(rgba($background-color, 0), $background-color)
+    height: 590px
+    top: auto
+    bottom: 0
+
+  &__content
+    align-items: flex-start
+    display: flex
+    flex-direction: column
+    position: relative
+
+    > *
+      order: 3
+
+    > .banner__title,
+    > .banner__logo
+      order: 1
+
+    > .banner__tags
+      order: 2
+
+  &__copy
+    line-height: 120%
+
+  &__title
+    font-size: 64px
+    line-height: 1
+
+  &__logo
+    margin-bottom: 20px
+    max-width: 320px
+
+  &__tags
+    margin-bottom: 20px
+    order: 2
+    width: 100%
+
+  &__tag
+    background: none
+    border-right: solid 1px $white
+    border-radius: 0
+    font-size: 16px
+    margin: 0 20px 0 0 
+    padding: 5px 20px 6px 0 
+    text-transform: uppercase
+
+    &:last-child
+      border: none
+      margin-right: 0
+      padding-right: 0
+
+  &__actions
+    > div:first-child,
+    .tag--new,
+      position: absolute
+      bottom: 100%
+      left: 0
+
+    .tag--new
+      left: 62px
+      margin-bottom: 25px
+
+  .text-button
+    text-transform: uppercase
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 10px
+
+    &:after
+      content: url('../../../images/theme/chevron-right.svg')
+      margin-left: 5px
+
+  &--tall
+    margin-bottom: 100px
+    padding-bottom: 100px
+    min-height: 350px
+
+    .banner__copy
+      margin-bottom: 20px
+      width: 100%
+
+    .banner__content
+      margin-bottom: -100px
+      padding-bottom: 0
+
+  &--overlap
+    height: 880px
+    min-height: 750px
+    margin-bottom: -370px
+
+    .banner__content
+      padding-bottom: 450px
+
+  &--intro,
+  &--short,
+  &--overlap
+    .banner__title:last-child
+      margin-bottom: 0
+
+  &--intro
+    height: $banner-intro-min-height
+
+  &--short
+    height: $banner-short-min-height
+    .banner__copy
+      margin-bottom: -40px
+  
+  &__iefix + .breadcrumbs
+    margin-top: -80px
+    position: relative
+    margin-bottom: 30px
+    height: 50px
+    z-index: 5
+
+    .breadcrumbs__item,
+    .breadcrumbs__link
+      color: rgba($white, .8)
+
+      +hover
+        color: $ziggurat
+
+  &__iefix + .section,
+  &__iefix ~ .content-block .content-block__inner,
+  &__iefix ~ .content-block .content-block__main,
+  &__iefix ~ .content-block .content-block__content,
+  &__iefix ~ .content-block > .container,
+  &__iefix ~ .content-block--banner-carousel > .content-block__inner,
+  &__iefix ~ .programme-highlights .content-block
+    position: relative
+    z-index: 1
+    
+
+  +breakpoint(1200px)
+    &--tall 
+      .banner__content
+        max-width: 650px
+
+  +breakpoint(largePlus)
+    &__content
+      padding-bottom: 50px
+      
+    &--tall
+      height: 420px
+      margin-bottom: 0
+
+    &--overlap
+      height: 520px
+      min-height: 350px
+      margin-bottom: -110px
+
+      .banner__content
+        padding-bottom: 150px
+
+    &__iefix + .breadcrumbs
+      margin-top: -50px
+
+      + .account-navigation
+        margin-top: -30px
+
+    &--intro
+      margin-bottom: -100px
+
+  +breakpoint(medium, min)
+    &--intro
+      margin-bottom: -70px
+
+  +breakpoint(medium)
+    &__title
+      font-size: 48px
+
+    &__title,
+    &__copy,
+    &__tags
+      margin-bottom: 10px
+
+    &__tag
+      font-size: 14px
+
+    &--intro
+      height: 300px
+      margin-bottom: 0
+
+      .banner__content
+        padding-bottom: 40px
+
+    &--overlap
+      height: 540px
+
+    &--tall
+      height: 280px
+
+    &__iefix + .breadcrumbs
+      margin-bottom: 20px
+
+      + .account-navigation
+        margin-top: -20px
+
+  +breakpoint(small, min)
+    &--short
+      &:after
+        background: linear-gradient(-90deg, rgba($background-color, 0), $background-color)
+        height: 100%
+        width: 50%
+    
+  +breakpoint(small)
+    &__title
+      font-size: 32px
+
+    &__tag
+      padding: 0 15px 0 0
+      margin-right: 15px
+
+    &--overlap
+      height: 380px
+
+    &__copy
+      display: none
+      
+
+.custom .cropper__preview
+  .banner
+    margin-bottom: 0

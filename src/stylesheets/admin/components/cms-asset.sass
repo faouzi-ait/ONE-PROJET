@@ -1,0 +1,115 @@
+
+@import '../imports'
+
+$asset-border-color: $base-color-light
+$asset-selected-bg: tint($brand-color, 80%)
+$asset-padding: 10px
+$asset-font-size: 14px
+$asset-font-family: $droid
+$asset-media-bg: $athens-gray
+
+//***********************************
+
+.cms-asset
+  align-items: center
+  border-bottom: 1px solid $asset-border-color
+  cursor: pointer
+  display: flex
+  font-size: $asset-font-size
+  padding: $asset-padding
+  transition: background-color .3s
+
+  &--is-active
+    background-color: $asset-selected-bg
+
+  &__media
+    align-items: flex-start
+    display: flex
+    flex-wrap: wrap
+    height: 75px
+    margin-right: $asset-padding
+    width: 75px
+
+    img
+      display: block
+      height: auto
+      margin: 0
+      width: 50%
+
+      &.file-type
+        margin: 5px auto 0
+        padding-right: 10px
+        padding-left: 10px
+
+      &:first-child
+        &:last-child
+          width: 100%
+
+  &--display
+    cursor: auto
+    padding-top: 0
+    padding-left: 0
+    padding-right: 0
+
+    .cms-asset__media
+      height: 60px
+      width: 45px
+
+      img
+        &.file-type
+          padding-right: 0
+          padding-left: 0
+
+  &__details
+    flex: 1
+    margin-right: $asset-padding
+
+  &__title
+    position: relative
+
+    &:hover
+      .cms-asset__input
+        border-color: tint($base-color-light, 25%)
+
+      .cms-asset__icon
+        opacity: 1
+
+  &__file
+    font-size: 12px
+    word-break: break-all
+
+  &__size
+    color: $base-color-light
+    font-size: 10px
+
+  &__icon
+    fill: tint($base-color-light, 10%)
+    opacity: 0
+    pointer-events: none
+    position: absolute
+    right: 10px
+    top: 5px
+    transition: opacity .2s
+
+  &__input
+    background-color: transparent
+    border: 1px solid transparent
+    border-radius: 2px
+    box-sizing: border-box
+    color: $base-color
+    display: block
+    font-family: $asset-font-family
+    font-size: $asset-font-size
+    margin: -5px 0 0 -6px
+    outline: none
+    padding: 5px
+    padding-right: 25px
+    text-overflow: ellipsis
+    transition: border-color .2s
+    width: 100%
+
+    &:focus
+      border-color: tint($base-color-light, 10%)
+
+  p
+    margin: 0

@@ -1,0 +1,61 @@
+//***********************************
+// Default Styles - DO NOT EDIT
+//***********************************
+
+//***********************************
+
+.print-preview
+  &__page
+    thead tr th
+      padding-top: 90px
+
+    tbody tr td
+      background-color: transparent !important
+
+    tbody tr.table__sub-total td
+      border-top: 3px solid black
+      border-bottom: 3px solid black
+
+  &__header
+    position: fixed
+    top: 0px
+    left: 0px
+    height: 60px
+    width: 100%
+    z-index: 10
+
+  &__logo
+    position: absolute
+    top: 15px
+    left: 30px
+
+  &__title
+    position: relative
+    top: 10px
+    text-align: center
+
+  &__dates
+    position: absolute
+    top: 10px
+    right: 10px
+
+  &__table
+    z-index: 5
+
+  &__footer
+    position: fixed
+    bottom: 0px
+    left: 0px
+    height: 60px
+    width: 100%
+    z-index: -1
+    background-color: white
+
+@page
+  size: auto
+  margin: 0mm
+
+@media print
+  .producer-hub__disclaimer
+    position: relative
+    top: 95px

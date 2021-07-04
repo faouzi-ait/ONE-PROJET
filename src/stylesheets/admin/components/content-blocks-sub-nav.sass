@@ -1,0 +1,86 @@
+@import '../imports'
+
+$top-offset: 60px
+$icon-width: 112px
+$icon-height: 90px
+$icon-padding: 0px 8px 8px 0px
+$width: 270px
+
+.content-blocks-sub-nav
+  background-color: $base-color
+  bottom: 0
+  box-shadow: inset 0 -10px 10px $black
+  left: 120px
+  padding-bottom: 20px
+  padding-left: 3px
+  position: absolute
+  top: $top-offset
+  transition: left .3s
+  width: calc(#{$width} - 6px)
+  z-index: 20
+
+  .sub-navigation__item
+    margin-top: 10px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-content: flex-start
+    height: calc(100vh - 120px)
+    overflow-y: auto
+    overflow-x: hidden
+    box-sizing: content-box
+
+  &__icon-placeholder
+    width: $icon-width
+    height: $icon-height
+    padding: $icon-padding
+    position: relative
+
+  &__content-blocks-autoscrolling
+    background-color: #f2fcac
+
+  &__icon
+    border-radius: 6px
+    width: $icon-width
+    height: $icon-height
+    margin: 2px 2px
+    line-height: 12px
+    background-color: #403f3f
+    color: $casper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border: 2px solid transparent
+    svg
+      padding: 10px 10px
+      fill: $casper
+
+    &:hover
+      border-color: $brand-color
+      color: $white
+      svg
+        fill: $brand-color
+
+    &--dragging
+      border-color: $brand-color
+      color: $white
+      svg
+        fill: $brand-color
+
+  &__icon-text
+    font-size: 12px
+    text-align: center
+
+.cms-header--collapsed + .main
+  .content-blocks-sub-nav
+    top: 0
+    padding-top: $top-offset
+    left: 20px
+    z-index: 19
+
+    .content-blocks-sub-nav__back-wrapper
+      top: 25px
+      right: 10px

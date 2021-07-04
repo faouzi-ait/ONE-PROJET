@@ -1,0 +1,132 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$banner-min-height: 730px
+$banner-tablet-min-height: 540px
+$banner-mobile-min-height: 480px
+$banner-short-min-height: 290px
+$banner-color: $white
+
+//***********************************
+
+$banner-content-padding: 20px 0
+$banner-tablet-content-padding: 20px 0
+$banner-content-width: 580px
+
+//***********************************
+
+$banner-intro-min-height: 290px
+$banner-intro-align-items: flex-end
+$banner-intro-content-padding: 20px 0
+$banner-intro-content-width: 800px
+
+//***********************************
+
+$banner-title-margin: 0 0 20px
+
+//***********************************
+
+$banner-copy-margin: 0 0 20px
+$banner-copy-size: (15/16)+rem
+
+//***********************************
+$container-width: 1180px
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .banner
+    align-items: center
+    background: $orient
+
+    &::before
+        background: linear-gradient(to right, rgba($black, .5) 0% , rgba($black, 0) 20%, rgba($black, 0) 100%)
+        content: ''
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+        z-index: 1
+
+    &::after
+        background: linear-gradient(to bottom, rgba($black, .5) 0% , rgba($black, 0) 90%)
+        background-color: transparent
+        height: 25%
+
+    &__logo:not(.banner__media)
+        margin-bottom: 10px
+        max-width: 100%
+
+    &__title
+        font-size: (48/16)+rem
+        font-weight: 600
+        line-height: 1
+
+    &__programme-genres
+        display: none
+
+    &__programme-title
+        margin-bottom: 40px
+
+    &__actions
+        margin-top: 10px
+
+    .container
+        max-width: 1340px
+
+    .button
+        box-shadow: 2px 2px 8px rgba($black, .6)
+
+    &--shaded
+        background: transparent
+
+    &--medium
+        min-height: 360px
+
+    &--end
+        align-items: flex-end
+
+        .container
+            max-width: $container-width
+
+        .banner__content
+            padding-bottom: 100px
+
+    &--medium,
+    &--intro,
+    &--short
+        .container
+            max-width: $container-width
+
+        .banner__content
+            padding: $banner-intro-content-padding
+
+        .banner__title
+            text-transform: uppercase
+            margin: 40px 0 0
+
+    &--intro
+        .tag--unregistered
+            position: absolute
+            top: 110px
+
+            & + .banner__title
+                margin-top: 125px
+
+        .banner__title
+            margin: 85px 0 0
+            
+
+    +breakpoint(small)
+            
+        &__title
+            font-size: (38/16)+rem
+
+

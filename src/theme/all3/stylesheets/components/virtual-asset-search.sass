@@ -1,0 +1,43 @@
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$virtual-asset-search-control-border-radius: 4px
+
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .virtual-asset-search
+
+  .programme-search
+    transform: none !important
+
+    &__input
+      background-position-x: 8px
+
+  .react-autosuggest
+    &__section-title
+      text-transform: none
+
+    &__suggestion
+      color: black
+
+  &__selector
+    .carousel
+      margin: 10px 0
+
+      .programme__image
+        position: relative
+
+      &__group
+        height: 4px
+        min-height: 4px
+
+        &::before,
+        &::after
+          display: none
+

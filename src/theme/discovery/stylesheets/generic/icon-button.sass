@@ -1,0 +1,33 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$icon-button-fill: $white
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .icon-button
+    align-items: center
+    background: $base-color
+    border: none
+    display: flex
+    justify-content: center
+    padding: 5px
+    height: 40px
+    width: 40px
+    transition: background-color .3s
+
+    .button__icon
+        margin-right: 0
+
+    +hover
+        background: $white
+        
+        svg
+            fill: $base-color

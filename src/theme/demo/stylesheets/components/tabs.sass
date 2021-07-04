@@ -1,0 +1,92 @@
+//***********************************
+
+@import '../../core/imports'
+
+//***********************************
+// Theme Variables
+//***********************************
+
+$tabs-background: $brand-color
+$tabs-border: none
+$tabs-spacing: 30px
+$tabs-active-color: $white
+$tabs-padding: 10px
+$tabs-border-radius: 4px
+
+//***********************************
+
+$tabs-item-font-size: 16px
+$tabs-item-weight: bold
+$tabs-item-background: transparent
+
+//***********************************
+
+$tabs-select-margin: 0 0 20px 0
+
+//***********************************
+// Custom Override Styles
+//***********************************
+
+.custom .tabs
+    justify-content: center
+
+    &__item
+        color: $white
+        display: flex
+        width: 220px
+        height: 40px
+        align-items: center
+        justify-content: center
+        border: 1px solid $brand-color
+        flex: 0 0 220px
+        margin: 0
+        &:first-child
+            border-radius: $tabs-border-radius 0 0 $tabs-border-radius
+        &:last-child
+            border-right: 1px solid $brand-color
+            border-radius: 0 $tabs-border-radius $tabs-border-radius 0
+
+    &--underline
+        margin-bottom: 50px
+        
+        .tabs__title
+            letter-spacing: -1px
+
+        .tabs__sub
+            color: $white
+
+        .tabs__item
+            border-width: 0 0 4px 0
+            border-color: $white
+            flex: 1
+            height: auto
+            width: auto
+
+            &--active
+                border-color: $brand-color
+
+            &:last-child
+                border-right: none
+
+.custom .content-block--promo-carousel 
+    .tabs
+        justify-content: center
+
+        &__item
+            border-radius: 0
+            border-width: 0
+            border-bottom: 2px solid transparent
+            margin: 0 2rem
+            padding: 0 0 4px 0
+            width: auto
+            flex: 0 1 auto
+            &:last-child,
+            &--active:last-child
+                border-right: 0
+            &--active
+                border-bottom-color: $brand-color
+                background-color: transparent
+
+    &.content-block--light
+        .tabs__item
+            color: $base-color
